@@ -1,0 +1,95 @@
+/*------------Footer in general ------------*/
+#Conteneur{
+	display: flex;
+    justify-content: nowrap;
+    border-top: 1px solid black;
+}
+
+
+#txtFooter{
+	font-size: medium;
+}
+
+/*------------Images ------------*/
+
+#logoCompany{
+	width: 20%;
+	height: 20%;
+}
+
+#flag{
+	width: 30%;
+	height: 30%;
+}
+
+/*------------Facebook logo ------------*/
+
+a.linkFacebookLogo{
+	background: url("images/logoFacebook.png");
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+a.linkFacebookLogo:hover{
+	background: url("images/logoFacebook2.png") no-repeat;
+	background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*------------Twitter logo ------------*/
+
+a.linkTwitterLogo{
+	background: url("images/logoTwitter.png");
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+a.linkTwitterLogo:hover{
+	background: url("images/logoFacebook2.png") no-repeat;
+	background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/*------------Instagram logo ------------*/
+
+a.linkInstagramLogo{
+	background: url("images/logoInstagram.png");
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+a.linkInstagramLogo:hover{
+	background: url("images/logoFacebook2.png") no-repeat;
+	background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+/*------------Sections of the footer ------------*/
+
+.reseauxSociaux{
+	margin: auto;
+	display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.pays{
+	margin: auto;
+	display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.Copyright{
+	margin: auto;
+	text-align: center;
+	flex: 4;
+}
