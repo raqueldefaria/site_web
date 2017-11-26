@@ -1,0 +1,38 @@
+#header{
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo{
+  flex: 1;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex: 2;
+}
+
+.seConnecter{
+  background-color: green;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 6px black;
+}
+
+.seConnecter:hover{
+  background-color: red;
+}
+
+#logoCompany{
+  width: 50%;
+  padding: 12px;
+}
+
+.txtHeader {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 7%;
+}

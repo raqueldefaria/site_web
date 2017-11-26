@@ -1,8 +1,8 @@
 /*------------Footer in general ------------*/
 #Conteneur{
 	display: flex;
-    justify-content: nowrap;
-    border-top: 1px solid black;
+  justify-content: nowrap;
+  border-top: 1px solid black;
 }
 
 #txtFooter{
