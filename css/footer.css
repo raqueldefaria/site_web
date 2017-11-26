@@ -1,32 +1,37 @@
 /*------------Footer in general ------------*/
-#Conteneur{
+footer{
 	display: flex;
-  justify-content: nowrap;
+  justify-content: space-between;
   border-top: 1px solid black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFF6F5;
 }
 
 #txtFooter{
-	font-size: medium;
+	font-size: small;
 }
 
 /*------------Images ------------*/
 
-#logoCompany{
-	width: 20%;
-	height: 20%;
+.logoCompanyFooter{
+	width: 10%;
+	height: 10%;
 }
 
 #flag{
-	width: 30%;
-	height: 30%;
+	width: 20%;
+	height: 20%;
 }
 
 /*------------Facebook logo ------------*/
 
 a.linkFacebookLogo{
 	background: url("../images/footer/logoFacebook.png");
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -41,8 +46,8 @@ a.linkFacebookLogo:hover{
 
 a.linkTwitterLogo{
 	background: url("../images/footer/logoTwitter.png");
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -57,8 +62,8 @@ a.linkTwitterLogo:hover{
 
 a.linkInstagramLogo{
 	background: url("../images/footer/logoInstagram.png");
-	width: 50px;
-	height: 50px;
+	width: 20px;
+	height: 20px;
 	background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -75,19 +80,19 @@ a.linkInstagramLogo:hover{
 .reseauxSociaux{
 	margin: auto;
 	display: flex;
-    justify-content: space-around;
-    flex: 1;
+  justify-content: space-around;
+  flex: 1;
 }
 
-.coutries{
+.countries{
 	margin: auto;
 	display: flex;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
 }
 
-.Copyright{
+.copyright{
 	margin: auto;
 	text-align: center;
 	flex: 4;

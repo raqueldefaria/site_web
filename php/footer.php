@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="../css/footer.css" />
-    </head>
-    <body>
-      
       <footer>
-
-          <div id="Conteneur">
 
               <div class="reseauxSociaux">
                   <a href="https://www.facebook.com" class="linkFacebookLogo">  </a>
@@ -19,19 +9,16 @@
                   <img src="images/logoInstagram.png" alt="Logo instagram" id="logoInstagram"  > -->
               </div>
 
-              <div class="Copyright">
-                  <p> </p>
-                  <img src="../images/logodomonline.png" alt="Logo du site" id="logoCompany">
+              <div class="copyright">
+                  <br />
+                  <a href="https://www.domonline.fr"> <img src="../images/logodomonline.png" class="logoCompanyFooter"> </a>
+                  <!--<img src="../images/logodomonline.png" alt="Logo du site" id="logoCompanyFooter">-->
                   <p id="txtFooter"> Copyright 2017 DomOnline, All Rights Reserved </p>
               </div>
 
-              <div class="coutries">
+              <div class="countries">
                   <img src="../images/footer/DrapeauFrancais.png" alt="Logo du drapeau français" id="flag">
                   <p id="txtFooter"> France </p>
               </div>
 
-          </div>
-
       </footer>
-    </body>
-</html>
