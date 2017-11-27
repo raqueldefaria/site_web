@@ -9,6 +9,7 @@ header{
 	top: 0;
 	left: 0;
 	right: 0;
+  opacity: 0.85;
 }
 
 /*------------ Different sections of the header ------------*/
@@ -73,9 +74,10 @@ header{
   padding: 7%;
   padding-top: 20%;
   margin-top: 25%;
+  border-right: 1px solid black;
 }
 
-.txtHeader1, .txtHeader2, .txtHeader3, .txtHeader4{
+.txtHeader1, .txtHeader2, .txtHeader3{
   color: black;
   text-decoration: none;
 }
@@ -89,10 +91,6 @@ header{
   text-decoration: underline;
 }
 .txtHeader3:hover{
-  font-weight: bold;
-  text-decoration: underline;
-}
-.txtHeader4:hover{
   font-weight: bold;
   text-decoration: underline;
 }

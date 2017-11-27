@@ -5,10 +5,9 @@
               </div>
 
               <nav class="menu">
-                <a href="https://www.facebook.com" class="txtHeader1"> France </a>
-                <a href="https://www.facebook.com" class="txtHeader2"> France </a>
-                <a href="https://www.facebook.com" class="txtHeader3"> France </a>
-                <a href="https://www.facebook.com" class="txtHeader4"> France </a>
+                <a href="https://www.facebook.com" class="txtHeader1"> Notre equipe </a>
+                <a href="https://www.facebook.com" class="txtHeader2"> Nos offres </a>
+                <a href="https://www.facebook.com" class="txtHeader3"> Nous contacter </a>
               </nav>
 
               <div class="seConnecter">

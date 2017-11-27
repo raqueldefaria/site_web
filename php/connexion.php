@@ -30,16 +30,16 @@
 
       <form method="post" action="traitement.php">
         <p>
-          <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" /> <br />
+          <input type="text" name="pseudo" id="identifiant" placeholder="  Identifiant" size="30" maxlength="20" /> <br />
 
           <br />
-          <input type="text" name="pseudo" id="mdp" placeholder="Mot De Passe" size="30" maxlength="20" /><br />
+          <input type="text" name="pseudo" id="mdp" placeholder="  Mot de passe" size="30" maxlength="20" /><br />
 
           <div id="box">
             <label for="souvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
             <a href="https://www.facebook.com" id="boutonSeConnecter2"> Se connecter </a>
           </div>
-          <a href="https://www.facebook.com" id="mdpOublie"> Mot de Passe oublie </a>
+          <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a>
         </p>
       </form>
 
