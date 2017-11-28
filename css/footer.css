@@ -1,39 +1,44 @@
 /*------------Footer in general ------------*/
-#Conteneur{
+footer{
 	display: flex;
-    justify-content: nowrap;
-    border-top: 1px solid black;
+  justify-content: space-between;
+  border-top: 1px solid black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFF6F5;
+	opacity: 0.85;
 }
 
-
 #txtFooter{
-	font-size: medium;
+	font-size: small;
 }
 
 /*------------Images ------------*/
 
-#logoCompany{
-	width: 20%;
-	height: 20%;
+.logoCompanyFooter{
+	width: 10%;
+	height: 10%;
 }
 
 #flag{
-	width: 30%;
-	height: 30%;
+	width: 20%;
+	height: 20%;
 }
 
 /*------------Facebook logo ------------*/
 
 a.linkFacebookLogo{
-	background: url("images/logoFacebook.png");
-	width: 50px;
-	height: 50px;
+	background: url("../images/footer/logoFacebook.png");
+	width: 30px;
+	height: 30px;
 	background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 a.linkFacebookLogo:hover{
-	background: url("images/logoFacebook2.png") no-repeat;
+	background: url("../images/footer/logoFacebook2.png") no-repeat;
 	background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -41,15 +46,15 @@ a.linkFacebookLogo:hover{
 /*------------Twitter logo ------------*/
 
 a.linkTwitterLogo{
-	background: url("images/logoTwitter.png");
-	width: 50px;
-	height: 50px;
+	background: url("../images/footer/logoTwitter.png");
+	width: 30px;
+	height: 30px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 a.linkTwitterLogo:hover{
-	background: url("images/logoFacebook2.png") no-repeat;
+	background: url("../images/footer/logoTwitter2.png") no-repeat;
 	background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -57,15 +62,15 @@ a.linkTwitterLogo:hover{
 /*------------Instagram logo ------------*/
 
 a.linkInstagramLogo{
-	background: url("images/logoInstagram.png");
-	width: 50px;
-	height: 50px;
+	background: url("../images/footer/logoInstagram.png");
+	width: 30px;
+	height: 30px;
 	background-repeat: no-repeat;
   background-size: 100%;
 }
 
 a.linkInstagramLogo:hover{
-	background: url("images/logoFacebook2.png") no-repeat;
+	background: url("../images/footer/logoInstagram2.png") no-repeat;
 	background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -76,19 +81,19 @@ a.linkInstagramLogo:hover{
 .reseauxSociaux{
 	margin: auto;
 	display: flex;
-    justify-content: space-around;
-    flex: 1;
+  justify-content: space-around;
+  flex: 1;
 }
 
-.pays{
+.countries{
 	margin: auto;
 	display: flex;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
 }
 
-.Copyright{
+.copyright{
 	margin: auto;
 	text-align: center;
 	flex: 4;
