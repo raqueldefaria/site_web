@@ -19,6 +19,7 @@
               <div class="countries">
                   <img src="../images/footer/DrapeauFrancais.png" alt="Logo du drapeau français" id="flag">
                   <p id="txtFooter"> France </p>
+
               </div>
 
       </footer>
