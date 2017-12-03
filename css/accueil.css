@@ -1,0 +1,19 @@
+#corps{
+    /* Pour éviter la superposition du pied de page et du contenu : */
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100%;
+    margin-top:6%;
+
+}

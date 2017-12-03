@@ -1,0 +1,67 @@
+/*------------ General ------------*/
+
+body{
+    margin-top:10%;
+}
+
+/*------------ Pieces in general ------------*/
+
+.pieces{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 60%;
+    margin-left: 39%;
+    margin-top: -10%;
+    border : 1px solid black;
+    padding-bottom: 2%;
+}
+
+.optionPieces{
+    display:flex;
+    align-content:space-around;
+    flex-wrap: wrap;
+}
+/*------------ Title of the section ------------*/
+
+.sectionPieces{
+    display:flex;
+    justify-content: space-between;
+    background-color: dimgray;
+    color: white;
+}
+
+.motPiece{
+    font-size: x-large;
+    padding-left: 5%;
+}
+.questions{
+    padding-top: 45%;
+    padding-right: 30%;
+}
+
+.section{
+    border: 1px solid black;
+    text-align: center;
+    width: 12%;
+    height: 32%;
+    padding-bottom: 8px;
+    margin-left: 7%;
+    margin-top: 10px;
+}
+.section:nth-child(8){
+    margin-left: 45.4%;
+    width: 12%;
+    height: 24%;
+    padding-top: 8%;
+}
+
+.section:hover{
+    background-color: aquamarine;
+}
+
+.section a:hover{
+    font-weight: bold;
+}
+
+

@@ -1,0 +1,26 @@
+.menuClient{
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    border: 1px solid black;
+    border-bottom: 0px solid black ;
+    text-align: center;
+    margin-left: 5%;
+}
+.homeControl{
+    background-color: dimgray;
+    color:white;
+    border-bottom: 1px solid black ;
+    font-size: x-large;
+}
+
+.lienAlarme, .lienCapteurs, .lienPieces{
+    text-decoration: none;
+    color:black;
+    border-bottom: 1px solid black ;
+    margin-top: 10px;
+}
+
+.lienAlarme:hover, .lienCapteurs:hover, .lienPieces:hover{
+    font-weight: bold;
+}
