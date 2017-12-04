@@ -3,8 +3,8 @@ header{
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid black;
-  padding-bottom: 1%;
-    padding-top: 0%;
+  /*padding-bottom: 1%;*/
+    /*padding-top: 0%;*/
   background-color: #FFF6F5;
   position: absolute;
   top: 0;
@@ -43,9 +43,9 @@ header{
   text-decoration: none;
   /*margin-top: 20%;*/
   margin-right: 20%;
-  padding-top: 20%;
-  padding-left: 5%;
-  padding-right: 5%;
+  /*padding-top: 20%;*/
+  /*padding-left: 5%;
+  padding-right: 5%;*/
 }
 
 #boutonSeConnecter:hover
@@ -57,7 +57,7 @@ header{
 #logoCompanyHeader
 {
   width: 40%;
-  padding: 12px;
+  /*padding: 12px;*/
 }
 
 /*------------Text of the menu ------------*/
@@ -66,23 +66,23 @@ header{
 {
   border-left: 1px solid black;
   border-right: 1px solid black;
-  padding: 7%;
-  padding-top: 20%;
+  /*padding: 7%;*/
+  /*padding-top: 20%;*/
   /*margin-top: 25%;*/
 }
 
 .txtHeader2
 {
   border-right: 1px solid black;
-  padding: 7%;
-  padding-top: 20%;
+  /*padding: 7%;*/
+  /*padding-top: 20%;*/
   /*margin-top: 25%;*/
 }
 
 .txtHeader3
 {
-  padding: 7%;
-  padding-top: 20%;
+  /*padding: 7%;*/
+  /*padding-top: 20%;*/
   /*margin-top: 25%;*/
   border-right: 1px solid black;
 }
