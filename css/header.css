@@ -15,24 +15,28 @@ header{
 
 /*------------ Different sections of the header ------------*/
 
-.logo{
+.logo
+{
   flex: 1;
 }
 
-.menu{
+.menu
+{
   display: flex;
   justify-content: center;
   text-align: center;
   flex: 2;
 }
 
-.seConnecter{
+.seConnecter
+{
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-#boutonSeConnecter{
+#boutonSeConnecter
+{
   color: white;
   border-radius: 10px;
   background-color: rgb(0,184,169);
@@ -44,19 +48,22 @@ header{
   padding-right: 5%;
 }
 
-#boutonSeConnecter:hover{
+#boutonSeConnecter:hover
+{
   background-color: rgb(0,136,125);
 }
 
 
-#logoCompanyHeader{
+#logoCompanyHeader
+{
   width: 40%;
   padding: 12px;
 }
 
 /*------------Text of the menu ------------*/
 
-.txtHeader1, .txtHeader4 {
+.txtHeader1, .txtHeader4
+{
   border-left: 1px solid black;
   border-right: 1px solid black;
   padding: 7%;
@@ -64,34 +71,42 @@ header{
   margin-top: 25%;
 }
 
-.txtHeader2{
+.txtHeader2
+{
   border-right: 1px solid black;
   padding: 7%;
   padding-top: 20%;
   margin-top: 25%;
 }
 
-.txtHeader3{
+.txtHeader3
+{
   padding: 7%;
   padding-top: 20%;
   margin-top: 25%;
   border-right: 1px solid black;
 }
 
-.txtHeader1, .txtHeader2, .txtHeader3{
+.txtHeader1, .txtHeader2, .txtHeader3
+{
   color: black;
   text-decoration: none;
 }
 
-.txtHeader1:hover{
+.txtHeader1:hover
+{
   font-weight: bold;
   text-decoration: underline;
 }
-.txtHeader2:hover{
+
+.txtHeader2:hover
+{
   font-weight: bold;
   text-decoration: underline;
 }
-.txtHeader3:hover{
+
+.txtHeader3:hover
+{
   font-weight: bold;
   text-decoration: underline;
 }
