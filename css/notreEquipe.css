@@ -1,0 +1,33 @@
+#conteneurs{
+
+  display: flex;
+  flex-direction: center;
+
+}
+.conteneurs
+{
+  display: flex;
+
+}
+#conteneur1
+{
+
+    display: flex;
+
+flex-direction: space-between;
+    justify-content: space-around;
+    margin-top: 10%;
+
+
+}
+
+#conteneur2
+{
+    flex-direction: space-between;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+
+}
