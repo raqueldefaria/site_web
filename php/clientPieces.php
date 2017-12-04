@@ -25,40 +25,58 @@
           <a href="#"><img src="../images/client/question.png" class="questions"></a>
       </div>
       <div class="optionPieces">
-          <div class="section">
-              <a>Garage</a>
-              <br />
-              <img src="../images/client/car.png">
-          </div>
-          <div class="section">
-              <a>Chambre 1</a>
-              <img src="../images/client/bed.png">
-          </div>
-          <div class="section">
-              <a>Chambre 2</a>
-              <img src="../images/client/bed.png">
-          </div>
-          <div class="section">
-              <a>Chambre 3</a>
-              <img src="../images/client/bed.png">
-          </div>
-          <div class="section">
-              <a>Salle de bain</a>
-              <img src="../images/client/bathtub.png">
-          </div>
-          <div class="section">
-              <a>Bureau</a>
-              <br />
-              <img src="../images/client/desktop.png">
-          </div>
-          <div class="section">
-              <a>Cuisine</a>
-              <br />
-              <img src="../images/client/cutlery.png">
-          </div>
-          <div class="section">
-              <a href="#"><img src="../images/client/add.png"></a>
-          </div>
+          <a href="#" >
+              <div class="section">
+                  <p>Garage</p>
+                  <img src="../images/client/car.png">
+              </div>
+          </a>
+          <a href="#">
+              <div class="section">
+                  <p>Chambre 1</p>
+                  <img src="../images/client/bed.png">
+              </div>
+          </a>
+          <a href="#">
+              <div class="section">
+                  <p>Chambre 2</p>
+                  <img src="../images/client/bed.png">
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="section">
+                  <p>Chambre 3</p>
+                  <img src="../images/client/bed.png">
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="section">
+                  <p>Salle de bain</p>
+                  <img src="../images/client/bathtub.png">
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="section">
+                  <p>Bureau</p>
+                  <img src="../images/client/desktop.png">
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="section">
+                  <p>Cuisine</p>
+                  <img src="../images/client/cutlery.png">
+              </div>
+          </a>
+
+          <a href="#" >
+              <div class="section">
+                  <img src="../images/client/add.png" class="addButton">
+              </div>
+          </a>
       </div>
   </div>
 

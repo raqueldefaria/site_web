@@ -12,7 +12,7 @@ body{
     height: 50%;
     width: 60%;
     margin-left: 39%;
-    margin-top: -10%;
+    margin-top: -17.7%;
     border : 1px solid black;
     padding-bottom: 2%;
 }
@@ -43,25 +43,33 @@ body{
 .section{
     border: 1px solid black;
     text-align: center;
-    width: 12%;
-    height: 32%;
     padding-bottom: 8px;
-    margin-left: 7%;
+    margin-left: 18%;
     margin-top: 10px;
+    text-decoration: none;
+    color:black;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 90px;
+    height: 90px;
+
 }
-.section:nth-child(8){
-    margin-left: 45.4%;
-    width: 12%;
-    height: 24%;
-    padding-top: 8%;
-}
+
+/*------------ Add button ------------*/
 
 .section:hover{
     background-color: aquamarine;
-}
-
-.section a:hover{
     font-weight: bold;
 }
+
+.optionPieces a{
+    text-decoration: none;
+}
+
+.addButton{
+    padding-top: 35%;
+    padding-left: 3%;
+}
+
 
 
