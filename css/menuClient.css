@@ -12,6 +12,7 @@
     color:white;
     border-bottom: 1px solid black ;
     font-size: x-large;
+    padding: 18px;
 }
 
 .lienAlarme, .lienCapteurs, .lienPieces{
@@ -19,6 +20,7 @@
     color:black;
     border-bottom: 1px solid black ;
     margin-top: 10px;
+    padding: 10px;
 }
 
 .lienAlarme:hover, .lienCapteurs:hover, .lienPieces:hover{
