@@ -41,7 +41,7 @@ header{
   border-radius: 10px;
   background-color: rgb(0,184,169);
   text-decoration: none;
-  margin-top: 20%;
+  /*margin-top: 20%;*/
   margin-right: 20%;
   padding-top: 20%;
   padding-left: 5%;
@@ -68,7 +68,7 @@ header{
   border-right: 1px solid black;
   padding: 7%;
   padding-top: 20%;
-  margin-top: 25%;
+  /*margin-top: 25%;*/
 }
 
 .txtHeader2
@@ -76,14 +76,14 @@ header{
   border-right: 1px solid black;
   padding: 7%;
   padding-top: 20%;
-  margin-top: 25%;
+  /*margin-top: 25%;*/
 }
 
 .txtHeader3
 {
   padding: 7%;
   padding-top: 20%;
-  margin-top: 25%;
+  /*margin-top: 25%;*/
   border-right: 1px solid black;
 }
 
