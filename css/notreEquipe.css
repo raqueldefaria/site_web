@@ -37,3 +37,33 @@ flex-direction: space-between;
   border: 3px solid blue;
   border-radius: 5px;
 }
+
+figcaption
+{
+	font-size: 1.2em;
+	text-align: center;
+}
+
+figcaption:hover
+{
+
+	font-weight: bold;
+}
+
+.image
+{
+	display: block;
+	text-align: center;
+    margin-left: 36.75%;
+    margin-right: 36.75%;
+    padding: 5px 50px 15px 50px;
+	background-color: #00B8A9;
+	border: 2px teal solid;
+	border-radius: 10%;
+}
+
+#img
+{
+
+	border-radius: 20%;
+}
