@@ -14,6 +14,7 @@ html, body {
 }
 body {
     min-height: 100%;
-    margin-top:6%;
-
+    background-image: url("../images/background/image_accueil_opaque.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
