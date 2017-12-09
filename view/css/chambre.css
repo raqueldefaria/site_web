@@ -1,0 +1,38 @@
+/*------------ General ------------*/
+
+body{
+    margin-top:10%;
+}
+
+/*------------ Title of the section ------------*/
+
+.sectionPieces{
+    display:flex;
+    justify-content: space-between;
+    background-color: dimgray;
+    color: white;
+}
+
+.motPiece{
+    font-size: x-large;
+    padding-left: 5%;
+}
+.questions{
+    padding-top: 45%;
+    padding-right: 30%;
+}
+
+.section{
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-left: 18%;
+    margin-top: 10px;
+    text-decoration: none;
+    color:black;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 90px;
+    height: 90px;
+
+}
