@@ -1,4 +1,4 @@
-#corps{
+.corps{
     /* Pour éviter la superposition du pied de page et du contenu : */
     padding-bottom: 50px;
     display: flex;
@@ -46,17 +46,16 @@ form{
     padding-top: 9px;
 }
 
-#boutonSeConnecter2{
+.boutton{
     color: white;
     border-radius: 10px;
-    padding-top: 24px;
     padding: 10px;
     background-color: rgb(0,184,169);
     text-decoration: none;
     margin-left: 5%;
 }
 
-#boutonSeConnecter2:hover{
+.boutton:hover{
     background-color: rgb(0,136,125);
 }
 

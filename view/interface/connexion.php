@@ -26,7 +26,7 @@
 
 
 
-    <div id="corps">
+    <div class="corps">
 
       <form method="post" action="traitement.php">
         <p>
@@ -37,7 +37,7 @@
 
           <div id="box">
             <label for="souvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
-            <a href="https://www.facebook.com" id="boutonSeConnecter2"> Se connecter </a>
+            <a href="https://www.facebook.com" class="boutton"> Se connecter </a>
           </div>
           <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a>
         </p>
