@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="Inscription added">
+    <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/view/css/connexion.css" afterPath="$PROJECT_DIR$/view/css/connexion.css" />
-      <change beforePath="$PROJECT_DIR$/view/interface/connexion.php" afterPath="$PROJECT_DIR$/view/interface/connexion.php" />
-      <change beforePath="$PROJECT_DIR$/view/interface/footer.php" afterPath="$PROJECT_DIR$/view/interface/footer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,28 +48,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="traitement_inscription.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="traitement_inscription.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1178">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="434">
+              <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               <folding>
-                <marker date="1512847144976" expanded="true" signature="309:319" ph="INSERT INTO utilisateur... " />
-                <marker date="1512847144976" expanded="true" signature="309:513" ph="INSERT INTO utilisateur... " />
-                <marker date="1512847144976" expanded="true" signature="309:515" ph="INSERT INTO utilisateur... " />
-                <marker date="1512847144976" expanded="true" signature="309:545" ph="INSERT INTO $insertUser" />
-                <marker date="1512847144976" expanded="true" signature="309:547" ph="INSERT INTO utilisateur... " />
-                <marker date="1512847144976" expanded="true" signature="696:837" ph="INSERT INTO logement... " />
+                <marker date="1512850503043" expanded="true" signature="309:319" ph="INSERT INTO utilisateur... " />
+                <marker date="1512850503043" expanded="true" signature="309:513" ph="INSERT INTO utilisateur... " />
+                <marker date="1512850503043" expanded="true" signature="309:515" ph="INSERT INTO utilisateur... " />
+                <marker date="1512850503043" expanded="true" signature="309:545" ph="INSERT INTO $insertUser" />
+                <marker date="1512850503043" expanded="true" signature="309:547" ph="INSERT INTO utilisateur... " />
+                <marker date="1512850503043" expanded="true" signature="697:838" ph="INSERT INTO logement... " />
+                <marker date="1512850503043" expanded="true" signature="974:1204" ph="INSERT INTO " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            <state relative-caret-position="775">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,8 +88,8 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+            <state relative-caret-position="279">
+              <caret line="24" column="64" lean-forward="false" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -232,12 +230,20 @@
       <updated>1511702849019</updated>
       <workItem from="1511702850238" duration="61000" />
       <workItem from="1512316652109" duration="1136000" />
-      <workItem from="1512844109900" duration="2662000" />
+      <workItem from="1512844109900" duration="8139000" />
     </task>
+    <task id="LOCAL-00001" summary="Inscription added">
+      <created>1512847297709</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512847297709</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19270000" />
+    <option name="totallyTimeSpent" value="24747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -254,7 +260,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29675674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -530,10 +536,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
+    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        <state relative-caret-position="775">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -545,26 +551,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <marker date="1512847144976" expanded="true" signature="309:319" ph="INSERT INTO utilisateur... " />
-            <marker date="1512847144976" expanded="true" signature="309:513" ph="INSERT INTO utilisateur... " />
-            <marker date="1512847144976" expanded="true" signature="309:515" ph="INSERT INTO utilisateur... " />
-            <marker date="1512847144976" expanded="true" signature="309:545" ph="INSERT INTO $insertUser" />
-            <marker date="1512847144976" expanded="true" signature="309:547" ph="INSERT INTO utilisateur... " />
-            <marker date="1512847144976" expanded="true" signature="696:837" ph="INSERT INTO logement... " />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="24" column="64" lean-forward="false" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
+    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="434">
+          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <marker date="1512850503043" expanded="true" signature="309:319" ph="INSERT INTO utilisateur... " />
+            <marker date="1512850503043" expanded="true" signature="309:513" ph="INSERT INTO utilisateur... " />
+            <marker date="1512850503043" expanded="true" signature="309:515" ph="INSERT INTO utilisateur... " />
+            <marker date="1512850503043" expanded="true" signature="309:545" ph="INSERT INTO $insertUser" />
+            <marker date="1512850503043" expanded="true" signature="309:547" ph="INSERT INTO utilisateur... " />
+            <marker date="1512850503043" expanded="true" signature="697:838" ph="INSERT INTO logement... " />
+            <marker date="1512850503043" expanded="true" signature="974:1204" ph="INSERT INTO " />
+          </folding>
         </state>
       </provider>
     </entry>
