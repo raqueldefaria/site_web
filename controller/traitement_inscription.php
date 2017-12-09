@@ -32,12 +32,12 @@ $insertLogement->execute(array(
   $_POST['pays']
   ));
 
-$bdd->exec('INSERT INTO utilisateur(utilisateur_login, utilisateur_motDePasse, utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance, 	utilisateur_mail)
-VALUES(\'Battlefield 1942\', \'Patrick\', \'PC\', \'hi\', 50, \'r@gmail.com\')');
+//$bdd->exec('INSERT INTO utilisateur(utilisateur_login, utilisateur_motDePasse, utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance, 	utilisateur_mail)
+//VALUES(\'Battlefield 1942\', \'Patrick\', \'PC\', \'hi\', 50, \'r@gmail.com\')');
 
 //header('Location : ../../view/interface/accueil.php')
 
-echo "All right";
+//echo "All right";
 
 echo $_POST['pseudo'];
 echo $_POST['mdp'];
