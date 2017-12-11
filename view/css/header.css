@@ -13,6 +13,17 @@
   opacity: 0.85;
 }
 
+@media screen and (max-width: 800px)
+{
+
+#header
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
 /*------------ Different sections of the header ------------*/
 
 .logo
@@ -28,11 +39,33 @@
   flex: 3;
 }
 
+@media screen and (max-width: 800px)
+{
+
+.menu
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
 .bouttons{
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
   flex: 1;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.bouttons
+{
+	display: flex;
+  flex-direction: column;
+}
+
 }
 
 /*------------ Bouttons ------------*/
@@ -59,7 +92,8 @@
 
 #logoCompanyHeader
 {
-  width: 60%;
+  width: 154px;
+	height: 34px;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 12%;

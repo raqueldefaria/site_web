@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
+
+    <title>DomOnline - Chambre</title>
   </head>
 
   <body>

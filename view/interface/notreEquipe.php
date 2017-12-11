@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="../css/notreEquipe.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <title>DomOnline</title>
+
+        <title>DomOnline - Nous contacter</title>
+
     </head>
 
 

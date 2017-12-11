@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
+
+    <title>DomOnline - Pièces</title>
   </head>
 
   <body>

@@ -9,7 +9,11 @@
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
 
+<<<<<<< HEAD
         <title>DomOnline | Connexion</title>
+=======
+        <title>DomOnline - Connexion</title>
+>>>>>>> 03f51a8b91adc79e9db52691b9cafe7be4589880
 
     </head>
 
