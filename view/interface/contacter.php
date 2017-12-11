@@ -26,9 +26,9 @@
         <p> Envoyez-nous un mail à notre adresse : <a href="mailto:domonline@gmail.com">domonline@gmail.com</a>. <br/> Un membre de notre équipe vous répondera le plus rapidement possible.</p>
 
         <h2>Nous contacter par téléphone</h2>
-        <p>Appelez-nous au 06 66 66 66 66 entre 9h et 20h, ligne vocale ouverte du lundi au samedi. Un membre de notre équipe sera à votre disposition pour répondre à vos questions.</p>
+        <p>Appelez-nous au 06 66 66 66 66 entre 9h et 20h, ligne vocale ouverte du lundi au samedi.<br/> Un membre de notre équipe sera à votre disposition pour répondre à vos questions.</p>
       </div>
-      
+
     </div>
 
     <?php include("footer.php"); ?>
