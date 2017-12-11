@@ -7,10 +7,7 @@
         <link rel="stylesheet" href="../css/notreEquipe.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <link rel="stylesheet" href="../css/accueil.css" />
-
-        <title>DomOnline - Nous contacter</title>
-
+        <title>DomOnline</title>
     </head>
 
 
@@ -31,12 +28,11 @@
         <br />
         <br />
         <br />
-        <div id="conteneur2">
+    <div id="conteneur2">
                 <div class="element"><img src="../images/equipe/Linda.png"><p> Linda Deghdegh </p></div>
                 <div class="element"><img src="../images/equipe/BG.png"><p>   Rémy Touret </p></div>
                 <div class="element"><img src="../images/equipe/Damien.png"><p> Damien Deredec </p></div>
-        </div>
-
+</div>
 
 
     <?php include("footer.php"); ?>
