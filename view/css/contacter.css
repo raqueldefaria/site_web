@@ -1,10 +1,11 @@
 #corps
 {
     /* Pour éviter la superposition du pied de page et du contenu : */
-    padding-bottom: 50px;
+    padding: 50px 0px 50px 0px;
     height: 90%;
     width:95%;
     margin:auto;
+
 }
 
 html, body
