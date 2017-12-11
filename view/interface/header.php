@@ -5,9 +5,9 @@
                 </div>
 
                 <nav class="menu">
-                  <a href="https://www.facebook.com" class="txtHeader1"> Notre equipe </a>
+                  <a href="notreEquipe.php" class="txtHeader1"> Notre equipe </a>
                   <a href="https://www.facebook.com" class="txtHeader2"> Nos offres </a>
-                  <a href="https://www.facebook.com" class="txtHeader3"> Nous contacter </a>
+                  <a href="contacter.php" class="txtHeader3"> Nous contacter </a>
                 </nav>
 
                 <div class="bouttons">
