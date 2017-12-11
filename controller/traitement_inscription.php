@@ -13,17 +13,18 @@ catch(Exception $e){
 
 
 // login present dans la base de donnees
-$loginDansBD = $bdd->query('SELECT login FROM utilisateurs')
+$loginDansBD = $bdd->query('SELECT utilisateur_login FROM utilisateur');
 while($donnees = $loginDansBD->fetch()){
-  if ($donnees == $_POST['pseudo']){
+  echo $donnees['utilisateur_login'];
+  if ($donnees['utilisateur_login'] == $_POST['pseudo']){
     // veillez choisir un autre pseudo
-    echo "Ce pseudo est deja utilise. Veillez choisir un autre pseudo"
+    echo "Ce pseudo est deja utilise. Veillez choisir un autre pseudo";
   }
 }
 
 // mdp correctement tape
 if ($_POST['mdp'] != $_POST['mdp2']){
-  echo "Vous n'avez pas tape le meme mot de passe dans les 2 champs"
+  echo "Vous n'avez pas tape le meme mot de passe dans les 2 champs";
 }
 
 // Hachage du mot de passe
@@ -34,24 +35,31 @@ $pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
 /* ------------------- Adding user to the Database ------------------- */
 
-$insertUser = $bdd->prepare('INSERT INTO utilisateur(utilisateur_login, utilisateur_motDePasse,
-                                                    utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
-                                                    utilisateur_mail)
-                            VALUES(?, ?, ?, ?, ?, ?)');
+try{
+  $insertUser = $bdd->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur_login, utilisateur_motDePasse,
+                                                      utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
+                                                      utilisateur_mail)
+                              VALUES(?,?, ?, ?, ?, ?, ?)');
 
-$insertUser->execute(array(
-	$_POST['pseudo'],
-	$pass_hache,
-	$_POST['prenom'],
-	$_POST['nom'],
-	$_POST['dateNaissance'],
-	$_POST['mail']
-	));
+  $insertUser->execute(array(
+  	$_POST['type'],
+  	$_POST['pseudo'],
+  	$pass_hache,
+  	$_POST['prenom'],
+  	$_POST['nom'],
+  	$_POST['dateNaissance'],
+  	$_POST['mail']
+  	));
 
-$insertUser->closeCursor();
+  $insertUser->closeCursor();
+}
+catch(Exception $e){
+  die('Erreur : '.$e->getMessage());
+}
 
 
-$insertLogement = $bdd->prepare('INSERT INTO Logement(logement_adresse, logement_codePostal, logement_ville, logement_pays)
+
+$insertLogement = $bdd->prepare('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays)
                                 VALUES(?, ?, ?, ?)');
 $insertLogement->execute(array(
   $_POST['adresse'],
