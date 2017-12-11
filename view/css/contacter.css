@@ -3,6 +3,8 @@
     /* Pour éviter la superposition du pied de page et du contenu : */
     padding-bottom: 50px;
     height: 90%;
+    width:95%;
+    margin:auto;
 }
 
 html, body
