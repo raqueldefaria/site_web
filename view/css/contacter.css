@@ -1,7 +1,7 @@
 #corps
 {
     /* Pour éviter la superposition du pied de page et du contenu : */
-    padding: 50px 0px 50px 0px;
+    padding-top:50px;
     height: 90%;
     width:95%;
     margin:auto;
