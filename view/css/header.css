@@ -71,7 +71,7 @@
 /*------------ Bouttons ------------*/
 
 
-#boutonSeConnecter, #boutonidentifier
+#boutonSeConnecter, #boutoninscrire
 {
   color: white;
   border-radius: 10px;
@@ -80,12 +80,12 @@
   padding: 3%;
 }
 
-#boutonSeConnecter:hover, #boutonidentifier:hover
+#boutonSeConnecter:hover, #boutoninscrire:hover
 {
   background-color: rgb(0,136,125);
 }
 
-.identifier, .seConnecter{
+.inscrire, .seConnecter{
   margin-top: 20%;
 }
 
