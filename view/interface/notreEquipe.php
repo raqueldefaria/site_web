@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../css/notreEquipe.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
+        <link rel="stylesheet" href="../css/accueil.css" />
 
         <title>DomOnline - Nous contacter</title>
 
@@ -36,12 +37,6 @@
                 <div class="element"><img src="../images/equipe/Damien.png"><p> Damien Deredec </p></div>
         </div>
 
-        <figure class="image">
-            <a href="../images/equipe/paresseux.png"> <img src="../images/equipe/paresseux.png" id="img" alt="Photo de Benjamin" title="Cliquez pour agrandir" style="width:200px;height:200px" /></a>
-            <br/>
-            <br/>
-            <figcaption> Benjamin Torchut </figcaption>
-        </figure>
 
 
     <?php include("footer.php"); ?>

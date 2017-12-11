@@ -14,14 +14,16 @@
 
   <body>
 
-  <!--------------- Header --------------->
+  <!--*************** Header ***************-->
   <?php include ("header.php")?>
 
+  <!--*************** Corps ***************-->
   <div class="corps">
     <form method="post" action="../../controller/traitement_inscription.php">
         <p>
             <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" /><br />
             <label for="mdp">Mot de passe</label> :  <input type="password" name="mdp" id="mdp" /><br />
+            <label for="mdp2">Retapez votre mot de passe</label> :  <input type="password" name="mdp2" id="mdp2" /><br />
             <label for="prenom">Prenom</label> :  <input type="text" name="prenom" id="prenom" /><br />
             <label for="nom">Nom</label> :  <input type="text" name="nom" id="nom" /><br />
             <label for="dateNaissance">Date de naissance</label> :  <input type="date" name="dateNaissance" id="dateNaissance" /><br />
@@ -37,7 +39,7 @@
     </form>
   </div>
 
-  <!--------------- Footer --------------->
+  <!--*************** Footer ***************-->
   <?php include ("footer.php")?>
   </body>
 </html>
