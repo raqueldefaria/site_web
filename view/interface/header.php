@@ -1,7 +1,7 @@
       <header>
               <div id="header">
                 <div class="logo">
-                    <a href="acceuil.php"><img src="../images/logodomonline.png" alt="Logo du site" id="logoCompanyHeader"></a>
+                    <a href="accueil.php"><img src="../images/logodomonline.png" alt="Logo du site" id="logoCompanyHeader"></a>
                 </div>
 
                 <nav class="menu">
