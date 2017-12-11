@@ -16,12 +16,12 @@ body {
     min-height: 100%;
     background-image: url("../images/background/image_accueil_opaque.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 form{
     background-color: #FFF6F5;
-    width: 25%;
+    width: 400px;
     text-align: center;
     border-radius: 10px;
     border: 1.5px solid grey;
