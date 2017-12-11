@@ -1,5 +1,5 @@
 /*------------Header in general ------------*/
-header{
+#header{
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid black;
@@ -11,6 +11,17 @@ header{
   left: 0;
   right: 0;
   opacity: 0.85;
+}
+
+@media screen and (max-width: 800px)
+{
+
+#header
+{
+	display: flex;
+  flex-direction: column;
+}
+
 }
 
 /*------------ Different sections of the header ------------*/
@@ -25,39 +36,67 @@ header{
   display: flex;
   justify-content: center;
   text-align: center;
-  flex: 2;
+  flex: 3;
 }
 
-.seConnecter
+@media screen and (max-width: 800px)
 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+
+.menu
+{
+	display: flex;
+  flex-direction: column;
 }
 
-#boutonSeConnecter
+}
+
+.bouttons{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  flex: 1;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.bouttons
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
+/*------------ Bouttons ------------*/
+
+
+#boutonSeConnecter, #boutonidentifier
 {
   color: white;
   border-radius: 10px;
   background-color: rgb(0,184,169);
   text-decoration: none;
-  /*margin-top: 20%;*/
-  margin-right: 20%;
-  /*padding-top: 20%;*/
-  /*padding-left: 5%;
-  padding-right: 5%;*/
+  padding: 3%;
 }
 
-#boutonSeConnecter:hover
+#boutonSeConnecter:hover, #boutonidentifier:hover
 {
   background-color: rgb(0,136,125);
+}
+
+.identifier, .seConnecter{
+  margin-top: 20%;
 }
 
 
 #logoCompanyHeader
 {
-  width: 40%;
-  /*padding: 12px;*/
+  width: 154px;
+	height: 34px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 12%;
 }
 
 /*------------Text of the menu ------------*/
@@ -66,23 +105,23 @@ header{
 {
   border-left: 1px solid black;
   border-right: 1px solid black;
-  /*padding: 7%;*/
-  /*padding-top: 20%;*/
+  padding: 4%;
+  padding-top: 20%;
   /*margin-top: 25%;*/
 }
 
 .txtHeader2
 {
   border-right: 1px solid black;
-  /*padding: 7%;*/
-  /*padding-top: 20%;*/
+  padding: 4%;
+  padding-top: 20%;
   /*margin-top: 25%;*/
 }
 
 .txtHeader3
 {
-  /*padding: 7%;*/
-  /*padding-top: 20%;*/
+  padding: 4%;
+  padding-top: 20%;
   /*margin-top: 25%;*/
   border-right: 1px solid black;
 }

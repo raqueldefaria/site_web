@@ -4,24 +4,6 @@ body{
     margin-top:10%;
 }
 
-/*------------ Pieces in general ------------*/
-
-.pieces{
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    width: 60%;
-    margin-left: 39%;
-    margin-top: -17.7%;
-    border : 1px solid black;
-    padding-bottom: 2%;
-}
-
-.optionPieces{
-    display:flex;
-    align-content:space-around;
-    flex-wrap: wrap;
-}
 /*------------ Title of the section ------------*/
 
 .sectionPieces{
@@ -54,22 +36,3 @@ body{
     height: 90px;
 
 }
-
-/*------------ Add button ------------*/
-
-.section:hover{
-    background-color: aquamarine;
-    font-weight: bold;
-}
-
-.optionPieces a{
-    text-decoration: none;
-}
-
-.addButton{
-    padding-top: 35%;
-    padding-left: 3%;
-}
-
-
-
