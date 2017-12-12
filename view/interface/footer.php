@@ -10,7 +10,6 @@
               </div>
 
               <div class="copyright">
-                  <br />
                   <a href="https://www.domonline.fr"> <img src="../images/logodomonline.png" class="logoCompanyFooter"> </a>
                   <!--<img src="../images/logodomonline.png" alt="Logo du site" id="logoCompanyFooter">-->
                   <p id="txtFooter"> Copyright 2017 DomOnline, All Rights Reserved </p>

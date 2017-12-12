@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
 
-        <title>Mon super site</title>
+        <title>DomOnline - Connexion</title>
 
     </head>
 
@@ -17,27 +17,20 @@
 
     <body>
 
+      <!--*************** Header ***************-->
+      <?php include("header.php"); ?>
 
-    <?php include("header.php"); ?>
+    <!--*************** Le corps ***************-->
+    <div class="corps">
 
-
-
-    <!-- Le corps -->
-
-
-
-    <div id="corps">
-
-      <form method="post" action="traitement.php">
+      <form method="post" action="../../controller/traitement_connexion.php">
         <p>
           <input type="text" name="pseudo" id="identifiant" placeholder="  Identifiant" size="30" maxlength="20" /> <br />
-
           <br />
-          <input type="text" name="pseudo" id="mdp" placeholder="  Mot de passe" size="30" maxlength="20" /><br />
-
+          <input type="text" name="mdp" id="mdp" placeholder="  Mot de passe" size="30" maxlength="20" /><br />
           <div id="box">
             <label for="souvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
-            <a href="https://www.facebook.com" id="boutonSeConnecter2"> Se connecter </a>
+            <input type="submit" value="Se connecter" class="boutton" />
           </div>
           <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a>
         </p>
@@ -47,10 +40,7 @@
 
 
 
-    <!-- Le pied de page -->
-
-
-
+    <!--*************** Footer ***************-->
     <?php include("footer.php"); ?>
 
 
