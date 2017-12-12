@@ -23,7 +23,12 @@
         <p>
             <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" /><br />
             <label for="mdp">Mot de passe</label> :  <input type="password" name="mdp" id="mdp" /><br />
-            <label for="mdp2">Retapez votre mot de passe</label> :  <input type="password" name="mdp2" id="mdp2" /><br />
+            <label for="mdp2">Confirmez votre mot de passe</label> :  <input type="password" name="mdp2" id="mdp" /><br />
+            <label for="type">Type d'utilisateur</label> : <select name="type" id="type">
+              <option value="particulier">Particulier</option>
+              <option value="gestionnaire">Gestionnaire</option>
+              <option value="administrateur">Administrateur</option>
+            </select><br />
             <label for="prenom">Prenom</label> :  <input type="text" name="prenom" id="prenom" /><br />
             <label for="nom">Nom</label> :  <input type="text" name="nom" id="nom" /><br />
             <label for="dateNaissance">Date de naissance</label> :  <input type="date" name="dateNaissance" id="dateNaissance" /><br />

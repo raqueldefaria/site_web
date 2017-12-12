@@ -1,3 +1,10 @@
 form{
   margin-top: 6%;
 }
+
+input, select{
+  color: grey;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
