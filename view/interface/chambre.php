@@ -28,13 +28,39 @@
           <a href="#"><img src="../images/client/question.png" class="questions"></a>
       </div>
 
-      <div>
-
+      <div class="optionPieces">
+        <a href="#">
+          <div class="section">
+            <p>Lumière </p>
+            <img src="../images/lumière.png"/>
+          </div>
+        </a>
+        <a href="#">
+          <div class="section">
+            <p>Volets</p>
+            <img src="../images/volets.png"/>
+          </div>
+        </a>
+        <a href="#">
+          <div class="section">
+            <p>Température</p>
+            <img src="../images/température.png"/>
+          </div>
+        </a>
+        <a href="#">
+          <div class="section">
+            <p>Humidité</p>
+            <img src="../images/humidité.png"/>
+          </div>
+        </a>
       </div>
   </div>
 
 
+
   <!--------------- Footer --------------->
   <?php include ("footer.php")?>
+
+
   </body>
 </html>
