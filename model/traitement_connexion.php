@@ -2,7 +2,7 @@
 
 /* ------------------- BDD ------------------- */
 try{
-  $bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', '');
+  $bdd = new PDO('mysql:host=localhost;dbname=site_web;charset=utf8', 'root', '');
 }
 catch(Exception $e){
   die('Erreur : '.$e->getMessage());
@@ -11,15 +11,15 @@ catch(Exception $e){
 /* ------------------- Verifications ------------------- */
 
 // Hachage du mot de passe
-//$pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+$pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
 // Vérification des identifiants
 $req = $bdd->prepare('SELECT id_Utilisateur FROM utilisateur
                       WHERE utilisateur_login = :pseudo AND utilisateur_motDePasse = :pass');
 $req->execute(array(
     'pseudo' => htmlspecialchars($_POST['pseudo']),
-    //'pass' => $pass_hache));
-    'pass' => htmlspecialchars($_POST['mdp'])));
+    'pass' => $pass_hache));
+    //'pass' => htmlspecialchars($_POST['mdp'])));
 
 $resultat = $req->fetch();
 
@@ -28,18 +28,19 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+  echo 'Mauvais identifiant ou mot de passe !. Veillez ressayer';
 }
 else
 {
-    session_start();
-    $_SESSION['id'] = $resultat['id_Utilisateur'];
-    $_SESSION['pseudo'] = $_POST['pseudo'];
-    echo 'Vous êtes connecté !';
+  session_start();
+  $_SESSION['id'] = $resultat['id_Utilisateur'];
+  $_SESSION['pseudo'] = $_POST['pseudo'];
+  echo 'Vous êtes connecté !';
+  // rederecting to the house page
+  header("Location: ../view/clientPieces.php");
+  die();
 }
 
-// rederecting to the house page
-header("Location: clientPieces.php");
-die();
+
 
 ?>
