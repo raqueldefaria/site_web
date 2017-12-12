@@ -38,5 +38,8 @@ else
     echo 'Vous êtes connecté !';
 }
 
+// rederecting to the house page
+header("Location: clientPieces.php");
+die();
 
 ?>
