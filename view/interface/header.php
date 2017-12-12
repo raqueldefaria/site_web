@@ -11,8 +11,8 @@
                 </nav>
 
                 <div class="bouttons">
-                  <div class="identifier">
-                      <a href="https://www.facebook.com" id="boutonidentifier"> Identification </a>
+                  <div class="inscrire">
+                      <a href="https://www.facebook.com" id="boutoninscrire"> Inscription </a>
                   </div>
                   <div class="seConnecter">
                       <a href="https://www.facebook.com" id="boutonSeConnecter"> Connexion </a>
