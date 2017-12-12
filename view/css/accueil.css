@@ -7,12 +7,7 @@
     height: 90%;
 }
 
-/*
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}*/
+
 body {
     min-height: 100%;
     background-image: url("../images/background/image_accueil_opaque.jpg");
@@ -20,142 +15,6 @@ body {
     background-size: cover;
 }
 
-#corps
-{
-  width: 80%;
-  margin: auto;
-}
-
-@media all and (max-width: 1024px)
-{
-  #bloc_page
-  {
-    width: auto;
-  }
-}
-
-
-header h1
-{
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 10px;
-}
-
-header h2
-{
-    font-size: 1.1em;
-    margin-top: 0px;
-    font-weight: normal;
-}
-
-
-
-/* Corps */
-
-section
-{
-    display: flex;
-    margin-top: 1%;
-    margin-bottom: 20px;
-}
-
-article, aside
-{
-    text-align: justify;
-}
-
-#articles
-{
-    display: flex;
-    flex-direction: column;
-}
-
-article
-{
-    width: 900px;
-    margin-right: 20px;
-    background-color: rgba(255,255,255,0.5);
-    box-shadow: 0px 2px 5px #1c1a19;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.5em;
-}
-
-article p
-{
-    font-size: 0.8em;
-}
-
-aside
-{
-    position: relative;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 0px 2px 5px #1c1a19;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1.5em;
-}
-
-aside h1
-{
-  text-align: center;
-}
-
-#logo_domonline
-{
-    text-align: center;
-}
-
-#logo_domonline img
-{
-    width: 15%;
-    height: 15%;
-}
-
-aside img
-{
-    margin-right: 3px;
-}
-
-section:nth-child(1)
-{
-  flex:2;
-}
-
-section:nth-child(2)
-{
-  flex:1;
-}
-
-@media all and (max-width: 1024px)
-{
-    section
-    {
-        flex-direction: column;
-    }
-
-    article, aside
-    {
-        width: auto;
-        margin-bottom: 15px;
-    }
-
-    #logo_domonline img
-    {
-        width: 110px;
-        float: right;
-        margin-left: 15px;
-    }
-
-    aside p:last-child
-    {
-        text-align: center;
-    }
-}
-
-
-/*
 #news
 {
   margin:10px;
@@ -165,4 +24,3 @@ section:nth-child(2)
   border-radius: 10px;
   max-width: 90%;
 }
-*/
