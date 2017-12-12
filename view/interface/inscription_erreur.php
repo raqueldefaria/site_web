@@ -38,6 +38,9 @@
             <label for="ville">Ville</label> :  <input type="text" name="ville" id="ville" /><br />
             <label for="pays">Pays</label> :  <input type="text" name="pays" id="pays" /><br />
             <input type="submit" value="Envoyer" class="boutton" />
+            <?php
+              $contenu = "<h2>Erreur dans le formulaire de connexion</h2>".$text;
+            ?>
         </p>
 
 

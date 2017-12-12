@@ -1,12 +1,7 @@
 <?php
 
 /* ------------------- BDD ------------------- */
-try{
-  $bdd = new PDO('mysql:host=localhost;dbname=site_web;charset=utf8', 'root', '');
-}
-catch(Exception $e){
-  die('Erreur : '.$e->getMessage());
-}
+require("connexion_db.php")
 
 /* ------------------- Verifications ------------------- */
 
@@ -33,7 +28,7 @@ if (!$resultat)
 else
 {
   session_start();
-  $_SESSION['id'] = $resultat['id_Utilisateur'];
+  $_SESSION['userID'] = $resultat['id_Utilisateur'];
   $_SESSION['pseudo'] = $_POST['pseudo'];
   echo 'Vous êtes connecté !';
   // rederecting to the house page

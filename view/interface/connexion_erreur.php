@@ -23,7 +23,7 @@
     <!--*************** Le corps ***************-->
     <div class="corps">
 
-      <form method="post" action="../../controller/connexion.php">
+      <form method="post" action="../../model/traitement_connexion.php">
         <p>
           <input type="text" name="pseudo" id="identifiant" placeholder="  Identifiant" size="30" maxlength="20" /> <br />
           <br />
@@ -33,6 +33,9 @@
             <input type="submit" value="Se connecter" class="boutton" />
           </div>
           <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a>
+          <?php
+            $contenu = "<h2>Erreur dans le formulaire de connexion</h2>".$erreur;
+          ?>
         </p>
       </form>
 
