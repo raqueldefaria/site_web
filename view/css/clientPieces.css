@@ -61,6 +61,8 @@ body{
     background-color: aquamarine;
     font-weight: bold;
 }
+<<<<<<< HEAD:css/clientPieces.css
+=======
 
 .optionPieces a{
     text-decoration: none;
@@ -70,3 +72,4 @@ body{
     padding-top: 35%;
     padding-left: 3%;
 }
+>>>>>>> 7d995c42de50acad7aa6cbf810fa1573c8034899:view/css/clientPieces.css
