@@ -45,9 +45,6 @@
                     <aside>
                         <h1> A propos de DomOnline </h1>
 
-
-                        <p id="logo_domonline"> <img src="../images/logodomonline.png" alt="Logo DomOnline"/> </p>
-
                         <p>Laisse-moi le temps de me présenter: je m'appelle Zozor, je suis né un 23 novembre 2005.</p>
 
                         <p>Bien maigre, n'est-ce pas ? C'est pourquoi, aujourd'hui, j'ai décidé d'écrire ma biographie afin que vous sachiez qui je suis réellement.</p>

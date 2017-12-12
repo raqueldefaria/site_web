@@ -118,6 +118,16 @@ aside img
     margin-right: 3px;
 }
 
+section:nth-child(1)
+{
+  flex:2;
+}
+
+section:nth-child(2)
+{
+  flex:1;
+}
+
 @media all and (max-width: 1024px)
 {
     section
