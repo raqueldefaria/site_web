@@ -77,6 +77,9 @@ if (!$erreur){
 
   $insertLogement->closeCursor();
 }
+else{
+  
+}
 
 // rederecting to the profile settings
 header("Location: profil.php");
