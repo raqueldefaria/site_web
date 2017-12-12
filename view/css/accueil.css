@@ -20,18 +20,6 @@ body {
     background-size: cover;
 }
 
-body
-{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    background-image: url("image_accueil_opaque.jpg");
-    background-repeat: no-repeat center fixed;
-    background-size: cover;
-}
-
-
-
 #corps
 {
   width: 80%;
@@ -45,14 +33,6 @@ body
     width: auto;
   }
 }
-
-section h1, footer h1, nav a
-{
-  font-family: Dayrom, serif;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-
 
 
 header h1
@@ -100,12 +80,6 @@ article
     border-radius: 5px;
     padding: 10px;
     font-size: 1.5em;
-}
-
-.ico_categorie
-{
-    vertical-align: middle;
-    margin-right: 8px;
 }
 
 article p
