@@ -17,8 +17,14 @@ $erreur = true; //initialising value
 $loginDansBD = $bdd->query('SELECT utilisateur_login FROM utilisateur');
 while($donnees = $loginDansBD->fetch()){
   echo $donnees['utilisateur_login'];
-  if ($donnees['utilisateur_login'] == $_POST['pseudo'] || $donnees['utilisateur_mail'] == $_POST['mail'] ){
+  if ($donnees['utilisateur_login'] == $_POST['pseudo'] ){
     echo "Ce pseudo est deja utilise. Veillez choisir un autre pseudo";
+  }
+  elseif ($donnees['utilisateur_mail'] == $_POST['mail']) {
+    echo "Cet adresse mail est deja utilisee. Veillez choisir une autre adresse mail";
+  }
+  elseif ($donnees['utilisateur_mail'] == $_POST['mail'] && $donnees['utilisateur_login'] == $_POST['pseudo']) {
+    echo "Ce pseudo et cet adresse mail sont deja utilises. Etes-vous sur que vous ne vous etes pas deja inscrit ?";
   }
   else {
     $erreur = false;
@@ -43,7 +49,7 @@ $pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
 if (!$erreur){
   $insertUser = $bdd->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur_login, utilisateur_motDePasse,
-                                                        utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
+                                                       utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
                                                         utilisateur_mail)
                                 VALUES(?,?, ?, ?, ?, ?, ?)');
 
