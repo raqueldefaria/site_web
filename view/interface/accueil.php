@@ -27,7 +27,7 @@
         </div>
 
         <div id="about_domonline">
-
+          <h2>A propos de DomOnline</h2>
 
         </div>
 
