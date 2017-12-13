@@ -18,13 +18,13 @@ $loginDansBD = $bdd->query('SELECT utilisateur_login FROM utilisateur');
 while($donnees = $loginDansBD->fetch()){
   echo $donnees['utilisateur_login'];
   if ($donnees['utilisateur_login'] == $_POST['pseudo'] ){
-    echo "Ce pseudo est deja utilise. Veillez choisir un autre pseudo";
+    echo "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo.";
   }
   elseif ($donnees['utilisateur_mail'] == $_POST['mail']) {
-    echo "Cet adresse mail est deja utilisee. Veillez choisir une autre adresse mail";
+    echo "Cet adresse mail est déjà utilisée. Veuillez choisir une autre adresse mail.";
   }
   elseif ($donnees['utilisateur_mail'] == $_POST['mail'] && $donnees['utilisateur_login'] == $_POST['pseudo']) {
-    echo "Ce pseudo et cet adresse mail sont deja utilises. Etes-vous sur que vous ne vous etes pas deja inscrit ?";
+    echo "Ce pseudo et cet adresse mail sont déjà utilisés. Etes-vous sûr que vous ne vous êtes pas déjà inscrit ?";
   }
   else {
     $erreur = false;
@@ -33,7 +33,7 @@ while($donnees = $loginDansBD->fetch()){
 
 // mdp correctement tape
 if ($_POST['mdp'] != $_POST['mdp2']){
-  echo "Vous n'avez pas tape le meme mot de passe dans les 2 champs";
+  echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
 }
 else{
   $erreur = false;
@@ -78,7 +78,7 @@ if (!$erreur){
   $insertLogement->closeCursor();
 }
 else{
-  
+
 }
 
 // rederecting to the profile settings
