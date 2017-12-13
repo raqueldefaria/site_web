@@ -14,15 +14,15 @@ while($donnees = $loginDansBD->fetch()){
 
     //echo $donnees['utilisateur_login'];
     if ($donnees['utilisateur_mail'] == $_POST['mail'] && $donnees['utilisateur_login'] == $_POST['pseudo']){
-        $text = "Ce pseudo et cet adresse mail sont deja utilises. Etes-vous sur que vous ne vous etes pas deja inscrit ?";
+        $text = "Ce pseudo et cet adresse mail sont deja utilisés. Êtes-vous sûr que vous ne vous êtes pas déjà inscrit ?";
         include("../view/interface/inscription_erreur.php");
     }
     elseif ($donnees['utilisateur_mail'] == $_POST['mail']) {
-        $text = "Cet adresse mail est deja utilisee. Veillez choisir une autre adresse mail";
+        $text = "Cet adresse mail est deja utilisée. Veuillez choisir une autre adresse mail";
         include("../view/interface/inscription_erreur.php");
     }
     elseif ($donnees['utilisateur_login'] == $_POST['pseudo'] )   {
-        $text = "Ce pseudo est deja utilise. Veillez choisir un autre pseudo";
+        $text = "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo";
         include("../view/interface/inscription_erreur.php");
     }
     else {
@@ -37,7 +37,7 @@ while($donnees = $loginDansBD->fetch()){
     echo "Cet adresse mail est déjà utilisée. Veuillez choisir une autre adresse mail.";
   }
   elseif ($donnees['utilisateur_mail'] == $_POST['mail'] && $donnees['utilisateur_login'] == $_POST['pseudo']) {
-    echo "Ce pseudo et cet adresse mail sont déjà utilisés. Etes-vous sûr que vous ne vous êtes pas déjà inscrit ?";
+    echo "Ce pseudo et cet adresse mail sont déjà utilisés. Êtes-vous sûr que vous ne vous êtes pas déjà inscrit ?";
   }
   else {
     $erreur = false;
@@ -48,7 +48,7 @@ while($donnees = $loginDansBD->fetch()){
 // mdp correctement tape
 if ($_POST['mdp'] != $_POST['mdp2']){
 
-    $text = "Vous n'avez pas tape le meme mot de passe dans les 2 champs";
+    $text = "Vous n'avez pas tape le meme mot de passe dans les 2 champs.";
     include("../view/interface/inscription_erreur.php");
 
   echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
