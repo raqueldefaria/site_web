@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/accueil.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <title>DomOnline - Accueil </title>
+        <title> DomOnline - Accueil </title>
     </head>
 
 

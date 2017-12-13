@@ -5,13 +5,13 @@
         <link rel="stylesheet" href="nosOffres.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <title> nos Offres </title>
+        <title> Nos offres </title>
     </head>
 
     <body>
         <div id="corps">
 
-            <!--   Header   -->
+            <!--     Header     -->
             <?php include ("header.php")?>
 
 
@@ -41,7 +41,7 @@
                 <img src="">
             </div>
 
-            <!--  Footer   -->
+            <!--    Footer    -->
             <?php include("footer.php"); ?>
 
 
