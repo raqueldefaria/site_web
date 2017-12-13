@@ -20,15 +20,15 @@
                 <h2> Kit Starter Pack </h2>
 
                 <div class="Starter">
-                    <img src="">
+                    <img src="" alt="">
 
                 </div>
 
 
                 <h2> Les Kit performant </h2>
                 <div class="performant">
-                    <img src="">
-                    <img src="">
+                    <img src="" alt="">
+                    <img src="" alt="">
 
                 </div>
 
@@ -37,8 +37,8 @@
 
                 <h2> Les meilleurs Kit </h2>
                 <div class="meilleurs">
-                    <img src="">
-                    <img src="">
+                    <img src="" alt="">
+                    <img src="" alt="">
                 </div>
 
             </div>
