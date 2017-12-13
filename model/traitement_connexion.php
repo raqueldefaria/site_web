@@ -28,7 +28,7 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-  echo 'Mauvais identifiant ou mot de passe !. Veuillez réessayer';
+  echo 'Mauvais identifiant ou mot de passe ! Veuillez réessayer.';
 }
 else
 {
