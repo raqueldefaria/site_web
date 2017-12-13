@@ -56,3 +56,10 @@ body {
   border-radius: 10px;
   width: 30%;
 }
+
+div h2
+{
+  text-align: center;
+  background-color: black;
+  color:white;
+}

@@ -22,10 +22,10 @@
       <div id="paragraphe">
         <p>Des questions sur notre application ? <br />Vous avez un soucis dans votre installation ?<br /> Le matériel est tombé en panne ?<br /> Nous sommes là <span class="bold">pour vous aider</span>.</p>
 
-        <h2>Nous contacter par mail</h2>
+        <h2><img src="../images/icone_mail.png" alt"" /> - Nous contacter par mail</h2>
         <p> Envoyez-nous un mail à notre adresse : <a href="mailto:domonline@gmail.com">domonline@gmail.com</a>. <br/> Un membre de notre équipe vous répondera le plus rapidement possible.</p>
 
-        <h2>Nous contacter par téléphone</h2>
+        <h2><img src="../images/logo_telephone.png" alt"" /> - Nous contacter par téléphone</h2>
         <p>Appelez-nous au 06 66 66 66 66 entre 9h et 20h, ligne vocale ouverte du lundi au samedi.<br/> Un membre de notre équipe sera à votre disposition pour répondre à vos questions.</p>
       </div>
 
