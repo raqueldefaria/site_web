@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="nosOffres.css" />
+        <link rel="stylesheet" href="../css/nosOffres.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
         <title>DomOnline - Nos offres</title>
@@ -14,33 +14,34 @@
             <!--     Header     -->
             <?php include ("header.php")?>
 
+            <div id="main_block">
+                <h1> Les differents types de pack </h1>
 
-            <h1> Les differents types de pack </h1>
+                <h2> Kit Starter Pack </h2>
 
-            <h2> Kit Starter Pack </h2>
+                <div class="Starter">
+                    <img src="">
 
-            <div class="Starter">
-                <img src="">
+                </div>
+
+
+                <h2> Les Kit performant </h2>
+                <div class="performant">
+                    <img src="">
+                    <img src="">
+
+                </div>
+
+
+
+
+                <h2> Les meilleurs Kit </h2>
+                <div class="meilleurs">
+                    <img src="">
+                    <img src="">
+                </div>
 
             </div>
-
-
-            <h2> Les Kit performant </h2>
-            <div class="performant">
-                <img src="">
-                <img src="">
-
-            </div>
-
-
-
-
-            <h2> Les meilleurs Kit </h2>
-            <div class="meilleurs">
-                <img src="">
-                <img src="">
-            </div>
-
             <!--    Footer    -->
             <?php include("footer.php"); ?>
 
