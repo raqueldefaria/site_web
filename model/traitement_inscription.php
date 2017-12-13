@@ -11,7 +11,7 @@ $erreur = true; //initialising value
 // login present dans la base de donnees
 $loginDansBD = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur');
 while($donnees = $loginDansBD->fetch()){
-<<<<<<< HEAD
+
     //echo $donnees['utilisateur_login'];
     if ($donnees['utilisateur_mail'] == $_POST['mail'] && $donnees['utilisateur_login'] == $_POST['pseudo']){
         $text = "Ce pseudo et cet adresse mail sont deja utilises. Etes-vous sur que vous ne vous etes pas deja inscrit ?";
@@ -28,7 +28,7 @@ while($donnees = $loginDansBD->fetch()){
     else {
         $erreur = false;
     }
-=======
+
   echo $donnees['utilisateur_login'];
   if ($donnees['utilisateur_login'] == $_POST['pseudo'] ){
     echo "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo.";
@@ -42,17 +42,17 @@ while($donnees = $loginDansBD->fetch()){
   else {
     $erreur = false;
   }
->>>>>>> 6add260783e4d9dae0721a5fe56e33b450e11ad3
+
 }
 
 // mdp correctement tape
 if ($_POST['mdp'] != $_POST['mdp2']){
-<<<<<<< HEAD
+
     $text = "Vous n'avez pas tape le meme mot de passe dans les 2 champs";
     include("../view/interface/inscription_erreur.php");
-=======
+
   echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
->>>>>>> 6add260783e4d9dae0721a5fe56e33b450e11ad3
+
 }
 else{
     $erreur = false;
@@ -104,6 +104,10 @@ else{
 //header("Location: ../view/interface/clientPieces.php");
 //die();
 
-
+/*
+<<<<<<< HEAD
+=======
+>>>>>>> 6add260783e4d9dae0721a5fe56e33b450e11ad3
+*/
 
 ?>
