@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="nosOffres.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <title> Nos offres </title>
+        <title>DomOnline - Nos offres</title>
     </head>
 
     <body>
