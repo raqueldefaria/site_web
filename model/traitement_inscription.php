@@ -18,17 +18,18 @@ while($donnees = $loginDansBD->fetch()){
         include("../view/interface/inscription_erreur.php");
     }
     elseif ($donnees['utilisateur_mail'] == $_POST['mail']) {
-        $text = "Cet adresse mail est deja utilisée. Veuillez choisir une autre adresse mail";
+        $text = "Cet adresse mail est deja utilisée. Veuillez choisir une autre adresse mail.";
         include("../view/interface/inscription_erreur.php");
     }
     elseif ($donnees['utilisateur_login'] == $_POST['pseudo'] )   {
-        $text = "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo";
+        $text = "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo.";
         include("../view/interface/inscription_erreur.php");
     }
     else {
         $erreur = false;
     }
 
+/*
   echo $donnees['utilisateur_login'];
   if ($donnees['utilisateur_login'] == $_POST['pseudo'] ){
     echo "Ce pseudo est deja utilisé. Veuillez choisir un autre pseudo.";
@@ -44,6 +45,7 @@ while($donnees = $loginDansBD->fetch()){
   }
 
 }
+*/
 
 // mdp correctement tape
 if ($_POST['mdp'] != $_POST['mdp2']){
