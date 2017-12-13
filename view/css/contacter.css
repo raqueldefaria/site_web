@@ -1,11 +1,10 @@
 #corps
 {
     /* Pour éviter la superposition du pied de page et du contenu : */
-    padding-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90%;
-    width:95%;
-    margin:auto;
-
 }
 
 html, body
@@ -30,10 +29,16 @@ body
   background-color: white;
   opacity: 0.8;
   border-radius: 10px;
-  max-width: 60%;
+  width: 50%;
 }
 
 .bold
 {
   font-weight: bold;
+}
+
+h2 img
+{
+  width: 35px;
+  height: 35px;
 }

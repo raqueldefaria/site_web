@@ -5,8 +5,10 @@
                 </div>
 
                 <nav class="menu">
-                  <a href="notreEquipe.php" class="txtHeader1"> Notre equipe </a>
-                  <a href="https://www.facebook.com" class="txtHeader2"> Nos offres </a>
+                  
+                  <a href="notreEquipe.php" class="txtHeader1"> Notre équipe </a>
+
+                  <a href="nosOffres.php" class="txtHeader2"> Nos offres </a>
                   <a href="contacter.php" class="txtHeader3"> Nous contacter </a>
                 </nav>
 
@@ -23,3 +25,11 @@
 
 
       </header>
+
+<!--
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 6add260783e4d9dae0721a5fe56e33b450e11ad3
+-->

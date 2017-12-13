@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../css/accueil.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
-        <title>DomOnline - Accueil </title>
+        <title> DomOnline - Accueil </title>
     </head>
 
 
@@ -31,7 +31,7 @@
                 </div>
 
                 <div id="news2">
-                    <h2>Un titre sans antécédent.</h2>
+                    <h2>Un titre sans antécédent</h2>
                     <p>La qualité de ces news ne fait qu'augmenter ! Celui qui remplacera ce texte devra vraiment gérer car je compte sur lui pour que la qualité augmente à nouveau...</p>
                 </div>
 

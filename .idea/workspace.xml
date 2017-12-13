@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e0a9e00-5c89-49e6-9c74-d6b680263956.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/view/css/inscription.css" afterPath="$PROJECT_DIR$/view/css/inscription.css" />
+      <change beforePath="$PROJECT_DIR$/model/connexion_bdd.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/model/traitement_connexion.php" afterPath="$PROJECT_DIR$/model/traitement_connexion.php" />
+      <change beforePath="$PROJECT_DIR$/model/traitement_inscription.php" afterPath="$PROJECT_DIR$/model/traitement_inscription.php" />
+      <change beforePath="$PROJECT_DIR$/view/interface/connexion.php" afterPath="$PROJECT_DIR$/view/interface/connexion.php" />
       <change beforePath="$PROJECT_DIR$/view/interface/inscription.php" afterPath="$PROJECT_DIR$/view/interface/inscription.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,60 +31,30 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="mydb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mydb: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="utilisateur: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="traitement_inscription.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-              <folding>
-                <marker date="1513005862516" expanded="true" signature="336:377" ph="SELECT utili... utilisateur" />
-                <marker date="1513005862516" expanded="true" signature="976:1308" ph="INSERT INTO utilisateur... " />
-                <marker date="1513005862516" expanded="true" signature="1620:1761" ph="INSERT INTO logement... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateur" pinned="false" current-in-tab="false">
-        <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -86,9 +62,42 @@
       <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+            <state relative-caret-position="0">
+              <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traitement_inscription.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/traitement_inscription.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1326">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <marker date="1513116201961" expanded="true" signature="255:296" ph="SELECT utili... utilisateur" />
+                <marker date="1513116201961" expanded="true" signature="1352:1689" ph="INSERT INTO utilisateur... " />
+                <marker date="1513116201961" expanded="true" signature="1981:2124" ph="INSERT INTO logement... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilisateur" pinned="false" current-in-tab="false">
+        <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.utilisateur">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -105,6 +114,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>garage</find>
+      <find>value</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,8 +133,10 @@
         <option value="$PROJECT_DIR$/php/clientPieces.php" />
         <option value="$PROJECT_DIR$/css/clientPieces.css" />
         <option value="$PROJECT_DIR$/css/menuClient.css" />
-        <option value="$PROJECT_DIR$/view/interface/inscription.php" />
         <option value="$PROJECT_DIR$/controller/traitement_inscription.php" />
+        <option value="$PROJECT_DIR$/view/interface/connexion.php" />
+        <option value="$PROJECT_DIR$/view/interface/inscription.php" />
+        <option value="$PROJECT_DIR$/model/traitement_inscription.php" />
       </list>
     </option>
   </component>
@@ -171,7 +183,7 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
@@ -230,6 +242,17 @@
       <workItem from="1512316652109" duration="1136000" />
       <workItem from="1512844109900" duration="8139000" />
       <workItem from="1513024757153" duration="713000" />
+      <workItem from="1513105437703" duration="38000" />
+      <workItem from="1513105495117" duration="397000" />
+      <workItem from="1513105912691" duration="90000" />
+      <workItem from="1513106023428" duration="142000" />
+      <workItem from="1513106184939" duration="123000" />
+      <workItem from="1513106327227" duration="212000" />
+      <workItem from="1513106557907" duration="547000" />
+      <workItem from="1513107125425" duration="276000" />
+      <workItem from="1513107888707" duration="1581000" />
+      <workItem from="1513115762280" duration="100000" />
+      <workItem from="1513115879358" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -242,7 +265,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25460000" />
+    <option name="totallyTimeSpent" value="29287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,15 +279,15 @@
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29675674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2172973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2664865" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2664865" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -314,18 +337,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513005862516" expanded="true" signature="336:377" ph="SELECT utili... utilisateur" />
-            <marker date="1513005862516" expanded="true" signature="976:1308" ph="INSERT INTO utilisateur... " />
-            <marker date="1513005862516" expanded="true" signature="1620:1761" ph="INSERT INTO logement... " />
-          </folding>
+        <state relative-caret-position="1054">
+          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur" />
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php" />
+    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur" />
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php" />
     <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -334,13 +389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur" />
     <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="744">
@@ -384,37 +433,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur">
+    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php" />
+    <entry file="das://table:/c0bd3acd/2e0a9e00-5c89-49e6-9c74-d6b680263956/mydb.utilisateur" />
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.logement">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a5f12695-4510-4092-bb06-813837dd7f9b/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/connexion_bdd.php" />
     <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/traitement_inscription.php">
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.utilisateur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/traitement_inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1326">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <marker date="1513005862516" expanded="true" signature="336:377" ph="SELECT utili... utilisateur" />
-            <marker date="1513005862516" expanded="true" signature="976:1308" ph="INSERT INTO utilisateur... " />
-            <marker date="1513005862516" expanded="true" signature="1620:1761" ph="INSERT INTO logement... " />
+            <marker date="1513116201961" expanded="true" signature="255:296" ph="SELECT utili... utilisateur" />
+            <marker date="1513116201961" expanded="true" signature="1352:1689" ph="INSERT INTO utilisateur... " />
+            <marker date="1513116201961" expanded="true" signature="1981:2124" ph="INSERT INTO logement... " />
           </folding>
         </state>
       </provider>
