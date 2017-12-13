@@ -1,0 +1,18 @@
+#corps
+{
+    /* Pour éviter la superposition du pied de page et du contenu : */
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+
+body
+{
+    min-height: 100%;
+    background-image: url("../images/background/image_accueil_opaque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

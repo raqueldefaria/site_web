@@ -33,7 +33,7 @@ body {
   background-color: white;
   opacity: 0.8;
   border-radius: 10px;
-  width:60%;
+  width:90%;
 }
 
 #news2
@@ -43,7 +43,7 @@ body {
   background-color: white;
   opacity: 0.8;
   border-radius: 10px;
-  width:60%;
+  width:90%;
 }
 
 
@@ -55,4 +55,11 @@ body {
   opacity: 0.8;
   border-radius: 10px;
   width: 30%;
+}
+
+div h2
+{
+  text-align: center;
+  background-color: black;
+  color:white;
 }
