@@ -20,21 +20,22 @@
 
         <div id="main_block">
             <h2>Votre profil</h2>
-            <p>
 
+            <p>
+            Pseudo : <!-- [utilisateur_login] --> <br />
+            Mail : <!-- [utilisateur_mail] -->  <br />
             Prénom : <!-- [utilisateur_prenom] -->  <br />
             Nom : <!-- [utilisateur_nom] -->  <br />
             Date de naissance : <!-- [utilisateur_dateDeNaissance] -->  <br />
-            Mail : <!-- [utilisateur_mail] -->  <br />
-
             </p>
+
             <p>
             Pays : <!-- [logement_pays] -->  <br />
             Ville : <!-- [logement_ville] -->  <br />
             Code postal : <!-- [logement_codePostal] -->  <br />
             Adresse : <!-- [logement_adresse] -->  <br />
-
             </p>
+
             <p> <a href="#">Editer votre profil</a> </p>
 
 
