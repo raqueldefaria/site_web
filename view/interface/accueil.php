@@ -29,7 +29,7 @@
                 </div>
 
                 <div id="news2">
-                    <h2> Nous cherchons à repondre au mieux à vos besoins </h2>
+                    <h2> Nous cherchons à répondre au mieux à vos besoins </h2>
                     <p> Les fonctionnalités privilégiées par les utilisateurs sont : </p>
                     <ul type="square">
                       <li> la possibilité d’être informé d’un problème technique dans sa maison </li>
@@ -47,7 +47,7 @@
             </div>
 
             <div id="about_domonline">
-              <h2>A propos de DomOnline</h2>
+              <h2>À propos de DomOnline</h2>
               <p>Spécialisée dans les maisons connectées, DomOnline propose une solution domotique de qualité, vous permettant de piloter votre domicile à n'importe quel moment, depuis n'importe quel endroit.</p>
             </div>
 
