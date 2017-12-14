@@ -53,7 +53,7 @@ $pays = $_POST['pays'];
 $idUser = $db->lastInsertId();
 $insertLogement->execute();
 
-
+header("Location:../view/interface/connexion.php")
 
 
 /* ------------------- Sending email to user -------------------
