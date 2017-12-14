@@ -21,29 +21,30 @@ $insertUser->execute(array(
     $_POST['mail']
 ));
 
-/* ------------------- Adding user to the Database ------------------- */
+$insertUser->closeCursor();
+
+$prenom = $_POST['prenom'];
+$nom = $_POST['nom'];
 
 $idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
-                           WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom);
+                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
+$idUser ->fetch();
+
+echo $idUser;
+
+$adresse = $_POST['adresse'];
+$codePostal = $_POST['codePostal'];
+$ville = $_POST['ville'];
+$pays = $_POST['pays'];
+$id = $idUser;
+
+$db->exec('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
+                    VALUES('.$adresse.', '.$codePostal.', '.$ville.', '.$pays.', '.$id.')') or die(print_r($db->errorInfo()));
 
 
-$insertLogement = $db->prepare('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays, id_Utilisateur )
-                                    VALUES(?, ?, ?, ?, ?)');
 
 
-$insertLogement->execute(array(
-    $_POST['adresse'],
-    $_POST['codePostal'],
-    $_POST['ville'],
-    $_POST['pays'],
-    $idUser['id_Utilisateur']
-));
-
-$insertUser->closeCursor();
-$insertLogement->closeCursor();
-
-
-/* ------------------- Sending email to user ------------------- */
+/* ------------------- Sending email to user -------------------
 $pseudo = $_POST['pseudo'];
 $mail = $_POST['mail'];
 $to = $_POST['mail'];
@@ -51,22 +52,22 @@ $subject = "Inscription a DomOnline";
 
 $message = "
 <html>
-<head>
-<title>Inscription à DomOnline</title>
-</head>
-<body>
-<p>Voici les identifiants de votre compte DomOnline</p>
-<table>
-<tr>
-<th>Pseudo</th>
-<th>Adresse-mail</th>
-</tr>
-<tr>
-<td>$pseudo</td>
-<td>$mail</td>
-</tr>
-</table>
-</body>
+    <head>
+        <title>Inscription à DomOnline</title>
+    </head>
+    <body>
+        <p>Voici les identifiants de votre compte DomOnline</p>
+        <table>
+            <tr>
+                <th>Pseudo</th>
+                <th>Adresse-mail</th>
+            </tr>
+            <tr>
+                <td>$pseudo</td>
+                <td>$mail</td>
+            </tr>
+        </table>
+    </body>
 </html>
 ";
 
@@ -83,5 +84,7 @@ mail($to,$subject,$message,$headers);
 // rederecting to the profile settings
 header("Location: ../view/interface/clientPieces.php");
 die();
+
+*/
 
 ?>

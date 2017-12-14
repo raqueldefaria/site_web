@@ -125,8 +125,6 @@
             </table>
             <input type="submit" value="Envoyer" class="boutton" />
         </p>
-
-
     </form>
   </div>
 
