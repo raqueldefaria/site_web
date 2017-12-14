@@ -21,7 +21,7 @@
   <div class="corps">
     <form method="post" action="../../controller/inscription.php">
         <p>
-          <div class="table">
+          <div class="table" align='center'>
 
             <table>
               <tr>
