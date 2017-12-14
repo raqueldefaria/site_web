@@ -67,3 +67,44 @@ div h1
   width:140px;
   height:auto;
 }
+#demoCatalogueStarterBoite h3{
+  color:white;
+  background-color: red;
+}
+
+#demoCatalogueParType{
+  background-color: grey;
+}
+
+#demoCatalogueTypeCemac{
+  border: 1px solid black;
+  border-radius: 10px;
+  flex:1;
+  margin-right:10px;
+}
+
+#demoCatalogueTypeFumee{
+  border: 1px solid black;
+  border-radius: 10px;
+  flex:1;
+  margin-left:10px;
+}
+#demoCatalogueBoiteCemacFumee{
+  display:flex;
+  justify-content: space-around;
+}
+
+#demoCatalogueBoiteFumee{
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+#demoCatalogueBoiteCemac{
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+#demoCatalogueTypeFumee img{
+  width:140px;
+  height:auto;
+}
