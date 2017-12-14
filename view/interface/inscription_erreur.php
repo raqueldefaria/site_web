@@ -40,6 +40,7 @@
             <input type="submit" value="Envoyer" class="boutton" />
             <?php
               $contenu = "<h2>Erreur dans le formulaire de connexion</h2>".$text;
+              echo $contenu;
             ?>
         </p>
 

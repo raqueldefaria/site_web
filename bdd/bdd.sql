@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `site_web`.`Piece` (
   INDEX `fk_Piece_Logement1_idx` (`Logement_idLogement` ASC, `Logement_Utilisateur_idUtilisateur` ASC),
   CONSTRAINT `fk_Piece_Logement1`
     FOREIGN KEY (`Logement_idLogement` , `Logement_Utilisateur_idUtilisateur`)
-    REFERENCES `site_web`.`Logement` (`id_Logement` , `Utilisateur_idUtilisateur`)
+    REFERENCES `site_web`.`Logement` (`id_Logement` , id_Utilisateur)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
