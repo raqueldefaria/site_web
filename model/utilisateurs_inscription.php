@@ -56,7 +56,6 @@ $insertLogement->execute();
 
 
 
-
 /* ------------------- Sending email to user -------------------
 $pseudo = $_POST['pseudo'];
 $mail = $_POST['mail'];
