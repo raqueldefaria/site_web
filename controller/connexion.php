@@ -12,13 +12,13 @@
             }
             else { // utilisateur trouvé dans la base de données
                 $donnee = $reponse->fetch();
-                if(password_hash($_POST['mdp'],PASSWORD_DEFAULT)!=$donnee['utilisateur_motDePasse']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
+                if($_POST['mdp']!=$donnee['utilisateur_motDePasse']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
                     $erreur = "Mot de passe incorrect";
                     include("../view/interface/connexion_erreur.php");
                 }
                 else { // mot de passe correct, on affiche la page d'accueil
-                    $_SESSION["userID"] = $donnee['id'];
-                    include("../view/interface/clientPieces.php");
+                    $_SESSION["userID"] = $donnee['id_Utilisateur'];
+                    header("Location:../view/interface/clientPieces.php");
                 }
             }
         } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
