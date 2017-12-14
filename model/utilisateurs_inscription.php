@@ -23,20 +23,22 @@ $insertUser->execute(array(
 
 $insertUser->closeCursor();
 
+/* ------------------- Adding logement to the Database ------------------- */
+
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
-$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
-                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
+$idUser = $db->query('SELECT id_Utilisateur  FROM utilisateur
+                      WHERE utilisateur_prenom="Raquel" AND utilisateur_nom="De Faria Cristas"') or die(print_r($db->errorInfo()));
 $idUser ->fetch();
 
-echo $idUser;
+//echo $idUser;
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
 $ville = $_POST['ville'];
 $pays = $_POST['pays'];
-$id = $idUser;
+$id = $idUser['id_Utilisateur'];
 
 $db->exec('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
                     VALUES('.$adresse.', '.$codePostal.', '.$ville.', '.$pays.', '.$id.')') or die(print_r($db->errorInfo()));
