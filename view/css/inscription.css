@@ -2,6 +2,11 @@ form{
   margin-top: 6%;
 }
 
+.table{
+  text-align: center;
+  align:center;
+}
+
 input, select{
   text-align: center;
   margin-top: 1%;
