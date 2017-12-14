@@ -24,7 +24,7 @@ $insertUser->execute(array(
 /* ------------------- Adding user to the Database ------------------- */
 
 $idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
-                           WHERE utilisateur_prenom=$prenom AND utilisateur_nom=$nom');
+                           WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom);
 
 
 $insertLogement = $db->prepare('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays, id_Utilisateur )
@@ -38,7 +38,14 @@ $insertLogement->execute(array(
     $_POST['pays'],
     $idUser['id_Utilisateur']
 ));
+
+$insertUser->closeCursor();
+$insertLogement->closeCursor();
+
+
 /* ------------------- Sending email to user ------------------- */
+$pseudo = $_POST['pseudo'];
+$mail = $_POST['mail'];
 $to = $_POST['mail'];
 $subject = "Inscription a DomOnline";
 

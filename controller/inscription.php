@@ -17,10 +17,10 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
     $pseudo = $_POST['pseudo'];
     $mail = $_POST['mail'];
 
-    $reponse = $db->exec('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
-                           WHERE utilisateur_login=$pseudo OR utilisateur_mail=$mail ');
+    $reponse = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
+                           WHERE utilisateur_login='.$pseudo.' OR utilisateur_mail='.$mail );
 
-    if ($reponse->rowcount()==0) {  // L'utilisateur n'existe pas dans la base de données, on peut continuer
+    if (empty($reponse)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false;
         // mdp correctement tapé
         if ($_POST['mdp'] != $_POST['mdp2']) {
@@ -31,14 +31,15 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
         }
     }
     else { // utilisateur trouvé dans la base de données
-        $erreur = true;
-        if($_POST['pseudo'] ==$reponse['utilisateur_login'] ){
+        if(strcmp($pseudo,$reponse['utilisateur_login'])==0){
             $text = "Veillez choisir un autre login";
             include("../view/interface/inscription_erreur.php");
+            $erreur = true;
         }
-        else{
+        if(strcmp($mail,$reponse['utilisateur_mail'])==0){
             $text = "Veillez choisir une autre adresse mail";
             include("../view/interface/inscription_erreur.php");
+            $erreur = true;
         }
 
     }

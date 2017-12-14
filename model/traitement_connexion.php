@@ -1,7 +1,7 @@
 <?php
 
 /* ------------------- BDD ------------------- */
-require("connexion_db.php")
+require("connexion_db.php");
 
 /* ------------------- Verifications ------------------- */
 
