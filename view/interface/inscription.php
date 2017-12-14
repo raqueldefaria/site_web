@@ -19,7 +19,7 @@
 
   <!--*************** Corps ***************-->
   <div class="corps">
-    <form method="post" action="../../model/traitement_inscription.php">
+    <form method="post" action="../../controller/inscription.php">
         <p>
             <table>
               <tr>
