@@ -29,7 +29,7 @@ $insertUser->closeCursor();
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
-<<<<<<< HEAD
+
 //$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
                       //WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
 
@@ -45,29 +45,17 @@ $insertLogement->bindParam(':ville', $ville);
 $insertLogement->bindParam(':pays', $pays);
 $insertLogement->bindParam(':id', $idUser);
 
-=======
 
-$idUser = $db->prepare("SELECT id_Utilisateur FROM utilisateur
-                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom") or die(print_r($db->errorInfo()));
 
-$idUser ->fetch();
-
-//echo $idUser;
-
->>>>>>> 5b259d9897d285868e260fc5cb6f603adf736723
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
 $ville = $_POST['ville'];
 $pays = $_POST['pays'];
-<<<<<<< HEAD
+
 $idUser = $db->lastInsertId();
 $insertLogement->execute();
-=======
-$id = $idUser;
 
-var_dump($id);
->>>>>>> 5b259d9897d285868e260fc5cb6f603adf736723
 
 
 
