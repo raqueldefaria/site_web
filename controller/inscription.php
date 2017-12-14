@@ -19,51 +19,53 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
 
     //$reponse = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
     //WHERE utilisateur_login='.$pseudo.' OR utilisateur_mail='.$mail ) or die(print_r($db->errorInfo()));
-                           $reponse = $db->prepare('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
-                                                  WHERE utilisateur_login=:pseudo OR utilisateur_mail=:mail') or die(print_r($db->errorInfo()));
+    $reponse = $db->prepare('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
+                             WHERE utilisateur_login=:pseudo OR utilisateur_mail=:mail') or die(print_r($db->errorInfo()));
 
-                           $reponse->bindParam(':pseudo', $pseudo);
-                           $reponse->bindParam(':mail', $mail);
+    $reponse->bindParam(':pseudo', $pseudo);
+    $reponse->bindParam(':mail', $mail);
 
 
-                           $prenom = $_POST['prenom'];
-                           $nom = $_POST['nom'];
-                           $pseudo = $_POST['pseudo'];
-                           $mail = $_POST['mail'];
-                           //$idUser = $db->lastInsertId();
-                           $reponse->execute() or die(print_r($db->errorInfo()));
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $pseudo = $_POST['pseudo'];
+    $mail = $_POST['mail'];
+    //$idUser = $db->lastInsertId();
+    $reponse->execute() or die(print_r($db->errorInfo()));
 
-    if (empty($reponse)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
-        $erreur = false;
+    $donnee = $reponse->fetch() or die(print_r($db->errorInfo()));
+
+    if (empty($donnee)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
+        $erreur = false; // on n'a pas d'erreur
         // mdp correctement tapé
         if ($_POST['mdp'] != $_POST['mdp2']) {
             $text = "Vous n'avez pas tapé le meme mot de passe dans les 2 champs";
-            header("Location:../view/interface/inscription_erreur.php?erreur=2");
-            $erreur = true;
-            echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
+            include("../view/interface/inscription_erreur.php");
+            $erreur = true; // on a une erreur
+            //echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
         }
     }
     else { // utilisateur trouvé dans la base de données
-        if(strcmp($pseudo,$reponse['utilisateur_login'])==0){
+        if($pseudo == $donnee['utilisateur_login']){
             $text = "Veillez choisir un autre login";
-            header("Location:../view/interface/inscription_erreur.php?erreur=3");
+            include("../view/interface/inscription_erreur.php");
             $erreur = true;
         }
-        elseif(strcmp($mail,$reponse['utilisateur_mail'])==0){
+        elseif(strcmp($mail,$donnee['utilisateur_mail'])==0){
             $text = "Veillez choisir une autre adresse mail";
-            header("Location:../view/interface/inscription_erreur.php?erreur=4");
+            include("../view/interface/inscription_erreur.php");
             $erreur = true;
         }
 
     }
 
     if($erreur == false){
-        header("Location:../model/utilisateurs_inscription.php");
+        include("../model/utilisateurs_inscription.php");
     }
 }
 else{
     $text = "Vous n'avez pas rempli tout les champs";
-    header("Location:../view/interface/inscription_erreur.php?erreur=1");
+    include("../view/interface/inscription_erreur.php");
 }
 
 // Hachage du mot de passe
