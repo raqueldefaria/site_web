@@ -17,7 +17,7 @@
                       <a href="inscription.php" id="boutoninscrire"> Inscription </a>
                   </div>
                   <div class="seConnecter">
-                      <a href="connexion" id="boutonSeConnecter"> Connexion </a>
+                      <a href="connexion.php" id="boutonSeConnecter"> Connexion </a>
                   </div>
                 </div>
               </div>
@@ -25,11 +25,3 @@
 
 
       </header>
-
-<!--
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 6add260783e4d9dae0721a5fe56e33b450e11ad3
--->
