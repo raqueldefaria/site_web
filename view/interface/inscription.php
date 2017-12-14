@@ -43,7 +43,7 @@
                   <label for="mdp2">Confirmez votre mot de passe</label> :
                 </td>
                 <td>
-                  <input type="password" name="mdp2" id="mdp" />
+                  <input type="password" name="mdp2" id="mdp" placeholder="Mot de passe" />
                 </td>
               </tr>
               <tr>
