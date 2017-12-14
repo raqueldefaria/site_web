@@ -1240,23 +1240,23 @@ Cemac_idCemac</RefColNames>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="236" name="Utilisateur_idUtilisateur">
+    <column id="295" parent="236" name="id_Utilisateur">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="296" parent="236" name="fk_Logement_Utilisateur1_idx">
-      <ColNames>Utilisateur_idUtilisateur</ColNames>
+      <ColNames>id_Utilisateur</ColNames>
     </index>
     <key id="297" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Logement
-Utilisateur_idUtilisateur</ColNames>
+id_Utilisateur</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="298" parent="236" name="fk_Logement_Utilisateur1">
-      <ColNames>Utilisateur_idUtilisateur</ColNames>
+      <ColNames>id_Utilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>utilisateur</RefTableName>
       <RefColNames>id_Utilisateur</RefColNames>
@@ -1350,7 +1350,7 @@ Logement_Utilisateur_idUtilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>logement</RefTableName>
       <RefColNames>id_Logement
-Utilisateur_idUtilisateur</RefColNames>
+id_Utilisateur</RefColNames>
     </foreign-key>
     <column id="314" parent="239" name="id_Scenario">
       <Position>1</Position>

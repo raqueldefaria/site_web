@@ -20,7 +20,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
     $reponse = $db->exec('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
                            WHERE utilisateur_login=$pseudo OR utilisateur_mail=$mail ');
 
-    if ($reponse == null) {  // L'utilisateur n'existe pas dans la base de données, on peut continuer
+    if ($reponse->rowcount()==0) {  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false;
         // mdp correctement tapé
         if ($_POST['mdp'] != $_POST['mdp2']) {

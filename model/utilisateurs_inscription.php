@@ -8,7 +8,7 @@ require("../model/connexion_db.php");
 $insertUser = $db->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur_login, utilisateur_motDePasse,
                                                         utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
                                                         utilisateur_mail)
-                                VALUES(?,?, ?, ?, ?, ?, ?)');
+                                VALUES(?, ?, ?, ?, ?, ?, ?)');
 
 $insertUser->execute(array(
     $_POST['type'],
@@ -21,15 +21,16 @@ $insertUser->execute(array(
     $_POST['mail']
 ));
 
-
 /* ------------------- Adding user to the Database ------------------- */
 
 $idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
                            WHERE utilisateur_prenom=$prenom AND utilisateur_nom=$nom');
 
 
-$insertLogement = $db->prepare('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays, Utilisateur_idUtilisateur )
+$insertLogement = $db->prepare('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays, id_Utilisateur )
                                     VALUES(?, ?, ?, ?, ?)');
+
+
 $insertLogement->execute(array(
     $_POST['adresse'],
     $_POST['codePostal'],
@@ -37,7 +38,6 @@ $insertLogement->execute(array(
     $_POST['pays'],
     $idUser['id_Utilisateur']
 ));
-
 /* ------------------- Sending email to user ------------------- */
 $to = $_POST['mail'];
 $subject = "Inscription a DomOnline";
