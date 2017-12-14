@@ -54,7 +54,6 @@
                   <select name="type" id="type">
                    <option value="particulier">Particulier</option>
                    <option value="gestionnaire">Gestionnaire</option>
-                   <option value="administrateur">Administrateur</option>
                  </select>
                 </td>
               </tr>
