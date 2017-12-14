@@ -26,7 +26,7 @@
     <!--*************** Le corps ***************-->
     <div class="corps">
 
-      <form method="post" action="../../model/traitement_connexion.php">
+      <form method="post" action="../../controller/connexion.php">
         <p>
           <input type="text" name="pseudo" id="identifiant" placeholder="  Identifiant" size="30" maxlength="20" /> <br />
           <br />
