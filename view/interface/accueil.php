@@ -23,20 +23,12 @@
             <div id="news">
 
                 <div id="news1">
-                    <h2>Mon super site</h2>
-                    <p>
-                    Bienvenue sur mon super site !<br />
-                    Vous allez adorer ici, c'est un site génial qui va parler de... euh... Je cherche encore un peu le thème de mon site. :-D
-                    </p>
-                </div>
-
-                <div id="news2">
                     <h2> La domotique à de l'avenir </h2>
                     <p>Selon une étude publiée par McKinsey, 50 milliard d’objets seraient connectés dans le monde en 2025 pour un marché estimé à 6 000 milliards de dollars. Cette technologie permet à des produits d’envoyer et de recevoir des données par l’intermédiaire d’Internet ce qui devrait dans un futur proche transformer le quotidien en créant de nouveaux usages.
                        Les évolutions technologiques sont au cœur du succès de la domotique en réinventant les habitudes de vie au sein de l’habitat ou du logement.</p>
                 </div>
 
-                <div id="news3">
+                <div id="news2">
                     <h2> Nous cherchons à repondre au mieux à vos besoins </h2>
                     <p> Les fonctionnalités privilégiées par les utilisateurs sont : </p>
                     <ul>
