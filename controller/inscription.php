@@ -7,9 +7,9 @@ require("../model/connexion_db.php");
 
 
 // if all input fields aren't empty
-if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) && !empty($_POST['prenom'])
-    && !empty($_POST['nom']) && !empty($_POST['dateNaissance']) && !empty($_POST['mail']) && !empty($_POST['adresse'])
-    && !empty($_POST['codePostal']) && !empty($_POST['ville']) && !empty($_POST['pays'])) {
+if(!empty(htmlspecialchars($_POST['pseudo'])) && !empty(htmlspecialchars($_POST['mdp'])) && !empty(htmlspecialchars($_POST['type'])) && !empty(htmlspecialchars($_POST['prenom']))
+    && !empty(htmlspecialchars($_POST['nom'])) && !empty(htmlspecialchars($_POST['dateNaissance'])) && !empty($_POST['mail']) && !empty(htmlspecialchars($_POST['adresse']))
+    && !empty(htmlspecialchars($_POST['codePostal'])) && !empty(htmlspecialchars($_POST['ville'])) && !empty(htmlspecialchars($_POST['pays']))) {
 
     // est-ce que le login & mail sont presents dans la base de données
     //$prenom = $_POST['prenom'];
@@ -27,10 +27,10 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
     $reponse->bindParam(':pseudo', $pseudo);
     $reponse->bindParam(':mail', $mail);
 
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $pseudo = $_POST['pseudo'];
-    $mail = $_POST['mail'];
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $mail = htmlspecialchars($_POST['mail']);
     //$idUser = $db->lastInsertId();
     $reponse->execute();
 
@@ -39,7 +39,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
     if (empty($donnee)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false; // on n'a pas d'erreur
         // mdp correctement tapé
-        if ($_POST['mdp'] != $_POST['mdp2']) {
+        if (htmlspecialchars($_POST['mdp']) != htmlspecialchars($_POST['mdp2'])) {
               header("Location:../view/interface/inscription_erreur.php?erreur=2");
             $erreur = true; // on a une erreur
             //echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
