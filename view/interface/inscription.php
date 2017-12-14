@@ -35,7 +35,7 @@
                 <label for="mdp">Mot de passe</label> :
                 </td>
                 <td>
-                <input type="password" name="mdp" id="mdp" />
+                <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" />
                 </td>
               </tr>
               <tr>

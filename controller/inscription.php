@@ -12,13 +12,26 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
     && !empty($_POST['codePostal']) && !empty($_POST['ville']) && !empty($_POST['pays'])) {
 
     // est-ce que le login & mail sont presents dans la base de données
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $pseudo = $_POST['pseudo'];
-    $mail = $_POST['mail'];
+    //$prenom = $_POST['prenom'];
+    //$nom = $_POST['nom'];
+    //$pseudo = $_POST['pseudo'];
+    //$mail = $_POST['mail'];
 
-    $reponse = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
-                           WHERE utilisateur_login='.$pseudo.' OR utilisateur_mail='.$mail );
+    //$reponse = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
+    //WHERE utilisateur_login='.$pseudo.' OR utilisateur_mail='.$mail ) or die(print_r($db->errorInfo()));
+                           $reponse = $db->prepare('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
+                                                  WHERE utilisateur_login=:pseudo OR utilisateur_mail=:mail') or die(print_r($db->errorInfo()));
+
+                           $reponse->bindParam(':pseudo', $pseudo);
+                           $reponse->bindParam(':mail', $mail);
+
+
+                           $prenom = $_POST['prenom'];
+                           $nom = $_POST['nom'];
+                           $pseudo = $_POST['pseudo'];
+                           $mail = $_POST['mail'];
+                           //$idUser = $db->lastInsertId();
+                           $reponse->execute() or die(print_r($db->errorInfo()));
 
     if (empty($reponse)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false;
@@ -36,7 +49,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
             include("../view/interface/inscription_erreur.php");
             $erreur = true;
         }
-        if(strcmp($mail,$reponse['utilisateur_mail'])==0){
+        elseif(strcmp($mail,$reponse['utilisateur_mail'])==0){
             $text = "Veillez choisir une autre adresse mail";
             include("../view/interface/inscription_erreur.php");
             $erreur = true;
