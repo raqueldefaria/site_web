@@ -5,6 +5,8 @@ require("../model/connexion_db.php");
 
 /* ------------------- Adding user to the Database ------------------- */
 
+$pass_hache = sha1($_POST['mdp']);
+
 $insertUser = $db->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur_login, utilisateur_motDePasse,
                                                         utilisateur_prenom, utilisateur_nom, utilisateur_dateDeNaissance,
                                                         utilisateur_mail)
@@ -13,8 +15,7 @@ $insertUser = $db->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur
 $insertUser->execute(array(
     $_POST['type'],
     $_POST['pseudo'],
-    $_POST['mdp'],
-    //$pass_hache,
+    $pass_hache,
     $_POST['prenom'],
     $_POST['nom'],
     $_POST['dateNaissance'],
@@ -28,25 +29,29 @@ $insertUser->closeCursor();
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
-<<<<<<< HEAD
-$idUser = $db->query('SELECT id_Utilisateur  FROM utilisateur
-                      WHERE utilisateur_prenom="Raquel" AND utilisateur_nom="De Faria Cristas"') or die(print_r($db->errorInfo()));
-=======
-$idUser = $db->prepare('SELECT id_Utilisateur FROM utilisateur
-                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
->>>>>>> 071ae530f67ca1de6316cb0ad41f517437d23ff6
-$idUser ->fetch();
+//$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
+                      //WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
+
 
 //echo $idUser;
+
+$insertLogement = $db->prepare("INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
+                    VALUES(:adresse, :codePostal, :ville, :pays, :id)") or die(print_r($db->errorInfo()));
+
+$insertLogement->bindParam(':adresse', $adresse);
+$insertLogement->bindParam(':codePostal', $codePostal);
+$insertLogement->bindParam(':ville', $ville);
+$insertLogement->bindParam(':pays', $pays);
+$insertLogement->bindParam(':id', $idUser);
+
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
 $ville = $_POST['ville'];
 $pays = $_POST['pays'];
-$id = $idUser['id_Utilisateur'];
+$idUser = $db->lastInsertId();
+$insertLogement->execute();
 
-$db->exec('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
-                    VALUES('.$adresse.', '.$codePostal.', '.$ville.', '.$pays.', '.$id.')') or die(print_r($db->errorInfo()));
 
 
 

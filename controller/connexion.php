@@ -12,7 +12,7 @@
             }
             else { // utilisateur trouvé dans la base de données
                 $donnee = $reponse->fetch();
-                if($_POST['mdp']!=$donnee['utilisateur_motDePasse']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
+                if($pass_hache = sha1($_POST['mdp'])!=$donnee['utilisateur_motDePasse']){ // Le mot de passe entré ne correspond pas à celui stocké dans la base de données
                     $erreur = "Mot de passe incorrect";
                     header("Location:../view/interface/connexion_erreur.php?erreur=2");
                 }
