@@ -9,6 +9,7 @@ footer{
 	right: 0;
 	background-color: #FFF6F5;
 	opacity: 0.85;
+	position: fixed;
 }
 
 #txtFooter{
