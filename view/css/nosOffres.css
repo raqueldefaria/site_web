@@ -92,6 +92,7 @@ div h1
 #demoCatalogueBoiteCemacFumee{
   display:flex;
   justify-content: space-around;
+  margin-bottom:20px;
 }
 
 #demoCatalogueBoiteFumee{
@@ -105,6 +106,16 @@ div h1
 }
 
 #demoCatalogueTypeFumee img{
+  width:140px;
+  height:auto;
+}
+
+#demoCatalogueStarterBoite2{
+  border:1px solid black;
+  border-radius: 15px;
+  margin-bottom:20px;
+}
+#demoCatalogueBoiteCameraSol img{
   width:140px;
   height:auto;
 }
