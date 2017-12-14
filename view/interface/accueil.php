@@ -36,6 +36,14 @@
                        Les évolutions technologiques sont au cœur du succès de la domotique en réinventant les habitudes de vie au sein de l’habitat ou du logement.</p>
                 </div>
 
+                <div id="news3">
+                    <h2>Mon super site</h2>
+                    <p>
+                    Bienvenue sur mon super site !<br />
+                    Vous allez adorer ici, c'est un site génial qui va parler de... euh... Je cherche encore un peu le thème de mon site. :-D
+                    </p>
+                </div>
+
             </div>
 
             <div id="about_domonline">
