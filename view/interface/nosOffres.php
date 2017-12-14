@@ -15,31 +15,30 @@
             <?php include ("header.php")?>
 
             <div id="main_block">
-                <h1> Les differents types de pack </h1>
+                <h1> Notre Catalogue </h1>
 
-                <h2> Kit Starter Pack </h2>
+                <div id="demoCatalogueStarterBoite">
+                    <h2> Starter pack - Pack Découverte </h2>
+                    <div id="demoCatalogueStarterBoiteInner">
+                        <div id="demoCatalogueStarterCemac" class="demoCatalogueBoite">
+                            <img src="../images/Offres/Cemac.jpg" alt="Cemac">
+                            <p>Une Cemac</p>
+                        </div>
+                        <div id="demoCatalogueStarterFumee" class="demoCatalogueBoite">
+                            <img src="../images/Offres/detecteur_fumee.jpg" alt="Détecteur de fumée">
+                            <p>Un détecteur de fumée</p>
+                        </div>
+                        <div id="demoCatalogueStarterHumiditeTemperature" class="demoCatalogueBoite">
+                            <img src="../images/Offres/detecteur_humidite_temperature.jpg" alt="Détecteur d'humidité et de température">
+                            <p>Un détecteur d'humidité et de température</p>
+                        </div>
+                        <div id="demoCatalogueStarterLuminositeLuminaire" class="demoCatalogueBoite">
+                            <img src="../images/Offres/capteur_luminosite_luminaire.jpg" alt="Capteur de luminosité/luminaire">
+                            <p>Un capteur de luminosité/luminaire</p>
+                        </div>
+                    </div>
 
-                <div class="Starter">
-                    <img src="" alt="">
 
-                </div>
-
-
-                <h2> Les Kit performant </h2>
-                <div class="performant">
-                    <img src="" alt="">
-                    <img src="" alt="">
-
-                </div>
-
-
-
-
-                <h2> Les meilleurs Kit </h2>
-                <div class="meilleurs">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
 
             </div>
             <!--    Footer    -->

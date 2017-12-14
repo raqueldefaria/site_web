@@ -12,3 +12,10 @@ input[type="password"]
 {
   border: 1px solid black;
 }
+
+.msg_erreur
+{
+  font-size: 1.1em;
+  color:red;
+  font-weight: bold;
+}
