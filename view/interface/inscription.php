@@ -60,7 +60,7 @@
               </tr>
               <tr>
                 <td>
-                  <label for="prenom">Prenom</label> :
+                  <label for="prenom">Prénom</label> :
                 </td>
                 <td>
                   <input type="text" name="prenom" id="prenom" />
