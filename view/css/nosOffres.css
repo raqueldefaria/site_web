@@ -43,6 +43,9 @@ div h1
 
 #demoCatalogueStarterBoiteInner{
   display: flex;
+  margin-bottom: 20px;
+  justify-content: space-around;
+
 }
 
 .demoCatalogueBoite{
@@ -51,8 +54,6 @@ div h1
   width: 200px;
   height :200px;
   background-color: rgba(255,255,255);
-  justify-content: space-around;
-  opacity:initial;
 }
 .demoCatalogueBoite img{
   width:150px;
