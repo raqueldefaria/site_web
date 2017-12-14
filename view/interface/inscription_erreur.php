@@ -148,10 +148,6 @@
                 <p><span class="msg_erreur">L'adresse mail que vous avez choisi est déjà utilisée</span></p>
             <?php
               }
-              elseif($_GET['erreur']!=1 && $_GET['erreur']!=2 && $_GET['erreur']!=3 && $_GET['erreur']!=4)
-              {
-                header("Location:../interface/inscription.php");
-              }
             ?>
         </p>
 
