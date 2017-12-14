@@ -46,6 +46,15 @@ body {
   width:90%;
 }
 
+#news3
+{
+  margin:10px;
+  padding:2px 10px 2px 10px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width:90%;
+}
 
 #about_domonline
 {
@@ -55,6 +64,8 @@ body {
   opacity: 0.8;
   border-radius: 10px;
   width: 30%;
+  font-size: 1.3em;
+  height: 50%;
 }
 
 div h2

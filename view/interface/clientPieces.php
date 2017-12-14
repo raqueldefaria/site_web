@@ -23,7 +23,7 @@
   <!--------------- Navigation --------------->
   <div class="pieces">
       <div class="sectionPieces">
-          <p class="motPiece">Pieces</p>
+          <p class="motPiece">Pièces</p>
           <a href="#"><img src="../images/client/question.png" class="questions"></a>
       </div>
       <div class="optionPieces">

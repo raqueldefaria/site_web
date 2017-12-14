@@ -1,0 +1,177 @@
+/*------------Header in general ------------*/
+#header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  /*padding-bottom: 1%;*/
+    /*padding-top: 0%;*/
+  background-color: #FFF6F5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 800px)
+{
+
+#header
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
+/*------------ Different sections of the header ------------*/
+
+.logo
+{
+  flex: 1;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.logo
+{
+  text-align: center;
+}
+
+}
+
+.menu
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex: 3;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.menu
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
+.bouttons{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  flex: 1;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.bouttons
+{
+	display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+}
+
+/*------------ Bouttons ------------*/
+
+
+#boutonSeConnecter, #boutoninscrire
+{
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(0,184,169);
+  text-decoration: none;
+  padding: 5px;
+}
+
+#boutonSeConnecter:hover, #boutoninscrire:hover
+{
+  background-color: rgb(0,136,125);
+}
+
+
+.inscrire, .seConnecter{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+#logoCompanyHeader
+{
+  width: 154px;
+	height: 34px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 20%;
+}
+
+@media screen and (max-width: 800px)
+{
+
+  #logoCompanyHeader
+  {
+    padding-left: 0px;
+  }
+
+}
+
+/*------------Text of the menu ------------*/
+
+.txtHeader1
+{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+}
+
+.txtHeader2
+{
+  border-right: 1px solid black;
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+}
+
+.txtHeader3
+{
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+  border-right: 1px solid black;
+}
+
+.txtHeader1, .txtHeader2, .txtHeader3
+{
+  color: black;
+  text-decoration: none;
+}
+
+.txtHeader1:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.txtHeader2:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.txtHeader3:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}

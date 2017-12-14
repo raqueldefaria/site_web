@@ -6,8 +6,11 @@
 
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/connexion.css" />
+        <link rel="stylesheet" href="../view/css/connexion.css" />
         <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../view/css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
+        <link rel="stylesheet" href="../view/css/footer.css" />
 
         <title>DomOnline - Connexion</title>
 
