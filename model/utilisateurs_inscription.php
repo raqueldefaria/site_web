@@ -28,22 +28,22 @@ $insertUser->closeCursor();
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
-<<<<<<< HEAD
-$idUser = $db->query('SELECT id_Utilisateur  FROM utilisateur
-                      WHERE utilisateur_prenom="Raquel" AND utilisateur_nom="De Faria Cristas"') or die(print_r($db->errorInfo()));
-=======
-$idUser = $db->prepare('SELECT id_Utilisateur FROM utilisateur
-                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
->>>>>>> 071ae530f67ca1de6316cb0ad41f517437d23ff6
+
+$idUser = $db->prepare("SELECT id_Utilisateur FROM utilisateur
+                      WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom") or die(print_r($db->errorInfo()));
+
 $idUser ->fetch();
 
 //echo $idUser;
+
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
 $ville = $_POST['ville'];
 $pays = $_POST['pays'];
-$id = $idUser['id_Utilisateur'];
+$id = $idUser;
+
+var_dump($id);
 
 $db->exec('INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
                     VALUES('.$adresse.', '.$codePostal.', '.$ville.', '.$pays.', '.$id.')') or die(print_r($db->errorInfo()));
