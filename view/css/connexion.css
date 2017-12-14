@@ -68,3 +68,10 @@ input[id="identifiant"], input[id="mdp"]
 {
   border: 1px solid black;
 }
+
+.msg_erreur
+{
+  font-size: 1.1em;
+  color:red;
+  font-weight: bold;
+}
