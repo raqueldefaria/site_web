@@ -99,11 +99,11 @@
                               </div>
                               <div id="demoCatalogueBoiteDetecteurMouvementLumierePresenceMur" class="demoCatalogueBoite">
                                   <img src="../images/Offres/detecteur_mouvement_lumiere_presence_mur.jpg" alt="Détecteur de mouvements/luminosité/présence mural">
-                                  <p>Détecteur de mouvements/luminosité/présence mural - XX euros</p>
+                                  <p>Détecteur de mouvements /luminosité /présence mural - XX euros</p>
                               </div>
                               <div id="demoCatalogueBoiteDetecteurToutEn1" class="demoCatalogueBoite">
                                   <img src="../images/Offres/detecteur_temperature_humidite_luminosite_mouvement.jpg" alt="Détecteur tout en 1">
-                                  <p>Détecteur de température/humidité/luminosité/mouvement - XX euros</p>
+                                  <p>Détecteur de température /humidité /luminosité /mouvement - XX euros</p>
                               </div>
                           </div>
                         </div>
