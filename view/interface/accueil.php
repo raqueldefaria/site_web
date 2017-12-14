@@ -31,13 +31,13 @@
                 <div id="news2">
                     <h2> Nous cherchons à repondre au mieux à vos besoins </h2>
                     <p> Les fonctionnalités privilégiées par les utilisateurs sont : </p>
-                    <ul>
+                    <ul type="square">
                       <li> la possibilité d’être informé d’un problème technique dans sa maison </li>
-                      <li> la possibilité de réduire automatiquement les consommations d’énergie lorsque personne n’est à la maison </li>
+                      <li> la possibilité de réduire automatiquement les consommations d’énergie lorsque personne n’est présent dans la maison </li>
                       <li> la possibilité d’être informé en cas de consommation anormale d’énergie </li>
                     </ul>
                     <p> Selon une autre étude de 2012 publiée par l’Institut de Prospective et d’Etudes de l’Ameublement (IPEA) et le Crédit Agricole : </p>
-                    <ul>
+                    <ul type="square">
                       <li> 86 % des propriétaires interrogés s’équiperaient en domotique pour gagner en confort. </li>
                       <li> 87 % des locataires associent en premier la domotique à l’économie d’énergie. </li>
                     </ul>
