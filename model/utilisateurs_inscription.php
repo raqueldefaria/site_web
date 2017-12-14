@@ -93,7 +93,6 @@ $headers .= 'From: <racheldf19@outlook.com>' . "\r\n";
 
 mail($to,$subject,$message,$headers);
 
-
 // rederecting to the profile settings
 header("Location: ../view/interface/clientPieces.php");
 die();
