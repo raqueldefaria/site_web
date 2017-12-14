@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/inscription.php" afterPath="$PROJECT_DIR$/controller/inscription.php" />
-      <change beforePath="$PROJECT_DIR$/model/traitement_connexion.php" afterPath="$PROJECT_DIR$/model/traitement_connexion.php" />
-      <change beforePath="$PROJECT_DIR$/model/utilisateurs_inscription.php" afterPath="$PROJECT_DIR$/model/utilisateurs_inscription.php" />
-      <change beforePath="$PROJECT_DIR$/view/interface/inscription_erreur.php" afterPath="$PROJECT_DIR$/view/interface/inscription_erreur.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,8 +68,8 @@
       <file leaf-file-name="utilisateurs_inscription.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/utilisateurs_inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            <state relative-caret-position="300">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <marker date="1513248087494" expanded="true" signature="199:538" ph="INSERT INTO utilisateur... " />
                 <marker date="1513248087494" expanded="true" signature="842:933" ph="SELECT id_Ut... utilisateur" />
@@ -373,7 +369,7 @@
       <workItem from="1513197641342" duration="2757000" />
       <workItem from="1513200434809" duration="104000" />
       <workItem from="1513200879182" duration="9020000" />
-      <workItem from="1513238622837" duration="9459000" />
+      <workItem from="1513238622837" duration="9508000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -396,11 +392,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513243638645</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit">
+      <created>1513248158675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513248158676</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50644000" />
+    <option name="totallyTimeSpent" value="50693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -653,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/utilisateurs_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        <state relative-caret-position="300">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <marker date="1513248087494" expanded="true" signature="199:538" ph="INSERT INTO utilisateur... " />
             <marker date="1513248087494" expanded="true" signature="842:933" ph="SELECT id_Ut... utilisateur" />
