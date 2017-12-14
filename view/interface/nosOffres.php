@@ -60,9 +60,9 @@
 <!-- -->
 
 
+<!-- Caméras -->
 
-
-                    <div id="demoCatalogueStarterBoite">
+                    <div class="demoCatalogueStarterBoite2">
                         <h2> Caméras </h2>
                         <div id="demoCatalogueStarterBoiteInner">
                             <div id="demoCatalogueBoiteCameraMur" class="demoCatalogueBoite">
@@ -78,10 +78,35 @@
                                 <p>Caméra mobile - XX euros</p>
                             </div>
                         </div>
-
-
-
                       </div>
+
+<!-- -->
+
+                      <div class="demoCatalogueStarterBoite2">
+                          <h2> Capteurs de luminosité </h2>
+                          <div id="demoCatalogueStarterBoiteInner2">
+                              <div id="demoCatalogueBoiteLuminositeLuminaire" class="demoCatalogueBoite">
+                                  <img src="../images/Offres/capteur_luminosite_luminaire.jpg" alt="Capteur de luminosité/luminaire">
+                                  <p>Capteur de luminosité/luminaire - XX euros</p>
+                              </div>
+                              <div id="demoCatalogueBoiteLuminositeMur" class="demoCatalogueBoite">
+                                  <img src="../images/Offres/detecteur_luminosite_mur.jpg" alt="Capteur de luminosité mural">
+                                  <p>Capteur de luminosité mural - XX euros</p>
+                              </div>
+                              <div id="demoCatalogueBoiteDetecteurLuminositePresencePlafond" class="demoCatalogueBoite">
+                                  <img src="../images/Offres/detecteur_luminosité_presence_plafond.jpg" alt="Detecteur luminosité présence plafond">
+                                  <p>Détecteur de luminosité et de présence (plafond) - XX euros</p>
+                              </div>
+                              <div id="demoCatalogueBoiteDetecteurMouvementLumierePresenceMur" class="demoCatalogueBoite">
+                                  <img src="../images/Offres/detecteur_mouvement_lumiere_presence_mur.jpg" alt="Détecteur de mouvements/luminosité/présence mural">
+                                  <p>Détecteur de mouvements/luminosité/présence mural - XX euros</p>
+                              </div>
+                              <div id="demoCatalogueBoiteDetecteurToutEn1" class="demoCatalogueBoite">
+                                  <img src="../images/Offres/detecteur_temperature_humidite_luminosite_mouvement.jpg" alt="Détecteur tout en 1">
+                                  <p>Détecteur de température/humidité/luminosité/mouvement - XX euros</p>
+                              </div>
+                          </div>
+                        </div>
             <!--    Footer    -->
             <?php include("footer.php"); ?>
 

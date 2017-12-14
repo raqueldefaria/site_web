@@ -110,12 +110,45 @@ div h1
   height:auto;
 }
 
-#demoCatalogueStarterBoite2{
+.demoCatalogueStarterBoite2{
   border:1px solid black;
   border-radius: 15px;
   margin-bottom:20px;
 }
-#demoCatalogueBoiteCameraSol img{
+#demoCatalogueBoiteCameraSol img {
   width:140px;
   height:auto;
+}
+#demoCatalogueStarterBoiteInner2{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#demoCatalogueBoiteLuminositeLuminaire p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteLuminositeLuminaire img{
+  width:130px;
+  height:auto;
+}
+#demoCatalogueBoiteLuminositeMur p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteDetecteurLuminositePresencePlafond p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteDetecteurMouvementLumierePresenceMur p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteDetecteurMouvementLumierePresenceMur img{
+  width:130px;
+  height:auto;
+}
+#demoCatalogueBoiteDetecteurToutEn1 img{
+  width:115px;
+  height:auto;
+}
+#demoCatalogueBoiteDetecteurToutEn1 p{
+  margin-top:0px;
 }
