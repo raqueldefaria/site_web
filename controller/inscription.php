@@ -22,21 +22,23 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
 
     if (empty($reponse)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false;
-        // mdp pas correctement tapé
+        // mdp correctement tapé
         if ($_POST['mdp'] != $_POST['mdp2']) {
             $text = "Vous n'avez pas tapé le meme mot de passe dans les 2 champs";
-            header("Location:../view/interface/inscription_erreur.php?erreur=2");
+            include("../view/interface/inscription_erreur.php");
+            $erreur = true;
+            echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
         }
     }
     else { // utilisateur trouvé dans la base de données
         if(strcmp($pseudo,$reponse['utilisateur_login'])==0){
             $text = "Veillez choisir un autre login";
-            header("Location:../view/interface/inscription_erreur.php?erreur=3");
+            include("../view/interface/inscription_erreur.php");
             $erreur = true;
         }
         if(strcmp($mail,$reponse['utilisateur_mail'])==0){
             $text = "Veillez choisir une autre adresse mail";
-            header("Location:../view/interface/inscription_erreur.php?erreur=4");
+            include("../view/interface/inscription_erreur.php");
             $erreur = true;
         }
 
@@ -48,7 +50,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['mdp']) && !empty($_POST['type']) &
 }
 else{
     $text = "Vous n'avez pas rempli tout les champs";
-    header("Location:../view/interface/inscription_erreur.php?erreur=1");
+    include("../view/interface/inscription_erreur.php");
 }
 
 // Hachage du mot de passe

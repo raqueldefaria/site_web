@@ -22,14 +22,17 @@ $insertUser->execute(array(
     $_POST['mail']
 ));
 
-$insertUser->closeCursor();
+//$insertUser->closeCursor();
 
 /* ------------------- Adding logement to the Database ------------------- */
 
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 23e42a0ce0ca22b10e75a3f2f760671673b96aa5
 //$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
                       //WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
 
@@ -45,17 +48,25 @@ $insertLogement->bindParam(':ville', $ville);
 $insertLogement->bindParam(':pays', $pays);
 $insertLogement->bindParam(':id', $idUser);
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 23e42a0ce0ca22b10e75a3f2f760671673b96aa5
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
 $ville = $_POST['ville'];
 $pays = $_POST['pays'];
+<<<<<<< HEAD
+$idUser = $db->lastInsertId();
+$insertLogement->execute();
+=======
 
 $idUser = $db->lastInsertId();
 $insertLogement->execute();
 
+>>>>>>> 23e42a0ce0ca22b10e75a3f2f760671673b96aa5
 
 
 
