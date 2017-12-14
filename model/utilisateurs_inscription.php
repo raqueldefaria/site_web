@@ -30,7 +30,7 @@ $idUser = $db->prepare('SELECT id_Utilisateur FROM utilisateur
                       WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
 $idUser ->fetch();
 
-echo $idUser;
+//echo $idUser;
 
 $adresse = $_POST['adresse'];
 $codePostal = $_POST['codePostal'];
