@@ -32,9 +32,9 @@
             <label for="souvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
             <input type="submit" value="Se connecter" class="boutton" />
           </div>
-          <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a>
+          <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublie </a> <br />
           <?php
-            $contenu = "<h2>Erreur dans le formulaire de connexion</h2>".$erreur;
+            echo $erreur;
           ?>
         </p>
       </form>
