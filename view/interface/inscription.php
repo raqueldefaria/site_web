@@ -24,7 +24,7 @@
             <table>
               <tr>
                 <td>
-                <label for="pseudo">Pseudo</label> :
+                <label for="pseudo">Identifiant</label> :
                 </td>
                 <td>
                 <input type="text" name="pseudo" id="pseudo" />
