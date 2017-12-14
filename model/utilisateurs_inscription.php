@@ -26,7 +26,7 @@ $insertUser->closeCursor();
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 
-$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
+$idUser = $db->prepare('SELECT id_Utilisateur FROM utilisateur
                       WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
 $idUser ->fetch();
 
