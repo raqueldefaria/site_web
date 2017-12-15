@@ -33,7 +33,7 @@
                   <img src="../images/client/car.png">
               </div>
           </a>
-          <a href="#">
+          <a href="chambre.php">
               <div class="section">
                   <p>Chambre 1</p>
                   <img src="../images/client/bed.png">

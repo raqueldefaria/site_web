@@ -32,28 +32,92 @@
         <a href="#">
           <div class="section">
             <p>Lumière </p>
-            <img src="../images/lumière.png"/>
+            <div class=imgBoutton>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+              <img src="../images/lumière.png"/>
+            </div>
+
           </div>
         </a>
         <a href="#">
           <div class="section">
             <p>Volets</p>
-            <img src="../images/volets.png"/>
+
+            <div class=imgBoutton>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+              <img src="../images/volets.png"/>
+            </div>
           </div>
         </a>
         <a href="#">
           <div class="section">
             <p>Température</p>
-            <img src="../images/température.png"/>
+            <div class=imgBoutton>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+              <img src="../images/température.png"/>
+            </div>
           </div>
         </a>
         <a href="#">
           <div class="section">
             <p>Humidité</p>
-            <img src="../images/humidité.png"/>
+
+            <div class=imgBoutton>
+              <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                </label>
+              </div>
+              <img src="../images/humidité.png"/>
+            </div>
           </div>
         </a>
       </div>
+      <p class="motPiece" color:black>Scénario :</p>
+      <div id="menu">
+        <ul id="onglets">
+          <li class="active"><a href="Accueil.html"> Chauffage </a></li>
+          <li><a href="Forums.html"> Volets </a></li>
+        </ul>
+      </div>
+      <br />
+      <div class=options>
+        <label> Si la temperature est </label>
+        <select>
+         <option>supérieure</option>
+         <option>inférieure</option>
+       </select>
+       <label> à </label>
+       <input type="number" min="-10" max="40" placeholder="Température en degrés" />
+       <label> alors </label>
+       <select name="type" id="type">
+        <option value="particulier">éteindre le chauffage</option>
+        <option value="gestionnaire">allumer le chauffage</option>
+      </select>
+      <a href="#" ><img src="../images/add.png" /></a>
+      <a href="#" ><img src="../images/error.png" /></a>
+      </div>
+
   </div>
 
 
