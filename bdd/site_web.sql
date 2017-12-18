@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 18 déc. 2017 à 14:32
+-- Généré le :  lun. 18 déc. 2017 à 14:37
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -150,13 +150,6 @@ CREATE TABLE IF NOT EXISTS `logement` (
   KEY `fk_Logement_Utilisateur1_idx` (`id_Utilisateur`)
 ) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `logement`
---
-
-INSERT INTO `logement` (`id_Logement`, `logement_adresse`, `logement_codePostal`, `logement_ville`, `logement_pays`, `id_Utilisateur`) VALUES
-(45, '18 avenue de la porte des poissonniers', '75018', 'Paris', 'France', 78);
-
 -- --------------------------------------------------------
 
 --
@@ -254,13 +247,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `utilisateur_dateDeNaissance` date DEFAULT NULL,
   PRIMARY KEY (`id_Utilisateur`)
 ) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `utilisateur`
---
-
-INSERT INTO `utilisateur` (`id_Utilisateur`, `utilisateur_type`, `utilisateur_nom`, `utilisateur_prenom`, `utilisateur_mail`, `utilisateur_login`, `utilisateur_motDePasse`, `utilisateur_dateDeNaissance`) VALUES
-(78, 'particulier', 'De Faria Cristas', 'Raquel', 'racheldf19@gmail.com', 'raqueldf', '22ea1c649c82946aa6e479e1ffd321e4a318b1b0', '1997-08-19');
 
 --
 -- Contraintes pour les tables déchargées
