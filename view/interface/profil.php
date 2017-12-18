@@ -4,7 +4,7 @@ session_start();
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
 
 
-   $requser = $bdd->query('SELECT * FROM utilisateur,logement  WHERE id_Utilisateur = $_SESSION["userID"]');
+   $requser = $bdd->query(SELECT * FROM utilisateur,logement  WHERE utilisateur_login = $_SESSION['pseudo']);
    $userinfo = $requser->fetch();
 ?>
 
