@@ -7,9 +7,9 @@ require("../model/connexion_db.php");
 
 
 // if all input fields aren't empty
-if(!empty(htmlspecialchars($_POST['pseudo'])) && !empty(htmlspecialchars($_POST['mdp'])) && !empty(htmlspecialchars($_POST['type'])) && !empty(htmlspecialchars($_POST['prenom']))
-    && !empty(htmlspecialchars($_POST['nom'])) && !empty(htmlspecialchars($_POST['dateNaissance'])) && !empty($_POST['mail']) && !empty(htmlspecialchars($_POST['adresse']))
-    && !empty(htmlspecialchars($_POST['codePostal'])) && !empty(htmlspecialchars($_POST['ville'])) && !empty(htmlspecialchars($_POST['pays']))) {
+if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST['mdp'])) AND !empty(htmlspecialchars($_POST['type'])) AND !empty(htmlspecialchars($_POST['prenom']))
+    AND !empty(htmlspecialchars($_POST['nom'])) AND !empty(htmlspecialchars($_POST['dateNaissance'])) AND !empty($_POST['mail']) AND !empty(htmlspecialchars($_POST['adresse']))
+    AND !empty(htmlspecialchars($_POST['codePostal'])) AND !empty(htmlspecialchars($_POST['ville'])) AND !empty(htmlspecialchars($_POST['pays']))) {
 
     // est-ce que le login & mail sont presents dans la base de données
     //$prenom = $_POST['prenom'];
