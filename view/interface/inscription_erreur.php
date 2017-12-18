@@ -26,7 +26,7 @@
             <table>
               <tr>
                 <td>
-                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Pseudo" />
+                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant" />
                 </td>
               </tr>
               <tr>
