@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
+    <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="J'enleve les fichiers innutiles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/connexion.php" afterPath="$PROJECT_DIR$/controller/connexion.php" />
-      <change beforePath="$PROJECT_DIR$/controller/inscription.php" afterPath="$PROJECT_DIR$/controller/inscription.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -278,7 +276,7 @@
       <workItem from="1513238622837" duration="22338000" />
       <workItem from="1513591203099" duration="24000" />
       <workItem from="1513591244486" duration="299000" />
-      <workItem from="1513605373547" duration="1774000" />
+      <workItem from="1513605373547" duration="1836000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -343,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513605472653</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="J'enleve les fichiers innutiles">
+      <created>1513607597550</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1513607597550</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65620000" />
+    <option name="totallyTimeSpent" value="65682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,8 +365,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19567567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19567567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
