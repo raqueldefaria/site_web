@@ -2,6 +2,10 @@ form{
   margin-top: 6%;
 }
 
+table{
+  margin: auto;
+}
+
 input, select{
   text-align: center;
   margin-top: 1%;
@@ -15,7 +19,7 @@ input[type="password"]
 
 .msg_erreur
 {
-  font-size: 1.1em;
+  font-size: 0.8em;
   color:red;
   font-weight: bold;
 }

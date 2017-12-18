@@ -21,107 +21,74 @@
   <div class="corps">
     <form method="post" action="../../controller/inscription.php">
         <p>
-          <table>
-            <tr>
-              <td>
-              <label for="pseudo">Identifiant</label> :
-              </td>
-              <td>
-              <input type="text" name="pseudo" id="pseudo" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-              <label for="mdp">Mot de passe</label> :
-              </td>
-              <td>
-              <input type="password" name="mdp" id="mdp" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="mdp2">Confirmez votre mot de passe</label> :
-              </td>
-              <td>
-                <input type="password" name="mdp2" id="mdp" placeholder="Mot de passe" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="type">Type d'utilisateur</label> :
-              </td>
-              <td>
-                <select name="type" id="type">
-                 <option value="particulier">Particulier</option>
-                 <option value="gestionnaire">Gestionnaire</option>
-               </select>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="prenom">Prénom</label> :
-              </td>
-              <td>
-                <input type="text" name="prenom" id="prenom" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="nom">Nom</label> :
-              </td>
-              <td>
-                <input type="text" name="nom" id="nom" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="dateNaissance">Date de naissance</label> :
-              </td>
-              <td>
-                <input type="date" name="dateNaissance" id="dateNaissance" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="mail">Mail</label> :
-              </td>
-              <td>
-                <input type="email" name="mail" id="mail" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="adresse">Adresse</label> :
-              </td>
-              <td>
-                <input type="text" name="adresse" id="adresse" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="codePostal">Code Postal</label> :
-              </td>
-              <td>
-                <input type="text" name="codePostal" id="codePostal" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="ville">Ville</label> :
-              </td>
-              <td>
-                <input type="text" name="ville" id="ville" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="pays">Pays</label> :
-              </td>
-              <td>
-                <input type="text" name="pays" id="pays" />
-              </td>
-            </tr>
-          </table>
+          <div class="table" >
+
+            <table>
+              <tr>
+                <td>
+                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <input type="password" name="mdp" id="mdp" size=35 placeholder="Mot de passe" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="password" name="mdp2" id="mdp" size=35 placeholder="Confirmez le mot de passe" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select name="type" id="type" placeholder="Type d'utilisateur">
+                   <option value="particulier">Particulier</option>
+                   <option value="gestionnaire">Gestionnaire</option>
+                 </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="nom" id="nom" size=35 placeholder="Nom" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="email" name="mail" id="mail" size=35 placeholder="Mail" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="ville" id="ville" size=35 placeholder="Ville" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" name="pays" id="pays" size=35 placeholder="Pays" />
+                </td>
+              </tr>
+            </table>
+            </div>
             <input type="submit" value="Envoyer" class="boutton" />
             <?php
               if($_GET['erreur']==1)
@@ -147,10 +114,6 @@
             ?>
                 <p><span class="msg_erreur">L'adresse mail que vous avez choisi est déjà utilisée</span></p>
             <?php
-              }
-              elseif($_GET['erreur']!=1 && $_GET['erreur']!=2 && $_GET['erreur']!=3 && $_GET['erreur']!=4)
-              {
-                header("Location:../interface/inscription.php");
               }
             ?>
         </p>

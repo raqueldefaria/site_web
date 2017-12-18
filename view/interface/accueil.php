@@ -23,13 +23,13 @@
             <div id="news">
 
                 <div id="news1">
-                    <h2> La domotique à de l'avenir </h2>
+                    <h2> La domotique a de l'avenir </h2>
                     <p>Selon une étude publiée par McKinsey, 50 milliard d’objets seraient connectés dans le monde en 2025 pour un marché estimé à 6 000 milliards de dollars. Cette technologie permet à des produits d’envoyer et de recevoir des données par l’intermédiaire d’Internet ce qui devrait dans un futur proche transformer le quotidien en créant de nouveaux usages.
                        Les évolutions technologiques sont au cœur du succès de la domotique en réinventant les habitudes de vie au sein de l’habitat ou du logement.</p>
                 </div>
 
                 <div id="news2">
-                    <h2> Nous cherchons à repondre au mieux à vos besoins </h2>
+                    <h2> Nous cherchons à répondre au mieux à vos besoins </h2>
                     <p> Les fonctionnalités privilégiées par les utilisateurs sont : </p>
                     <ul type="square">
                       <li> la possibilité d’être informé d’un problème technique dans sa maison </li>
@@ -47,7 +47,7 @@
             </div>
 
             <div id="about_domonline">
-              <h2>A propos de DomOnline</h2>
+              <h2>À propos de DomOnline</h2>
               <p>Spécialisée dans les maisons connectées, DomOnline propose une solution domotique de qualité, vous permettant de piloter votre domicile à n'importe quel moment, depuis n'importe quel endroit.</p>
             </div>
 
