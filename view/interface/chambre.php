@@ -33,6 +33,9 @@
           <div class="section">
             <p>Lumière </p>
             <img src="../images/lumière.png"/>
+            
+
+
           </div>
         </a>
         <a href="#">
