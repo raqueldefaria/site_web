@@ -22,9 +22,10 @@ body
   margin:10px;
   padding:2px 10px 2px 10px;
   background-color: white;
-  opacity: 0.85;
+  /*opacity: 0.85; on a un gros pb avec l'opacité, tous les éléments fils deviennnet un peu tranparent,
+  y compris les images, et ce quoi qu'on fasse aux éléments fils.*/
   border-radius: 10px;
-  width:50%;
+  width:90%;
   text-align: center;
 }
 
@@ -33,4 +34,123 @@ div h1
   text-align: center;
   background-color: black;
   color:white;
+}
+
+#demoCatalogueStarterBoite{
+  border:1px solid black;
+  border-radius: 15px;
+}
+
+#demoCatalogueStarterBoiteInner{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-around;
+
+}
+
+.demoCatalogueBoite{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 200px;
+  height :200px;
+  background-color: rgba(255,255,255);
+}
+.demoCatalogueBoite img{
+  width:150px;
+  height:auto;
+}
+#demoCatalogueStarterHumiditeTemperature img{
+  width:140px;
+  height:auto;
+}
+#demoCatalogueStarterLuminositeLuminaire img{
+  width:140px;
+  height:auto;
+}
+#demoCatalogueStarterBoite h3{
+  color:white;
+  background-color: red;
+}
+
+#demoCatalogueParType{
+  background-color: grey;
+}
+
+#demoCatalogueTypeCemac{
+  border: 1px solid black;
+  border-radius: 10px;
+  flex:1;
+  margin-right:10px;
+}
+
+#demoCatalogueTypeFumee{
+  border: 1px solid black;
+  border-radius: 10px;
+  flex:1;
+  margin-left:10px;
+}
+#demoCatalogueBoiteCemacFumee{
+  display:flex;
+  justify-content: space-around;
+  margin-bottom:20px;
+}
+
+#demoCatalogueBoiteFumee{
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+#demoCatalogueBoiteCemac{
+  margin:auto;
+  margin-bottom: 20px;
+}
+
+#demoCatalogueTypeFumee img{
+  width:140px;
+  height:auto;
+}
+
+.demoCatalogueStarterBoite2{
+  border:1px solid black;
+  border-radius: 15px;
+  margin-bottom:20px;
+}
+#demoCatalogueBoiteCameraSol img {
+  width:140px;
+  height:auto;
+}
+#demoCatalogueStarterBoiteInner2{
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#demoCatalogueBoiteLuminositeLuminaire p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteLuminositeLuminaire img{
+  width:130px;
+  height:auto;
+}
+#demoCatalogueBoiteLuminositeMur p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteDetecteurLuminositePresencePlafond p{
+  margin-top:0px;
+}
+#demoCatalogueBoiteDetecteurMouvementLumierePresenceMur p{
+  margin-top:0px;
+  margin-bottom:0px;
+}
+#demoCatalogueBoiteDetecteurMouvementLumierePresenceMur img{
+  width:130px;
+  height:auto;
+}
+#demoCatalogueBoiteDetecteurToutEn1 img{
+  width:115px;
+  height:auto;
+}
+#demoCatalogueBoiteDetecteurToutEn1 p{
+  margin-top:0px;
+  margin-bottom:0px;
 }

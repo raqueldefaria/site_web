@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
+
+
+   $requser = $bdd->query('SELECT * FROM utilisateur,logement  WHERE id_Utilisateur = $_SESSION["userID"]');
+   $userinfo = $requser->fetch();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -19,24 +29,91 @@
     <div id="corps">
 
         <div id="main_block">
-            <h2>Votre profil</h2>
 
-            <p>
-            Pseudo : <!-- [utilisateur_login] --> <br />
-            Mail : <!-- [utilisateur_mail] -->  <br />
-            Prénom : <!-- [utilisateur_prenom] -->  <br />
-            Nom : <!-- [utilisateur_nom] -->  <br />
-            Date de naissance : <!-- [utilisateur_dateDeNaissance] -->  <br />
-            </p>
+         <div align="center">
+          <h2>Votre profil</h2>
 
-            <p>
-            Pays : <!-- [logement_pays] -->  <br />
-            Ville : <!-- [logement_ville] -->  <br />
-            Code postal : <!-- [logement_codePostal] -->  <br />
-            Adresse : <!-- [logement_adresse] -->  <br />
-            </p>
+          <table>
+          <tr>
+             <td align="right">
+                Pseudo :
+             </td>
+             <td>
+                <?php echo $userinfo['utilisateur_login']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                Mail :
+             </td>
+             <td>
+                <?php echo $userinfo['utilisateur_mail']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                Prénom :
+             </td>
+             <td>
+                <?php echo $userinfo['utilisateur_prenom']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                Nom :
+             </td>
+             <td>
+                <?php echo $userinfo['utilisateur_nom']; ?>
+             </td>
+          </tr>
 
-            <p> <a href="#">Editer votre profil</a> </p>
+       </table>
+
+       </div>
+
+       <div align="center">
+         <h2>Votre logement</h2>
+
+         <table>
+           <tr>
+              <td align="right">
+                 Adresse :
+              </td>
+              <td>
+                 <?php echo $userinfo['logement_adresse']; ?>
+              </td>
+           </tr>
+           <tr>
+              <td align="right">
+                 Ville :
+              </td>
+              <td>
+                 <?php echo $userinfo['logement_ville']; ?>
+              </td>
+           </tr>
+           <tr>
+              <td align="right">
+                 Code postal :
+              </td>
+              <td>
+                 <?php echo $userinfo['logement_codePostal']; ?>
+              </td>
+           </tr>
+           <tr>
+              <td align="right">
+                 Pays :
+              </td>
+              <td>
+                 <?php echo $userinfo['logement_pays']; ?>
+              </td>
+           </tr>
+         </table>
+       </div>
+
+            <br />
+            <a href="editionprofil.php"> Editer mon profil </a>
+            <br />
+            <a href="deconnection.php"> Se déconnecter </a>
 
 
         </div>

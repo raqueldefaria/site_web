@@ -23,7 +23,7 @@
   <!--------------- Navigation --------------->
   <div class="pieces">
       <div class="sectionPieces">
-          <p class="motPiece">Pieces</p>
+          <p class="motPiece">Pièces</p>
           <a href="#"><img src="../images/client/question.png" class="questions"></a>
       </div>
       <div class="optionPieces">
@@ -33,7 +33,7 @@
                   <img src="../images/client/car.png">
               </div>
           </a>
-          <a href="#">
+          <a href="chambre.php">
               <div class="section">
                   <p>Chambre 1</p>
                   <img src="../images/client/bed.png">
