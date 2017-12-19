@@ -32,7 +32,7 @@
             <label for="souvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
             <input type="submit" value="Se connecter" class="boutton" />
           </div>
-          <a href="https://www.facebook.com" id="mdpOublie"> Mot de passe oublié </a>
+          <a href="#" id="mdpOublie"> Mot de passe oublié </a>
         </p>
       </form>
 
