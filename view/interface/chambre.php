@@ -32,14 +32,10 @@
         <a href="#">
           <div class="section">
             <p>Lumière </p>
-<<<<<<< HEAD
-=======
 
             <img src="../images/lumière.png"/>
 
 
-
->>>>>>> d4fe3096ad58b6764c725233126bf38e13fc1c36
             <div class=imgBoutton>
               <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -50,10 +46,6 @@
               </div>
               <img src="../images/lumière.png"/>
             </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> d4fe3096ad58b6764c725233126bf38e13fc1c36
 
           </div>
         </a>
