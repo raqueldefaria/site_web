@@ -61,7 +61,7 @@
 
 }
 
-.bouttons{
+.avatar{
   display: flex;
   justify-content: space-around;
   border-radius: 10px;
@@ -71,7 +71,7 @@
 @media screen and (max-width: 800px)
 {
 
-.bouttons
+.avatar
 {
 	display: flex;
   flex-direction: column;

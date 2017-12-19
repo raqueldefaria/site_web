@@ -12,9 +12,11 @@
             <a href="contacter.php" class="txtHeader3"> Nous contacter </a>
           </nav>
 
-        <div id="avatar">
-          <a img src="../images/avatar.png" />
+        <div class="avatar">
+          <div class="profil">
+          <a href="#" id="avattar"><img src="../images/avatar.png" /> <a/>
         <div/>
+      </div>
 
 
 
