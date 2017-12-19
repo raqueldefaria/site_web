@@ -108,7 +108,7 @@
       </div>
       <br />
       <div class=options>
-        <label> Si la temperature est </label>
+        <label> Si la température est </label>
         <select>
          <option>supérieure</option>
          <option>inférieure</option>
