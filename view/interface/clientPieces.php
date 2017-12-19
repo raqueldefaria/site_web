@@ -14,7 +14,7 @@
   <body>
 
   <!--------------- Header --------------->
-  <?php include ("header.php")?>
+  <?php include ("headerbis.php")?>
 
   <!--------------- Menu --------------->
   <?php include ("menuClient.php")?>
