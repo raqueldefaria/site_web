@@ -19,7 +19,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
         }
         else { // mot de passe correct, on affiche la page d'accueil
             session_start();
-            $_SESSION['pseudo'] = $pseudo;
+            $_SESSION['pseudo'] = $_POST['pseudo'];
             $_SESSION["userID"] = $donnee['id_Utilisateur'];
             header("Location:../view/interface/clientPieces.php");
         }

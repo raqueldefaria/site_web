@@ -1,7 +1,7 @@
 <?php
 
 /* ------------------- DB ------------------- */
-require("../model/connexion_db.php");
+require("../model/connection_db.php");
 
 /* ------------------- Adding user to the Database ------------------- */
 
@@ -50,7 +50,7 @@ $insertLogement->execute();
 
 $insertLogement->closeCursor();
 
-header("Location:../view/interface/connexion.php")
+header("Location:../view/interface/connection.php")
 
 
 /* ------------------- Sending email to user -------------------
