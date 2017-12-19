@@ -11,14 +11,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
     AND !empty(htmlspecialchars($_POST['nom'])) AND !empty(htmlspecialchars($_POST['dateNaissance'])) AND !empty($_POST['mail']) AND !empty(htmlspecialchars($_POST['adresse']))
     AND !empty(htmlspecialchars($_POST['codePostal'])) AND !empty(htmlspecialchars($_POST['ville'])) AND !empty(htmlspecialchars($_POST['pays']))) {
 
-    // est-ce que le login & mail sont presents dans la base de données
-    //$prenom = $_POST['prenom'];
-    //$nom = $_POST['nom'];
-    //$pseudo = $_POST['pseudo'];
-    //$mail = $_POST['mail'];
-
-    //$reponse = $db->query('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
-    //WHERE utilisateur_login='.$pseudo.' OR utilisateur_mail='.$mail ) or die(print_r($db->errorInfo()));
+    // si le pseudo ou mail rentres sont dans la BDD alors on recupere quelque chose
     $reponse = $db->prepare('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
                              WHERE utilisateur_login=:pseudo OR utilisateur_mail=:mail');
 
@@ -41,16 +34,15 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
         // mdp correctement tapé
         if (htmlspecialchars($_POST['mdp']) != htmlspecialchars($_POST['mdp2'])) {
               header("Location:../view/interface/inscription_erreur.php?erreur=2");
-            $erreur = true; // on a une erreur
-            //echo "Vous n'avez pas tapé le même mot de passe dans les 2 champs.";
+            $erreur = true; // on a une erreur : le mot de passe n'a pas bien ete tape
         }
     }
-    else { // utilisateur trouvé dans la base de données
+    else { // utilisateur trouvé dans la base de données, on regarde si il a le meme pseudo ou mail
         if($pseudo == $donnee['utilisateur_login']){
               header("Location:../view/interface/inscription_erreur.php?erreur=3");
             $erreur = true;
         }
-        elseif(strcmp($mail,$donnee['utilisateur_mail'])==0){
+        elseif(strcmp($mail,$donnee['utilisateur_mail'])==0){ // strcmp = string comparaison
               header("Location:../view/interface/inscription_erreur.php?erreur=4");
             $erreur = true;
         }
@@ -65,8 +57,6 @@ else{
       header("Location:../view/interface/inscription_erreur.php?erreur=1");
 }
 
-// Hachage du mot de passe
-//$pass_hache = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
 
 
 ?>

@@ -1,10 +1,11 @@
 <?php
 
-/* ------------------- BDD ------------------- */
+/* ------------------- DB ------------------- */
 require("../model/connexion_db.php");
 
 /* ------------------- Adding user to the Database ------------------- */
 
+//hachage password
 $pass_hache = sha1($_POST['mdp']);
 
 $insertUser = $db->prepare('INSERT INTO utilisateur(utilisateur_type,utilisateur_login, utilisateur_motDePasse,
@@ -22,19 +23,13 @@ $insertUser->execute(array(
     $_POST['mail']
 ));
 
-//$insertUser->closeCursor();
+$insertUser->closeCursor();
+
 
 /* ------------------- Adding logement to the Database ------------------- */
 
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
-
-
-//$idUser = $db->query('SELECT id_Utilisateur FROM utilisateur
-                      //WHERE utilisateur_prenom='.$prenom.' AND utilisateur_nom='.$nom) or die(print_r($db->errorInfo()));
-
-
-//echo $idUser;
 
 $insertLogement = $db->prepare("INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
                     VALUES(:adresse, :codePostal, :ville, :pays, :id)") or die(print_r($db->errorInfo()));
@@ -52,6 +47,8 @@ $ville = $_POST['ville'];
 $pays = $_POST['pays'];
 $idUser = $db->lastInsertId();
 $insertLogement->execute();
+
+$insertLogement->closeCursor();
 
 header("Location:../view/interface/connexion.php")
 
