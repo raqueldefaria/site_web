@@ -32,11 +32,11 @@
         <a href="#">
           <div class="section">
             <p>Lumière </p>
-<<<<<<< HEAD
-            <img src="../images/lumière.png"/>
-            
 
-=======
+            <img src="../images/lumière.png"/>
+
+
+
             <div class=imgBoutton>
               <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -47,7 +47,7 @@
               </div>
               <img src="../images/lumière.png"/>
             </div>
->>>>>>> 2f318aac839cf33f9728354e3787141b5f096786
+
 
           </div>
         </a>
@@ -108,7 +108,7 @@
       </div>
       <br />
       <div class=options>
-        <label> Si la temperature est </label>
+        <label> Si la température est </label>
         <select>
          <option>supérieure</option>
          <option>inférieure</option>
@@ -128,7 +128,7 @@
 
 
 
-  <!--------------- Footer --------------->
+  <!--************- Footer -*************->
   <?php include ("footer.php")?>
 
 
