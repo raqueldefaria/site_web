@@ -8,8 +8,11 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
    $requser->execute(array($_SESSION['userID'], $_SESSION['userID']));
    $userinfo = $requser->fetch();
 
-if(isset($_SESSION['userID']) AND !empty($_SESSION['userID']))
+if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
 {
+  header("Location: connexion.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -131,10 +134,3 @@ if(isset($_SESSION['userID']) AND !empty($_SESSION['userID']))
 
 
 </html>
-<?php
-}
-else
-{
-  header("Location: connexion.php");
-}
- ?>
