@@ -14,7 +14,7 @@
 
         <div class="avatar">
           <div class="profil">
-          <a href="#" id="avattar"><img src="../images/avatar.png" /> <a/>
+          <a href="profil.php" id="avattar"><img src="../images/avatar.png" /> <a/>
         <div/>
       </div>
 

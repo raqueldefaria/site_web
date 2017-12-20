@@ -7,6 +7,9 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
    $requser = $bdd->prepare('SELECT * FROM utilisateur,logement  WHERE utilisateur.id_Utilisateur = ? AND logement.id_Utilisateur = ?');
    $requser->execute(array($_SESSION['userID'], $_SESSION['userID']));
    $userinfo = $requser->fetch();
+
+if(isset($_SESSION['userID']) AND !empty($_SESSION['userID']))
+{
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +117,7 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
             <br />
             <a href="editionprofil.php"> Editer mon profil </a>
             <br />
-            <a href="deconnection.php"> Se déconnecter </a>
+            <a href="deconnexion.php"> Se déconnecter </a>
 
 
         </div>
@@ -128,3 +131,10 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
 
 
 </html>
+<?php
+}
+else
+{
+  header("Location: connexion.php");
+}
+ ?>
