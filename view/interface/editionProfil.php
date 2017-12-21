@@ -79,7 +79,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
        </div>
 
        <div align="center">
-         <h2>Votre logement</h2>
+         <h2>Éditer votre logement</h2>
 
          <table>
            <tr>
