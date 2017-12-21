@@ -38,7 +38,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
         <div id="main_block">
 
          <div align="center">
-          <h2>Votre profil</h2>
+          <h2>Éditer votre profil</h2>
 
           <table>
           <tr>
@@ -46,7 +46,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                 <strong> Pseudo </strong> :
              </td>
              <td>
-                <?php echo $userinfo['utilisateur_login']; ?>
+               <input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" value="<?php echo $userinfo['utilisateur_login']; ?>" />
              </td>
           </tr>
           <tr>
@@ -54,7 +54,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                 <strong> Mail </strong> :
              </td>
              <td>
-                <?php echo $userinfo['utilisateur_mail']; ?>
+               <input type="mail" placeholder="Mail" id="mail" name="mail" value="<?php echo $userinfo['utilisateur_mail']; ?>" />
              </td>
           </tr>
           <tr>
@@ -62,7 +62,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                 <strong> Prénom </strong> :
              </td>
              <td>
-                <?php echo $userinfo['utilisateur_prenom']; ?>
+               <input type="text" placeholder="Prénom" id="prenom" name="prenom" value="<?php echo $userinfo['utilisateur_prenom']; ?>" />
              </td>
           </tr>
           <tr>
@@ -70,7 +70,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                 <strong> Nom </strong> :
              </td>
              <td>
-                <?php echo $userinfo['utilisateur_nom']; ?>
+               <input type="text" placeholder="Nom" id="nom" name="nom" value="<?php echo $userinfo['utilisateur_nom']; ?>" />
              </td>
           </tr>
 
@@ -87,7 +87,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                  <strong> Adresse </strong> :
               </td>
               <td>
-                 <?php echo $userinfo['logement_adresse']; ?>
+                <input type="text" placeholder="Adresse" id="adresse" name="adresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
               </td>
            </tr>
            <tr>
@@ -95,7 +95,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                  <strong> Ville </strong> :
               </td>
               <td>
-                 <?php echo $userinfo['logement_ville']; ?>
+                <input type="text" placeholder="Ville" id="ville" name="ville" value="<?php echo $userinfo['logement_ville']; ?>" />
               </td>
            </tr>
            <tr>
@@ -103,7 +103,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                  <strong> Code postal </strong> :
               </td>
               <td>
-                 <?php echo $userinfo['logement_codePostal']; ?>
+                <input type="text" placeholder="Code postal" id="codePostal" name="codePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
               </td>
            </tr>
            <tr>
@@ -111,7 +111,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                  <strong> Pays </strong> :
               </td>
               <td>
-                 <?php echo $userinfo['logement_pays']; ?>
+                <input type="text" placeholder="Pays" id="pays" name="pays" value="<?php echo $userinfo['logement_pays']; ?>" />
               </td>
            </tr>
          </table>
