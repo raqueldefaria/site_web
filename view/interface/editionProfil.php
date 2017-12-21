@@ -115,6 +115,10 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
               </td>
            </tr>
          </table>
+
+         <br />
+         <input type="submit" value="Mettre à jour mon profil !" class="boutton"/>
+
        </div>
 
             <br />
