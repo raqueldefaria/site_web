@@ -21,6 +21,8 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
             session_start();
             $_SESSION['pseudo'] = $_POST['pseudo'];
             $_SESSION["userID"] = $donnee['id_Utilisateur'];
+            $_SESSION['prenom'] = $donnee['utilisateur_prenom'];
+            $_SESSION['nom'] = $donnee['utilisateur_nom'];
             header("Location:../view/interface/clientPieces.php");
         }
     }
