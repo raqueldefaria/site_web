@@ -21,7 +21,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
 
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../css/profil.css" />
+        <link rel="stylesheet" href="../css/editionProfil.css" />
         <link rel="stylesheet" href="../css/header.css" />
         <link rel="stylesheet" href="../css/footer.css" />
         <title> DomOnline - Profil </title>
@@ -118,7 +118,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
        </div>
 
             <br />
-            <a href="editionProfil.php"> Editer mon profil </a>
+            <a href="profil.php"> Retourner à mon profil </a>
             <br />
             <a href="deconnexion.php"> Se déconnecter </a>
 
