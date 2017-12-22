@@ -128,26 +128,20 @@
 {
   border-left: 1px solid black;
   border-right: 1px solid black;
-  padding: 8%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 8%;
   /*margin-top: 25%;*/
 }
 
 .txtHeader2
 {
   border-right: 1px solid black;
-  padding: 8%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 8%;
   /*margin-top: 25%;*/
 }
 
 .txtHeader3
 {
-  padding: 8%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 8%;
   /*margin-top: 25%;*/
   border-right: 1px solid black;
 }

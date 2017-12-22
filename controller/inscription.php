@@ -5,7 +5,6 @@ require("../model/connection_db.php");
 
 /* ------------------- Verifications ------------------- */
 
-
 // Tous les champs sont remplis
 if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST['mdp'])) AND !empty(htmlspecialchars($_POST['type'])) AND !empty(htmlspecialchars($_POST['prenom']))
     AND !empty(htmlspecialchars($_POST['nom'])) AND !empty(htmlspecialchars($_POST['dateNaissance'])) AND !empty($_POST['mail']) AND !empty(htmlspecialchars($_POST['adresse']))
