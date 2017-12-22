@@ -10,7 +10,8 @@
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0.85;
+  opacity: 0.95;
+  z-index: 2;
 }
 
 @media screen and (max-width: 800px)
@@ -65,6 +66,7 @@
   justify-content: space-around;
   border-radius: 10px;
   flex: 1;
+  margin-right: 3%;
 }
 
 @media screen and (max-width: 800px)
@@ -77,6 +79,25 @@
   text-align: center;
 }
 
+}
+
+img
+{
+  width: 19px;
+  height: 19px;
+}
+
+
+.prenom_nom
+{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.avatar
+{
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /*------------ Bouttons ------------*/
@@ -97,7 +118,7 @@
 }
 
 
-.inscrire, .seConnecter{
+.profil, .seConnecter{
   padding-top: 10px;
   padding-bottom: 10px;
 }

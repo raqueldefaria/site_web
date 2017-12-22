@@ -18,7 +18,7 @@
                       <a href="inscription.php" id="boutoninscrire"> Inscription </a>
                   </div>
                   <div class="seConnecter">
-                      <a href="connexion.php" id="boutonSeConnecter"> Connexion </a>
+                      <a href="connexion.php" id="boutonSeConnecter"> Se connecter </a>
                   </div>
 
 
