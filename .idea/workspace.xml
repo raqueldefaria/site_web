@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/css/headerbis.css" afterPath="$PROJECT_DIR$/view/css/headerbis.css" />
-      <change beforePath="$PROJECT_DIR$/controller/inscription.php" afterPath="$PROJECT_DIR$/controller/inscription.php" />
-      <change beforePath="$PROJECT_DIR$/view/css/header.css" afterPath="$PROJECT_DIR$/view/css/header.css" />
-      <change beforePath="$PROJECT_DIR$/view/css/inscription.css" afterPath="$PROJECT_DIR$/view/css/inscription.css" />
-      <change beforePath="$PROJECT_DIR$/view/interface/inscription.php" afterPath="$PROJECT_DIR$/view/interface/inscription.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,7 +102,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-              <folding />
+              <folding>
+                <marker date="1513940120965" expanded="true" signature="1184:1186" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/view/interface/inscription_erreur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <marker date="1513938733000" expanded="true" signature="1714:1802" ph="..." />
                 <marker date="1513938733000" expanded="true" signature="1735:1802" ph="..." />
@@ -317,10 +314,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/connection.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/model/utilisateurs_connexion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/accueil.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/connexion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/connexion_erreur.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/deconnexion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/header.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/headerbis.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/profil.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -328,9 +327,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/editionProfil.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/deconnexion.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/editionProfil.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/connexion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/headerInclude.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/headerIncludeCSS.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -338,7 +337,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/deconnection.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -476,7 +474,7 @@
       <workItem from="1513636198025" duration="47000" />
       <workItem from="1513677419360" duration="5375000" />
       <workItem from="1513796300103" duration="939000" />
-      <workItem from="1513930334483" duration="9601000" />
+      <workItem from="1513930334483" duration="9644000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -576,11 +574,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513683687123</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="MAJ">
+      <created>1513940096076</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1513940096076</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83286000" />
+    <option name="totallyTimeSpent" value="83329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -853,7 +858,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1513940120965" expanded="true" signature="1184:1186" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -884,7 +891,7 @@
     <entry file="file://$PROJECT_DIR$/view/interface/inscription_erreur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <marker date="1513938733000" expanded="true" signature="1714:1802" ph="..." />
             <marker date="1513938733000" expanded="true" signature="1735:1802" ph="..." />
