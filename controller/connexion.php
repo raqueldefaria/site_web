@@ -18,6 +18,10 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
             header("Location:../view/interface/connexion_erreur.php?erreur=2");
         }
         else { // mot de passe correct, on affiche la page d'accueil
+            if (isset($_POST['souvenir']))
+            {
+              setcookie('identifiant',$_POST['pseudo'], time() + 365*2*3600, null, null, false, true);
+            }
             session_start();
             $_SESSION['pseudo'] = $_POST['pseudo'];
             $_SESSION["userID"] = $donnee['id_Utilisateur'];
