@@ -13,12 +13,15 @@
                 </nav>
 
                 <div class="bouttons">
+
                   <div class="inscrire">
                       <a href="inscription.php" id="boutoninscrire"> Inscription </a>
                   </div>
                   <div class="seConnecter">
                       <a href="connexion.php" id="boutonSeConnecter"> Connexion </a>
                   </div>
+
+
                 </div>
               </div>
 
