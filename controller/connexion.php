@@ -18,7 +18,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
             header("Location:../view/interface/connexion_erreur.php?erreur=2");
         }
         else { // mot de passe correct, on affiche la page d'accueil
-            if (isset($_POST['souvenir']))
+            if (isset($_POST['souvenir'])) //on crée le cookie si l'utilisateur a coché "Se souvenir de moi"
             {
               setcookie('identifiant',$_POST['pseudo'], time() + 365*2*3600, null, null, false, true);
             }
