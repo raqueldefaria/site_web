@@ -13,14 +13,14 @@
 
   <body>
 
-  <!--------------- Header --------------->
+  <!--************** Header *************-->
   <?php include ("headerbis.php")?>
 
-  <!--------------- Menu --------------->
+  <!--************** Menu **************-->
   <?php include ("menuClient.php")?>
 
 
-  <!--------------- Navigation --------------->
+  <!--************** Navigation **************-->
   <div class="pieces">
       <div class="sectionPieces">
           <p class="motPiece">Pièces</p>
