@@ -20,7 +20,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
         else { // mot de passe correct, on affiche la page d'accueil
             if (isset($_POST['souvenir'])) //on crée le cookie si l'utilisateur a coché "Se souvenir de moi"
             {
-              setcookie('identifiant',$_POST['pseudo'], time() + 365*2*3600, null, null, false, true);
+              setcookie('username',$_POST['pseudo'], time() + 365*2*3600, null, null, false, true);
             }
             session_start();
             $_SESSION['pseudo'] = $_POST['pseudo'];
