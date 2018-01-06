@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +9,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../css/chambre.css" />
     <link rel="stylesheet" href="../css/clientPieces.css" />
-    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
 
@@ -15,7 +19,7 @@
   <body>
 
   <!--------------- Header --------------->
-  <?php include ("header.php")?>
+  <?php include ("headerbis.php")?>
 
   <!--------------- Menu --------------->
   <?php include ("menuClient.php")?>
