@@ -15,6 +15,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
 
         // Le mot de passe tapé ne correspond pas à celui stocké dans la base de données
         if($pass_hache = sha1(htmlspecialchars($_POST['mdp']))!=$donnee['utilisateur_motDePasse']){
+            cookie_username_temp();
             header("Location:../view/interface/connexion_erreur.php?erreur=2");
         }
         else { // mot de passe correct, on affiche la page d'accueil
@@ -31,6 +32,8 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
         }
     }
 } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
+    include("../model/utilisateurs_connexion.php");
+    cookie_username_temp();
     header("Location:../view/interface/connexion_erreur.php?erreur=3");
 }
 

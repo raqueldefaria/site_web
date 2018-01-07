@@ -28,8 +28,9 @@
 
     <form method="post" action="../../controller/connexion.php">
         <p>
-            <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username'])){echo $_COOKIE['username'];}?>" /> <br />
-            <br />
+            <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username']) && !isset($_COOKIE['username_temp'])){echo $_COOKIE['username'];} elseif (isset($_COOKIE['username_temp'])){echo $_COOKIE['username_temp'];} ?>" />
+            <br /><br />
+
             <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" size="30" maxlength="20" /><br />
         <div id="box">
             <label for="boxSouvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
@@ -40,7 +41,7 @@
         if($_GET['erreur']==1)
         {
             ?>
-            <p><span class="msg_erreur">L'utilisateur n'a pas été trouvé</span></p>
+            <p><span class="msg_erreur">Cet identifiant n'existe pas</span></p>
             <?php
         }
         elseif($_GET['erreur']==2)
@@ -57,7 +58,7 @@
         }
         elseif($_GET['erreur']!=1 && $_GET['erreur']!=2 && $_GET['erreur']!=3)
         {
-            header("Location:../interface/connection.php");
+            header("Location:../interface/connexion.php");
         }
         ?>
 
