@@ -13,5 +13,13 @@
         return $reponse;
     }
 
+    // fonction qui crée un cookie temporaire (5min=300s) pour le pseudo de l'utilisateur lors d'une erreur durant la tentative de connexion
+    function cookie_username_temp(){
+      if (!isset($_COOKIE['username']) && isset($_POST['pseudo']))
+      {
+        setcookie('username_temp',$_POST['pseudo'], time() + 300, "/site_web", "localhost", false, true);
+      }
+    }
+
 
 ?>
