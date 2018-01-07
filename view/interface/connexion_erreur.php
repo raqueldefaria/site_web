@@ -28,7 +28,7 @@
 
     <form method="post" action="../../controller/connexion.php">
         <p>
-            <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" /> <br />
+            <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username'])){echo $_COOKIE['username'];}?>" /> <br />
             <br />
             <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" size="30" maxlength="20" /><br />
         <div id="box">

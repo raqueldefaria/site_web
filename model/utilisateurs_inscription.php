@@ -50,7 +50,7 @@ $insertLogement->execute();
 
 $insertLogement->closeCursor();
 
-header("Location:../view/interface/connection.php")
+header("Location:../view/interface/connexion.php")
 
 
 /* ------------------- Sending email to user -------------------
