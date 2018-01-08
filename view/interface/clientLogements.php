@@ -7,7 +7,7 @@ session_start();
 
   <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../css/clientPieces.css" />
+    <link rel="stylesheet" href="../css/clientLogements.css" />
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
@@ -17,15 +17,15 @@ session_start();
 
   <body>
 
-  <!--************** Header *************-->
+  <!--------------- Header --------------->
   <?php include ("headerbis.php")?>
 
-  <!--************** Menu **************-->
+  <!--------------- Menu --------------->
   <?php include ("menuClient.php")?>
 
 
-  <!--************** Navigation **************-->
-  <div class="pieces">
+  <!--------------- Navigation --------------->
+  <div class="logements">
       <div class="sectionPieces">
           <p class="motPiece">Pièces</p>
           <a href="#"><img src="../images/client/question.png" class="questions"></a>

@@ -23,18 +23,18 @@
 
         <div id="conteneur1">
 
-            <div class="element"><img src="../images/equipe/Dejous.png"><p>Alexandre Dejous </p></div>
-            <div class="element"><img src="../images/equipe/paresseux.png"><p>Benjamin Torchut </p></div>
-            <div class="element"><img src="../images/equipe/Raquel.png"><p>Raquel DeFaria </p></div>
+            <div class="element"><img src="../images/equipe/Dejous.png"><p>Alexandre Dejous </p><a> Alexandre.Dejous@Domonline.com </a></div>
+            <div class="element"><img src="../images/equipe/paresseux.png"><p>Benjamin Torchut </p><a> Benjamin.Torchut@Domonline.com </a></div>
+            <div class="element"><img src="../images/equipe/Raquel.png"><p>Raquel DeFaria </p><a> Raquel.DeFaria@Domonline.com </a></div>
         </div>
 
         <br />
         <br />
         <br />
         <div id="conteneur2">
-                <div class="element"><img src="../images/equipe/Linda.png"><p> Linda Deghdegh </p></div>
-                <div class="element"><img src="../images/equipe/BG.png"><p>   Rémy Touret </p></div>
-                <div class="element"><img src="../images/equipe/Damien.png"><p> Damien Deredec </p></div>
+                <div class="element"><img src="../images/equipe/Linda.png"><p> Linda Deghdegh </p> <a>Linda.Deghdegh@Domonline.com </a></div>
+                <div class="element"><img src="../images/equipe/BG.png"><p>   Rémy Touret </p><a>Rémy.Touret@Domonline.com </a></div>
+                <div class="element"><img src="../images/equipe/Damien.png"><p> Damien Deredec </p><a> Damien.Deredec@Domonline.com </a></div>
         </div>
 
 

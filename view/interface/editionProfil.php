@@ -22,7 +22,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/editionProfil.css" />
-        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/headerbis.css" />
         <link rel="stylesheet" href="../css/footer.css" />
         <title> DomOnline - Profil </title>
     </head>

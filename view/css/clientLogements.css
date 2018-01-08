@@ -9,7 +9,7 @@ body{
 
 /*------------ Pieces in general ------------*/
 
-.pieces{
+.logements{
     display: flex;
     flex-direction: column;
     height: 50%;
