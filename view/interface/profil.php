@@ -73,6 +73,14 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
                 <?php echo $userinfo['utilisateur_nom']; ?>
              </td>
           </tr>
+          <tr>
+             <td align="right">
+                <strong> Type </strong> :
+             </td>
+             <td>
+                <?php echo $userinfo['utilisateur_type']; ?>
+             </td>
+          </tr>
 
        </table>
 
