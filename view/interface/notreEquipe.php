@@ -23,7 +23,7 @@
 
         <div id="conteneur1">
 
-            <div class="element"><img src="../images/equipe/Dejous.png"><p>Alexandre Dejous </p><a> Alexandre.Dejous@Domonline.com </a></div>
+            <div class="element"><img src="../images/equipe/Dejous.png"><p>Alexandre Dejous <span class="email_domonline"><br /><a>Alexandre.Dejous@Domonline.com </a></span></p></div>
             <div class="element"><img src="../images/equipe/paresseux.png"><p>Benjamin Torchut </p><a> Benjamin.Torchut@Domonline.com </a></div>
             <div class="element"><img src="../images/equipe/Raquel.png"><p>Raquel DeFaria </p><a> Raquel.DeFaria@Domonline.com </a></div>
         </div>
