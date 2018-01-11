@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
+    <link rel="stylesheet" href="../css/jspopUp.css" />
 
     <title>DomOnline - Pièces</title>
 </head>
@@ -22,6 +23,25 @@ session_start();
 
 <!--************** Menu **************-->
 <?php include ("menuClient.php")?>
+
+<!--************** Pop **************-->
+<div id="addPiece" class="parentDisable">
+    <div class="addPieceOptions" >
+        <form method="post" action="../../model/addPiece.php" >
+            <p>Ajouter une piece : <select name="piece">
+                    <option value="garage">Garage</option>
+                    <option value="chambre">Chambre</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="bureau">Bureau</option>
+                    <option value="salleDeBain">Salle de bain</option>
+                    <option value="toilettes">Toilettes</option>
+                    <option value="Salon">Salon</option>
+                </select></p>
+            <script type="application/javascript" src="../js/addPiece.js"></script>
+            <input value="Ajouter" type="submit" onClick="return hideAdd('addPiece', <?php echo $_SESSION['userID']?>)">
+        </form>
+    </div>
+</div>
 
 
 <!--************** Navigation **************-->
@@ -78,7 +98,7 @@ session_start();
             </div>
         </a>
 
-        <a href="#" >
+        <a href="#" onclick="return popAdd('addPiece') " >
             <div class="section">
                 <img src="../images/client/add.png" class="addButton">
             </div>

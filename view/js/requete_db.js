@@ -1,6 +1,6 @@
 /*************** Functions to show or hide the graphs ****************/
 
-function pop(div,table,limit, label, title) {
+function popChart(div,table,limit, label, title) {
     var dataArray = gettingDataFromDb(table, limit);
     console.log(dataArray);
     createChart(dataArray, label, title); // creating chart
