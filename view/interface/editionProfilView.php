@@ -34,7 +34,7 @@
                 <strong> Pseudo </strong> :
              </td>
              <td>
-               <input type="text" placeholder="Pseudo" id="pseudo" name="pseudo" value="<?php echo $userinfo['utilisateur_login']; ?>" />
+               <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userinfo['utilisateur_login']; ?>" />
              </td>
           </tr>
           <tr>
@@ -42,7 +42,7 @@
                 <strong> Mail </strong> :
              </td>
              <td>
-               <input type="mail" placeholder="Mail" id="mail" name="mail" value="<?php echo $userinfo['utilisateur_mail']; ?>" />
+               <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userinfo['utilisateur_mail']; ?>" />
              </td>
           </tr>
           <tr>
@@ -50,7 +50,7 @@
                 <strong> Prénom </strong> :
              </td>
              <td>
-               <input type="text" placeholder="Prénom" id="prenom" name="prenom" value="<?php echo $userinfo['utilisateur_prenom']; ?>" />
+               <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userinfo['utilisateur_prenom']; ?>" />
              </td>
           </tr>
           <tr>
@@ -58,10 +58,41 @@
                 <strong> Nom </strong> :
              </td>
              <td>
-               <input type="text" placeholder="Nom" id="nom" name="nom" value="<?php echo $userinfo['utilisateur_nom']; ?>" />
+               <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userinfo['utilisateur_nom']; ?>" />
              </td>
           </tr>
-
+          <tr>
+            <td align="right">
+               <strong> Adresse </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Adresse" id="adresse" name="adresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Ville </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Ville" id="ville" name="ville" value="<?php echo $userinfo['logement_ville']; ?>" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Code postal </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Code postal" id="codePostal" name="codePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Pays </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Pays" id="pays" name="pays" value="<?php echo $userinfo['logement_pays']; ?>" />
+            </td>
+          </tr>
           <tr>
              <td align="right">
                 <strong> Mot de passe actuel </strong> :
@@ -86,51 +117,10 @@
                <input type="text" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" />
              </td>
           </tr>
-
        </table>
 
-       </div>
-
-       <div align="center">
-         <h2>Éditer votre logement</h2>
-
-         <table>
-           <tr>
-              <td align="right">
-                 <strong> Adresse </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Adresse" id="adresse" name="adresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Ville </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Ville" id="ville" name="ville" value="<?php echo $userinfo['logement_ville']; ?>" />
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Code postal </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Code postal" id="codePostal" name="codePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Pays </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Pays" id="pays" name="pays" value="<?php echo $userinfo['logement_pays']; ?>" />
-              </td>
-           </tr>
-         </table>
-
-         <br />
-         <input type="submit" value="Mettre à jour mon profil !" class="boutton"/>
+       <br />
+       <input type="submit" value="Mettre à jour mon profil !" class="boutton"/>
 
        </div>
 
