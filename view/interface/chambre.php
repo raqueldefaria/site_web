@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
-    <link rel="stylesheet" href="../css/jsPopUp.css" />
+    <link rel="stylesheet" href="../css/jspopChartUp.css" />
 
     <title>DomOnline - Chambre</title>
 
@@ -48,7 +48,7 @@ session_start();
     <div class="optionPieces">
         <a href="#">
             <div class="section">
-                <p onclick="return pop('chartDiv', 'donnees',10, 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Lumière </p>
+                <p onclick="return popChart('chartDiv', 'donnees',10, 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Lumière </p>
                 <div class=imgBoutton>
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -64,7 +64,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return pop('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Volets</p>
+                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Volets</p>
 
                 <div class=imgBoutton>
                     <div class="onoffswitch">
@@ -80,7 +80,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return pop('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Température</p>
+                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Température</p>
                 <div class=imgBoutton>
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -95,7 +95,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return pop('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Humidité</p>
+                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Humidité</p>
 
                 <div class=imgBoutton>
                     <div class="onoffswitch">
