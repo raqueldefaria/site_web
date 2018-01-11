@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/footer.css" />
 
     <title>DomOnline - Inscription</title>
+    <script src="../js/verifInscription.js"></script>
 
 </head>
 
