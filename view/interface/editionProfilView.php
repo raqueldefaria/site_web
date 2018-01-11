@@ -1,18 +1,6 @@
+
 <?php
-session_start();
-
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=site_web', 'root', '');
-
-
-   $requser = $bdd->prepare('SELECT * FROM utilisateur,logement  WHERE utilisateur.id_Utilisateur = ? AND logement.id_Utilisateur = ?');
-   $requser->execute(array($_SESSION['userID'], $_SESSION['userID']));
-   $userinfo = $requser->fetch();
-
-if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
-{
-  header("Location: connexion.php");
-}
-
+  require('../../controller/editionProfilController.php');
 ?>
 
 <!DOCTYPE html>

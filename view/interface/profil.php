@@ -116,7 +116,7 @@ require("../../controller/profilController.php");
        </div>
 
             <br />
-            <a href="editionProfil.php"> Editer mon profil </a>
+            <a href="editionProfilView.php"> Editer mon profil </a>
             <br />
             <a href="deconnexion.php"> Se déconnecter </a>
 
