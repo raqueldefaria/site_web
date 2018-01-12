@@ -115,13 +115,17 @@ require("../../controller/profilController.php");
          </table>
        </div>
 
-            <br />
-            <a href="editionProfilView.php"> Editer mon profil </a>
-            <br />
-            <a href="deconnexion.php"> Se déconnecter </a>
+       <br/>
+
+       <?php if(isset($msg)) { echo '<p>' . $msg . '</p>'; } ?>
+
+       <br/>
+       <a href="editionProfilView.php"> Editer mon profil </a>
+       <br/>
+       <a href="deconnexion.php"> Se déconnecter </a>
 
 
-        </div>
+      </div>
 
 
     </div>
