@@ -1,8 +1,8 @@
 <?php
     if(!isset($_SESSION['nom'])){
-      include("../interface/header.php");
+      require("../interface/header.php");
     }
     else{
-      include("../interface/headerbis.php");
+      require("../interface/headerbis.php");
     }
 ?>
