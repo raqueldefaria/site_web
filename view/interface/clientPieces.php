@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['idLogement'] = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +40,6 @@ session_start();
                     <option value="Salon">Salon</option>
                 </select></p>
             <input hidden name="idUser" value="<?php echo $_SESSION['userID']?>"/>
-            <input hidden name="idLogement" value="<?php echo $_GET['id']?>"/>
             <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
             <input value="Ajouter" type="submit">
             <input value="Fermer" type="submit" onclick="return hide('addPiece')">
