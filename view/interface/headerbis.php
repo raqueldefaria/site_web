@@ -13,7 +13,7 @@
           </nav>
           <div class="bouttons">
             <div class="profil">
-              <a href="profil.php" id="boutoninscrire">
+              <a href="profil.php" id="boutonProfil">
                 <div class="prenom_nom">
                 <?php echo $_SESSION['prenom'] . ' ' . $_SESSION['nom']; ?>
                 </div>
@@ -23,7 +23,7 @@
               </a>
             </div>
             <div class="seConnecter">
-              <a href="deconnexion.php" id="boutonSeConnecter"> Se Déconnecter </a>
+              <a href="deconnexion.php" id="boutonSeDeconnecter"> Se Déconnecter </a>
             </div>
           </div>
         </div>
