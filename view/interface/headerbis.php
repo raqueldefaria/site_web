@@ -20,8 +20,8 @@
                 <img id="avatar" src="../images/585e4beacb11b227491c3399.png" />
             </div>
             <div class="dropdown_content">
-              <a href="profil.php">Votre profil</a>
-              <a href="logements.php">Vos logements</a>
+              <a href="profil.php">Profil</a>
+              <a href="logements.php">Logements</a>
             </div>
 
 
