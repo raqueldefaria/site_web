@@ -12,15 +12,19 @@
             <a href="contacter.php" class="txtHeader3"> Nous contacter </a>
           </nav>
           <div class="bouttons">
-            <div class="profil">
-              <a href="profil.php" id="boutonProfil">
+            <div class="bouton_profil" id="boutonProfil">
                 <div class="prenom_nom">
                 <?php echo $_SESSION['prenom'] . ' ' . $_SESSION['nom']; ?>
                 </div>
                 <div class="avatar">
                 <img id="avatar" src="../images/585e4beacb11b227491c3399.png" />
-              </div>
-              </a>
+            </div>
+            <div class="dropdown_content">
+              <a href="profil.php">Profil</a>
+              <a href="logements.php">Logements</a>
+            </div>
+
+
             </div>
             <div class="seConnecter">
               <a href="deconnexion.php" id="boutonSeDeconnecter"> Se Déconnecter </a>
