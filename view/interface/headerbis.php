@@ -28,12 +28,5 @@
           </div>
         </div>
 
-      <!--  <div class="avatar">
-          <div class="profil">
-          <a href="profil.php" id="avattar"><img src="../images/avatar.png" /> <a/>
-        <div/>
-      </div>
--->
-
 
 </header>

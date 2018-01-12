@@ -1,9 +1,9 @@
       <footer>
 
               <div class="reseauxSociaux">
-                  <a href="https://www.facebook.com" class="linkFacebookLogo">  </a>
-                  <a href="https://www.twitter.com" class="linkTwitterLogo"> </a>
-                  <a href="https://www.instagram.com" class="linkInstagramLogo"> </a>
+                  <a href="https://www.facebook.com" class="linkFacebookLogo" target="_blank">  </a>
+                  <a href="https://www.twitter.com" class="linkTwitterLogo" target="_blank"> </a>
+                  <a href="https://www.instagram.com" class="linkInstagramLogo" target="_blank"> </a>
                   <!--<img src="images/logoFacebook.png" alt="Logo facebook" id="logoFacebook">
                   <img src="images/logoTwitter.png" alt="Logo twitter" id="logoTwitter" >
                   <img src="images/logoInstagram.png" alt="Logo instagram" id="logoInstagram"  > -->
@@ -17,7 +17,7 @@
 
               <div class="countries">
                   <img src="../images/footer/DrapeauFrancais.png" alt="Logo du drapeau français" id="flag">
-                  <p id="txtFooter"> France </p>
+                  <p id="txtFooter"> Français </p>
 
               </div>
 

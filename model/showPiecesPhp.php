@@ -2,7 +2,7 @@
 
 require ("connection_db.php");
 
-$pieces = $db->query("SELECT * FROM piece WHERE Logement_Utilisateur_idUtilisateur =".$_SESSION['userID']."AND Logement_idLogement=".$_POST['idLogement'] );
+$pieces = $db->query("SELECT * FROM piece WHERE Logement_Utilisateur_idUtilisateur =" .$_SESSION['userID']. " AND Logement_idLogement=".$_SESSION['idLogement']);
 
 while ($data = $pieces->fetch()){
     switch ($data['piece_nom']) {

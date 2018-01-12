@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/controller/addLogement.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/addLogement.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/showLogementsPhp.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/interface/logements.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/site_web.iml" afterPath="$PROJECT_DIR$/.idea/site_web.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/model/addPieces.php" afterPath="$PROJECT_DIR$/model/addPieces.php" />
       <change beforePath="$PROJECT_DIR$/model/showPiecesPhp.php" afterPath="$PROJECT_DIR$/model/showPiecesPhp.php" />
-      <change beforePath="$PROJECT_DIR$/view/interface/chambre.php" afterPath="$PROJECT_DIR$/view/interface/chambre.php" />
       <change beforePath="$PROJECT_DIR$/view/interface/clientPieces.php" afterPath="$PROJECT_DIR$/view/interface/clientPieces.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,17 +58,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="clientPieces.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/interface/clientPieces.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/addLogement.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="385">
@@ -90,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
-              <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
+              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="62" />
               <folding>
                 <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
               </folding>
@@ -131,22 +115,30 @@
       <file leaf-file-name="showPiecesPhp.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding>
-                <marker date="1515744670197" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
-                <marker date="1515744670197" expanded="true" signature="61:170" ph="SELECT * FRO... piece" />
-                <marker date="1515744670197" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
-                <marker date="1515744670197" expanded="true" signature="61:193" ph="SELECT * FRO... piece" />
+                <marker date="1515747675382" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
+                <marker date="1515747675382" expanded="true" signature="61:145" ph="SELECT * FRO... piece" />
+                <marker date="1515747675382" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logements.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="piece" pinned="false" current-in-tab="false">
+        <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logements.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
+            <state relative-caret-position="140">
               <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
               <folding />
             </state>
@@ -241,11 +233,11 @@
         <option value="$PROJECT_DIR$/controller/addLogement.php" />
         <option value="$PROJECT_DIR$/model/addLogement.php" />
         <option value="$PROJECT_DIR$/view/css/jsPopUp.css" />
-        <option value="$PROJECT_DIR$/model/addPieces.php" />
         <option value="$PROJECT_DIR$/view/interface/logements.php" />
         <option value="$PROJECT_DIR$/model/showLogementsPhp.php" />
         <option value="$PROJECT_DIR$/view/interface/clientPieces.php" />
         <option value="$PROJECT_DIR$/model/showPiecesPhp.php" />
+        <option value="$PROJECT_DIR$/model/addPieces.php" />
       </list>
     </option>
   </component>
@@ -311,23 +303,13 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="interface" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -367,7 +349,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/headerInclude.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/footer.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/headerbis.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/contacter.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/footer.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/headerbis.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/nosOffres.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/notreEquipe.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -382,6 +370,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/mdp(1).css</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -534,7 +523,7 @@
       <workItem from="1515605918379" duration="5057000" />
       <workItem from="1515658520669" duration="9449000" />
       <workItem from="1515694414691" duration="17122000" />
-      <workItem from="1515744559570" duration="123000" />
+      <workItem from="1515744559570" duration="3221000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -676,11 +665,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515701701266</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Affichage automatique pieces">
+      <created>1515744724205</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1515744724205</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147996000" />
+    <option name="totallyTimeSpent" value="151094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -876,6 +872,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -919,6 +916,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -993,33 +991,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="18" column="76" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="76" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/addPieces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1515707328789" expanded="true" signature="212:265" ph="SELECT id_Lo... logement" />
-            <marker date="1515707328789" expanded="true" signature="212:266" ph="SELECT id_Lo... logement" />
-            <marker date="1515707328789" expanded="true" signature="212:267" ph="SELECT id_Lo... logement" />
-            <marker date="1515707328789" expanded="true" signature="212:277" ph="SELECT id_Lo... logement" />
-            <marker date="1515707328789" expanded="true" signature="212:312" ph="SELECT id_Lo... logement" />
-            <marker date="1515707328789" expanded="true" signature="424:545" ph="INSERT INTO piece... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,60 +1007,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/clientPieces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/addLogement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <marker date="1515744670170" expanded="true" signature="120:277" ph="INSERT INTO logement... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="64" lean-forward="false" selection-start-line="8" selection-start-column="64" selection-end-line="8" selection-end-column="64" />
-          <folding>
-            <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/bureau.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <marker date="1515744670197" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
-            <marker date="1515744670197" expanded="true" signature="61:170" ph="SELECT * FRO... piece" />
-            <marker date="1515744670197" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
-            <marker date="1515744670197" expanded="true" signature="61:193" ph="SELECT * FRO... piece" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,9 +1033,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
+        <state relative-caret-position="140">
           <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="62" />
+          <folding>
+            <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1515747675382" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
+            <marker date="1515747675382" expanded="true" signature="61:145" ph="SELECT * FRO... piece" />
+            <marker date="1515747675382" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/addPieces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <marker date="1515747722992" expanded="true" signature="266:387" ph="INSERT INTO piece... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/clientPieces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <marker date="1515746730712" expanded="true" signature="87:1627" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="95:460" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="468:1627" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="711:1627" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="745:1627" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="810:1627" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="827:1333" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="868:1329" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="1747:2011" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="1779:1913" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="1944:2011" ph="..." />
+            <marker date="1515746730712" expanded="true" signature="2137:2258" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/addLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <marker date="1515744670170" expanded="true" signature="120:277" ph="INSERT INTO logement... " />
+          </folding>
         </state>
       </provider>
     </entry>
