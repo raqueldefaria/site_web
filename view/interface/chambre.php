@@ -12,7 +12,7 @@ session_start();
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
-    <link rel="stylesheet" href="../css/jspopChartUp.css" />
+    <link rel="stylesheet" href="../css/jsPopUp.css" />
 
     <title>DomOnline - Chambre</title>
 
