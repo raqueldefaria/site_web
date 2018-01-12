@@ -88,7 +88,6 @@ a.linkInstagramLogo:hover{
 
 .countries{
 	margin: auto;
-	display: flex;
 	justify-content: center;
 	text-align: center;
 	flex: 1;
@@ -98,4 +97,11 @@ a.linkInstagramLogo:hover{
 	margin: auto;
 	text-align: center;
 	flex: 4;
+}
+
+.countries p, .countries img
+{
+	margin:auto;
+  display: inline-block;
+  vertical-align: middle;
 }
