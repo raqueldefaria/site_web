@@ -11,7 +11,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $obj = json_decode($_POST["x"], false);
 
 /* ------------------- BDD ------------------- */
-require("../../model/connection_db.php");
+require("connection_db.php");
 
 $data = $db->query("SELECT donnees_valeur, donnees_temps FROM ".$obj->table." LIMIT ".$obj->limit) or die(print_r($db->errorInfo()));
 

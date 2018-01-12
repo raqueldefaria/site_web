@@ -1,9 +1,11 @@
 /*************** Functions to show or hide the graphs ****************/
 
-function popChart(div,table,limit, label, title) {
-    var dataArray = gettingDataFromDb(table, limit);
-    console.log(dataArray);
-    createChart(dataArray, label, title); // creating chart
+function popChart(div,limit, label, title, yLabel, xLabel) {
+    console.log(yLabel);
+    console.log(xLabel);
+    var xData = xDataFromDb(limit);
+    var yData = yDataFromDb(limit);
+    createChart(xData, yData, label, title, yLabel, xLabel); // creating chart
     document.getElementById(div).style.display='block';
     return false;
 }
@@ -14,11 +16,11 @@ function hide(div) {
 
 /*************** Getting data from db (AJAX with JSON) ****************/
 
-function gettingDataFromDb (table, limit){
+function xDataFromDb (limit){
     var parametersSentToDb, dbParam, xmlhttp, responseFromDb, it;
-    var yDataArray = [], xDataArray = [], dataArray = [];
+    var dataArray = [];
 
-    parametersSentToDb = {"table":table, "limit":limit};
+    parametersSentToDb = {"table":"donnees", "limit":limit};
     dbParam = JSON.stringify(parametersSentToDb);
 
     xmlhttp = new XMLHttpRequest();
@@ -26,11 +28,32 @@ function gettingDataFromDb (table, limit){
         if (this.readyState === 4 && this.status === 200) {
             responseFromDb = JSON.parse(this.responseText); // db data
             for (it = 0; it < responseFromDb.length; it++){ //separating data
-                yDataArray.push(Number(responseFromDb[it].donnees_valeur));
-                xDataArray.push(String(responseFromDb[it].donnees_temps));
+                dataArray.push(String(responseFromDb[it].donnees_temps));
             }
-            dataArray.push(xDataArray);
-            dataArray.push(yDataArray);
+        }
+    };
+
+    xmlhttp.open("POST", "../../model/graph.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
+    return dataArray;
+}
+
+function yDataFromDb (limit){
+    var parametersSentToDb, dbParam, xmlhttp, responseFromDb, it;
+    var dataArray = [];
+
+    parametersSentToDb = {"table":"donnees", "limit":limit};
+    dbParam = JSON.stringify(parametersSentToDb);
+
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            responseFromDb = JSON.parse(this.responseText); // db data
+            for (it = 0; it < responseFromDb.length; it++){ //separating data
+                dataArray.push(Number(responseFromDb[it].donnees_valeur));
+            }
         }
     };
 
@@ -40,19 +63,20 @@ function gettingDataFromDb (table, limit){
 
     return dataArray;
 
+
 }
 
 /*************** Creating chart ****************/
 
-function createChart (dataArray, label, title){
+function createChart (xData, yData, label, title, yLabel, xLabel){
 
     var chart = new Chart(document.getElementById("chart"), {
         type: 'line',
         data: {
-            labels: dataArray[0],
+            labels: xData,
             datasets: [
                 {
-                    data: dataArray[1],
+                    data: yData,
                     label: label,
                     borderColor: "#3e95cd",
                     fill: false
@@ -63,6 +87,20 @@ function createChart (dataArray, label, title){
             title: {
                 display: true,
                 text: title
+            },
+            scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: yLabel
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: xLabel
+                    }
+                }],
             }
         }
     });

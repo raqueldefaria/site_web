@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/model/addPieces.php" afterPath="$PROJECT_DIR$/model/addPieces.php" />
-      <change beforePath="$PROJECT_DIR$/model/showPiecesPhp.php" afterPath="$PROJECT_DIR$/model/showPiecesPhp.php" />
-      <change beforePath="$PROJECT_DIR$/view/interface/clientPieces.php" afterPath="$PROJECT_DIR$/view/interface/clientPieces.php" />
+      <change beforePath="$PROJECT_DIR$/model/graph.php" afterPath="$PROJECT_DIR$/model/graph.php" />
+      <change beforePath="$PROJECT_DIR$/view/interface/chambre.php" afterPath="$PROJECT_DIR$/view/interface/chambre.php" />
+      <change beforePath="$PROJECT_DIR$/view/js/requete_db.js" afterPath="$PROJECT_DIR$/view/js/requete_db.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,6 +44,13 @@
         <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="donnees: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="logement: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
@@ -58,76 +65,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/addLogement.php">
+      <file leaf-file-name="requete_db.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/js/requete_db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding>
-                <marker date="1515744670170" expanded="true" signature="120:277" ph="INSERT INTO logement... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showLogementsPhp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="62" />
-              <folding>
-                <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateurs_inscription_erreur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/utilisateurs_inscription_erreur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="258">
+              <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_erreur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/interface/inscription_erreur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showPiecesPhp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding>
-                <marker date="1515747675382" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
-                <marker date="1515747675382" expanded="true" signature="61:145" ph="SELECT * FRO... piece" />
-                <marker date="1515747675382" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="piece" pinned="false" current-in-tab="false">
-        <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
+      <file leaf-file-name="donnees" pinned="false" current-in-tab="false">
+        <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.donnees">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -135,11 +84,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logements.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
+      <file leaf-file-name="graph.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/graph.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+            <state relative-caret-position="280">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <folding>
+                <marker date="1515748748769" expanded="true" signature="357:398" ph="SELECT donne... " />
+                <marker date="1515748748769" expanded="true" signature="357:399" ph="SELECT donne... donnees" />
+                <marker date="1515748748769" expanded="true" signature="357:400" ph="SELECT donne... ${$obj-&gt;table}" />
+                <marker date="1515748748769" expanded="true" signature="357:421" ph="SELECT donne... ${$obj-&gt;table}" />
+                <marker date="1515748748769" expanded="true" signature="357:469" ph="SELECT donne... .$obj-&gt;table." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chambre.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/interface/chambre.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -180,6 +145,8 @@
       <find>img</find>
       <find>addPiece</find>
       <find>Piece</find>
+      <find>console.log</find>
+      <find>table</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/connexion.css" />
         <option value="$PROJECT_DIR$/php/accueil.php" />
         <option value="$PROJECT_DIR$/css/clientPiece.css" />
         <option value="$PROJECT_DIR$/css/header.css" />
@@ -220,14 +186,12 @@
         <option value="$PROJECT_DIR$/view/css/chambre.css" />
         <option value="$PROJECT_DIR$/view/interface/configCompte.php" />
         <option value="$PROJECT_DIR$/model/utilisateurs_inscription.php" />
-        <option value="$PROJECT_DIR$/view/js/requete_db.js" />
         <option value="$PROJECT_DIR$/view/js/displayPieces.js" />
         <option value="$PROJECT_DIR$/model/addPiece.php" />
         <option value="$PROJECT_DIR$/model/addPiecePhp.php" />
         <option value="$PROJECT_DIR$/model/addPieceJs.php" />
         <option value="$PROJECT_DIR$/view/js/addPiece.js" />
         <option value="$PROJECT_DIR$/view/interface/pieces/chambre.php" />
-        <option value="$PROJECT_DIR$/view/interface/chambre.php" />
         <option value="$PROJECT_DIR$/view/interface/Bureau.php" />
         <option value="$PROJECT_DIR$/view/js/showOrHidePopUp.js" />
         <option value="$PROJECT_DIR$/controller/addLogement.php" />
@@ -238,6 +202,10 @@
         <option value="$PROJECT_DIR$/view/interface/clientPieces.php" />
         <option value="$PROJECT_DIR$/model/showPiecesPhp.php" />
         <option value="$PROJECT_DIR$/model/addPieces.php" />
+        <option value="$PROJECT_DIR$/view/js/test.js" />
+        <option value="$PROJECT_DIR$/model/graph.php" />
+        <option value="$PROJECT_DIR$/view/interface/chambre.php" />
+        <option value="$PROJECT_DIR$/view/js/requete_db.js" />
       </list>
     </option>
   </component>
@@ -303,7 +271,31 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="font" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="font" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="OpenSansRegular" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="interface" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
@@ -349,13 +341,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/footer.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/headerbis.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/contacter.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/footer.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/headerbis.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/nosOffres.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/notreEquipe.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/editionProfilController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/connexion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/editionProfilView.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -370,7 +358,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/mdp(1).css</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -523,7 +510,7 @@
       <workItem from="1515605918379" duration="5057000" />
       <workItem from="1515658520669" duration="9449000" />
       <workItem from="1515694414691" duration="17122000" />
-      <workItem from="1515744559570" duration="3221000" />
+      <workItem from="1515744559570" duration="8516000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -672,11 +659,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515744724205</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Affichage automatique pieces qui marche">
+      <created>1515747844503</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1515747844503</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151094000" />
+    <option name="totallyTimeSpent" value="156389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,9 +683,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18378378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18378378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32555282" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -750,27 +743,14 @@
     <MESSAGE value="MAJ" />
     <MESSAGE value="Mise en place du graph" />
     <MESSAGE value="Affichage automatique pieces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage automatique pieces" />
+    <MESSAGE value="Affichage automatique pieces qui marche" />
+    <option name="LAST_COMMIT_MESSAGE" value="Affichage automatique pieces qui marche" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/css/connexion.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2240">
-          <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/inscription.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/js/verification_inscription.js" />
     <entry file="file://$PROJECT_DIR$/controller/profil.php" />
     <entry file="file://$PROJECT_DIR$/view/css/headerbis.css">
@@ -839,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.donnees">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/accueil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -854,28 +827,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/configCompte.php" />
-    <entry file="file://$PROJECT_DIR$/model/graph.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <marker date="1515580341139" expanded="true" signature="369:410" ph="SELECT donne... " />
-            <marker date="1515580341139" expanded="true" signature="369:411" ph="SELECT donne... donnees" />
-            <marker date="1515580341139" expanded="true" signature="369:412" ph="SELECT donne... ${$obj-&gt;table}" />
-            <marker date="1515580341139" expanded="true" signature="369:433" ph="SELECT donne... ${$obj-&gt;table}" />
-            <marker date="1515580341139" expanded="true" signature="369:481" ph="SELECT donne... .$obj-&gt;table." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/js/requete_db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.panne">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -909,14 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/chambre.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/inscription_erreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/bureau.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1020,59 +955,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/utilisateurs_inscription_erreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="32" column="82" lean-forward="false" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="62" />
-          <folding>
-            <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <marker date="1515747675382" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
-            <marker date="1515747675382" expanded="true" signature="61:145" ph="SELECT * FRO... piece" />
-            <marker date="1515747675382" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1109,10 +991,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/addLogement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        <state relative-caret-position="350">
+          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding>
             <marker date="1515744670170" expanded="true" signature="120:277" ph="INSERT INTO logement... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/showLogementsPhp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="62" />
+          <folding>
+            <marker date="1515744670182" expanded="true" signature="61:106" ph="SELECT * FRO... logement" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/utilisateurs_inscription_erreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/inscription_erreur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/showPiecesPhp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1515747675382" expanded="true" signature="61:123" ph="SELECT * FRO... piece" />
+            <marker date="1515747675382" expanded="true" signature="61:145" ph="SELECT * FRO... piece" />
+            <marker date="1515747675382" expanded="true" signature="61:173" ph="SELECT * FRO... piece" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.piece">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="15096" column="12" lean-forward="false" selection-start-line="15096" selection-start-column="12" selection-end-line="15096" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.donnees">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/chambre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="50" column="56" lean-forward="false" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/requete_db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="23" column="49" lean-forward="true" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/graph.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1515748748769" expanded="true" signature="357:398" ph="SELECT donne... " />
+            <marker date="1515748748769" expanded="true" signature="357:399" ph="SELECT donne... donnees" />
+            <marker date="1515748748769" expanded="true" signature="357:400" ph="SELECT donne... ${$obj-&gt;table}" />
+            <marker date="1515748748769" expanded="true" signature="357:421" ph="SELECT donne... ${$obj-&gt;table}" />
+            <marker date="1515748748769" expanded="true" signature="357:469" ph="SELECT donne... .$obj-&gt;table." />
           </folding>
         </state>
       </provider>

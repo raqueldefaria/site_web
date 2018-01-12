@@ -48,7 +48,7 @@ session_start();
     <div class="optionPieces">
         <a href="#">
             <div class="section">
-                <p onclick="return popChart('chartDiv', 'donnees',10, 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Lumière </p>
+                <p onclick="return popChart('chartDiv', 10, 'Flux lumineux', 'Flux lumineux en fonction du temps','Flux lumineux en lumens', 'Temps en heures')">Lumière </p>
                 <div class=imgBoutton>
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -64,7 +64,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Volets</p>
+                <p>Volets</p>
 
                 <div class=imgBoutton>
                     <div class="onoffswitch">
@@ -80,7 +80,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Température</p>
+                <p onclick="return popChart('chartDiv', 10, 'Température', 'Température en fonction du temps', 'Température en °C', 'Temps en heures')">Température</p>
                 <div class=imgBoutton>
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -95,8 +95,7 @@ session_start();
         </a>
         <a href="#">
             <div class="section">
-                <p onclick="return popChart('chartDiv', 'donnees','10', 'Intensité lumineuse', 'Intensité lumineuse en fonction des minutes')">Humidité</p>
-
+                <p onclick="return popChart('chartDiv', 10, 'Humidité', 'Humidité en fonction du temps', 'Humidité en g par unité de volume', 'Temps en heures')">Humidité</p>
                 <div class=imgBoutton>
                     <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
