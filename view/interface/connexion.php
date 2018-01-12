@@ -29,7 +29,7 @@
           <br />
           <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" size="30" maxlength="20" /><br />
           <div id="box">
-            <label for="boxSouvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" name="souvenir" id="boxSouvenir" /> <br />
+            <label for="boxSouvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" checked name="souvenir" id="boxSouvenir" /> <br />
             <input type="submit" value="Se connecter" class="boutton" />
           </div>
           <a href="#" id="mdpOublie"> Mot de passe oublié </a>
