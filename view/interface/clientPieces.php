@@ -14,6 +14,7 @@ session_start();
     <link rel="stylesheet" href="../css/jspopUp.css" />
 
     <title>DomOnline - Pièces</title>
+
 </head>
 
 <body>
@@ -24,24 +25,27 @@ session_start();
 <!--************** Menu **************-->
 <?php include ("menuClient.php")?>
 
-<!--************** Pop **************-->
+<!--************** Pop js **************-->
 <div id="addPiece" class="parentDisable">
     <div class="addPieceOptions" >
-        <form method="post" action="../../model/addPiece.php" >
+        <form method="post" action="../../model/addPieces.php" >
             <p>Ajouter une piece : <select name="piece">
-                    <option value="garage">Garage</option>
-                    <option value="chambre">Chambre</option>
-                    <option value="cuisine">Cuisine</option>
-                    <option value="bureau">Bureau</option>
-                    <option value="salleDeBain">Salle de bain</option>
-                    <option value="toilettes">Toilettes</option>
+                    <option value="Garage">Garage</option>
+                    <option value="Chambre">Chambre</option>
+                    <option value="Cuisine">Cuisine</option>
+                    <option value="Bureau">Bureau</option>
+                    <option value="Salle De Bain">Salle de bain</option>
+                    <option value="Toilettes">Toilettes</option>
                     <option value="Salon">Salon</option>
                 </select></p>
-            <script type="application/javascript" src="../js/addPiece.js"></script>
-            <input value="Ajouter" type="submit" onClick="return hideAdd('addPiece', <?php echo $_SESSION['userID']?>)">
+            <input hidden name="idUser" value="<?php echo $_SESSION['userID']?>"/>
+            <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+            <input value="Ajouter" type="submit">
         </form>
     </div>
 </div>
+
+
 
 
 <!--************** Navigation **************-->
@@ -51,6 +55,11 @@ session_start();
         <a href="#"><img src="../images/client/question.png" class="questions"></a>
     </div>
     <div class="optionPieces">
+
+        <!-- displaying pieces from Db -->
+        <?php include('../../model/showPiecesPhp.php') ?>
+
+        <!--
         <a href="#" >
             <div class="section">
                 <p>Garage</p>
@@ -96,9 +105,9 @@ session_start();
                 <p>Cuisine</p>
                 <img src="../images/client/cutlery.png">
             </div>
-        </a>
+        </a>-->
 
-        <a href="#" onclick="return popAdd('addPiece') " >
+        <a href="#" onclick="return pop('addPiece') " >
             <div class="section">
                 <img src="../images/client/add.png" class="addButton">
             </div>
