@@ -77,17 +77,17 @@ if(isset($_POST['newpays']) AND !empty($_POST['newpays']) AND $_POST['newpays'] 
   header('Location: profil.php');
 }
 
-/*
+
 if(isset($_POST['mdpactuel']) AND !empty($_POST['mdpactuel']) AND isset($_POST['newmdp1']) AND !empty($_POST['newmdp1']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2'])) {
-      $mdpactuel = sha1($_POST['mdpactuel'])
+      $mdpactuel = sha1($_POST['mdpactuel']);
       $newmdp1 = sha1($_POST['newmdp1']);
       $newmdp2 = sha1($_POST['newmdp2']);
 
       if($mdpactuel == $userinfo['utilisateur_motDePasse'] )
       {
         if($newmdp1 == $newmdp2) {
-           $insertmdp = $bdd->prepare("UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE id_Utilisateur = ?");
-           $insertmdp->execute(array($newmdp1, $_SESSION['id']));
+           $insertmdp = $db->prepare("UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE id_Utilisateur = ?");
+           $insertmdp->execute(array($newmdp1, $userinfo['id_Utilisateur']));
            header('Location: profil.php');
         }
         else {
@@ -99,5 +99,5 @@ if(isset($_POST['mdpactuel']) AND !empty($_POST['mdpactuel']) AND isset($_POST['
       }
 
 }
-*/
+
 ?>
