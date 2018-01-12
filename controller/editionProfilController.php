@@ -88,7 +88,7 @@ if(isset($_POST['mdpactuel']) AND !empty($_POST['mdpactuel']) AND isset($_POST['
         if($newmdp1 == $newmdp2) {
            $insertmdp = $db->prepare("UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE id_Utilisateur = ?");
            $insertmdp->execute(array($newmdp1, $userinfo['id_Utilisateur']));
-           header('Location: profil.php');
+           header('Location: editionProfilView.php');
         }
         else {
            $msg = "Vos deux nouveaux mots de passe ne correspondent pas !";

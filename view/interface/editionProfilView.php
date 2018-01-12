@@ -100,7 +100,7 @@
                   <strong> Mot de passe actuel </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" />
+                 <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" />
                </td>
             </tr>
             <tr>
@@ -108,7 +108,7 @@
                   <strong> Nouveau mot de passe </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" />
+                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" />
                </td>
             </tr>
             <tr>
@@ -116,7 +116,7 @@
                   <strong> Confirmer nouveau mot de passe </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" />
+                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" />
                </td>
             </tr>
          </table>
