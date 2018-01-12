@@ -71,15 +71,6 @@ require("../../controller/profilController.php");
                 <?php echo $userinfo['utilisateur_type']; ?>
              </td>
           </tr>
-
-       </table>
-
-       </div>
-
-       <div align="center">
-         <h2>Votre logement</h2>
-
-         <table>
            <tr>
               <td align="right">
                  <strong> Adresse </strong> :
