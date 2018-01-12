@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -17,7 +21,10 @@
     <body>
 
 
-    <?php include("header.php"); ?>
+    <?php
+    require("../../controller/headerInclude.php");
+    require("../../controller/headerIncludeCSS.php");
+    ?>
 
     <!-- Le corps -->
 

@@ -18,7 +18,7 @@
                 <?php echo $_SESSION['prenom'] . ' ' . $_SESSION['nom']; ?>
                 </div>
                 <div class="avatar">
-                <img src="../images/585e4beacb11b227491c3399.png" />
+                <img id="avatar" src="../images/585e4beacb11b227491c3399.png" />
               </div>
               </a>
             </div>
