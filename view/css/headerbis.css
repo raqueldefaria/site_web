@@ -64,7 +64,7 @@
 .bouttons{
   display: flex;
   justify-content: space-around;
-  border-radius: 10px;
+  border-radius: 5px;
   flex: 1;
   margin-right: 3%;
 }
@@ -103,13 +103,25 @@
 /*------------ Bouttons ------------*/
 
 
-#boutonSeDeconnecter, #boutonProfil
+#boutonSeDeconnecter
 {
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: rgb(0,184,169);
   text-decoration: none;
   padding: 5px;
+}
+
+#boutonProfil
+{
+  color: white;
+  border-radius: 8px;
+  background-color: rgb(0,184,169);
+  text-decoration: none;
+  padding: 3px;
+  margin-top: 5px;
+  width:120px;
+  max-height: 25px;
 }
 
 #boutonSeDeconnecter:hover, #boutonProfil:hover
@@ -117,11 +129,51 @@
   background-color: rgb(0,136,125);
 }
 
-.profil, .seConnecter{
+.bouton_profil, .seConnecter{
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/*------- Dropdown menu -------*/
+
+.bouton_profil
+{
+  position:relative;
+  display: inline-block;
+
+}
+
+.bouton_profil .dropdown_content
+{
+  display: none;
+  position: absolute;
+  min-width: 114px;
+  z-index: 3;
+  background-color: #F9F9F9;
+  margin-top: 0px;
+  border: 3px solid #00887d;
+}
+
+.dropdown_content a
+{
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px 16px;
+}
+
+.dropdown_content a:hover
+{
+  background-color: #D8D8D8;
+}
+
+.bouton_profil:hover .dropdown_content
+{
+  display: block;
+}
+
+
+/* ----------------------- */
 
 #logoCompanyHeader
 {
