@@ -68,7 +68,7 @@
                  <strong> Adresse </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Adresse" id="adresse" name="adresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
+                <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
               </td>
             </tr>
             <tr>
@@ -76,7 +76,7 @@
                  <strong> Ville </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Ville" id="ville" name="ville" value="<?php echo $userinfo['logement_ville']; ?>" />
+                <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $userinfo['logement_ville']; ?>" />
               </td>
             </tr>
             <tr>
@@ -84,7 +84,7 @@
                  <strong> Code postal </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Code postal" id="codePostal" name="codePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
+                <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
               </td>
             </tr>
             <tr>
@@ -92,7 +92,7 @@
                  <strong> Pays </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Pays" id="pays" name="pays" value="<?php echo $userinfo['logement_pays']; ?>" />
+                <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $userinfo['logement_pays']; ?>" />
               </td>
             </tr>
             <tr>
