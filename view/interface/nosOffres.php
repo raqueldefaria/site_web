@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +15,11 @@
     <body>
         <div id="corps">
 
-            <!--     Header     -->
-            <?php include ("header.php")?>
+            <!-- Header -->
+            <?php
+            require("../../controller/headerInclude.php");
+            require("../../controller/headerIncludeCSS.php");
+            ?>
 
             <div id="main_block">
                 <h1> Notre Catalogue </h1>
