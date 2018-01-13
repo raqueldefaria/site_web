@@ -30,17 +30,7 @@
 
 
 
-       <?php if(isset($msg)) { echo $msg; } ?>
 
-       </div>
-
-            <br />
-            <a href="profil.php"> Retourner à mon profil </a>
-            <br />
-            <a href="deconnexion.php"> Se déconnecter </a>
-
-
-        </div>
 
 
     </div>
