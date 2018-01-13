@@ -47,7 +47,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  flex: 3;
+  flex: 2;
 }
 
 @media screen and (max-width: 800px)
@@ -122,6 +122,7 @@
   margin-top: 5px;
   width:135px;
   max-height: 25px;
+  text-align: center;
 }
 
 #boutonSeDeconnecter:hover, #boutonProfil:hover
@@ -133,6 +134,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 
 /*------- Dropdown menu -------*/
 
