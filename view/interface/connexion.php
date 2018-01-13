@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../../controller/accessDenied.php");
+include("../../controller/accessDenied.php"); // on vérifie que l'utilisateur n'est pas déjà connecté
 ?>
 
 
