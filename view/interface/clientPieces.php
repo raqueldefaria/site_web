@@ -71,7 +71,7 @@ $_SESSION['idLogement'] = $_GET['id'];
 </div>
 
 
-<!--------------- Footer --------------->
+<!--************ Footer **************-->
 <?php include ("footer.php")?>
 </body>
 </html>
