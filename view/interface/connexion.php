@@ -1,6 +1,9 @@
 <?php
 session_start();
+include("../../controller/accessDenied.php");
 ?>
+
+
 
 <!DOCTYPE html>
 
