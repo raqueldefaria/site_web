@@ -1,5 +1,6 @@
 <?php
 session_start();
+$erreur = $_GET['erreur'];
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,7 @@ session_start();
     <div class="addLogementOptions" >
         <form method="post" action="../../controller/addLogement.php" >
             <p>Ajouter un logement :</p>
+            <input hidden name="idUser" value="<?php echo $_SESSION['userID']?>"/>
             <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" />
             <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" />
             <input type="text" name="ville" id="ville" size=35 placeholder="Ville" />
@@ -43,6 +45,26 @@ session_start();
     </div>
 </div>
 
+<!--************** Erreur **************-->
+<?php
+if ($erreur == 0) {
+?>
+<script>
+    alert("Ce logement existe deja")
+</script>
+<?php
+}
+elseif($erreur==1){
+    ?>
+<script>
+    alert("Vous n'avez pas rempli tous les champs pour rajouter un logement")
+</script>
+<?php
+}
+else{
+    header("Location:../view/interface/logements.php");
+}
+?>
 
 
 
