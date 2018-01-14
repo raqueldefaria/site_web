@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../css/clientPieces.css" />
+    <link rel="stylesheet" href="../css/clientLogements.css" />
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
@@ -46,20 +46,20 @@ session_start();
 
 
 <!--************** Navigation **************-->
-<div class="pieces">
-    <div class="sectionPieces">
-        <p class="motPiece">Logements</p>
+<div class="logements">
+    <div class="sectionLogements">
+        <p class="motLogement">Logements</p>
         <a href="#"><img src="../images/client/question.png" class="questions"></a>
     </div>
-    <div class="optionPieces">
+    <div class="optionLogement">
 
         <!-- displaying pieces from Db -->
         <?php include('../../model/showLogementsPhp.php') ?>
 
         <a href="#" onclick="return pop('addLogement') " >
-            <div class="section">
+            <div class="section_without_add">
                 <img src="../images/client/add.png" class="addButton">
-                <p>Ajouter</p>
+                <p class="addText">Ajouter</p>
             </div>
         </a>
     </div>

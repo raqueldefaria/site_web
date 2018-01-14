@@ -21,21 +21,21 @@ body{
     background-color: white;
 }
 
-.optionPieces{
+.optionLogement{
     display:flex;
     align-content:space-around;
     flex-wrap: wrap;
 }
 /*------------ Title of the section ------------*/
 
-.sectionPieces{
+.sectionLogements{
     display:flex;
     justify-content: space-between;
     background-color: dimgray;
     color: white;
 }
 
-.motPiece{
+.motLogement{
     font-size: x-large;
     padding-left: 5%;
 }
@@ -59,6 +59,47 @@ body{
 
 }
 
+.suppLogement{
+    width:20px;
+    position:relative;
+    left:50px;
+}
+
+.adresse{
+    margin-top: 0px;
+    margin-bottom: 2px;
+    position:relative;
+    bottom:30px;
+}
+
+.code_postal{
+    margin-bottom: 2px;
+    margin-top: 2px;
+    position:relative;
+    bottom:30px;
+
+}
+
+.pays{
+    margin-bottom: 0px;
+    margin-top: 2px;
+    position:relative;
+    bottom:30px;
+}
+
+.section_without_add{
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-left: 18%;
+    margin-top: 10px;
+    text-decoration: none;
+    color:black;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 90px;
+    height: 90px;
+}
 /*------------ Add button ------------*/
 
 .section:hover{
@@ -66,11 +107,15 @@ body{
     /*font-weight: bold;*/
 }
 
-.optionPieces a{
+.optionLogement a{
     text-decoration: none;
 }
 
 .addButton{
     padding-top: 35%;
     padding-left: 3%;
+}
+
+.addText{
+      margin-top: 2px;
 }
