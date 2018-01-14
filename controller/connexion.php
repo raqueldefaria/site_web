@@ -29,7 +29,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
             $_SESSION['prenom'] = $donnee['utilisateur_prenom'];
             $_SESSION['nom'] = $donnee['utilisateur_nom'];
             $_SESSION['type'] = $donnee['utilisateur_type'];
-            header("Location:../view/interface/clientPieces.php");
+            header("Location:../view/interface/logements.php");
         }
     }
 } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
