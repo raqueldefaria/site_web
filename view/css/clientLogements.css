@@ -106,6 +106,10 @@ body{
     background-color: aquamarine;
     /*font-weight: bold;*/
 }
+.section_without_add:hover{
+    background-color: aquamarine;
+    /*font-weight: bold;*/
+}
 
 .optionLogement a{
     text-decoration: none;
