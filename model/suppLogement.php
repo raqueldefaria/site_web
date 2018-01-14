@@ -13,4 +13,6 @@ $db->exec("DELETE FROM logement WHERE id_Logement = ". htmlspecialchars($_GET['i
 
 header("Location:../view/interface/logements.php");
 //* Supprime l'id du logement souhaité (on sait lequel supp grace au GET)*//
+//*Mais avant cela, supprime toutes les pièces associées au logement en question. Dans un futur proche on pourra espérer voir*//
+//* cette même suppression appliquée aux capteurs*//
 ?>
