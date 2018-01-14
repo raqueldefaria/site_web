@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['idLogement'] = $_GET['id'];
+$_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 ?>
 
 <!DOCTYPE html>
