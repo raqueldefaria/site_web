@@ -8,8 +8,9 @@ while ($data = $pieces->fetch()){
     switch ($data['piece_nom']) {
         case "Garage":
             ?>
-            <a href="garage.php">
-                <div class="section">
+            <a href="garage.php" id="<?php echo($data['id_Piece']); ?>"> <!-- on identifie chaque pièce dans le dom grace à son id de la database -->
+                <div class="section" >
+                    <img src="../images/client/cancel.png" class="suppPiece"> <!-- Modif pour le moment uniquement faite sur garage, modif après le prochain push-->
                     <p><?php echo $data['piece_nom']?></p>
                     <img src="../images/client/car.png">
                 </div>
