@@ -66,7 +66,7 @@ session_start();
 </div>
 
 
-<!--------------- Footer --------------->
+<!--************** Footer ****************-->
 <?php include ("footer.php")?>
 </body>
 </html>
