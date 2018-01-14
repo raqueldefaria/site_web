@@ -14,11 +14,14 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
     <link rel="stylesheet" href="../css/menuClient.css" />
     <link rel="stylesheet" href="../css/jspopUp.css" />
 
+    <script type="application/javascript" src="../js/showData.js"></script>
+    <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+
     <title>DomOnline - Pièces</title>
 
 </head>
 
-<body>
+<body onload="showPiecesFromDb(<?php echo $_SESSION['userID']?>, <?php echo $_SESSION['idLogement']?>)">
 
 <!--************** Header *************-->
 <?php include ("headerbis.php")?>
@@ -30,7 +33,7 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 <div id="addPiece" class="parentDisable">
     <div class="addPieceOptions" >
         <form method="post" action="../../model/addPieces.php" >
-            <p>Ajouter une pièce : <select name="piece">
+            <p>Type de pièce : <select name="piece">
                     <option value="Garage">Garage</option>
                     <option value="Chambre">Chambre</option>
                     <option value="Cuisine">Cuisine</option>
@@ -38,9 +41,10 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
                     <option value="Salle De Bain">Salle de bain</option>
                     <option value="Toilettes">Toilettes</option>
                     <option value="Salon">Salon</option>
+                    <option value="autre">Autre</option>
                 </select></p>
-            <input hidden name="idUser" value="<?php echo $_SESSION['userID']?>"/>
-            <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+            <p> Nom de la pièce : <input type="text" name="nomPiece"></p>
+            <p>Nom du Cemac correspondant : <input type="text" name="nomCemac"></p>
             <input value="Ajouter" type="submit">
             <input value="Fermer" type="submit" onclick="return hide('addPiece')">
         </form>
@@ -56,17 +60,20 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
         <p class="motPiece">Pièces</p>
         <a href="#"><img src="../images/client/question.png" class="questions"></a>
     </div>
-    <div class="optionPieces">
+    <div class="optionPieces" id="pieces">
 
-        <!-- displaying pieces from Db -->
-        <?php include('../../model/showPiecesPhp.php') ?>
+        <!-- displaying pieces from Db if javascript is not enabled -->
+        <noscript>
+            <?php include('../../model/showPiecesPhp.php') ?>
+            <a href="#" onclick="return pop('addLogement') " >
+                <div class="section">
+                    <img src="../images/client/add.png" class="addButton">
+                    <p>Ajouter</p>
+                </div>
+            </a>
+        </noscript>
 
-        <a href="#" onclick="return pop('addPiece') " >
-            <div class="section">
-                <img src="../images/client/add.png" class="addButton">
-                <p>Ajouter</p>
-            </div>
-        </a>
+
     </div>
 </div>
 

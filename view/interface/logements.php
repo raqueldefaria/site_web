@@ -7,17 +7,19 @@ session_start();
 
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../css/clientLogements.css" />
+    <link rel="stylesheet" href="../css/clientPieces.css" />
     <link rel="stylesheet" href="../css/headerbis.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/menuClient.css" />
     <link rel="stylesheet" href="../css/jspopUp.css" />
 
-    <title>DomOnline - Pièces</title>
+    <script type="application/javascript" src="../js/showData.js"></script>
+
+    <title>DomOnline - Logements</title>
 
 </head>
 
-<body>
+<body onload="showLogementsFromDb(<?php echo $_SESSION['userID']?>)">
 
 <!--************** Header *************-->
 <?php include ("headerbis.php")?>
@@ -46,27 +48,29 @@ session_start();
 
 
 <!--************** Navigation **************-->
-<div class="logements">
-    <div class="sectionLogements">
-        <p class="motLogement">Logements</p>
+<div class="pieces">
+    <div class="sectionPieces">
+        <p class="motPiece">Logements</p>
         <a href="#"><img src="../images/client/question.png" class="questions"></a>
     </div>
-    <div class="optionLogement">
+    <div class="optionPieces" id="logements">
 
-        <!-- displaying pieces from Db -->
-        <?php include('../../model/showLogementsPhp.php') ?>
+        <noscript>
+            <!-- displaying logements from Db if javascript is not enabled -->
+            <?php include('../../model/showLogementsPhp.php') ?>
+            <a href="#" onclick="return pop('addLogement') " >
+                <div class="section">
+                    <img src="../images/client/add.png" class="addButton">
+                    <p>Ajouter</p>
+                </div>
+            </a>
+        </noscript>
 
-        <a href="#" onclick="return pop('addLogement') " >
-            <div class="section_without_add">
-                <img src="../images/client/add.png" class="addButton">
-                <p class="addText">Ajouter</p>
-            </div>
-        </a>
     </div>
 </div>
 
 
-<!--************** Footer ****************-->
+<!--------------- Footer --------------->
 <?php include ("footer.php")?>
 </body>
 </html>

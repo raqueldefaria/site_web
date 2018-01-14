@@ -1,10 +1,8 @@
 /*************** Functions to show or hide the graphs ****************/
 
-function popChart(div,limit, label, title, yLabel, xLabel) {
-    console.log(yLabel);
-    console.log(xLabel);
-    var xData = xDataFromDb(limit);
-    var yData = yDataFromDb(limit);
+function popChart(div,limit, idPiece, label, title, yLabel, xLabel) {
+    var xData = xDataFromDb(limit, idPiece);
+    var yData = yDataFromDb(limit, idPiece);
     createChart(xData, yData, label, title, yLabel, xLabel); // creating chart
     document.getElementById(div).style.display='block';
     return false;
@@ -16,11 +14,11 @@ function hide(div) {
 
 /*************** Getting data from db (AJAX with JSON) ****************/
 
-function xDataFromDb (limit){
+function xDataFromDb (limit, idPiece){
     var parametersSentToDb, dbParam, xmlhttp, responseFromDb, it;
     var dataArray = [];
 
-    parametersSentToDb = {"table":"donnees", "limit":limit};
+    parametersSentToDb = {"limit":limit, "idPiece":idPiece};
     dbParam = JSON.stringify(parametersSentToDb);
 
     xmlhttp = new XMLHttpRequest();
@@ -40,11 +38,11 @@ function xDataFromDb (limit){
     return dataArray;
 }
 
-function yDataFromDb (limit){
+function yDataFromDb (limit, idPiece){
     var parametersSentToDb, dbParam, xmlhttp, responseFromDb, it;
     var dataArray = [];
 
-    parametersSentToDb = {"table":"donnees", "limit":limit};
+    parametersSentToDb = {"limit":limit, "idPiece":idPiece};
     dbParam = JSON.stringify(parametersSentToDb);
 
     xmlhttp = new XMLHttpRequest();

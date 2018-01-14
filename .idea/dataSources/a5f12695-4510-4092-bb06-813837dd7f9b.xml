@@ -994,129 +994,134 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="253" parent="234" name="fk_Capteur/actionneur_Cemac1_idx">
+    <column id="253" parent="234" name="Utilisateur_idUtilisateur">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="254" parent="234" name="fk_Capteur/actionneur_Cemac1_idx">
       <ColNames>Cemac_idCemac</ColNames>
     </index>
-    <key id="254" parent="234" name="PRIMARY">
+    <key id="255" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Capteur/actionneur
 Cemac_idCemac</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="255" parent="234" name="fk_Capteur/actionneur_Cemac1">
+    <foreign-key id="256" parent="234" name="fk_Capteur/actionneur_Cemac1">
       <ColNames>Cemac_idCemac</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>cemac</RefTableName>
       <RefColNames>id_Cemac</RefColNames>
     </foreign-key>
-    <column id="256" parent="235" name="id_Cemac">
+    <column id="257" parent="235" name="id_Cemac">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="235" name="cemac_nom">
+    <column id="258" parent="235" name="cemac_nom">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="235" name="Piece_idPiece">
+    <column id="259" parent="235" name="Piece_idPiece">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="259" parent="235" name="fk_Cemac_Piece1_idx">
+    <index id="260" parent="235" name="fk_Cemac_Piece1_idx">
       <ColNames>Piece_idPiece</ColNames>
     </index>
-    <key id="260" parent="235" name="PRIMARY">
+    <key id="261" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Cemac
 Piece_idPiece</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="261" parent="235" name="fk_Cemac_Piece1">
+    <foreign-key id="262" parent="235" name="fk_Cemac_Piece1">
       <ColNames>Piece_idPiece</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>piece</RefTableName>
       <RefColNames>id_Piece</RefColNames>
     </foreign-key>
-    <column id="262" parent="236" name="id_Commande">
+    <column id="263" parent="236" name="id_Commande">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="236" name="commande_date">
+    <column id="264" parent="236" name="commande_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="236" name="Utilisateur_idUtilisateur">
+    <column id="265" parent="236" name="Utilisateur_idUtilisateur">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="265" parent="236" name="fk_Commande_Utilisateur_idx">
+    <index id="266" parent="236" name="fk_Commande_Utilisateur_idx">
       <ColNames>Utilisateur_idUtilisateur</ColNames>
     </index>
-    <key id="266" parent="236" name="PRIMARY">
+    <key id="267" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Commande
 Utilisateur_idUtilisateur</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="267" parent="236" name="fk_Commande_Utilisateur">
+    <foreign-key id="268" parent="236" name="fk_Commande_Utilisateur">
       <ColNames>Utilisateur_idUtilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>utilisateur</RefTableName>
       <RefColNames>id_Utilisateur</RefColNames>
     </foreign-key>
-    <column id="268" parent="237" name="Commande_idCommande">
+    <column id="269" parent="237" name="Commande_idCommande">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="237" name="Commande_Utilisateur_idUtilisateur">
+    <column id="270" parent="237" name="Commande_Utilisateur_idUtilisateur">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="237" name="typeCapteur/actionneur_idCapteur/actionneur">
+    <column id="271" parent="237" name="typeCapteur/actionneur_idCapteur/actionneur">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="237" name="Commander_idCommande">
+    <column id="272" parent="237" name="Commander_idCommande">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="272" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commande1_idx">
+    <index id="273" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commande1_idx">
       <ColNames>Commande_idCommande
 Commande_Utilisateur_idUtilisateur</ColNames>
     </index>
-    <index id="273" parent="237" name="fk_Commande_has_typeCapteur/actionneur_typeCapteur/actionne_idx">
+    <index id="274" parent="237" name="fk_Commande_has_typeCapteur/actionneur_typeCapteur/actionne_idx">
       <ColNames>typeCapteur/actionneur_idCapteur/actionneur</ColNames>
     </index>
-    <index id="274" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commander1_idx">
+    <index id="275" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commander1_idx">
       <ColNames>Commander_idCommande</ColNames>
     </index>
-    <key id="275" parent="237" name="PRIMARY">
+    <key id="276" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Commande_idCommande
 Commande_Utilisateur_idUtilisateur
 typeCapteur/actionneur_idCapteur/actionneur</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="276" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commande1">
+    <foreign-key id="277" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commande1">
       <ColNames>Commande_idCommande
 Commande_Utilisateur_idUtilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
@@ -1124,81 +1129,81 @@ Commande_Utilisateur_idUtilisateur</ColNames>
       <RefColNames>id_Commande
 Utilisateur_idUtilisateur</RefColNames>
     </foreign-key>
-    <foreign-key id="277" parent="237" name="fk_Commande_has_typeCapteur/actionneur_typeCapteur/actionneur1">
+    <foreign-key id="278" parent="237" name="fk_Commande_has_typeCapteur/actionneur_typeCapteur/actionneur1">
       <ColNames>typeCapteur/actionneur_idCapteur/actionneur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>typecapteur/actionneur</RefTableName>
       <RefColNames>id_Capteur/actionneur</RefColNames>
     </foreign-key>
-    <foreign-key id="278" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commander1">
+    <foreign-key id="279" parent="237" name="fk_Commande_has_typeCapteur/actionneur_Commander1">
       <ColNames>Commander_idCommande</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>commander</RefTableName>
       <RefColNames>id_Commande</RefColNames>
     </foreign-key>
-    <column id="279" parent="238" name="id_Commande">
+    <column id="280" parent="238" name="id_Commande">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="238" name="id_Capteur/actionneur">
+    <column id="281" parent="238" name="id_Capteur/actionneur">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="238" name="commander_quantite">
+    <column id="282" parent="238" name="commander_quantite">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="282" parent="238" name="PRIMARY">
+    <key id="283" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Commande</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="283" parent="239" name="id_Donnees">
+    <column id="284" parent="239" name="id_Donnees">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="239" name="donnees_temps">
+    <column id="285" parent="239" name="donnees_temps">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="239" name="donnees_valeur">
+    <column id="286" parent="239" name="donnees_valeur">
       <Position>3</Position>
       <DataType>decimal(6,2)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="239" name="Capteur/actionneur_idCapteur/actionneur">
+    <column id="287" parent="239" name="Capteur/actionneur_idCapteur/actionneur">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="239" name="Capteur/actionneur_Cemac_idCemac">
+    <column id="288" parent="239" name="Capteur/actionneur_Cemac_idCemac">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="288" parent="239" name="fk_Donnees_Capteur/actionneur1_idx">
+    <index id="289" parent="239" name="fk_Donnees_Capteur/actionneur1_idx">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
     </index>
-    <key id="289" parent="239" name="PRIMARY">
+    <key id="290" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Donnees
 Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="290" parent="239" name="fk_Donnees_Capteur/actionneur1">
+    <foreign-key id="291" parent="239" name="fk_Donnees_Capteur/actionneur1">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
@@ -1206,118 +1211,118 @@ Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefColNames>id_Capteur/actionneur
 Cemac_idCemac</RefColNames>
     </foreign-key>
-    <column id="291" parent="240" name="id_FAQ">
+    <column id="292" parent="240" name="id_FAQ">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="240" name="faq_question">
+    <column id="293" parent="240" name="faq_question">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="240" name="faq_reponse">
+    <column id="294" parent="240" name="faq_reponse">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="240" name="PRIMARY">
+    <key id="295" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_FAQ</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="241" name="id_Logement">
+    <column id="296" parent="241" name="id_Logement">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="241" name="logement_adresse">
+    <column id="297" parent="241" name="logement_adresse">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="241" name="logement_codePostal">
+    <column id="298" parent="241" name="logement_codePostal">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="241" name="logement_ville">
+    <column id="299" parent="241" name="logement_ville">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="241" name="logement_pays">
+    <column id="300" parent="241" name="logement_pays">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="241" name="id_Utilisateur">
+    <column id="301" parent="241" name="id_Utilisateur">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="301" parent="241" name="fk_Logement_Utilisateur1_idx">
+    <index id="302" parent="241" name="fk_Logement_Utilisateur1_idx">
       <ColNames>id_Utilisateur</ColNames>
     </index>
-    <key id="302" parent="241" name="PRIMARY">
+    <key id="303" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Logement
 id_Utilisateur</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="303" parent="241" name="fk_Logement_Utilisateur1">
+    <foreign-key id="304" parent="241" name="fk_Logement_Utilisateur1">
       <ColNames>id_Utilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>utilisateur</RefTableName>
       <RefColNames>id_Utilisateur</RefColNames>
     </foreign-key>
-    <column id="304" parent="242" name="id_Panne">
+    <column id="305" parent="242" name="id_Panne">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="242" name="panne_date">
+    <column id="306" parent="242" name="panne_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="242" name="panne_type">
+    <column id="307" parent="242" name="panne_type">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="242" name="Capteur/actionneur_idCapteur/actionneur">
+    <column id="308" parent="242" name="Capteur/actionneur_idCapteur/actionneur">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="242" name="Capteur/actionneur_Cemac_idCemac">
+    <column id="309" parent="242" name="Capteur/actionneur_Cemac_idCemac">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="309" parent="242" name="fk_Panne_Capteur/actionneur1_idx">
+    <index id="310" parent="242" name="fk_Panne_Capteur/actionneur1_idx">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
     </index>
-    <key id="310" parent="242" name="PRIMARY">
+    <key id="311" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Panne
 Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="311" parent="242" name="fk_Panne_Capteur/actionneur1">
+    <foreign-key id="312" parent="242" name="fk_Panne_Capteur/actionneur1">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
@@ -1325,42 +1330,47 @@ Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefColNames>id_Capteur/actionneur
 Cemac_idCemac</RefColNames>
     </foreign-key>
-    <column id="312" parent="243" name="id_Piece">
+    <column id="313" parent="243" name="id_Piece">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="243" name="piece_nom">
+    <column id="314" parent="243" name="piece_nom">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="243" name="Logement_idLogement">
+    <column id="315" parent="243" name="Logement_idLogement">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="243" name="Logement_Utilisateur_idUtilisateur">
+    <column id="316" parent="243" name="Logement_Utilisateur_idUtilisateur">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="316" parent="243" name="fk_Piece_Logement1_idx">
+    <column id="317" parent="243" name="piece_type">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="318" parent="243" name="fk_Piece_Logement1_idx">
       <ColNames>Logement_idLogement
 Logement_Utilisateur_idUtilisateur</ColNames>
     </index>
-    <key id="317" parent="243" name="PRIMARY">
+    <key id="319" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Piece
 Logement_idLogement
 Logement_Utilisateur_idUtilisateur</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="318" parent="243" name="fk_Piece_Logement1">
+    <foreign-key id="320" parent="243" name="fk_Piece_Logement1">
       <ColNames>Logement_idLogement
 Logement_Utilisateur_idUtilisateur</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
@@ -1368,77 +1378,77 @@ Logement_Utilisateur_idUtilisateur</ColNames>
       <RefColNames>id_Logement
 id_Utilisateur</RefColNames>
     </foreign-key>
-    <column id="319" parent="244" name="id_Scenario">
+    <column id="321" parent="244" name="id_Scenario">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="244" name="idCapteur/actionneur">
+    <column id="322" parent="244" name="idCapteur/actionneur">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="244" name="scenario_dateDebut">
+    <column id="323" parent="244" name="scenario_dateDebut">
       <Position>3</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="244" name="scenario_dateFin">
+    <column id="324" parent="244" name="scenario_dateFin">
       <Position>4</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="244" name="scenario_valeur">
+    <column id="325" parent="244" name="scenario_valeur">
       <Position>5</Position>
       <DataType>decimal(6,2)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="324" parent="244" name="PRIMARY">
+    <key id="326" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Scenario</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="325" parent="245" name="Scenario_idScenario">
+    <column id="327" parent="245" name="Scenario_idScenario">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="245" name="Capteur/actionneur_idCapteur/actionneur">
+    <column id="328" parent="245" name="Capteur/actionneur_idCapteur/actionneur">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="245" name="Capteur/actionneur_Cemac_idCemac">
+    <column id="329" parent="245" name="Capteur/actionneur_Cemac_idCemac">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="328" parent="245" name="fk_Scenario_has_Capteur/actionneur_Scenario1_idx">
+    <index id="330" parent="245" name="fk_Scenario_has_Capteur/actionneur_Scenario1_idx">
       <ColNames>Scenario_idScenario</ColNames>
     </index>
-    <index id="329" parent="245" name="fk_Scenario_has_Capteur/actionneur_Capteur/actionneur1_idx">
+    <index id="331" parent="245" name="fk_Scenario_has_Capteur/actionneur_Capteur/actionneur1_idx">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
     </index>
-    <key id="330" parent="245" name="PRIMARY">
+    <key id="332" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Scenario_idScenario
 Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="331" parent="245" name="fk_Scenario_has_Capteur/actionneur_Scenario1">
+    <foreign-key id="333" parent="245" name="fk_Scenario_has_Capteur/actionneur_Scenario1">
       <ColNames>Scenario_idScenario</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
       <RefTableName>scenario</RefTableName>
       <RefColNames>id_Scenario</RefColNames>
     </foreign-key>
-    <foreign-key id="332" parent="245" name="fk_Scenario_has_Capteur/actionneur_Capteur/actionneur1">
+    <foreign-key id="334" parent="245" name="fk_Scenario_has_Capteur/actionneur_Capteur/actionneur1">
       <ColNames>Capteur/actionneur_idCapteur/actionneur
 Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefSchemaName>site_web</RefSchemaName>
@@ -1446,71 +1456,71 @@ Capteur/actionneur_Cemac_idCemac</ColNames>
       <RefColNames>id_Capteur/actionneur
 Cemac_idCemac</RefColNames>
     </foreign-key>
-    <column id="333" parent="246" name="id_Capteur/actionneur">
+    <column id="335" parent="246" name="id_Capteur/actionneur">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="246" name="capteur/actionneur_fonction">
+    <column id="336" parent="246" name="capteur/actionneur_fonction">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="246" name="capteur/actionneur_stock">
+    <column id="337" parent="246" name="capteur/actionneur_stock">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="336" parent="246" name="PRIMARY">
+    <key id="338" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Capteur/actionneur</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="337" parent="247" name="id_Utilisateur">
+    <column id="339" parent="247" name="id_Utilisateur">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="247" name="utilisateur_type">
+    <column id="340" parent="247" name="utilisateur_type">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="247" name="utilisateur_nom">
+    <column id="341" parent="247" name="utilisateur_nom">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="247" name="utilisateur_prenom">
+    <column id="342" parent="247" name="utilisateur_prenom">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="247" name="utilisateur_mail">
+    <column id="343" parent="247" name="utilisateur_mail">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="247" name="utilisateur_login">
+    <column id="344" parent="247" name="utilisateur_login">
       <Position>6</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="247" name="utilisateur_motDePasse">
+    <column id="345" parent="247" name="utilisateur_motDePasse">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="247" name="utilisateur_dateDeNaissance">
+    <column id="346" parent="247" name="utilisateur_dateDeNaissance">
       <Position>8</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="345" parent="247" name="PRIMARY">
+    <key id="347" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_Utilisateur</ColNames>
       <Primary>1</Primary>
