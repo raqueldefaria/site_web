@@ -11,7 +11,8 @@ while ($data = $pieces->fetch()){
 
             <a href="garage.php" id="<?php echo($data['id_Piece']); ?>"> <!-- on identifie chaque pièce dans le dom grace à son id de la database -->
                 <div class="section" >
-                    <img src="../images/client/cancel.png" class="suppPiece" id="supp<?php echo($data['id_Piece']); ?>">
+                    <img src="../images/client/cancel.png" class="suppPiece" id="supp<?php echo($data['id_Piece']); ?>"> 
+                    <p><?php echo $data['piece_nom']?></p>
                     <img src="../images/client/car.png">
                 </div>
             </a>
