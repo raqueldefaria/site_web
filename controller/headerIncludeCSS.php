@@ -18,7 +18,7 @@
 <!-- Si il existe un SSID (rappel : $_SESSION['SSID'] = session_id()) alors charger le css du header connecté,
 sinon charger le css du header non connecté
 
-Remarque: En vrai on aurait pu faire ca avec n'importe quelle variable de session, mais comme je sais pas quelles variables
+Remarque: On prend ici la variable de session "nom" mais n'importe quelle variable de session aurait pu être utilisé
 
 isset($_SESSION['SSID'])
 -->
