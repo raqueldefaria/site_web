@@ -37,10 +37,7 @@
                         <th> </th>
                     </tr>
 
-                      <?php
-                      while($userinfo = $requser->fetch())
-                      {
-                      ?>
+
                       <tr>
                           <th> <?php echo $userinfo['id_Utilisateur']; ?> </th>
                           <th> <?php echo $userinfo['utilisateur_type']; ?> </th>
@@ -50,9 +47,7 @@
                           <th> </th>
                           <th> </th>
                       </tr>
-                      <?php
-                      }
-                      ?>
+                      
 
                 </table>
             </div>
