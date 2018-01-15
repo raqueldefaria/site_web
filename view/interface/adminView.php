@@ -22,17 +22,41 @@
 
     <!-- Le corps -->
     <div id="corps">
-
         <div id="main_block">
+            <div align="center">
+                <h2>Administration</h2>
 
-         <div align="center">
-          <h2>Administration</h2>
+                <table>
+                    <tr>
+                        <th> ID </th>
+                        <th> Type</th>
+                        <th> Pseudo </th>
+                        <th> Prénom </th>
+                        <th> Nom </th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
 
+                      <?php
+                      while($userinfo = $requser->fetch())
+                      {
+                      ?>
+                      <tr>
+                          <th> <?php echo $userinfo['id_Utilisateur']; ?> </th>
+                          <th> <?php echo $userinfo['utilisateur_type']; ?> </th>
+                          <th> <?php echo $userinfo['utilisateur_login']; ?> </th>
+                          <th> <?php echo $userinfo['utilisateur_prenom']; ?> </th>
+                          <th> <?php echo $userinfo['utilisateur_nom']; ?> </th>
+                          <th> </th>
+                          <th> </th>
+                      </tr>
+                      <?php
+                      }
+                      ?>
 
-
-
-
-
+                </table>
+            </div>
+        </div>
     </div>
 
     <?php include("footer.php"); ?>
