@@ -37,17 +37,9 @@
                         <th> </th>
                     </tr>
 
-
-                      <tr>
-                          <th> <?php echo $userinfo['id_Utilisateur']; ?> </th>
-                          <th> <?php echo $userinfo['utilisateur_type']; ?> </th>
-                          <th> <?php echo $userinfo['utilisateur_login']; ?> </th>
-                          <th> <?php echo $userinfo['utilisateur_prenom']; ?> </th>
-                          <th> <?php echo $userinfo['utilisateur_nom']; ?> </th>
-                          <th> </th>
-                          <th> </th>
-                      </tr>
-                      
+                      <?php
+                      userstable();
+                      ?>
 
                 </table>
             </div>
