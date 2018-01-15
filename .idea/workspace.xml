@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/addLogement.php" afterPath="$PROJECT_DIR$/controller/addLogement.php" />
-      <change beforePath="$PROJECT_DIR$/model/addLogement.php" afterPath="$PROJECT_DIR$/model/addLogement.php" />
+      <change beforePath="$PROJECT_DIR$/model/showAllCapteurs.php" afterPath="$PROJECT_DIR$/model/showAllCapteurs.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,6 +42,20 @@
         <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="capteur/actionneur: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="cemac: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="logement: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
@@ -60,18 +73,8 @@
       <file leaf-file-name="logements.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
+            <state relative-caret-position="0">
               <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showOrHidePopUp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/js/showOrHidePopUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
+            <state relative-caret-position="-352">
               <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding>
                 <marker date="1516023928015" expanded="true" signature="416:491" ph="SELECT * FRO... logement" />
@@ -138,14 +141,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showAllCapteurs.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="showAllCapteurs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/showAllCapteurs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+            <state relative-caret-position="792">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
-                <marker date="1515971512129" expanded="true" signature="107:455" ph="SELECT `capt... capteur/actionneur" />
+                <marker date="1516027880721" expanded="true" signature="112:156" ph="SELECT * FRO... logement" />
+                <marker date="1516027880721" expanded="true" signature="252:316" ph="SELECT id_Pi... piece" />
+                <marker date="1516027880721" expanded="true" signature="421:468" ph="SELECT id_Ce... cemac" />
+                <marker date="1516027880721" expanded="true" signature="563:674" ph="SELECT `capt... capteur/actionneur" />
+                <marker date="1516027880721" expanded="true" signature="1414:1662" ph="SELECT `capt... capteur/actionneur" />
+                <marker date="1516027880721" expanded="true" signature="1737:1771" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="capteur/actionneur" pinned="false" current-in-tab="false">
+        <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.capteur&amp;eslash;actionneur">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -272,11 +289,11 @@
         <option value="$PROJECT_DIR$/view/js/showData.js" />
         <option value="$PROJECT_DIR$/view/interface/capteurs.php" />
         <option value="$PROJECT_DIR$/view/css/capteurs.css" />
-        <option value="$PROJECT_DIR$/model/showAllCapteurs.php" />
         <option value="$PROJECT_DIR$/view/interface/logements.php" />
         <option value="$PROJECT_DIR$/view/interface/logementsErreur.php" />
         <option value="$PROJECT_DIR$/model/addLogement.php" />
         <option value="$PROJECT_DIR$/controller/addLogement.php" />
+        <option value="$PROJECT_DIR$/model/showAllCapteurs.php" />
       </list>
     </option>
   </component>
@@ -349,28 +366,6 @@
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="interface" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -409,9 +404,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/headerbis.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/menuClient.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/headerbis.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/adminController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/adminView.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -588,7 +582,7 @@
       <workItem from="1515938397911" duration="30711000" />
       <workItem from="1516007720113" duration="170000" />
       <workItem from="1516008271307" duration="1662000" />
-      <workItem from="1516021442600" duration="2442000" />
+      <workItem from="1516021442600" duration="7138000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -772,11 +766,25 @@
       <option name="project" value="LOCAL" />
       <updated>1516007764005</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="MAJ">
+      <created>1516024270277</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1516024270277</updated>
+    </task>
+    <task id="LOCAL-00028" summary="MAJ">
+      <created>1516025391984</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1516025391984</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205529000" />
+    <option name="totallyTimeSpent" value="210225000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,11 +799,11 @@
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2064865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1227027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32360098" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27351353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22756757" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804877" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -839,7 +847,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/js/displayPieces.js" />
     <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-665">
@@ -1032,13 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.capteur&amp;eslash;actionneur">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/capteurs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-385">
@@ -1090,7 +1090,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
+        <state relative-caret-position="0">
           <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding />
         </state>
@@ -1134,21 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding>
-            <marker date="1516023928015" expanded="true" signature="416:491" ph="SELECT * FRO... logement" />
-            <marker date="1516023928015" expanded="true" signature="416:524" ph="SELECT * FRO... logement" />
-            <marker date="1516023928015" expanded="true" signature="416:555" ph="SELECT * FRO... logement" />
-            <marker date="1516023928015" expanded="true" signature="416:580" ph="SELECT * FRO... logement" />
-            <marker date="1516023928015" expanded="true" signature="416:585" ph="SELECT * FRO... logement" />
-            <marker date="1516023928015" expanded="true" signature="416:602" ph="SELECT * FRO... logement" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/addCapteurs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -1168,12 +1153,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/showAllCapteurs.php">
+    <entry file="file://$PROJECT_DIR$/bdd/site_web.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/c0bd3acd/a5f12695-4510-4092-bb06-813837dd7f9b/site_web.capteur&amp;eslash;actionneur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/showAllCapteurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
-            <marker date="1515971512129" expanded="true" signature="107:455" ph="SELECT `capt... capteur/actionneur" />
+            <marker date="1516027880721" expanded="true" signature="112:156" ph="SELECT * FRO... logement" />
+            <marker date="1516027880721" expanded="true" signature="252:316" ph="SELECT id_Pi... piece" />
+            <marker date="1516027880721" expanded="true" signature="421:468" ph="SELECT id_Ce... cemac" />
+            <marker date="1516027880721" expanded="true" signature="563:674" ph="SELECT `capt... capteur/actionneur" />
+            <marker date="1516027880721" expanded="true" signature="1414:1662" ph="SELECT `capt... capteur/actionneur" />
+            <marker date="1516027880721" expanded="true" signature="1737:1771" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <marker date="1516023928015" expanded="true" signature="416:491" ph="SELECT * FRO... logement" />
+            <marker date="1516023928015" expanded="true" signature="416:524" ph="SELECT * FRO... logement" />
+            <marker date="1516023928015" expanded="true" signature="416:555" ph="SELECT * FRO... logement" />
+            <marker date="1516023928015" expanded="true" signature="416:580" ph="SELECT * FRO... logement" />
+            <marker date="1516023928015" expanded="true" signature="416:585" ph="SELECT * FRO... logement" />
+            <marker date="1516023928015" expanded="true" signature="416:602" ph="SELECT * FRO... logement" />
           </folding>
         </state>
       </provider>
