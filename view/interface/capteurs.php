@@ -15,7 +15,7 @@ session_start();
     <link rel="stylesheet" href="../css/capteurs.css" />
 
 
-    <title>DomOnline - Tout les capteurs/actionneurs</title>
+    <title>DomOnline - Tous les capteurs/actionneurs</title>
 
 </head>
 
@@ -32,7 +32,7 @@ session_start();
 
 <div class="pieces">
     <div class="sectionPieces">
-        <p class="motPiece">Tout les capteurs et actionneurs</p>
+        <p class="motPiece">Tous les capteurs et actionneurs</p>
         <a href="#"><img src="../images/client/question.png" class="questions"></a>
     </div>
     <table>
