@@ -9,7 +9,7 @@ $insertLogement->bindParam(':codePostal', $codePostal);
 $insertLogement->bindParam(':ville', $ville);
 $insertLogement->bindParam(':pays', $pays);
 $insertLogement->bindParam(':idUser', $idUser);
-$insertLogement->execute();
+$insertLogement->execute() or die(print_r($insertLogement->errorInfo()));
 
 
 $insertLogement->closeCursor();
