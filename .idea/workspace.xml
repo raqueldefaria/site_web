@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0375fc5c-0844-40e5-890b-59a285557732" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/model/showAllCapteurs.php" afterPath="$PROJECT_DIR$/model/showAllCapteurs.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,16 +69,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="logements.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/interface/logements.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/addLogement.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addLogement.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/addLogement.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-352">
@@ -114,6 +103,16 @@
                 <marker date="1516023928015" expanded="true" signature="416:585" ph="SELECT * FRO... logement" />
                 <marker date="1516023928015" expanded="true" signature="416:602" ph="SELECT * FRO... logement" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -359,12 +358,13 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="interface" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -404,7 +404,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/controller/adminController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/model/adminModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/view/css/admin.css</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/view/interface/adminView.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -582,7 +583,7 @@
       <workItem from="1515938397911" duration="30711000" />
       <workItem from="1516007720113" duration="170000" />
       <workItem from="1516008271307" duration="1662000" />
-      <workItem from="1516021442600" duration="7138000" />
+      <workItem from="1516021442600" duration="7918000" />
     </task>
     <task id="LOCAL-00001" summary="Inscription added">
       <created>1512847297709</created>
@@ -780,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516025391984</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="MAJ">
+      <created>1516030121698</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1516030121698</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210225000" />
+    <option name="totallyTimeSpent" value="211005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -847,13 +855,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-665">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/interface/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -1195,6 +1196,14 @@
             <marker date="1516023928015" expanded="true" signature="416:585" ph="SELECT * FRO... logement" />
             <marker date="1516023928015" expanded="true" signature="416:602" ph="SELECT * FRO... logement" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/interface/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
