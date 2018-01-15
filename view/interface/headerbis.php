@@ -14,17 +14,15 @@
           <div class="bouttons">
             <div class="bouton_profil" id="boutonProfil">
                 <div class="prenom_nom">
-                <?php echo $_SESSION['pseudo'] ; ?>
+                  <?php echo $_SESSION['pseudo'] ; ?>
                 </div>
                 <div class="avatar">
-                <img id="avatar" src="../images/585e4beacb11b227491c3399.png" />
-            </div>
-            <div class="dropdown_content">
-              <a href="profil.php">Profil</a>
-              <a href="logements.php">Logements</a>
-            </div>
-
-
+                  <img id="avatar" src="../images/585e4beacb11b227491c3399.png" />
+                </div>
+                <div class="dropdown_content">
+                  <a href="profil.php">Profil</a>
+                  <a href="logements.php">Logements</a>
+                </div>
             </div>
             <div class="seConnecter">
               <a href="deconnexion.php" id="boutonSeDeconnecter"> Se Déconnecter </a>
