@@ -28,6 +28,7 @@
                 <tr>
                     <td>
                         <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant" />
+                        <span id="missPseudo"></span>
                     </td>
                 </tr>
                 <tr>
@@ -50,52 +51,79 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" />
+                        <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="nom" id="nom" size=35 placeholder="Nom" />
+                        <input type="text" name="nom" id="nom" size=35 placeholder="Nom" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" />
+                        <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="email" name="mail" id="mail" size=35 placeholder="Mail" />
+                        <input type="email" name="mail" id="mail" size=35 placeholder="Mail"  required/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" />
+                        <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" />
+                        <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" required />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="ville" id="ville" size=35 placeholder="Ville" />
+                        <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="pays" id="pays" size=35 placeholder="Pays" />
+                        <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required />
                     </td>
                 </tr>
             </table>
         </div>
-        <input type="submit" value="Envoyer" class="boutton" />
+        <input type="submit" value="Envoyer" class="boutton" id="boutonenvoi"  />
 
         </p>
     </form>
 </div>
+<script>
+  var formValid = document.getElementById('boutonenvoi');
+  var prenom = document.getElementById('identifiant');
+  var missPrenom = document.getElementById('missPseudo');
+  var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
+
+
+
+  formValid.addEventListener('click', validation);
+
+  function validation(event){
+      //Si le champ est vide
+
+      if (identifiant.validity.valueMissing){
+          event.preventDefault();
+          missPseudo.textContent = 'login manquant';
+          missPseudo.style.color = 'red';
+          erreur = true
+      }else if (identifiantValid.test(identifiant.value) == false){
+          event.preventDefault();
+          missPrenom.textContent = 'Format incorrect';
+          missPseudo.style.color = 'red';
+
+      }else{
+      }
+
+  }
 <!--*************** Footer ***************-->
 <?php include ("footer.php")?>
 </body>
