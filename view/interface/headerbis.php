@@ -22,6 +22,8 @@
                 <div class="dropdown_content">
                   <a href="profil.php">Profil</a>
                   <a href="logements.php">Logements</a>
+                  <!-- Si l'utilisateur qui se connecte est un administrateur, celui-ci a accès à la page d'administration via le menu déroulant -->
+                  <?php if (isset($_SESSION['type']) && $_SESSION['type'] == 'admin'){echo '<a href="adminView.php">Admin</a>';} ?>
                 </div>
             </div>
             <div class="seConnecter">
