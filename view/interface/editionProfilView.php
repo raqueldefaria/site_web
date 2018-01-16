@@ -36,7 +36,8 @@
                   <strong> Pseudo </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userinfo['utilisateur_login']; ?>" />
+                 <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userinfo['utilisateur_login']; ?>" required />
+                   <span id="missPseu"></span>
                </td>
             </tr>
             <tr>
@@ -44,7 +45,7 @@
                   <strong> Mail </strong> :
                </td>
                <td>
-                 <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userinfo['utilisateur_mail']; ?>" />
+                 <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userinfo['utilisateur_mail']; ?>" required />
                </td>
             </tr>
             <tr>
@@ -52,7 +53,7 @@
                   <strong> Prénom </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userinfo['utilisateur_prenom']; ?>" />
+                 <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userinfo['utilisateur_prenom']; ?>" required />
                </td>
             </tr>
             <tr>
@@ -60,7 +61,7 @@
                   <strong> Nom </strong> :
                </td>
                <td>
-                 <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userinfo['utilisateur_nom']; ?>" />
+                 <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userinfo['utilisateur_nom']; ?>" required />
                </td>
             </tr>
             <tr>
@@ -68,7 +69,7 @@
                  <strong> Adresse </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $userinfo['logement_adresse']; ?>" />
+                <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $userinfo['logement_adresse']; ?>" required />
               </td>
             </tr>
             <tr>
@@ -76,7 +77,7 @@
                  <strong> Ville </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $userinfo['logement_ville']; ?>" />
+                <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $userinfo['logement_ville']; ?>" required />
               </td>
             </tr>
             <tr>
@@ -84,7 +85,7 @@
                  <strong> Code postal </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" />
+                <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $userinfo['logement_codePostal']; ?>" required/>
               </td>
             </tr>
             <tr>
@@ -92,7 +93,7 @@
                  <strong> Pays </strong> :
               </td>
               <td>
-                <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $userinfo['logement_pays']; ?>" />
+                <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $userinfo['logement_pays']; ?>" required />
               </td>
             </tr>
             <tr>
@@ -100,7 +101,7 @@
                   <strong> Mot de passe actuel </strong> :
                </td>
                <td>
-                 <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" />
+                 <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" required />
                </td>
             </tr>
             <tr>
@@ -108,7 +109,7 @@
                   <strong> Nouveau mot de passe </strong> :
                </td>
                <td>
-                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" />
+                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" required />
                </td>
             </tr>
             <tr>
@@ -116,13 +117,13 @@
                   <strong> Confirmer nouveau mot de passe </strong> :
                </td>
                <td>
-                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" />
+                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" required />
                </td>
             </tr>
          </table>
 
          <br />
-         <input type="submit" value="Mettre à jour mon profil !" class="boutton"/>
+         <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
 
        </form>
 
@@ -140,6 +141,42 @@
 
 
     </div>
+    <!--************** script **************-->
+    <script>
+      var formValid = document.getElementById('bouenvoi');
+      var prenom = document.getElementById('Pseudo');
+      var missPrenom = document.getElementById('missPseu');
+      var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+
+
+
+
+      formValid.addEventListener('click', validation);
+
+      function validation(event){
+          //Si le champ est vide
+
+          if (identifiant.validity.valueMissing){
+              event.preventDefault();
+              missPseu.textContent = 'login manquant';
+              missPseu.style.color = 'red';
+              erreur = true
+          }else if (identifiantValid.test(identifiant.value) == false){
+              event.preventDefault();
+              missPrenom.textContent = 'Format incorrect';
+              missP.style.color = 'red';
+
+          }else{
+          }
+
+      }
+
+
+
+
+
+
+
 
     <?php include("footer.php"); ?>
 
