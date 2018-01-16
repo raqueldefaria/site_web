@@ -160,6 +160,19 @@ function showCapteursFromDb(idPiece) {
                                 "                </div>\n" +
                                 "            </div>";
                             break;
+                        default:
+                            txt += "<div class=\"section\">\n" +
+                                "                <p onclick=\"return popChart('chartDiv', 10, " + idPiece + ", 'Données du capteur/actionneur', 'Données du capteur/actionneur en fonction du temps', 'Axe des ordonnées', 'Axe des abscisse')\">Capteur/actionneur</p>\n" +
+                                "                <div class=imgBoutton>\n" +
+                                "                    <div class=\"onoffswitch\">\n" +
+                                "                        <input type=\"checkbox\" name=\"onoffswitch\" class=\"onoffswitch-checkbox\" id=\"myonoffswitch\" checked>\n" +
+                                "                        <label class=\"onoffswitch-label\" for=\"myonoffswitch\">\n" +
+                                "                            <span class=\"onoffswitch-inner\"></span>\n" +
+                                "                            <span class=\"onoffswitch-switch\"></span>\n" +
+                                "                        </label>\n" +
+                                "                    </div>\n" +
+                                "                </div>\n" +
+                                "            </div>";
                     }
                     txt += "</a>";
                 }

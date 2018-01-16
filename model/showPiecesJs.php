@@ -16,4 +16,3 @@ $outp = $pieces->fetchAll();
 $pieces->closeCursor();
 echo json_encode($outp);
 
-?>
