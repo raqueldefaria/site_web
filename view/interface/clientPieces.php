@@ -43,13 +43,45 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
                     <option value="Salon">Salon</option>
                     <option value="autre">Autre</option>
                 </select></p>
-            <p> Nom de la pièce : <input type="text" name="nomPiece"></p>
-            <input value="Ajouter" type="submit">
-            <input value="Fermer" type="submit" onclick="return hide('addPiece')">
+            <p> Nom de la pièce : <input type="text" name="nomPiece" id="nomPiece" required></p>
+                  <span id="missnomPiece"></span>
+            <input value="Ajouter" type="submit" id="boutonAjout">
+            <input value="Fermer" type="submit" onclick="return hide('addPiece')" >
         </form>
     </div>
 </div>
 
+
+<!--************** Script**************-->
+<script>
+  var formValid = document.getElementById('boutonAjout');
+  var prenom = document.getElementById('nomPiece');
+  var missPrenom = document.getElementById('missnomPiece');
+  var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+
+
+
+
+  formValid.addEventListener('click', validation);
+
+  function validation(event){
+      //Si le champ est vide
+
+      if (identifiant.validity.valueMissing){
+          event.preventDefault();
+          missnomPiece.textContent = 'Nom pièce manqunat';
+          missnomPiece.style.color = 'red';
+          erreur = true
+      }else if (identifiantValid.test(identifiant.value) == false){
+          event.preventDefault();
+          missPrenom.textContent = 'Format incorrect';
+          missP.style.color = 'red';
+
+      }else{
+      }
+
+  }
+  </script>
 
 
 
