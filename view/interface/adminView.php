@@ -42,6 +42,7 @@
                       ?>
 
                 </table>
+                <?php if(isset($erreur)) {echo $erreur ;} ?>
             </div>
         </div>
     </div>
