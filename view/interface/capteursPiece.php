@@ -53,6 +53,7 @@ $_SESSION['idPiece'] = htmlspecialchars($_GET['id']);
                     <option value="Capteur">Capteur</option>
                     <option value="Actionneur">Actionneur</option>
                 </select></p>
+            <p>Adresse MAC du Cemac correspondant : <input type="text" name="nomCemac"></p>
             <input value="Ajouter" type="submit">
             <input value="Fermer" type="submit" onclick="return hide('addCapteurs')">
         </form>

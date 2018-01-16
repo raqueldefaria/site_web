@@ -44,7 +44,6 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
                     <option value="autre">Autre</option>
                 </select></p>
             <p> Nom de la pièce : <input type="text" name="nomPiece"></p>
-            <p>Nom du Cemac correspondant : <input type="text" name="nomCemac"></p>
             <input value="Ajouter" type="submit">
             <input value="Fermer" type="submit" onclick="return hide('addPiece')">
         </form>

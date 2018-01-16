@@ -1,5 +1,3 @@
-<br/>
-<br/>
 <footer>
 
     <div class="reseauxSociaux">
