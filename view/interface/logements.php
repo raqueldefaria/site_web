@@ -32,19 +32,49 @@ session_start();
     <div class="addLogementOptions" >
         <form method="post" action="../../controller/addLogement.php" >
             <p>Ajouter un logement :</p>
-            <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" />
-            <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" />
-            <input type="text" name="ville" id="ville" size=35 placeholder="Ville" />
-            <input type="text" name="pays" id="pays" size=35 placeholder="Pays" />
+            <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
+            <span id="missAdresse"></span>
+            <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" required/>
+            <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required />
+            <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required/>
             <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
-            <input value="Ajouter" type="submit">
-            <input value="Fermer" type="submit" onclick="return hide('addLogement')">
+            <input value="Ajouter" type="submit"id="boutenvoi">
+            <input value="Fermer" type="submit" onclick="return hide('addLogement') ">
         </form>
     </div>
 </div>
 
 
+<!--************** script **************-->
+<script>
+  var formValid = document.getElementById('boutenvoi');
+  var adress = document.getElementById('adresse');
+  var missAdress= document.getElementById('missAdresse');
+  var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
+
+
+
+  formValid.addEventListener('click', validation);
+
+  function validation(event){
+      //Si le champ est vide
+
+      if (identifiant.validity.valueMissing){
+          event.preventDefault();
+          missAdresse.textContent = 'Adresse manquante';
+          missAdresse.style.color = 'red';
+          erreur = true
+      }else if (identifiantValid.test(identifiant.value) == false){
+          event.preventDefault();
+          missAdress.textContent = 'Format incorrect';
+          missP.style.color = 'red';
+
+      }else{
+      }
+
+  }
+  </script>
 
 <!--************** Navigation **************-->
 <div class="pieces">
@@ -67,6 +97,7 @@ session_start();
 
     </div>
 </div>
+
 
 
 <!--************** Footer *****************-->
