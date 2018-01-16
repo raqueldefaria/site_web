@@ -11,21 +11,7 @@ if(!empty(htmlspecialchars($_POST['pseudo'])) AND !empty(htmlspecialchars($_POST
     AND !empty(htmlspecialchars($_POST['codePostal'])) AND !empty(htmlspecialchars($_POST['ville'])) AND !empty(htmlspecialchars($_POST['pays']))) {
 
     // si le pseudo ou mail rentres sont dans la BDD alors on recupere quelque chose
-    $reponse = $db->prepare('SELECT utilisateur_login, utilisateur_mail FROM utilisateur
-                             WHERE utilisateur_login=:pseudo OR utilisateur_mail=:mail');
-
-    //or die(print_r($db->errorInfo()));
-
-    $reponse->bindParam(':pseudo', $pseudo);
-    $reponse->bindParam(':mail', $mail);
-
-    $prenom = htmlspecialchars($_POST['prenom']);
-    $nom = htmlspecialchars($_POST['nom']);
-    $pseudo = htmlspecialchars($_POST['pseudo']);
-    $mail = htmlspecialchars($_POST['mail']);
-    $reponse->execute();
-
-    $donnee = $reponse->fetch();
+    require('../model/utilisateur_verif_inscription.php');
 
     if (empty($donnee)){  // L'utilisateur n'existe pas dans la base de données, on peut continuer
         $erreur = false; // on n'a pas d'erreur

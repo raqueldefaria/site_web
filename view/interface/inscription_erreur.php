@@ -90,6 +90,8 @@
             </table>
             </div>
             <input type="submit" value="Envoyer" class="boutton" />
+
+            <!-- ************* Erreur *************** -->
             <?php
               if($_GET['erreur']==1)
               {
