@@ -27,18 +27,18 @@
             <table>
                 <tr>
                     <td>
-                        <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant" />
+                        <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant"required />
                         <span id="missPseudo"></span>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" name="mdp" id="mdp" size=35 placeholder="Mot de passe" />
+                        <input type="password" name="mdp" id="mdp" size=35 placeholder="Mot de passe" required/>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" name="mdp2" id="mdp2" size=35 placeholder="Confirmez le mot de passe" />
+                        <input type="password" name="mdp2" id="mdp2" size=35 placeholder="Confirmez le mot de passe" required />
                     </td>
                 </tr>
                 <tr>
@@ -118,7 +118,7 @@
       }else if (identifiantValid.test(identifiant.value) == false){
           event.preventDefault();
           missPrenom.textContent = 'Format incorrect';
-          missPseudo.style.color = 'red';
+          missP.style.color = 'red';
 
       }else{
       }
