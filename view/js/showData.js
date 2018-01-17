@@ -112,11 +112,10 @@ function showCapteursFromDb(idPiece) {
                                 "                        </label>\n" +
                                 "                    </div>\n" +
                                 "                    <img src=\"../images/lumière.png\"/>\n" +
-                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].ID_capteur_actionneur+"\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" +
+                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
                                 "                </div>\n" +
                                 "            </div>" ;
 
-//                                "<script>document.getElementById(\"supp"+myObj[it].ID_capteur_actionneur+"\").addEventListener(\"click\" , function myScript(e){ e.stopPropagation(); e.preventDefault(); delCapteur("+myObj[it].ID_capteur_actionneur , idPiece+");}, true);</script>";
                             break;
                         case "Volets":
                             txt += "<div class=\"section\">\n" +
@@ -130,6 +129,7 @@ function showCapteursFromDb(idPiece) {
                                 "                        </label>\n" +
                                 "                    </div>\n" +
                                 "                    <img src=\"../images/volets.png\"/>\n" +
+                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + // morceau au cas où:  id=\"supp"+myObj[it].ID_capteur_actionneur+"\"
                                 "                </div>\n" +
                                 "            </div>";
                             break;
@@ -145,6 +145,7 @@ function showCapteursFromDb(idPiece) {
                                 "                        </label>\n" +
                                 "                    </div>\n" +
                                 "                    <img src=\"../images/température.png\"/>\n" +
+                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" +
                                 "                </div>\n" +
                                 "            </div>";
                             break;
@@ -160,6 +161,7 @@ function showCapteursFromDb(idPiece) {
                                 "                        </label>\n" +
                                 "                    </div>\n" +
                                 "                    <img src=\"../images/humidité.png\"/>\n" +
+                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" +
                                 "                </div>\n" +
                                 "            </div>";
                             break;
