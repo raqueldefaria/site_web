@@ -112,8 +112,11 @@ function showCapteursFromDb(idPiece) {
                                 "                        </label>\n" +
                                 "                    </div>\n" +
                                 "                    <img src=\"../images/lumière.png\"/>\n" +
+                                "                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].ID_capteur_actionneur+"\" onclick=\"return delCapteur("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" +
                                 "                </div>\n" +
-                                "            </div>";
+                                "            </div>" ;
+
+//                                "<script>document.getElementById(\"supp"+myObj[it].ID_capteur_actionneur+"\").addEventListener(\"click\" , function myScript(e){ e.stopPropagation(); e.preventDefault(); delCapteur("+myObj[it].ID_capteur_actionneur , idPiece+");}, true);</script>";
                             break;
                         case "Volets":
                             txt += "<div class=\"section\">\n" +
@@ -189,4 +192,20 @@ function showCapteursFromDb(idPiece) {
     xmlhttp.open("POST", "../../model/showCapteursJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
+}
+
+function delCapteur(idCapteur, idPiece){
+    var dbParam = JSON.stringify({"idCapteur":idCapteur }); // On encode en JSON dbParam, qui contient l'id capteur
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              showCapteursFromDb(idPiece);
+
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/suppCapteurJs.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
 }

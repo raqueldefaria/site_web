@@ -11,7 +11,7 @@ $dataCemac = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece =" .$obj
 $response  = $dataCemac->fetch();
 
 if (!empty($response)){
-    $data = $db->query("SELECT `capteur/actionneur_fonction` AS fonction FROM `capteur/actionneur` WHERE Cemac_idCemac =" .$response['id_Cemac']) or die(print_r($db->errorInfo()));
+    $data = $db->query("SELECT `capteur/actionneur_fonction` AS fonction , `id_Capteur/actionneur` AS ID_capteur_actionneur FROM `capteur/actionneur` WHERE Cemac_idCemac =" .$response['id_Cemac']) or die(print_r($db->errorInfo()));
 
     $outp = array();
     $outp = $data->fetchAll();
@@ -24,12 +24,3 @@ if (!empty($response)){
 else{
     echo json_encode(null);
 }
-
-
-
-
-
-
-
-
-
