@@ -47,34 +47,35 @@ function showPiecesFromDb(idUser, idLogement) {
                 txt += "<a href='capteursPiece.php?id="+ myObj[it].id_Piece + "'>";
                 switch (myObj[it].piece_type){
                     case "Garage":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
                         break;
                     case "Chambre":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
                         break;
                     case "Cuisine":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'>";
                         break;
                     case "Bureau":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'>";
                         break;
                     case "Salle de Bain":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'>";
                         break;
                     case "Toilettes":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'>";
                         break;
                     case "Salon":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'>";
                         break;
                     default:
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p></div>";
+                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
                 }
-                txt += "</a>";
+                txt += "<img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delPiece("+myObj[it].id_Piece +" , "+idLogement+")\">\n</div></a>";
             }
             txt +="<a href=\"#\" onclick=\"return pop('addPiece') \" >\n" +
                 "            <div class=\"section\">\n" +
                 "                <img src=\"../images/client/add.png\" class=\"addButton\">\n" +
+                //"                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delPiece("+myObj[it].id_Piece +" , "+idLogement+")\">\n" +
                 "                <p>Ajouter</p>\n" +
                 "            </div>\n" +
                 "        </a>";
@@ -207,6 +208,22 @@ function delCapteur(idCapteur, idPiece){
           }
       }
     xmlhttp.open("POST", "../../model/suppCapteurJs.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
+}
+
+function delPiece(idPiece, idLogement){
+    var dbParam = JSON.stringify({"idPiece":idPiece }); // On encode en JSON dbParam, qui contient l'id piece
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              showPiecesFromDb(idLogement);
+
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/suppPieceJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 

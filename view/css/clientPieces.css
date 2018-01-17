@@ -30,7 +30,8 @@ body{
 .suppPiece{
   width:20px;
   position:relative;
-  left:50px;
+  left:32px;
+  bottom:31px;
 }
 /*------------ Title of the section ------------*/
 
