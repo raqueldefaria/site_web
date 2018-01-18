@@ -5,7 +5,7 @@ require("../model/connection_db.php");
 $mail_recup = htmlspecialchars($_POST['mail_recup']);
 
 //Verification existance de l'email sur la base de données
-$req = $bdd->prepare('SELECT utilisateur_mail FROM utilisateur WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
+$req = $db->prepare('SELECT utilisateur_mail FROM utilisateur WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
 $req->execute(array($mail_recup)) or die(print_r($req->errorInfo()));
 
 
