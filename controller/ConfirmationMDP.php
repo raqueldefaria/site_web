@@ -12,11 +12,11 @@
     <p> Pas de panique ! Nous vous enverrons un nouveau mot de passe sur votre adresse mail associé au compte. </p>
 
 
-    <form method="post" action="MDP_POST.php">
+    <form method="post" action="ConfirmationMDP_POST.php">
 
     <p>
-       <label for="mail_recup"> Votre mail :</label>
-       <input type="email" name="mail_recup" id="mail_recup" />
+       <label for="code"> Votre mail :</label>
+       <input type="text" name="code_recup" id="code_recup" />
        <input type="submit" value="Envoyer" />
     </p>
 
