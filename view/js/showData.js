@@ -70,12 +70,12 @@ function showPiecesFromDb(idUser, idLogement) {
                     default:
                         txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
                 }
-                txt += "<img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delPiece("+myObj[it].id_Piece +" , "+idLogement+")\">\n</div></a>";
+                txt += "<img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\">\n</div></a>";
+                txt += "\n<script>document.getElementById(\"supp"+myObj[it].id_Piece+"\").addEventListener(\"click\" , function myScript(e){ e.stopPropagation(); e.preventDefault(); delPiece("+myObj[it].id_Piece +" , "+idLogement+");}, true);</script>";
             }
             txt +="<a href=\"#\" onclick=\"return pop('addPiece') \" >\n" +
                 "            <div class=\"section\">\n" +
                 "                <img src=\"../images/client/add.png\" class=\"addButton\">\n" +
-                //"                    <img src=\"../images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delPiece("+myObj[it].id_Piece +" , "+idLogement+")\">\n" +
                 "                <p>Ajouter</p>\n" +
                 "            </div>\n" +
                 "        </a>";
