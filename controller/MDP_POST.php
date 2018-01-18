@@ -1,39 +1,63 @@
-//Demande de l'adresse mail
-//Sécurisation et verification de la validitée de l'adresse mail
-//Correspondance avec une autre adresse mail de la bdd
-//-si ok -> envoie un code par mail (mt_rand()*8)
-//-BDD => table "récuperation" (id, mail, code)
-// Stockage du mail dans $_SESSION['recupmail']
-// stockage du code dans $_SESSION['recupcode']
-//-Redirection vers la page d'entrée du code ($_GET['SECTION']='code')
-//-checker correspondance mail dans la bdd
-//-si ok > redirection vers la page de changement de mot de passe (+confirmation du mdp) ($_GET['SECTION']= 'mdpform')
-//-Si les deux mot de passe correspondent => hashage en sha1() et enregistrement dans la bdd
-
-
-
 <?php
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=site_web;charset=utf8', 'root', '');
-	array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+
+require("../model/connection_db.php");
+
+$mail_recup = htmlspecialchars($_POST['mail_recup']);
+
 //Verification existance de l'email sur la base de données
-$req = $bdd->prepare('SELECT * FROM utilisateur WHERE utilisateur_mail = ?  AND utilisateur_mail_recup = ?');
-$req->execute(array($_POST['mail'], $_POST['mail_recup']));
+$req = $db->prepare('SELECT utilisateur_mail FROM utilisateur WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
+$req->execute(array($mail_recup)) or die(print_r($req->errorInfo()));
 
-$mail = $_POST['mail'];
-$mail_recup = $_POST['mail_recup'];
 
-if ($mail == $mail_recup) {
-	mail($mail, 'récuperation du mot de passe', 'Si ce n\'est pas vous qui vouliez récuperer votre mot de passe, ignorer ce mail. \n cliquer sur ce lien pour recuperer un nouveau mot de passe')
-}
-else
-{
-	echo "Ce mail n'existe pas.";
-}
 
+
+$donnees = $req->fetch();
+
+
+    	if (isset($_POST['mail_recup']) && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail_recup']) && $donnees['utilisateur_mail'] == $mail_recup)
+    	{
+
+
+                //envoie du mail
+               $tok = mt_rand(0,1000);
+
+               $requete = $db->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($bdd->errorInfo()));
+               $requete->execute(array($tok,$donnees['utilisateur_mail'])) or die(print_r($requete->errorInfo()));
+
+               ini_set( 'display_errors', 1 );
+
+            $header="MIME-Version: 1.0\r\n";
+            $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
+            $header.='Content-Type:text/html; charset="uft-8"'."\n";
+            $header.='Content-Transfer-Encoding: 8bit';
+
+
+              error_reporting( E_ALL );
+
+              $from = "remy.touret1@gmail.com";
+
+              $to = "remy.touret1@gmail.com";
+
+              $subject = "Vérification du mail";
+
+              $message = "Bonjour, Pour récuperer votre mot de passe sur le site, taper ce code :" . $tok;
+
+              $headers = "From:" . $from;
+
+              mail($to,$subject,$message, $headers);
+
+
+             header('Location:ReinitialisationMDP.php?tok='.$tok);
+
+
+    	}
+
+        else
+        {
+	      echo "Ce mail n'existe pas.";
+        }
+
+
+$req->closeCursor();
+
+?>

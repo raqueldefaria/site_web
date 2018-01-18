@@ -8,7 +8,7 @@ require("../model/connection_db.php");
 
 
 
-$mail=$bdd->prepare("SELECT utilisateur_mail FROM utilisateur WHERE tok = ?");
+$mail=$db->prepare("SELECT utilisateur_mail FROM utilisateur WHERE tok = ?");
 $mail->execute(array($tok));
 $getMail = $mail->fetch();
 
@@ -33,10 +33,10 @@ elseif (!isset($pass_recup2) OR !isset($pass_recup) OR $pass_recup2 !== $pass_re
 else
 	{
 		$tok = NULL;
-		$updateTok = $bdd->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($bdd->errorInfo()));
+		$updateTok = $db->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($bdd->errorInfo()));
         $updateTok->execute(array($tok,$getMail['utilisateur_mail'])) or die(print_r($updateTok->errorInfo()));
 
-		$updatePassword = $bdd->prepare('UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
+		$updatePassword = $db->prepare('UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
 		$updatePassword->execute(array($pass_recup,$getMail['utilisateur_mail'])) or die(print_r($updatePassword->errorInfo()));
 
 		echo "le mot de passe a été changé avec succès.";

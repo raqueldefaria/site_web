@@ -11,13 +11,13 @@
     <h1>Mot de passe oublié ?</h1>
     <p> Pas de panique ! Nous vous enverrons un nouveau mot de passe sur votre adresse mail associé au compte. </p>
 
+
     <form method="post" action="MDP_POST.php">
 
     <p>
-       <label for="mail_recup">Votre mail :</label>
+       <label for="mail_recup"> Votre mail :</label>
        <input type="email" name="mail_recup" id="mail_recup" />
        <input type="submit" value="Envoyer" />
-
     </p>
 
     </form>
