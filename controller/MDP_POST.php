@@ -34,9 +34,9 @@ $donnees = $req->fetch();
 
               error_reporting( E_ALL );
 
-              $from = "remy.touret1@gmail.com";
+              $from = "domonline.isep@gmail.com";
 
-              $to = "remy.touret1@gmail.com";
+              $to = $_POST['mail_recup'];
 
               $subject = "Vérification du mail";
 
