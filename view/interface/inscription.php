@@ -101,7 +101,7 @@
   var prenom = document.getElementById('identifiant');
   var missPrenom = document.getElementById('missPseudo');
   var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
-
+  
 
 
 
@@ -110,12 +110,12 @@
   function validation(event){
       //Si le champ est vide
 
-      if (identifiant.validity.valueMissing){
+      if (pseudo.validity.valueMissing){
           event.preventDefault();
           missPseudo.textContent = 'login manquant';
           missPseudo.style.color = 'red';
           erreur = true
-      }else if (identifiantValid.test(identifiant.value) == false){
+      }else if (prenomValid.test(pseudo.value) == false){
           event.preventDefault();
           missPrenom.textContent = 'Format incorrect';
           missP.style.color = 'red';

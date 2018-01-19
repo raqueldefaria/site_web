@@ -90,6 +90,11 @@
             </tr>
           </table>
 
+          <br />
+          <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
+
+        </form>
+
           <?php
           $data = $db->prepare('SELECT * from logement WHERE logement.id_Utilisateur = ? ');
           $data->execute(array($_SESSION['userID']));
@@ -99,6 +104,8 @@
           $count++;
           ?>
           <h2>Logement <?php echo $count; ?> </h2>
+
+          <form method="POST" action="editionProfilView.php">
 
           <table>
             <tr>
@@ -135,14 +142,18 @@
             </tr>
           </table>
 
+          <br />
+          <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
+
+          </form>
+
           <?php
           }
           ?>
 
-         <br />
-         <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
 
-       </form>
+
+       
 
        <?php if(isset($msg)) { echo $msg; } ?>
 
