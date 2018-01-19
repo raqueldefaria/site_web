@@ -24,7 +24,7 @@ $tok->execute(array($mail['utilisateur_mail']));
 
 if (!isset($tok2) OR $tok2 !== $tok)
 	{
-		echo "le code n'est pas valide";
+		echo "Le code n'est pas valide.";
 	}
 elseif (!isset($pass_recup2) OR !isset($pass_recup) OR $pass_recup2 !== $pass_recup)
 	{
@@ -39,6 +39,6 @@ else
 		$updatePassword = $db->prepare('UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?') or die(print_r($bdd->errorInfo()));
 		$updatePassword->execute(array($pass_recup,$getMail['utilisateur_mail'])) or die(print_r($updatePassword->errorInfo()));
 
-		echo "le mot de passe a été changé avec succès.";
+		echo "Le mot de passe a été changé avec succès.";
 	}
 ?>

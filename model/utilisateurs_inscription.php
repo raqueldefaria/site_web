@@ -49,6 +49,30 @@ $idUser = $db->lastInsertId();
 $insertLogement->execute();
 
 $insertLogement->closeCursor();
+            ini_set( 'display_errors', 1 );
+
+            $header="MIME-Version: 1.0\r\n";
+            $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
+            $header.='Content-Type:text/html; charset="uft-8"'."\n";
+            $header.='Content-Transfer-Encoding: 8bit';
+
+            error_reporting( E_ALL );
+
+              $from = "remy.touret1@gmail.com";
+
+              $to = "remy.touret1@gmail.com";
+
+              $subject = "Inscription à DomOnline";
+
+              $message = "Bonjour " . $_POST['prenom']. " " . $_POST['nom'] . "\n \n";
+              $message .= "Vous êtes bien inscrit sur DomOnline. \n \n";
+              $message .= "Votre pseudo : " . $_POST['pseudo'] . "\n \n";
+              $message .= "Cordialement, \n";
+              $message .= "L'équipe Domonline.";
+
+              $headers = "From:" . $from;
+
+              mail($to,$subject,$message, $headers);
 
 header("Location:../view/interface/connexion.php")
 
@@ -94,5 +118,7 @@ header("Location: ../view/interface/clientPieces.php");
 die();
 
 */
+
+
 
 ?>

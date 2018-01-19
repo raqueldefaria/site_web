@@ -5,17 +5,17 @@ $tok = htmlspecialchars($_GET['tok']);
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="ReinitialisationMDP.css" />
-        <title>mot de passe oublié </title>
+        <link rel="stylesheet" href="../css/ReinitialisationMDP.css" />
+        <title>DomOnlien - Mot de passe oublié </title>
     </head>
 
     <body>
-    <div class="bloc">
+    <div id="paragraphe">
     <h1> Réinitialisation du mot de passe </h1>
-   
 
 
-    <form method="post" action="ReinitialisationMDP_POST.php?tok=<?php echo $tok ?>">
+
+    <form method="post" action="../../controller/ReinitialisationMDP_POST.php?tok=<?php echo $tok ?>">
 
     <p>
         <table>
@@ -45,10 +45,10 @@ $tok = htmlspecialchars($_GET['tok']);
        <input type="password" name="pass_recup2" id="pass_recup2" /> <br />
        </td>
     </tr>
-     
+
        <td>
        <input type="submit" value="Envoyer" />
-       </td>  
+       </td>
 
        </table>
     </p>
@@ -56,6 +56,6 @@ $tok = htmlspecialchars($_GET['tok']);
     </form>
     </div>
 
-        
+
     </body>
 </html>
