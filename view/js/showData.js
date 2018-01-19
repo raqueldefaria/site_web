@@ -219,7 +219,7 @@ function delPiece(idPiece, idLogement, idUser){
     xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               showPiecesFromDb(idUser, idLogement);
-              window.alert("AH");
+              //window.alert("AH");
 
           }
       }
