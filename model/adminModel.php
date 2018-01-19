@@ -21,7 +21,7 @@ function userstable()
       <td> <?php echo $users['utilisateur_login']; ?> </td>
       <td> <?php echo $users['utilisateur_prenom']; ?> </td>
       <td> <?php echo $users['utilisateur_nom']; ?> </td>
-      <td> <a href="adminView.php?modify=<?php echo $users['id_Utilisateur']; ?>"> Modifier </a> </td>
+      <td> <a href="adminmodifyView.php?modify=<?php echo $users['id_Utilisateur']; ?>"> Modifier </a> </td>
       <td> <a href="adminView.php?delete=<?php echo $users['id_Utilisateur']; ?>"> Supprimer </a> </td>
   </tr>
   <?php
