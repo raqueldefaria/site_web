@@ -42,7 +42,7 @@ include("../../controller/accessDenied.php"); // on vérifie que l'utilisateur n
               <label for="boxSouvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" checked name="souvenir" id="boxSouvenir" /> <br />
               <input type="submit" value="Se connecter" class="boutton" id="bouton_envoi" />
             </div>
-            <a href="#" id="mdpOublie"> Mot de passe oublié </a>
+            <a href="../../controller/MDP.php" id="mdpOublie"> Mot de passe oublié </a>
           </p>
         </form>
 
@@ -76,7 +76,7 @@ include("../../controller/accessDenied.php"); // on vérifie que l'utilisateur n
             }
 
         }
-
+</script>
 
 
 
