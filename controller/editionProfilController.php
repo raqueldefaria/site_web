@@ -48,32 +48,32 @@ if(isset($_POST['newnom']) AND !empty($_POST['newnom']) AND $_POST['newnom'] != 
 if(isset($_POST['newadresse']) AND !empty($_POST['newadresse']) AND $_POST['newadresse'] != $userinfo['logement_adresse'])
 {
   $newadresse = htmlspecialchars($_POST['newadresse']);
-  $insertadresse = $db->prepare('UPDATE logement SET logement_adresse = ? WHERE id_Utilisateur = ?');
-  $insertadresse->execute(array($newadresse, $userinfo['id_Utilisateur']));
+  $insertadresse = $db->prepare('UPDATE logement SET logement_adresse = ? WHERE id_Logement = ?');
+  $insertadresse->execute(array($newadresse, $_POST['idlogement']));
   header('Location:  profil?msg=1.php');
 }
 
 if(isset($_POST['newville']) AND !empty($_POST['newville']) AND $_POST['newville'] != $userinfo['logement_ville'])
 {
   $newville = htmlspecialchars($_POST['newville']);
-  $insertville = $db->prepare('UPDATE logement SET logement_ville = ? WHERE id_Utilisateur = ?');
-  $insertville->execute(array($newville, $userinfo['id_Utilisateur']));
+  $insertville = $db->prepare('UPDATE logement SET logement_ville = ? WHERE id_Logement = ?');
+  $insertville->execute(array($newville, $_POST['idlogement']));
   header('Location:  profil?msg=1.php');
 }
 
 if(isset($_POST['newcodePostal']) AND !empty($_POST['newcodePostal']) AND $_POST['newcodePostal'] != $userinfo['logement_codePostal'])
 {
   $newcodePostal = htmlspecialchars($_POST['newcodePostal']);
-  $insertcodePostal = $db->prepare('UPDATE logement SET logement_codePostal = ? WHERE id_Utilisateur = ?');
-  $insertcodePostal->execute(array($newcodePostal, $userinfo['id_Utilisateur']));
+  $insertcodePostal = $db->prepare('UPDATE logement SET logement_codePostal = ? WHERE id_Logement = ?');
+  $insertcodePostal->execute(array($newcodePostal, $_POST['idlogement']));
   header('Location:  profil?msg=1.php');
 }
 
 if(isset($_POST['newpays']) AND !empty($_POST['newpays']) AND $_POST['newpays'] != $userinfo['logement_pays'])
 {
   $newpays = htmlspecialchars($_POST['newpays']);
-  $insertpays = $db->prepare('UPDATE logement SET logement_pays = ? WHERE id_Utilisateur = ?');
-  $insertpays->execute(array($newpays, $userinfo['id_Utilisateur']));
+  $insertpays = $db->prepare('UPDATE logement SET logement_pays = ? WHERE id_Logement = ?');
+  $insertpays->execute(array($newpays, $_POST['idlogement']));
   header('Location:  profil?msg=1.php');
 }
 

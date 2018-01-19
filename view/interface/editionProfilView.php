@@ -140,10 +140,13 @@
                 <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $logements['logement_pays']; ?>" required />
               </td>
             </tr>
+
+                <input type="hidden" placeholder="idlogement" id="idlogement" name="idlogement" value="<?php echo $logements['id_Logement']; ?>" required />
+
           </table>
 
           <br />
-          <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
+          <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
 
           </form>
 
@@ -153,7 +156,7 @@
 
 
 
-       
+
 
        <?php if(isset($msg)) { echo $msg; } ?>
 
