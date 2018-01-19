@@ -71,40 +71,14 @@ require("../../controller/profilController.php");
                 <?php echo $userinfo['utilisateur_type']; ?>
              </td>
           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Adresse </strong> :
-              </td>
-              <td>
-                 <?php echo $userinfo['logement_adresse']; ?>
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Ville </strong> :
-              </td>
-              <td>
-                 <?php echo $userinfo['logement_ville']; ?>
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Code postal </strong> :
-              </td>
-              <td>
-                 <?php echo $userinfo['logement_codePostal']; ?>
-              </td>
-           </tr>
-           <tr>
-              <td align="right">
-                 <strong> Pays </strong> :
-              </td>
-              <td>
-                 <?php echo $userinfo['logement_pays']; ?>
-              </td>
-           </tr>
-         </table>
-       </div>
+        </table>
+        </div>
+
+        <?php
+        show_logements();
+        ?>
+
+
 
        <br/>
 

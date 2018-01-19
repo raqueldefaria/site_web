@@ -18,4 +18,3 @@ while($cemac_infoID = $cemac_infoID_raw->fetch()){
 $db->exec("DELETE FROM cemac WHERE Piece_idPiece = " .$idPieceSQL) or die(print_r($db->errorInfo())); // faudrait mettre la clé utilisateur dans la table Cemac
 $db->exec("DELETE FROM piece WHERE id_Piece = ".$idPieceSQL." AND Logement_Utilisateur_idUtilisateur = ".$_SESSION['userID']) or die(print_r($db->errorInfo()));
 //On supprime également toutes les cemacs se trouvant dans la pièce et enfin la pièce en elle même
-?>
