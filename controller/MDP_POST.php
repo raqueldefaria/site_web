@@ -47,7 +47,7 @@ $donnees = $req->fetch();
               mail($to,$subject,$message, $headers);
 
 
-             header('Location:ReinitialisationMDP.php?tok='.$tok);
+             header('Location:../view/interface/ReinitialisationMDP.php?tok='.$tok);
 
 
     	}
