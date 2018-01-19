@@ -44,7 +44,7 @@ function showPiecesFromDb(idUser, idLogement) {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
             for (it = 0; it < myObj.length; it++) {
-                txt += "<a href='capteursPiece.php?id="+ myObj[it].id_Piece + "'>";
+                txt += "<div><a href='capteursPiece.php?id="+ myObj[it].id_Piece + "'>";
                 switch (myObj[it].piece_type){
                     case "Garage":
                         txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
@@ -70,8 +70,8 @@ function showPiecesFromDb(idUser, idLogement) {
                     default:
                         txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
                 }
-                txt += "<img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\">\n</div></a>";
-                txt += "\n<script>document.getElementById(\"supp"+myObj[it].id_Piece+"\").addEventListener(\"click\" , function myScript(e){ e.stopPropagation(); e.preventDefault(); delPiece("+myObj[it].id_Piece +" , "+idLogement+");}, true);</script>";
+                txt += "</div></a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delPiece("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n</div>";
+
             }
             txt +="<a href=\"#\" onclick=\"return pop('addPiece') \" >\n" +
                 "            <div class=\"section\">\n" +
@@ -213,13 +213,13 @@ function delCapteur(idCapteur, idPiece){
 
 }
 
-function delPiece(idPiece, idLogement){
+function delPiece(idPiece, idLogement, idUser){
     var dbParam = JSON.stringify({"idPiece":idPiece }); // On encode en JSON dbParam, qui contient l'id piece
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-              showPiecesFromDb(idLogement);
-
+              showPiecesFromDb(idUser, idLogement);
+              window.alert("AH");
 
           }
       }
