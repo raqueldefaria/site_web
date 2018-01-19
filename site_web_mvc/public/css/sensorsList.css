@@ -1,0 +1,28 @@
+table {
+    font-size: small;
+    border-collapse: collapse;
+    width:95%;
+    margin-left: 3%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr a{
+    text-decoration: underline;
+}
+
+tr a:hover{
+    font-weight: bold;
+}
+
+#sensorsList{
+    overflow: auto;
+}

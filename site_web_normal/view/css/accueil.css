@@ -1,0 +1,76 @@
+#corps{
+    /* Pour éviter la superposition du pied de page et du contenu : */
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+
+body {
+    min-height: 100%;
+    background-image: url("../images/background/image_accueil_opaque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section
+{
+  display: flex;
+}
+
+#news
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#news1
+{
+  margin:10px;
+  padding:2px 10px 2px 10px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width:90%;
+}
+
+#news2
+{
+  margin:10px;
+  padding:2px 10px 2px 10px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width:90%;
+}
+
+#news3
+{
+  margin:10px;
+  padding:2px 10px 2px 10px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width:90%;
+}
+
+#about_domonline
+{
+  margin:10px;
+  padding:2px 10px 2px 10px;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 30%;
+  font-size: 1.3em;
+  height: 50%;
+}
+
+div h2
+{
+  text-align: center;
+  background-color: black;
+  color:white;
+}
