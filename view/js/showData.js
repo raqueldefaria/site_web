@@ -9,13 +9,13 @@ function showLogementsFromDb(idUser) {
             myObj = JSON.parse(this.responseText);
             console.log(myObj);
             for (it = 0; it < myObj.length; it++) {
-                    txt += "<a href=\"clientPieces.php?id="+ myObj[it].id_Logement + "\" >" +
+                    txt += "<div><a href=\"clientPieces.php?id="+ myObj[it].id_Logement + "\" >" +
                         "<div class='section'>" +
                         "<p style='font-size: small'>" + myObj[it].logement_adresse + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_codePostal + " " + myObj[it].logement_ville + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_pays + "</p>" +
                         "</div>" +
-                        "</a>"
+                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\"return delLogement("+myObj[it].id_Logement+" , "+idUser+")\"></div>"
                 }
                 txt +="<a href=\"#\" onclick=\"return pop('addLogement') \" >\n" +
                     "            <div class=\"section\">\n" +
@@ -224,6 +224,22 @@ function delPiece(idPiece, idLogement, idUser){
           }
       }
     xmlhttp.open("POST", "../../model/suppPieceJs.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
+}
+
+function delLogement(idLogement, idUser){
+    var dbParam = JSON.stringify({"idLogement":idLogement }); // On encode en JSON dbParam, qui contient l'id logement
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              showLogementsFromDb(idUser);
+              //window.alert("AH");
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/suppLogementJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 
