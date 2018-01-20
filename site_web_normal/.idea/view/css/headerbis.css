@@ -1,0 +1,251 @@
+/*------------Header in general ------------*/
+#header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  /*padding-bottom: 1%;*/
+    /*padding-top: 0%;*/
+  background-color: #FFF6F5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.95;
+  z-index: 2;
+}
+
+@media screen and (max-width: 800px)
+{
+
+#header
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
+/*------------ Different sections of the header ------------*/
+
+.logo
+{
+  flex: 1;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.logo
+{
+  text-align: center;
+}
+
+}
+
+.menu
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex: 2;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.menu
+{
+	display: flex;
+  flex-direction: column;
+}
+
+}
+
+.bouttons{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 3%;
+}
+
+@media screen and (max-width: 800px)
+{
+
+.bouttons
+{
+	display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+}
+
+#avatar
+{
+  width: 18px;
+  height: 18px;
+}
+
+
+.prenom_nom
+{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.avatar
+{
+  display: inline-block;
+  vertical-align: -25%;
+}
+
+/*------------ Bouttons ------------*/
+
+
+#boutonSeDeconnecter
+{
+  color: white;
+  border-radius: 8px;
+  background-color: rgb(0,184,169);
+  text-decoration: none;
+  padding: 5px;
+}
+
+#boutonProfil
+{
+  color: white;
+  border-radius: 8px;
+  background-color: rgb(0,184,169);
+  text-decoration: none;
+  padding: 2px;
+  margin-top: 5px;
+  width:135px;
+  max-height: 25px;
+  text-align: center;
+}
+
+#boutonSeDeconnecter:hover, #boutonProfil:hover
+{
+  background-color: rgb(0,136,125);
+}
+
+.bouton_profil, .seConnecter{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/*------- Dropdown menu -------*/
+
+.bouton_profil
+{
+  position:relative;
+  display: inline-block;
+
+}
+
+.bouton_profil .dropdown_content
+{
+  display: none;
+  position: absolute;
+  min-width: 124px;
+  z-index: 3;
+  background-color: #F9F9F9;
+  margin-top: 0px;
+  border: 3px solid #00887d;
+}
+
+.dropdown_content a
+{
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px 16px;
+}
+
+.dropdown_content a:hover
+{
+  background-color: #D8D8D8;
+}
+
+.bouton_profil:hover .dropdown_content
+{
+  display: block;
+}
+
+
+/* ----------------------- */
+
+#logoCompanyHeader
+{
+  width: 154px;
+	height: 34px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 20%;
+}
+
+@media screen and (max-width: 800px)
+{
+
+  #logoCompanyHeader
+  {
+    padding-left: 0px;
+  }
+
+}
+
+/*------------Text of the menu ------------*/
+
+.txtHeader1
+{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+}
+
+.txtHeader2
+{
+  border-right: 1px solid black;
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+}
+
+.txtHeader3
+{
+  padding: 8%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*margin-top: 25%;*/
+  border-right: 1px solid black;
+}
+
+.txtHeader1, .txtHeader2, .txtHeader3
+{
+  color: black;
+  text-decoration: none;
+}
+
+.txtHeader1:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.txtHeader2:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.txtHeader3:hover
+{
+  font-weight: bold;
+  text-decoration: underline;
+}

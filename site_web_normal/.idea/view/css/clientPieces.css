@@ -1,0 +1,88 @@
+/*------------ General ------------*/
+
+body{
+    margin-top:10%;
+    background-image: url("../images/background/image_accueil_opaque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*------------ Pieces in general ------------*/
+
+.pieces{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 60%;
+    margin-left: 39%;
+    margin-top: -16%;
+    border : 1px solid black;
+    padding-bottom: 2%;
+    background-color: white;
+}
+
+.optionPieces{
+    display:flex;
+    align-content:space-around;
+    flex-wrap: wrap;
+}
+
+.suppPiece{
+  width:20px;
+  position:relative;
+  left:32px;
+  bottom:100px;
+}
+/*------------ Title of the section ------------*/
+
+.sectionPieces{
+    display:flex;
+    justify-content: space-between;
+    background-color: dimgray;
+    color: white;
+}
+
+.motPiece{
+    font-size: x-large;
+    padding-left: 5%;
+}
+.questions{
+    padding-top: 45%;
+    padding-right: 30%;
+}
+
+.section{
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 8px;
+    margin-left: 18%;
+    margin-top: 10px;
+    text-decoration: none;
+    color:black;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 90px;
+    height: 90px;
+
+}
+
+.section p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/*------------ Add button ------------*/
+
+.section:hover{
+    background-color: aquamarine;
+    /*font-weight: bold;*/
+}
+
+.optionPieces a{
+    text-decoration: none;
+}
+
+.addButton{
+    padding-top: 35%;
+    padding-left: 3%;
+}

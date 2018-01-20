@@ -1,0 +1,107 @@
+/*------------Footer in general ------------*/
+footer{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid black;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFF6F5;
+	opacity: 0.95;
+}
+
+#txtFooter{
+	font-size: small;
+}
+
+/*------------Images ------------*/
+
+.logoCompanyFooter{
+	padding-top: 5px;
+	width: 110px;
+	height: 24px;
+}
+
+#flag{
+	width: 42px;
+	height: 32px;
+}
+
+/*------------Facebook logo ------------*/
+
+a.linkFacebookLogo{
+	background: url("../images/footer/logoFacebook.png");
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+a.linkFacebookLogo:hover{
+	background: url("../images/footer/logoFacebook2.png") no-repeat;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*------------Twitter logo ------------*/
+
+a.linkTwitterLogo{
+	background: url("../images/footer/logoTwitter.png");
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+a.linkTwitterLogo:hover{
+	background: url("../images/footer/logoTwitter2.png") no-repeat;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*------------Instagram logo ------------*/
+
+a.linkInstagramLogo{
+	background: url("../images/footer/logoInstagram.png");
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+a.linkInstagramLogo:hover{
+	background: url("../images/footer/logoInstagram2.png") no-repeat;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+/*------------Sections of the footer ------------*/
+
+.reseauxSociaux{
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	flex: 1;
+}
+
+.countries{
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	flex: 1;
+}
+
+.copyright{
+	margin: auto;
+	text-align: center;
+	flex: 4;
+}
+
+.countries p, .countries img
+{
+	margin:auto;
+  display: inline-block;
+  vertical-align: middle;
+}

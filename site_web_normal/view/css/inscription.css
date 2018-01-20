@@ -1,0 +1,30 @@
+form{
+  margin-top: 6%;
+}
+
+table{
+  margin: auto;
+}
+
+input, select{
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+input[type="password"]
+{
+  border: 1px solid black;
+}
+
+.msg_erreur
+{
+  font-size: 0.8em;
+  color:red;
+  font-weight: bold;
+}
+
+#mdp2{
+    border-radius: 10px;
+    text-align: center
+}

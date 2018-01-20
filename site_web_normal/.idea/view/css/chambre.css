@@ -1,0 +1,143 @@
+/*------------ General ------------*/
+
+body{
+    margin-top:10%;
+}
+
+/*------------ Title of the section ------------*/
+.sectionPieces{
+    display:flex;
+    justify-content: space-between;
+    background-color: dimgray;
+    color: white;
+}
+
+.motPiece{
+    font-size: x-large;
+    padding-left: 5%;
+}
+.questions{
+    padding-top: 45%;
+    padding-right: 30%;
+}
+
+/*------------ Menu ------------*/
+
+#onglets
+{
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1;
+    margin-left : 0;
+}
+
+#onglets li
+{
+    float : left;
+    height : 21px; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    background-color: #F4F9FD;
+    margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+    border : 1px solid #9EA0A1;
+}
+
+#onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
+
+#onglets a
+{
+    display : block;
+    color : #666;
+    text-decoration : none;
+    padding : 4px;
+}
+
+#onglets a:hover
+{
+    background : #fff;
+}
+
+#menu
+{
+        /*border-bottom : 1px solid #9EA0A1;*/
+        padding-bottom : 25px;
+        margin-left: 3%;
+}
+
+#onglets
+{
+        position : absolute;
+        border : 1px solid transparent;
+        padding : 0;
+        font : bold 11px Batang, arial, serif;
+        list-style-type : none;
+        /*left : 50%;*/
+        margin-top : 0;
+        width : 430px;
+}
+
+.options{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 3%;
+}
+
+/*margin-left : -215px; /* la moitié de width */
+
+/*------------ Boutton ------------*/
+.imgBoutton{
+  text-align: right;
+}
+
+.imgBoutton img{
+  margin-top: -100%;
+}
+.onoffswitch {
+    position: relative; width: 40px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 9px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 17px; padding: 0; line-height: 17px;
+    font-size: 10px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    background-color: #35C44A; color: #FFFFFF;
+    text-align: left;
+    padding-left: 5px;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    background-color: #EEEEEE; color: #999999;
+    padding-right: 2px;
+}
+.onoffswitch-switch {
+    display: block; width: 5px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 19px;
+    border: 2px solid #999999; border-radius: 9px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
