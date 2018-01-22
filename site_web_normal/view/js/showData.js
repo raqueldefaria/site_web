@@ -266,3 +266,24 @@ function addCapteur(idPiece){
     xmlhttp.send("x=" + dbParam);
 
 }
+
+function addPiece(idUser,idLogement){
+    console.log($('form').serializeArray());
+    var array = $('form').serializeArray();
+    var obj = {"piece":array[0].value, "nomPiece":array[1].value};
+    //console.log(obj.fonction);
+    //window.alert("AH");
+    var dbParam = JSON.stringify(obj); // On encode en JSON dbParam, qui contient l'id logement
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //window.alert("BH");
+          if (this.readyState == 4) {
+              showPiecesFromDb(idUser,idLogement);
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/addPieceJS.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
+}

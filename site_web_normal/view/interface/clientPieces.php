@@ -16,6 +16,7 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 
     <script type="application/javascript" src="../js/showData.js"></script>
     <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 
     <title>DomOnline - Pièces</title>
 
@@ -45,7 +46,7 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
                 </select></p>
             <p> Nom de la pièce : <input type="text" name="nomPiece" id="nomPiece" required></p>
                   <span id="missnomPiece"></span>
-            <input value="Ajouter" type="submit" id="boutonAjout">
+            <input value="Ajouter" type="submit" id="boutonAjout" onclick="hide('addPiece'); event.preventDefault(); addPiece(<?php echo $_SESSION['userID']?>, <?php echo $_SESSION['idLogement']?>);">
             <input value="Fermer" type="submit" onclick="return hide('addPiece')" >
         </form>
     </div>
