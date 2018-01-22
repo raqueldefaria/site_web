@@ -244,3 +244,25 @@ function delLogement(idLogement, idUser){
     xmlhttp.send("x=" + dbParam);
 
 }
+
+function addCapteur(idPiece){
+    console.log($('form').serializeArray());
+    console.log(idPiece);
+    var array = $('form').serializeArray();
+    var obj = {"fonction":array[0].value, "type":array[1].value, "nomCemac":array[2].value };
+    console.log(obj.fonction);
+    //window.alert("AH");
+    var dbParam = JSON.stringify(obj); // On encode en JSON dbParam, qui contient l'id logement
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //window.alert("BH");
+          if (this.readyState == 4) {
+              showCapteursFromDb(idPiece);
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/addCapteurJS.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+
+}

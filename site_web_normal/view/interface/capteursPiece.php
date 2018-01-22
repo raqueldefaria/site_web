@@ -20,6 +20,7 @@ $_SESSION['idPiece'] = htmlspecialchars($_GET['id']);
     <script type="application/javascript" src="../js/requeteDbGraph.js"></script>
     <script type="application/javascript" src="../js/showData.js"></script>
     <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 </head>
 
 <body onload="showCapteursFromDb(<?php echo $_SESSION['idPiece']?>)">
@@ -42,7 +43,7 @@ $_SESSION['idPiece'] = htmlspecialchars($_GET['id']);
 
 <div id="addCapteurs" class="parentDisable">
     <div class="addPieceOptions" >
-        <form method="post" action="../../model/addCapteurs.php" >
+        <form method="post" action="#" >
             <p>Ajouter la fonction du capteur/actionneur : <select name="capteurActionneur">
                     <option value="Lumière">Lumière</option>
                     <option value="Volets">Volets</option>
@@ -54,8 +55,8 @@ $_SESSION['idPiece'] = htmlspecialchars($_GET['id']);
                     <option value="Actionneur">Actionneur</option>
                 </select></p>
             <p>Adresse MAC du Cemac correspondant : <input type="text" name="nomCemac"></p>
-            <input value="Ajouter" type="submit">
-            <input value="Fermer" type="submit" onclick="return hide('addCapteurs')">
+            <input value="Ajouter" type="submit" onclick="addCapteur(<?php echo $_SESSION['idPiece']?>); event.preventDefault(); hide('addCapteurs'); ">
+            <input value="Fermer" type="submit" onclick="return hide('addCapteurs'); event.preventDefault(); ">
         </form>
     </div>
 </div>
