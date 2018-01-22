@@ -14,6 +14,7 @@ session_start();
     <link rel="stylesheet" href="../css/jspopUp.css" />
 
     <script type="application/javascript" src="../js/showData.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 
     <title>DomOnline - Logements</title>
 
@@ -38,7 +39,7 @@ session_start();
             <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required />
             <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required/>
             <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
-            <input value="Ajouter" type="submit"id="boutenvoi">
+            <input value="Ajouter" type="submit"id="boutenvoi" onclick="hide('addLogement'); event.preventDefault(); addLogement(<?php echo $_SESSION['userID']?>);"> <!-- Attention, les deux addLogement ne sont pas les mêmes, le snd est une fonction de showData -->
             <input value="Fermer" type="submit" onclick="return hide('addLogement') ">
         </form>
     </div>

@@ -197,21 +197,24 @@ function showCapteursFromDb(idPiece) {
     xmlhttp.send("x=" + dbParam);
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////   SUPPRESSION    ///////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function delCapteur(idCapteur, idPiece){
     var dbParam = JSON.stringify({"idCapteur":idCapteur }); // On encode en JSON dbParam, qui contient l'id capteur
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
               showCapteursFromDb(idPiece);
-
-
           }
       }
     xmlhttp.open("POST", "../../model/suppCapteurJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-
 }
+
+
 
 function delPiece(idPiece, idLogement, idUser){
     var dbParam = JSON.stringify({"idPiece":idPiece }); // On encode en JSON dbParam, qui contient l'id piece
@@ -220,14 +223,14 @@ function delPiece(idPiece, idLogement, idUser){
           if (this.readyState == 4 && this.status == 200) {
               showPiecesFromDb(idUser, idLogement);
               //window.alert("AH");
-
           }
       }
     xmlhttp.open("POST", "../../model/suppPieceJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-
 }
+
+
 
 function delLogement(idLogement, idUser){
     var dbParam = JSON.stringify({"idLogement":idLogement }); // On encode en JSON dbParam, qui contient l'id logement
@@ -236,15 +239,17 @@ function delLogement(idLogement, idUser){
           if (this.readyState == 4 && this.status == 200) {
               showLogementsFromDb(idUser);
               //window.alert("AH");
-
           }
       }
     xmlhttp.open("POST", "../../model/suppLogementJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////   AJOUT    ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function addCapteur(idPiece){
     console.log($('form').serializeArray());
     console.log(idPiece);
@@ -286,4 +291,25 @@ function addPiece(idUser,idLogement){
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 
+}
+
+function addLogement(idUser){
+    console.log($('form').serializeArray());
+    var array = $('form').serializeArray();
+    var obj = {"adresse":array[0].value, "codePostal":array[1].value, "ville":array[2].value, "pays":array[3].value};
+    console.log(obj);
+    //console.log(obj.fonction);
+    //window.alert("AH");
+    var dbParam = JSON.stringify(obj); // On encode en JSON dbParam, qui contient l'id logement
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //window.alert("BH");
+          if (this.readyState == 4) {
+              showLogementsFromDb(idUser);
+
+          }
+      }
+    xmlhttp.open("POST", "../../controller/addLogement.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
 }

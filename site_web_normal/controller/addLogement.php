@@ -1,12 +1,13 @@
 <?php
 session_start();
-
+header("Content-Type: application/json; charset=UTF-8");
+$obj = json_decode($_POST["x"], false); //a tester après avec le htmlspecialchars
 require ("../model/connection_db.php");
 
-$adresse = htmlspecialchars($_POST['adresse']);
-$codePostal = htmlspecialchars($_POST['codePostal']);
-$ville = htmlspecialchars($_POST['ville']);
-$pays = htmlspecialchars($_POST['pays']);
+$adresse = $obj->adresse;
+$codePostal = $obj->codePostal;
+$ville = $obj->ville;
+$pays = $obj->pays;
 $idUser = htmlspecialchars($_SESSION['userID']);
 
 // on vérifie d'abord que tous les champs sont remplis

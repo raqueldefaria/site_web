@@ -41,7 +41,7 @@ if(empty($responseCemac['id_Cemac']) OR $responseCemac['Piece_idPiece']==$idPiec
     $cemac->closeCursor();
     $data->closeCursor();
 
-    header("Location:../view/interface/capteursPiece.php?id=$idPiece");
+    header("Location:../view/interface/capteursPiece.php?id=$idPiece");// à enlever ?
 }
 
 else{

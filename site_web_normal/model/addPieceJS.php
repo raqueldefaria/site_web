@@ -23,4 +23,4 @@ $insertPiece->execute() or die(print_r($insertPiece->errorInfo()));
 $insertPiece->closeCursor();
 
 
-header("Location:../view/interface/clientPieces.php?id=$idLogement");
+header("Location:../view/interface/clientPieces.php?id=$idLogement");//à enlever ?
