@@ -18,9 +18,9 @@ $insertPiece->bindParam(':piece', $piece);
 $insertPiece->bindParam(':idLogement', $idLogement);
 $insertPiece->bindParam(':idUser', $idUser);
 $insertPiece->bindParam(':type', $type);
-$insertPiece->execute() or die(print_r($insertPiece->errorInfo()));
+$insertPiece->execute(); //or die(print_r($insertPiece->errorInfo())); ca fait planter ce truc !!
 
 $insertPiece->closeCursor();
 
 
-header("Location:../view/interface/clientPieces.php?id=$idLogement");//à enlever ?
+//header("Location:../view/interface/clientPieces.php?id=$idLogement");//à enlever ?

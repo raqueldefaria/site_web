@@ -276,16 +276,18 @@ function addCapteur(idPiece){
 
 function addPiece(idUser,idLogement){
     //console.log($('form').serializeArray());
-    var array = $('#addLogementForm').serializeArray();
+    var array = $('#addPieceForm').serializeArray();
     var obj = {"piece":array[0].value, "nomPiece":array[1].value};
-    //console.log(obj.fonction);
+    console.log(obj);
     //window.alert("AH");
     var dbParam = JSON.stringify(obj); // On encode en JSON dbParam, qui contient l'id logement
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       //window.alert("BH");
           if (this.readyState == 4) {
+
               showPiecesFromDb(idUser,idLogement);
+              writePopUpsPieces(idUser, idLogement);
 
           }
       }
@@ -308,7 +310,7 @@ function addLogement(idUser){
       //window.alert("BH");
           if (this.readyState == 4) {
               showLogementsFromDb(idUser);
-
+              writePopUpsLogements(idUser);
           }
       }
     xmlhttp.open("POST", "../../controller/addLogement.php", true);
@@ -346,7 +348,7 @@ function editPiece(idUser, idLogement, idPiece){ //on prend en argument l'idUser
     console.log($('#editPieceForm'+idPiece).serializeArray());
     var array = $('#editPieceForm'+idPiece).serializeArray();
     var obj = {"piece":array[0].value, "nomPiece":array[1].value, "idPiece":idPiece};
-    console.log(obj);
+    //console.log(obj);
     //console.log(obj.fonction);
     //window.alert("AH");
     var dbParam = JSON.stringify(obj);
