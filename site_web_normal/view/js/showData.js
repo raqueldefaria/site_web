@@ -15,7 +15,8 @@ function showLogementsFromDb(idUser) {
                         "<p style='font-size: small'>" + myObj[it].logement_codePostal + " " + myObj[it].logement_ville + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_pays + "</p>" +
                         "</div>" +
-                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\"return delLogement("+myObj[it].id_Logement+" , "+idUser+")\"></div>"
+                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\"return delLogement("+myObj[it].id_Logement+" , "+idUser+")\">" +
+                        "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Logement+"\"  onclick=\"return pop('editLogement"+myObj[it].id_Logement+"')\" ></div>";
                 }
                 txt +="<a href=\"#\" onclick=\"return pop('addLogement') \" >\n" +
                     "            <div class=\"section\">\n" +
@@ -295,7 +296,7 @@ function addPiece(idUser,idLogement){
 
 function addLogement(idUser){
     console.log($('form').serializeArray());
-    var array = $('form').serializeArray();
+    var array = $('#addLogementForm').serializeArray();
     var obj = {"adresse":array[0].value, "codePostal":array[1].value, "ville":array[2].value, "pays":array[3].value};
     console.log(obj);
     //console.log(obj.fonction);
@@ -310,6 +311,32 @@ function addLogement(idUser){
           }
       }
     xmlhttp.open("POST", "../../controller/addLogement.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////// MODIFIER ///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function editLogement(idUser, idLogement){
+    console.log($('#editLogementForm'+idLogement).serializeArray());
+    var array = $('#editLogementForm'+idLogement).serializeArray();
+    var obj = {"adresse":array[0].value, "codePostal":array[1].value, "ville":array[2].value, "pays":array[3].value, "idLogement":idLogement};
+    console.log(obj);
+    //console.log(obj.fonction);
+    //window.alert("AH");
+    var dbParam = JSON.stringify(obj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //window.alert("BH");
+          if (this.readyState == 4) {
+              showLogementsFromDb(idUser);
+              writePopUpsLogements(idUser);
+
+          }
+      }
+    xmlhttp.open("POST", "../../controller/editLogementJS.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 }

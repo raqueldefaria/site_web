@@ -14,13 +14,14 @@ session_start();
     <link rel="stylesheet" href="../css/jspopUp.css" />
 
     <script type="application/javascript" src="../js/showData.js"></script>
+    <script type="application/javascript" src="../js/writePopUps.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 
     <title>DomOnline - Logements</title>
 
 </head>
 
-<body onload="showLogementsFromDb(<?php echo $_SESSION['userID']?>)">
+<body onload="writePopUpsLogements(<?php echo $_SESSION['userID']?>); showLogementsFromDb(<?php echo $_SESSION['userID']?>); ">
 
 <!--************** Header *************-->
 <?php include ("headerbis.php")?>
@@ -31,7 +32,7 @@ session_start();
 <!--************** Pop js **************-->
 <div id="addLogement" class="parentDisable">
     <div class="addLogementOptions" >
-        <form method="post" action="../../controller/addLogement.php" >
+        <form method="post" action="../../controller/addLogement.php" id="addLogementForm" >
             <p>Ajouter un logement :</p>
             <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
             <span id="missAdresse"></span>
@@ -44,6 +45,12 @@ session_start();
         </form>
     </div>
 </div>
+<div id="editLogementPopContainer"> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer un logement -->
+
+
+
+</div>
+
 
 
 <!--************** script **************-->
