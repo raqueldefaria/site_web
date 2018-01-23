@@ -71,7 +71,8 @@ function showPiecesFromDb(idUser, idLogement) {
                     default:
                         txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
                 }
-                txt += "</div></a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delPiece("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n</div>";
+                txt += "</div></a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delPiece("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n"+
+                      "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Piece+"\"  onclick=\"return pop('editPiece"+myObj[it].id_Piece+"')\" ></div>";
 
             }
             txt +="<a href=\"#\" onclick=\"return pop('addPiece') \" >\n" +
@@ -274,8 +275,8 @@ function addCapteur(idPiece){
 }
 
 function addPiece(idUser,idLogement){
-    console.log($('form').serializeArray());
-    var array = $('form').serializeArray();
+    //console.log($('form').serializeArray());
+    var array = $('#addLogementForm').serializeArray();
     var obj = {"piece":array[0].value, "nomPiece":array[1].value};
     //console.log(obj.fonction);
     //window.alert("AH");
@@ -295,7 +296,7 @@ function addPiece(idUser,idLogement){
 }
 
 function addLogement(idUser){
-    console.log($('form').serializeArray());
+    //console.log($('form').serializeArray());
     var array = $('#addLogementForm').serializeArray();
     var obj = {"adresse":array[0].value, "codePostal":array[1].value, "ville":array[2].value, "pays":array[3].value};
     console.log(obj);
@@ -337,6 +338,28 @@ function editLogement(idUser, idLogement){
           }
       }
     xmlhttp.open("POST", "../../controller/editLogementJS.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("x=" + dbParam);
+}
+
+function editPiece(idUser, idLogement, idPiece){ //on prend en argument l'idUser, qui pourrait servir pour la sécurité, l'idlogement pour pouvoir recharger la fonction showPiecesFromDb
+    console.log($('#editPieceForm'+idPiece).serializeArray());
+    var array = $('#editPieceForm'+idPiece).serializeArray();
+    var obj = {"piece":array[0].value, "nomPiece":array[1].value, "idPiece":idPiece};
+    console.log(obj);
+    //console.log(obj.fonction);
+    //window.alert("AH");
+    var dbParam = JSON.stringify(obj);
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      //window.alert("BH");
+          if (this.readyState == 4) {
+              showPiecesFromDb(idUser, idLogement);
+              writePopUpsPieces(idUser, idLogement);
+
+          }
+      }
+    xmlhttp.open("POST", "../../model/editPieceJS.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 }

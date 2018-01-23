@@ -16,13 +16,14 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 
     <script type="application/javascript" src="../js/showData.js"></script>
     <script type="application/javascript" src="../js/showOrHidePopUp.js"></script>
+    <script type="application/javascript" src="../js/writePopUps.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 
     <title>DomOnline - Pièces</title>
 
 </head>
 
-<body onload="showPiecesFromDb(<?php echo $_SESSION['userID']?>, <?php echo $_SESSION['idLogement']?>)">
+<body onload="writePopUpsPieces(<?php echo $_SESSION['userID']?>, <?php echo $_SESSION['idLogement']?>); showPiecesFromDb(<?php echo $_SESSION['userID']?>, <?php echo $_SESSION['idLogement']?>);">
 
 <!--************** Header *************-->
 <?php include ("headerbis.php")?>
@@ -33,7 +34,7 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 <!--************** Pop js **************-->
 <div id="addPiece" class="parentDisable">
     <div class="addPieceOptions" >
-        <form method="post" action="../../model/addPieces.php" >
+        <form method="post" action="../../model/addPieces.php" id="addPieceForm" >
             <p>Type de pièce : <select name="piece">
                     <option value="Garage">Garage</option>
                     <option value="Chambre">Chambre</option>
@@ -52,6 +53,9 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
     </div>
 </div>
 
+<div id="editPiecePopContainer"> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer un logement -->
+
+</div>
 
 <!--************** Script**************-->
 <script>
