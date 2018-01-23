@@ -13,10 +13,10 @@ function writePopUpsLogements(idUser) {
                            "<div class=\"addLogementOptions\" >"+
                            "<form method=\"post\" action=\"../../controller/addLogement.php\" id=\"editLogementForm"+myObj[it].id_Logement+"\">"+
                                 "<p>Modifier un logement :</p>"+
-                                "<input type=\"text\" name=\"adresse\" size=35 placeholder=\"Adresse\" required/>"+
-                                "<input type=\"text\" name=\"codePostal\" size=35 placeholder=\"Code Postal\" required/>"+
-                                "<input type=\"text\" name=\"ville\" size=35 placeholder=\"Ville\" required />"+
-                                "<input type=\"text\" name=\"pays\" size=35 placeholder=\"Pays\" required/>"+
+                                "<input type=\"text\" name=\"adresse\" value=\""+ myObj[it].logement_adresse +"\" size=35 placeholder=\"Adresse\" required/>"+
+                                "<input type=\"text\" name=\"codePostal\" value=\""+ myObj[it].logement_codePostal +"\" size=35 placeholder=\"Code Postal\" required/>"+
+                                "<input type=\"text\" name=\"ville\" value=\""+ myObj[it].logement_ville +"\" size=35 placeholder=\"Ville\" required />"+
+                                "<input type=\"text\" name=\"pays\" value=\""+ myObj[it].logement_pays +"\" size=35 placeholder=\"Pays\" required/>"+
                                 "<input value=\"Modifier\" type=\"submit\" onclick=\"hide('editLogement"+myObj[it].id_Logement+"'); event.preventDefault(); editLogement("+idUser+","+myObj[it].id_Logement+" );\">"+
                                 "<input value=\"Fermer\" type=\"submit\" onclick=\"return hide('editLogement"+myObj[it].id_Logement+"') \">"+
                             "</form>"+
