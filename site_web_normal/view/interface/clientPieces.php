@@ -74,7 +74,7 @@ $_SESSION['idLogement'] = htmlspecialchars($_GET['id']);
 
       if (identifiant.validity.valueMissing){
           event.preventDefault();
-          missnomPiece.textContent = 'Nom pièce manqunat';
+          missnomPiece.textContent = 'Nom pièce manquant';
           missnomPiece.style.color = 'red';
           erreur = true
       }else if (identifiantValid.test(identifiant.value) == false){
