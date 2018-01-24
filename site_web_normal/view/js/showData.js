@@ -48,7 +48,7 @@ function showPiecesFromDb(idUser, idLogement) {
                 txt += "<div><a href='capteursPiece.php?id="+ myObj[it].id_Piece + "'>";
                 switch (myObj[it].piece_type){
                     case "Garage":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
                         break;
                     case "Chambre":
                         txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
