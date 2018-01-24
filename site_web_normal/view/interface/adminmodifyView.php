@@ -28,7 +28,7 @@
          <div align="center">
           <h2>Éditer votre profil</h2>
 
-          <form method="POST" action="adminmodifyView.php">
+          <form method="POST" action="adminmodifyView.php?modify=<?php echo $_GET['modify']; ?>">
 
             <table>
             <tr>
@@ -148,7 +148,7 @@
           </table>
 
           <br />
-          <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
+          <input type="submit" value="Mettre à jour le logement !" class="boutton" id="bouenvoie"/>
 
           </form>
 
