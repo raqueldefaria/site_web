@@ -11,7 +11,8 @@
     <?= $styleHeader ?>
     <link rel="stylesheet" href="public/css/footer.css" />
     <link rel="stylesheet" href="public/css/profil.css" />
-    <title> <?= $title ?> </title>
+    <link rel="stylesheet" href="../css/MDP.css" />
+    <title> DomOnline -  <?= $title ?> </title>
 </head>
 
 <body>

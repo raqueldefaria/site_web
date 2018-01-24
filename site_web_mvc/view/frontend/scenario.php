@@ -52,11 +52,11 @@
 </style>
 
 <div class="w3-container">
-    <h2>Tabs in a Grid</h2>
+    <h2>Scénarios</h2>
 
     <div class="w3-row">
         <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red">London</div>
         </a>
         <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
             <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>

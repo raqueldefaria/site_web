@@ -6,7 +6,7 @@ $tok = htmlspecialchars($_GET['tok']);
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../css/ReinitialisationMDP.css" />
-        <title>DomOnlien - Mot de passe oublié </title>
+        <title>DomOnline - Mot de passe oublié </title>
     </head>
 
     <body>

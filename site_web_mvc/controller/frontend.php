@@ -61,9 +61,9 @@ function gettingHeader(){
                     <a href="index.php"><img src="public/images/logodomonline.png" alt="Logo du site" id="logoCompanyHeader"></a>
                 </div>
                 <nav class="menu">
-                    <a href="view/frontend/equipe.php" class="txtHeader1"> Notre équipe </a>
-                    <a href="view/frontend/offres.php" class="txtHeader2"> Nos offres </a>
-                    <a href="view/frontend/contacter.php" class="txtHeader3"> Nous contacter </a>
+                    <a href="index.php?action=goToTeam" class="txtHeader1"> Notre équipe </a>
+                    <a href="index.php?action=goToOffers" class="txtHeader2"> Nos offres </a>
+                    <a href="index.php?action=contact" class="txtHeader3"> Nous contacter </a>
                 </nav>
                 <div class="bouttons">
                     <div class="inscrire">
@@ -97,7 +97,7 @@ function register($error){
     $header = $headerList[1];
     ?>
     <?php ob_start(); ?>
-    DomOnline - Inscription
+    Inscription
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
     <div class="corps">
@@ -237,13 +237,13 @@ function logIn($error){
                 <label for="boxSouvenir" id="souvenir">Se souvenir de moi</label> <input type="checkbox" checked name="souvenir" id="boxSouvenir" /> <br />
                 <input type="submit" value="Se connecter" class="boutton" id="bouton_envoi" />
             </div>
-            <a href="#" id="mdpOublie"> Mot de passe oublié </a>
+            <a href="index.php?action=goToForgottenPassword" id="mdpOublie"> Mot de passe oublié </a>
             </p>
             <?php
             if($error!=null){
                 ?>
                 <?= $error ?>
-            <?php
+                <?php
             }
             ?>
 
@@ -268,7 +268,6 @@ function logIn($error){
                 event.preventDefault();
                 missIdentifiant.textContent = 'login manquant';
                 missIdentifiant.style.color = 'red';
-                erreur = true
             }else if (identifiantValid.test(identifiant.value) == false){
                 event.preventDefault();
                 missPrenom.textContent = 'Format incorrect';
@@ -686,8 +685,8 @@ function sensor($idRoom,$error){
         <div id="overflow">
             <div class="optionPieces" id="capteursActionneurs"></div>
 
-            <p class="motPiece">Scénario :</p>
-            <!--<div id="menu">
+            <!--<p class="motPiece">Scénario :</p>
+            <div id="menu">
                 <ul id="onglets">
                     <li class="active"><a href=""> Chauffage </a></li>
                     <li><a href=""> Volets </a></li>
@@ -806,4 +805,104 @@ function alarm($idUser){
     <?php $content = ob_get_clean(); ?>
     <?php
     require("view/frontend/template2.php");
+}
+
+function forgottenPassword($error){
+    $headerList = gettingHeader();
+    $styleHeader = $headerList[0];
+    $header = $headerList[1];
+    ?>
+    <?php ob_start(); ?>
+    Mot de passe oublié
+    <?php $title = ob_get_clean(); ?>
+    <?php ob_start(); ?>
+    <div class="corps">
+
+        <form method="post" action="index.php?action=forgottenPassword">
+            <p>
+                <h3>Mot de passe oublié ?</h3>
+                <p> Pas de panique ! Nous vous enverrons un nouveau mot de passe sur l'adresse mail associé à votre compte. </p>
+                <label for="mail_recup"> Votre mail :</label>
+                <input type="email" name="mail_recup" id="mail_recup" required/>
+                <input type="submit" value="Envoyer" required/>
+            </p>
+            <?php
+            if($error!=null){
+                ?>
+                <?= $error ?>
+                <?php
+            }
+            ?>
+
+        </form>
+
+    </div>
+    <?php $content = ob_get_clean(); ?>
+
+    <?php
+    require("view/frontend/template.php");
+}
+
+function newPassword($tok,$error){
+    $headerList = gettingHeader();
+    $styleHeader = $headerList[0];
+    $header = $headerList[1];
+    ?>
+    <?php ob_start(); ?>
+    Réinitialisation du mot de passe
+    <?php $title = ob_get_clean(); ?>
+    <?php ob_start(); ?>
+    <div id="corps">
+        <form method="post" action="index.php?action=changePassword&tok=<?php echo $tok?>">
+            <p>
+            <h3> Réinitialisation du mot de passe </h3>
+            <table>
+                <tr>
+                    <td>
+                        <label for="tok2"> Votre code :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="tok2" id="tok2" required/> <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass_recup"> Nouveau mot de passe :</label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass_recup" id="pass_recup" required/> <br />
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label for="pass_recup2"> Confirmation du nouveau mot de passe : </label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass_recup2" id="pass_recup2" required/> <br />
+                    </td>
+                </tr>
+
+                <td>
+                    <input type="submit" value="Envoyer" />
+                </td>
+
+            </table>
+            </p>
+
+            <?php
+            if($error!=null){
+                ?>
+                <?= $error ?>
+                <?php
+            }
+            ?>
+
+        </form>
+    </div>
+    <?php $content = ob_get_clean(); ?>
+    <?php
+    require("view/frontend/template.php");
+
 }

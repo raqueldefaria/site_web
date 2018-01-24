@@ -19,7 +19,7 @@ $donnees = $req->fetch();
 
 
                 //envoie du mail
-               $tok = mt_rand(0,1000);
+               $tok = mt_rand(0,10000);
 
                $requete = $db->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($bdd->errorInfo()));
                $requete->execute(array($tok,$donnees['utilisateur_mail'])) or die(print_r($requete->errorInfo()));

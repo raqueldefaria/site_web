@@ -82,6 +82,30 @@ try{
                                 housing($idUser,$error);
                             }
                             else{
+                                ini_set( 'display_errors', 1 );
+
+                                $header="MIME-Version: 1.0\r\n";
+                                $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
+                                $header.='Content-Type:text/html; charset="uft-8"'."\n";
+                                $header.='Content-Transfer-Encoding: 8bit';
+
+                                error_reporting( E_ALL );
+
+                                $from = "remy.touret1@gmail.com";
+
+                                $to = "remy.touret1@gmail.com";
+
+                                $subject = "Inscription à DomOnline";
+
+                                $message = "Bonjour " . $_POST['prenom']. " " . $_POST['nom'] . "\n \n";
+                                $message .= "Vous êtes bien inscrit sur DomOnline. \n \n";
+                                $message .= "Votre pseudo : " . $_POST['pseudo'] . "\n \n";
+                                $message .= "Cordialement, \n";
+                                $message .= "L'équipe Domonline.";
+
+                                $headers = "From:" . $from;
+
+                                mail($to,$subject,$message, $headers);
                                 header('Location: index.php?action=goToLogIn');
                             }
                         }
@@ -124,7 +148,7 @@ try{
             }
 
         }
-        elseif ($action == 'logIn'){
+        elseif($action == 'logIn'){
             $login = htmlspecialchars($_POST['pseudo']);
             $password = sha1(htmlspecialchars($_POST['mdp']));
             //$hash = password_hash($password, PASSWORD_DEFAULT);
@@ -181,7 +205,7 @@ try{
             }
 
         }
-        elseif ($action == 'logOut'){
+        elseif($action == 'logOut'){
             $error=null;
             logOut();
             logIn($error);
@@ -190,7 +214,7 @@ try{
             $error = null;
             housing($idUser,$error);
         }
-        elseif ($action == 'addHousing'){
+        elseif($action == 'addHousing'){
             $adress = htmlspecialchars($_POST['adresse']);
             $zipCode = htmlspecialchars($_POST['codePostal']);
             $city = htmlspecialchars($_POST['ville']);
@@ -402,13 +426,13 @@ try{
             }
 
         }
-        elseif ($action == 'goToListSensors'){
+        elseif($action == 'goToListSensors'){
             showAllSensorsAndActuators($idUser);
         }
-        elseif ($action == 'goToAlarm'){
+        elseif($action == 'goToAlarm'){
             alarm($idUser);
         }
-        elseif ($action == 'goToProfile'){
+        elseif($action == 'goToProfile'){
 
             if(!isset($idUser) AND empty($idUser))
             {
@@ -416,16 +440,174 @@ try{
             }
             profile();
         }
-        elseif ($action == 'profile'){
+        elseif($action == 'profile'){
             //logOut();
         }
-        elseif ($action == 'goToTeam'){
+        elseif($action == 'goToForgottenPassword'){
+            $error = null;
+            forgottenPassword($error);
+        }
+        elseif($action == 'forgottenPassword'){
+            $mail = htmlspecialchars($_POST['mail_recup']);
+            if(isset($_POST['mail_recup']) && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail_recup'])){
+                $newUser = new UserManager();
+                $newUser->setMail($mail);
+
+                $userExistence = $newUser->checkMailExistence($newUser);
+
+                if($userExistence === false){
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Cet adresse mail n'existe pas")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    forgottenPassword($error);
+                }
+                else{
+                    $tok = mt_rand(0,10000);
+                    $newUser->setTok($tok);
+                    $addingTok = $newUser->addTokToDb($newUser);
+
+                    if($addingTok === false){
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Un probléme est survenu. Veuillez réessayer ultérieurement")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        forgottenPassword($error);
+                    }
+                    else{
+                        ini_set( 'display_errors', 1 );
+
+                        $header="MIME-Version: 1.0\r\n";
+                        $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
+                        $header.='Content-Type:text/html; charset="uft-8"'."\n";
+                        $header.='Content-Transfer-Encoding: 8bit';
+
+                        error_reporting( E_ALL );
+
+                        $from = "domonline.isep@gmail.com";
+
+                        $to = $_POST['mail_recup'];
+
+                        $subject = "Vérification du mail";
+
+                        $message = "Bonjour, Pour récuperer votre mot de passe sur le site, taper ce code :" . $tok;
+
+                        $headers = "From:" . $from;
+
+                        mail($to,$subject,$message, $headers);
+
+                        header("Location: index.php?action=goToNewPassword&tok=".$newUser->getTok());
+
+                    }
+
+                }
+            }
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Cette adresse mail n'est pas valide")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                forgottenPassword($error);
+            }
+        }
+        elseif($action == 'goToNewPassword'){
+            $tok = htmlspecialchars($_GET['tok']);
+            $error = null;
+            newPassword($tok,$error);
+        }
+        elseif($action == 'changePassword'){
+            $tok = htmlspecialchars($_GET['tok']);
+            $tokInput = htmlspecialchars($_POST['tok2']);
+            $password = htmlspecialchars($_POST['pass_recup']);
+            $passwordVerification = htmlspecialchars($_POST['pass_recup2']);
+            if(!empty($tokInput) AND !empty($password) AND !empty($passwordVerification)){
+                if($tok == $tokInput){
+                    if($password==$passwordVerification){
+                        $newUser = new UserManager();
+                        $newUser->setTok($tokInput);
+                        $newUser->setPassword($password);
+                        $gettingMail = $newUser->gettingMailFromTok($newUser);
+
+                        if($gettingMail === false){
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Le code rentré n'est pas valide. Veuillez réessayer")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            newPassword($tok,$error);
+                        }
+                        else{
+                            $newUser->setTok(null);
+                            $updateTok = $newUser->updateTok($newUser);
+
+                            if($updateTok === false){
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                newPassword($tok,$error);
+                            }
+                            else{
+                                $updatePassword = $newUser->updatePassword($newUser);
+                                if($updatePassword===false){
+                                    ?>
+                                    <?php ob_start(); ?>
+                                    <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
+                                    <?php $error = ob_get_clean(); ?>
+                                    <?php
+                                    newPassword($tok,$error);
+                                }
+                                else{
+                                    ?>
+                                    <?php ob_start(); ?>
+                                    <script>alert("Votre mot de passe a bien été modifié !")</script>
+                                    <?php $error = ob_get_clean(); ?>
+                                    <?php
+                                    logIn($error);
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Les 2 mots de passe rentrés ne sont pas les mêmes")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        newPassword($tok,$error);
+                    }
+                }
+                else{
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Le code rentré n'est pas valide")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    newPassword($tok,$error);
+                }
+
+
+            }
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Veuillez remplir tous les champs")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                newPassword($tok,$error);
+            }
+        }
+        elseif($action == 'goToTeam'){
             showTeam();
         }
-        elseif ($action == 'goToOffers'){
+        elseif($action == 'goToOffers'){
             showOffers();
         }
-        elseif ($action == 'contact'){
+        elseif($action == 'contact'){
             contact();
         }
 

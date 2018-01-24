@@ -15,6 +15,7 @@ class UserManager
     private $lastName;
     private $birthday;
     private $type;
+    private $tok;
     //...
 
     //----------------Constructor----------------//
@@ -141,6 +142,24 @@ class UserManager
         $this->type = $type;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTok()
+    {
+        return $this->tok;
+    }
+
+    /**
+     * @param mixed $tok
+     */
+    public function setTok($tok)
+    {
+        $this->tok = $tok;
+    }
+
+
+
 
 
     //----------------Methods----------------//
@@ -234,6 +253,63 @@ class UserManager
 
 
     function changeProfile(){
+
+    }
+
+    function checkMailExistence($user){
+        $db = $this->dbConnect();
+
+        $req = $db->prepare('SELECT utilisateur_mail FROM utilisateur WHERE utilisateur_mail = ?') or die(print_r($db->errorInfo()));
+        $req->execute(array($user->mail)) or die(print_r($req->errorInfo()));
+        $response = $req->fetch();
+
+        $req->closeCursor();
+
+        return $response;
+    }
+
+    function addTokToDb($user){
+        $db = $this->dbConnect();
+
+        $requete = $db->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($db->errorInfo()));
+        $response = $requete->execute(array($user->tok,$user->mail)) or die(print_r($requete->errorInfo()));
+
+        $requete->closeCursor();
+
+        return $response;
+
+    }
+
+    function gettingMailFromTok($user){
+        $db = $this->dbConnect();
+
+        $mail=$db->prepare("SELECT utilisateur_mail FROM utilisateur WHERE tok = ?");
+        $mail->execute(array($user->tok));
+        $getMail = $mail->fetch();
+
+        $mail->closeCursor();
+
+        return $getMail;
+    }
+
+    function updateTok($user){
+        $db = $this->dbConnect();
+
+        $updateTok = $db->prepare("UPDATE utilisateur SET tok = ? WHERE utilisateur_mail = ? ") or die(print_r($db->errorInfo()));
+        $response = $updateTok->execute(array($user->tok,$user->mail)) or die(print_r($updateTok->errorInfo()));
+
+        $updateTok->closeCursor();
+
+        return $response;
+    }
+
+    function updatePassword($user){
+        $db = $this->dbConnect();
+
+        $updatePassword = $db->prepare('UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?') or die(print_r($db->errorInfo()));
+        $response = $updatePassword->execute(array($user->password,$user->mail)) or die(print_r($updatePassword->errorInfo()));
+
+        return $response;
 
     }
 
