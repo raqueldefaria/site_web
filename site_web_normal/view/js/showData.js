@@ -15,7 +15,7 @@ function showLogementsFromDb(idUser) {
                         "<p style='font-size: small'>" + myObj[it].logement_codePostal + " " + myObj[it].logement_ville + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_pays + "</p>" +
                         "</div>" +
-                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\"return delLogement("+myObj[it].id_Logement+" , "+idUser+")\">" +
+                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\" delLogement("+myObj[it].id_Logement+" , "+idUser+");\">" +
                         "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Logement+"\"  onclick=\"return pop('editLogement"+myObj[it].id_Logement+"')\" ></div>";
                 }
                 txt +="<a href=\"#\" onclick=\"return pop('addLogement') \" >\n" +
@@ -219,6 +219,7 @@ function delCapteur(idCapteur, idPiece){
 
 
 function delPiece(idPiece, idLogement, idUser){
+  if(confirm("Supprimer cette pièce ?")){
     var dbParam = JSON.stringify({"idPiece":idPiece }); // On encode en JSON dbParam, qui contient l'id piece
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -230,11 +231,12 @@ function delPiece(idPiece, idLogement, idUser){
     xmlhttp.open("POST", "../../model/suppPieceJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-}
+}}
 
 
 
 function delLogement(idLogement, idUser){
+  if(confirm("Supprimer ce logement ?")){
     var dbParam = JSON.stringify({"idLogement":idLogement }); // On encode en JSON dbParam, qui contient l'id logement
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -246,7 +248,7 @@ function delLogement(idLogement, idUser){
     xmlhttp.open("POST", "../../model/suppLogementJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-}
+}}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
