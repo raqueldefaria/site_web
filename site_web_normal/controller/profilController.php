@@ -9,9 +9,7 @@ if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
 }
 
 /* ------------------- Affichage d'un message si le profil a été édité ------------------- */
-$msg = htmlspecialchars($_GET['msg']) ;
-
-if(isset($msg) AND !empty($msg))
+if(isset($_GET['msg']) AND !empty($_GET['msg']))
 {
   $msg = '<strong> Profil édité ! </strong>';
 }
