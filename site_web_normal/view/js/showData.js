@@ -51,25 +51,25 @@ function showPiecesFromDb(idUser, idLogement) {
                         txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
                         break;
                     case "Chambre":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
                         break;
                     case "Cuisine":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'>";
                         break;
                     case "Bureau":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'>";
                         break;
                     case "Salle de Bain":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'>";
                         break;
                     case "Toilettes":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'>";
                         break;
                     case "Salon":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'>";
                         break;
                     default:
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p>";
                 }
                 txt += "</div></a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delPiece("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n"+
                       "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Piece+"\"  onclick=\"return pop('editPiece"+myObj[it].id_Piece+"')\" ></div>";
