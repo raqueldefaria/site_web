@@ -21,7 +21,7 @@ session_start();
 
 </head>
 
-<body onload=" showLogementsFromDb(<?php echo $_SESSION['userID']?>); ">
+<body onload=" showLogementsFromDb(<?php echo $_SESSION['userID']?>); writePopUpsLogements(<?php echo $_SESSION['userID']?>); ">
 
 <!--************** Header *************-->
 <?php include ("headerbis.php")?>

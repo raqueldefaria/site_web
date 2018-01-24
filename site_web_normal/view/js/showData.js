@@ -15,7 +15,7 @@ function showLogementsFromDb(idUser) {
                         "<p style='font-size: small'>" + myObj[it].logement_codePostal + " " + myObj[it].logement_ville + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_pays + "</p>" +
                         "</div>" +
-                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\"return delLogement("+myObj[it].id_Logement+" , "+idUser+")\">" +
+                        "</a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\" delLogement("+myObj[it].id_Logement+" , "+idUser+");\">" +
                         "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Logement+"\"  onclick=\"return pop('editLogement"+myObj[it].id_Logement+"')\" ></div>";
                 }
                 txt +="<a href=\"#\" onclick=\"return pop('addLogement') \" >\n" +
@@ -48,28 +48,28 @@ function showPiecesFromDb(idUser, idLogement) {
                 txt += "<div><a href='capteursPiece.php?id="+ myObj[it].id_Piece + "'>";
                 switch (myObj[it].piece_type){
                     case "Garage":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/car.png'>";
                         break;
                     case "Chambre":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/bed.png'>";
                         break;
                     case "Cuisine":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/cutlery.png'>";
                         break;
                     case "Bureau":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/desktop.png'>";
                         break;
                     case "Salle de Bain":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/bathtub.png'>";
                         break;
                     case "Toilettes":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/toilet.png'>";
                         break;
                     case "Salon":
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='../images/client/room.png'>";
                         break;
                     default:
-                        txt += "<div class='section'><p>" + myObj[it].piece_nom + "</p>";
+                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p>";
                 }
                 txt += "</div></a><img src=\"../images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delPiece("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n"+
                       "<img src=\"../images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Piece+"\"  onclick=\"return pop('editPiece"+myObj[it].id_Piece+"')\" ></div>";
@@ -219,6 +219,7 @@ function delCapteur(idCapteur, idPiece){
 
 
 function delPiece(idPiece, idLogement, idUser){
+  if(confirm("Supprimer cette pièce ?")){
     var dbParam = JSON.stringify({"idPiece":idPiece }); // On encode en JSON dbParam, qui contient l'id piece
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -230,11 +231,12 @@ function delPiece(idPiece, idLogement, idUser){
     xmlhttp.open("POST", "../../model/suppPieceJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-}
+}}
 
 
 
 function delLogement(idLogement, idUser){
+  if(confirm("Supprimer ce logement ?")){
     var dbParam = JSON.stringify({"idLogement":idLogement }); // On encode en JSON dbParam, qui contient l'id logement
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -246,7 +248,7 @@ function delLogement(idLogement, idUser){
     xmlhttp.open("POST", "../../model/suppLogementJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
-}
+}}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

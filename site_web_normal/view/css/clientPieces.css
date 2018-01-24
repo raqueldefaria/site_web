@@ -9,6 +9,10 @@ body{
 
 /*------------ Pieces in general ------------*/
 
+.namePieceCSS{
+    padding-top: 20px;
+}
+
 .pieces{
     display: flex;
     flex-direction: column;
