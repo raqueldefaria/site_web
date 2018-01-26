@@ -18,16 +18,28 @@ if($userinfo['utilisateur_type'] != 'admin')
 if(isset($_GET['delete']) AND !empty($_GET['delete']))
 {
   $id = $_GET['delete'];
-  //$deleteuser = $db->prepare('DELETE * FROM utilisateur,logement  WHERE utilisateur.id_Utilisateur = ? AND logement.id_Utilisateur = ?');
-  //$deleteuser->execute(array($_GET['delete'], $_GET['delete']));
-  $deletelogement = $db->prepare('DELETE FROM logement WHERE id_Utilisateur = ?');
-  $deletelogement->execute(array($id));
-  $deleteutilisateur = $db->prepare('DELETE FROM utilisateur WHERE id_Utilisateur = ?');
-  $deleteutilisateur->execute(array($id));
-  $deletepiece = $db->prepare('DELETE FROM piece WHERE Logement_Utilisateur_idUtilisateur = ?');
-  $deletepiece->execute(array($id));
+  deleteuser($id);
   header("Location: adminView.php");
-  //$erreur = $_GET['delete'];
+}
+
+function userstable()
+{
+  $membres = getusers();
+  while($users = $membres->fetch())
+  {
+  ?>
+  <tr>
+      <td> <?php echo $users['id_Utilisateur']; ?> </td>
+      <td> <?php echo $users['utilisateur_type']; ?> </td>
+      <td> <?php echo $users['utilisateur_login']; ?> </td>
+      <td> <?php echo $users['utilisateur_prenom']; ?> </td>
+      <td> <?php echo $users['utilisateur_nom']; ?> </td>
+      <td> <a href="adminmodifyView.php?modify=<?php echo $users['id_Utilisateur']; ?>"> Modifier </a> </td>
+      <td> <a href="adminView.php?delete=<?php echo $users['id_Utilisateur']; ?>"> Supprimer </a> </td>
+  </tr>
+  <?php
+  }
+
 }
 
 ?>

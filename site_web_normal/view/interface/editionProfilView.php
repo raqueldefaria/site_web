@@ -15,7 +15,6 @@
         <title> DomOnline - Profil </title>
     </head>
 
-
     <body>
 
     <?php include("headerbis.php"); ?>
@@ -95,68 +94,9 @@
 
         </form>
 
-          <?php
-          $data = $db->prepare('SELECT * from logement WHERE logement.id_Utilisateur = ? ');
-          $data->execute(array($_SESSION['userID']));
-          $count = 0;
-          while($logements = $data->fetch())
-          {
-          $count++;
-          ?>
-          <h2>Logement <?php echo $count; ?> </h2>
-
-          <form method="POST" action="editionProfilView.php">
-
-          <table>
-            <tr>
-              <td align="right">
-                 <strong> Adresse </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $logements['logement_adresse']; ?>" required />
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Ville </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $logements['logement_ville']; ?>" required />
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Code postal </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $logements['logement_codePostal']; ?>" required/>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Pays </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $logements['logement_pays']; ?>" required />
-              </td>
-            </tr>
-
-                <input type="hidden" placeholder="idlogement" id="idlogement" name="idlogement" value="<?php echo $logements['id_Logement']; ?>" required />
-
-          </table>
-
-          <br />
-          <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
-
-          </form>
-
-          <?php
-          }
-          ?>
-
-
-
-
+        <?php
+        show_logements();
+        ?>
 
        <?php if(isset($msg)) { echo $msg; } ?>
 
@@ -167,9 +107,7 @@
             <br />
             <a href="deconnexion.php"> Se déconnecter </a>
 
-
         </div>
-
 
     </div>
     <!--************** script **************-->
@@ -201,13 +139,6 @@
           }
 
       }
-
-
-
-
-
-
-
 
     <?php include("footer.php"); ?>
 

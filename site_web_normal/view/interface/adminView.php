@@ -37,12 +37,11 @@
                         <th> </th>
                     </tr>
 
-                      <?php
-                      userstable();
-                      ?>
+                    <?php
+                    userstable();
+                    ?>
 
                 </table>
-                <?php if(isset($erreur)) {echo $erreur ;} ?>
             </div>
         </div>
     </div>
