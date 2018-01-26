@@ -5,16 +5,21 @@ session_start();
 /* ------------------- BDD ------------------- */
 require("../../model/adminModel.php");
 
+/* ------------------- Redirection si l'utilisateur
+              n'est pas connecté ------------------- */
 if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
 {
   header("Location: connexion.php");
 }
 
+/* ------------------- Redirection si l'utilisateur
+              n'est pas un admin ------------------- */
 if($userinfo['utilisateur_type'] != 'admin')
 {
   header("Location: accueil.php");
 }
 
+/* ------------------- Suppression d'un client si demandé ------------------- */
 if(isset($_GET['delete']) AND !empty($_GET['delete']))
 {
   $id = $_GET['delete'];
@@ -22,6 +27,7 @@ if(isset($_GET['delete']) AND !empty($_GET['delete']))
   header("Location: adminView.php");
 }
 
+/* ------------------- Affichage des clients dans un tableau ------------------- */
 function userstable()
 {
   $membres = getusers();
@@ -39,7 +45,6 @@ function userstable()
   </tr>
   <?php
   }
-
 }
 
 ?>

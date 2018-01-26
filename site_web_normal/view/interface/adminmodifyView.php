@@ -64,32 +64,7 @@
                  <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $user['utilisateur_nom']; ?>" required />
                </td>
             </tr>
-            <!--
-            <tr>
-               <td align="right">
-                  <strong> Mot de passe actuel </strong> :
-               </td>
-               <td>
-                 <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" required />
-               </td>
-            </tr>
-            <tr>
-               <td align="right">
-                  <strong> Nouveau mot de passe </strong> :
-               </td>
-               <td>
-                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" required />
-               </td>
-            </tr>
-            <tr>
-               <td align="right">
-                  <strong> Confirmer nouveau mot de passe </strong> :
-               </td>
-               <td>
-                 <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" required />
-               </td>
-            </tr>
-          -->
+
           </table>
 
           <br />
@@ -98,74 +73,15 @@
         </form>
 
           <?php
-          $data = $db->prepare('SELECT * from logement WHERE logement.id_Utilisateur = ? ');
-          $data->execute(array($_GET['modify']));
-          $count = 0;
-          while($logements = $data->fetch())
-          {
-          $count++;
+          show_logements();
           ?>
-          <h2>Logement <?php echo $count; ?> </h2>
-
-          <form method="POST" action="adminmodifyView.php">
-
-          <table>
-            <tr>
-              <td align="right">
-                 <strong> Adresse </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $logements['logement_adresse']; ?>" required />
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Ville </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $logements['logement_ville']; ?>" required />
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Code postal </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $logements['logement_codePostal']; ?>" required/>
-              </td>
-            </tr>
-            <tr>
-              <td align="right">
-                 <strong> Pays </strong> :
-              </td>
-              <td>
-                <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $logements['logement_pays']; ?>" required />
-              </td>
-            </tr>
-
-                <input type="hidden" placeholder="idlogement" id="idlogement" name="idlogement" value="<?php echo $logements['id_Logement']; ?>" required />
-
-          </table>
-
-          <br />
-          <input type="submit" value="Mettre à jour le logement !" class="boutton" id="bouenvoie"/>
-
-          </form>
-
-          <?php
-          }
-          ?>
-
-
-
-
 
        <?php if(isset($msg)) { echo $msg; } ?>
 
        </div>
 
             <br />
-            <a href="profil.php"> Retourner à mon profil </a>
+            <a href="adminView.php"> Retourner à la page d'administration </a>
             <br />
             <a href="deconnexion.php"> Se déconnecter </a>
 
