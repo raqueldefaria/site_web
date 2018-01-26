@@ -1,20 +1,20 @@
 <?php
 session_start();
 
-/* ------------------- BDD ------------------- */
-require("../../model/adminmodifyModel.php");
-
-if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
-{
-  header("Location: connexion.php");
-}
-
 /* ------------------- On vérifie que c'est bien un nombre qui
                   est transmis dans l'adresse ------------------- */
 $id = htmlspecialchars($_GET['modify']);
 if(is_numeric($id) == FALSE)
 {
   header('Location: adminView.php');
+}
+
+/* ------------------- BDD ------------------- */
+require("../../model/adminmodifyModel.php");
+
+if(!isset($_SESSION['userID']) AND empty($_SESSION['userID']))
+{
+  header("Location: connexion.php");
 }
 
 if(isset($_POST['newpseudo']) AND !empty($_POST['newpseudo']) AND $_POST['newpseudo'] != $user['utilisateur_login'])
