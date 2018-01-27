@@ -14,7 +14,7 @@ $idUser = htmlspecialchars($_SESSION['userID']);
 // on vérifie d'abord que tous les champs sont remplis
 if(!empty($adresse) AND !empty($codePostal) AND !empty($ville) AND !empty($pays)){
 
-        include("../../model/ajax/editLogementJS.php");
+        include("../../model/ajax/editHousingJs.php");
 
 
 }

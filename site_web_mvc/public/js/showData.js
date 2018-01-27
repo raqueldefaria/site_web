@@ -252,7 +252,7 @@ function addSensor(idPiece){
     xmlhttp.onreadystatechange = function() {
       //window.alert("BH");
           if (this.readyState == 4) {
-              showCapteursFromDb(idPiece);
+              showSensorsFromDb(idPiece);
 
           }
       }
@@ -274,7 +274,7 @@ function addRoom(idUser,idLogement){
       //window.alert("BH");
           if (this.readyState == 4) {
 
-              showPiecesFromDb(idUser,idLogement);
+              showRoomsFromDb(idUser,idLogement);
               writePopUpsPieces(idUser, idLogement);
 
           }
@@ -297,7 +297,7 @@ function addHousing(idUser){
     xmlhttp.onreadystatechange = function() {
       //window.alert("BH");
           if (this.readyState == 4) {
-              showLogementsFromDb(idUser);
+              showHousingsFromDb(idUser);
               writePopUpsLogements(idUser);
           }
       }
@@ -322,7 +322,7 @@ function editHousing(idUser, idLogement){
     xmlhttp.onreadystatechange = function() {
       //window.alert("BH");
           if (this.readyState == 4) {
-              showLogementsFromDb(idUser);
+              showHousingsFromDb(idUser);
               writePopUpsLogements(idUser);
 
           }
@@ -344,7 +344,7 @@ function editRoom(idUser, idLogement, idPiece){ //on prend en argument l'idUser,
     xmlhttp.onreadystatechange = function() {
       //window.alert("BH");
           if (this.readyState == 4) {
-              showPiecesFromDb(idUser, idLogement);
+              showRoomsFromDb(idUser, idLogement);
               writePopUpsPieces(idUser, idLogement);
 
           }

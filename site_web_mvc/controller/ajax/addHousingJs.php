@@ -20,10 +20,10 @@ if(!empty($adresse) AND !empty($codePostal) AND !empty($ville) AND !empty($pays)
         include("../model/addLogement.php");
     }
     else{ // ce logement existe déjà, on obtient donc une erreur et on redirige l'utilisateur
-        header("Location:../view/interface/logementsErreur.php?erreur=0");
+        //header("Location:../view/interface/logementsErreur.php?erreur=0");
     }
 
 }
 else{ // un champ n'a pas été rempli, on obtient donc une erreur et on redirige l'utilisateur
-    header("Location:../view/interface/logementsErreur.php?erreur=1");
+    //header("Location:../view/interface/logementsErreur.php?erreur=1");
 }
