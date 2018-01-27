@@ -38,7 +38,7 @@ function writePopUpsPieces(idUser, idLogement) {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
             for (it = 0; it < myObj.length; it++) {
-                    txt += "<div id=\"editPiece"+myObj[it].id_Piece+"\" class=\"parentDisable\">"+
+                    txt += "<div id=\"editRoom"+myObj[it].id_Piece+"\" class=\"parentDisable\">"+
                         "<div class=\"addPieceOptions\" >"+
                             "<form method=\"post\" action=\"../../model/addPieces.php\" id=\"editPieceForm"+myObj[it].id_Piece+"\" >"+
                                 "<p>Type de pièce : <select name=\"piece\">"+
@@ -52,8 +52,8 @@ function writePopUpsPieces(idUser, idLogement) {
                                         "<option value=\"autre\">Autre</option>"+
                                     "</select></p>"+
                                 "<p> Nom de la pièce : <input type=\"text\" value=\""+myObj[it].piece_nom+"\" name=\"nomPiece\" required></p>"+
-                                "<input value=\"Modifier\" type=\"submit\" onclick=\"hide('editPiece"+myObj[it].id_Piece+"'); event.preventDefault(); editRoom("+idUser+","+idLogement+","+myObj[it].id_Piece+");\">"+
-                                "<input value=\"Fermer\" type=\"submit\" onclick=\"return hide('editPiece"+myObj[it].id_Piece+"')\" >"+
+                                "<input value=\"Modifier\" type=\"submit\" onclick=\"hide('editRoom"+myObj[it].id_Piece+"'); event.preventDefault(); editRoom("+idUser+","+idLogement+","+myObj[it].id_Piece+");\">"+
+                                "<input value=\"Fermer\" type=\"submit\" onclick=\"return hide('editRoom"+myObj[it].id_Piece+"')\" >"+
                             "</form>"+
                         "</div>"+
                     "</div>";

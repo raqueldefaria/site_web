@@ -349,7 +349,7 @@ function editRoom(idUser, idLogement, idPiece){ //on prend en argument l'idUser,
 
           }
       }
-    xmlhttp.open("POST", "model/ajax/editPieceJS.php", true);
+    xmlhttp.open("POST", "model/ajax/editRoomJS.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 }
