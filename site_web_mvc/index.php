@@ -2,26 +2,25 @@
 
 require('controller/frontend.php');
 
-if(isset($_GET['action'])){
+if (isset($_GET['action'])) {
     $action = htmlspecialchars($_GET['action']);
 }
 
 
-try{
-    if(isset($_SESSION['userID'])){
+try {
+    if (isset($_SESSION['userID'])) {
         $idUser = htmlspecialchars($_SESSION['userID']);
     }
-    if(isset($action)){
-        if($action == 'goToRegister'){
+    if (isset($action)) {
+        if ($action == 'goToRegister') {
             $error = null;
-            if(empty($idUser)){
+            if (empty($idUser)) {
                 register($error);
-            }
-            else{
-                housing($idUser,$error);
+            } else {
+                housing($idUser, $error);
             }
         }
-        elseif($action == 'register'){
+        elseif ($action == 'register') {
             $login = htmlspecialchars($_POST['pseudo']);
             $password = sha1(htmlspecialchars($_POST['mdp']));
             $password2 = sha1(htmlspecialchars($_POST['mdp2']));
@@ -36,11 +35,10 @@ try{
             $zipCode = htmlspecialchars($_POST['codePostal']);
             $city = htmlspecialchars($_POST['ville']);
             $country = htmlspecialchars($_POST['pays']);
-            if(!empty($login) AND !empty($password) AND !empty($password2) AND !empty($type) AND !empty($firstName)
-                AND !empty($lastName) AND !empty($birthday) AND !empty($mail) AND !empty($adress)
-                AND !empty($zipCode) AND !empty($city) AND !empty($country)) {
-
-                if($password == $password2){
+            if (!empty($login) and !empty($password) and !empty($password2) and !empty($type) and !empty($firstName)
+                and !empty($lastName) and !empty($birthday) and !empty($mail) and !empty($adress)
+                and !empty($zipCode) and !empty($city) and !empty($country)) {
+                if ($password == $password2) {
                     $user = new UserManager();
                     $user->setLogin($login);
                     $user->setPassword($password);
@@ -52,7 +50,7 @@ try{
 
                     $userExistence = $user->checkUserExistence($user);
 
-                    if(empty($userExistence)){
+                    if (empty($userExistence)) {
                         $affectedUser = $user->registerUser($user);
 
                         if ($affectedUser === false) {
@@ -62,55 +60,54 @@ try{
                             <?php $error = ob_get_clean(); ?>
                             <?php
                             register($error);
-                        }
-                        else {
+                        } else {
                             $housing = new HousingManager();
-                            $housing->setAdress($adress);
+                            $housing->setAddress($adress);
                             $housing->setZipCode($zipCode);
                             $housing->setCity($city);
                             $housing->setCountry($country);
 
                             $idUser = $user->getUserIdFromMail($user->getMail());
 
-                            $affectedHousing = $housing->registerHousing($housing,$idUser);
-                            if($affectedHousing === false){
+                            $affectedHousing = $housing->registerHousing($housing, $idUser['id_Utilisateur']);
+                            if ($affectedHousing === false) {
                                 ?>
                                 <?php ob_start(); ?>
                                 <script>alert("Votre logement n'a pas pu être enregistré. Veuillez le faire depuis l'espace Logements de votre compte")</script>
                                 <?php $error = ob_get_clean(); ?>
                                 <?php
-                                housing($idUser,$error);
+                                housing($idUser['id_Utilisateur'], $error);
                             }
-                            else{
-                                ini_set( 'display_errors', 1 );
+                            else {
+                                ini_set('display_errors', 1);
 
                                 $header="MIME-Version: 1.0\r\n";
                                 $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
                                 $header.='Content-Type:text/html; charset="uft-8"'."\n";
                                 $header.='Content-Transfer-Encoding: 8bit';
 
-                                error_reporting( E_ALL );
+                                error_reporting(E_ALL);
 
-                                $from = "remy.touret1@gmail.com";
+                                $from = "domonline.isep@gmail.com";
 
-                                $to = "remy.touret1@gmail.com";
+                                $to = $user->getMail();
 
                                 $subject = "Inscription à DomOnline";
 
-                                $message = "Bonjour " . $_POST['prenom']. " " . $_POST['nom'] . "\n \n";
+                                $message = "Bonjour " . $user->getFirstName(). " " . $user->getLastName() . "\n \n";
                                 $message .= "Vous êtes bien inscrit sur DomOnline. \n \n";
-                                $message .= "Votre pseudo : " . $_POST['pseudo'] . "\n \n";
+                                $message .= "Votre pseudo : " . $user->getLogin() . "\n \n";
                                 $message .= "Cordialement, \n";
                                 $message .= "L'équipe Domonline.";
 
                                 $headers = "From:" . $from;
 
-                                mail($to,$subject,$message, $headers);
+                                mail($to, $subject, $message, $headers);
                                 header('Location: index.php?action=goToLogIn');
                             }
                         }
                     }
-                    else{
+                    else {
                         ?>
                         <?php ob_start(); ?>
                         <p><span class="msg_erreur">L'utilisateur existe déja</span></p>
@@ -119,7 +116,7 @@ try{
                         register($error);
                     }
                 }
-                else{
+                else {
                     ?>
                     <?php ob_start(); ?>
                     <p><span class="msg_erreur">Les 2 mots de passe ne correspondent pas</span></p>
@@ -127,8 +124,7 @@ try{
                     <?php
                     register($error);
                 }
-            }
-            else {
+            } else {
                 ?>
                 <?php ob_start(); ?>
                 <p><span class="msg_erreur">Tous les champs ne sont pas remplis</span></p>
@@ -136,31 +132,28 @@ try{
                 <?php
                 register($error);
             }
-
         }
-        elseif($action == 'goToLogIn'){
+        elseif ($action == 'goToLogIn') {
             $error = null;
-            if(empty($idUser)){
+            if (empty($idUser)) {
                 logIn($error);
+            } else {
+                housing($idUser, $error);
             }
-            else{
-                housing($idUser,$error);
-            }
-
         }
-        elseif($action == 'logIn'){
+        elseif ($action == 'logIn') {
             $login = htmlspecialchars($_POST['pseudo']);
             $password = sha1(htmlspecialchars($_POST['mdp']));
             //$hash = password_hash($password, PASSWORD_DEFAULT);
-            if(!empty($login) AND !empty($password)){
+            if (!empty($login) and !empty($password)) {
                 $userLogIn = new UserManager;
                 $userLogIn->setLogin($login);
                 $userLogIn->setPassword($password);
 
                 $userExistence = $userLogIn->checkUserExistenceLogIn($userLogIn);
 
-                if(!empty($userExistence)){
-                    if($userExistence['utilisateur_motDePasse']==$userLogIn->getPassword()){
+                if (!empty($userExistence)) {
+                    if ($userExistence['utilisateur_motDePasse']==$userLogIn->getPassword()) {
                         session_start();
                         $_SESSION['login'] = $login;
                         $_SESSION['userID'] = $userExistence['id_Utilisateur'];
@@ -168,8 +161,7 @@ try{
                         $_SESSION['lastName'] = $userExistence['utilisateur_nom'];
                         $_SESSION['type'] = $userExistence['utilisateur_type'];
                         header('Location: index.php?action=goToHousing');
-                    }
-                    else{
+                    } else {
                         ?>
                         <?php ob_start(); ?>
                         <p><span class="msg_erreur">Le mot de passe utilisé est incorrect</span></p>
@@ -177,9 +169,7 @@ try{
                         <?php
                         logIn($error);
                     }
-
-                }
-                else{
+                } else {
                     ?>
                     <?php ob_start(); ?>
                     <p><span class="msg_erreur">Cet identifiant n'existe pas</span></p>
@@ -188,14 +178,11 @@ try{
                     //throw new Exception("Identifiant ou mdp incorrect" );
                     logIn($error);
                 }
-
-            }
-            else{
+            } else {
                 if (!isset($_COOKIE['username']) && isset($login)) {
-                    setcookie('username_temp',$_POST['pseudo'], time() + 300, "/site_web", "localhost", false, true);
-                    throw new Exception("Champs non remplis" );
-                }
-                ?>
+                    setcookie('username_temp', $_POST['pseudo'], time() + 300, "/site_web", "localhost", false, true);
+                    throw new Exception("Champs non remplis");
+                } ?>
                 <?php ob_start(); ?>
                 <p><span class="msg_erreur">Un des champs n'a pas été rempli</span></p>
                 <?php $error = ob_get_clean(); ?>
@@ -203,145 +190,132 @@ try{
                 //throw new Exception("Identifiant ou mdp incorrect" );
                 logIn($error);
             }
-
         }
-        elseif($action == 'logOut'){
+        elseif ($action == 'logOut') {
             $error=null;
             logOut();
             logIn($error);
         }
-        elseif($action == 'goToHousing'){
+        elseif ($action == 'goToHousing') {
             $error = null;
-            housing($idUser,$error);
+            housing($idUser, $error);
         }
-        elseif($action == 'addHousing'){
+        elseif ($action == 'addHousing') {
             $adress = htmlspecialchars($_POST['adresse']);
             $zipCode = htmlspecialchars($_POST['codePostal']);
             $city = htmlspecialchars($_POST['ville']);
             $country = htmlspecialchars($_POST['pays']);
 
-            if(!empty($adress) AND !empty($zipCode) AND !empty($city) AND !empty($country)){
+            if (!empty($adress) and !empty($zipCode) and !empty($city) and !empty($country)) {
                 $newHousing = new HousingManager();
-                $newHousing->setAdress($adress);
+                $newHousing->setAddress($adress);
                 $newHousing->setZipCode($zipCode);
                 $newHousing->setCity($city);
                 $newHousing->setCountry($country);
 
                 $housingInDb = $newHousing->checkHousingExistence($newHousing);
 
-                if(empty($housingInDb)){
+                if (empty($housingInDb)) {
                     $addingNewHousing = $newHousing->registerHousing($newHousing, $idUser);
-                    if($addingNewHousing === false){
+                    if ($addingNewHousing === false) {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Un probléme est survenu. Veillez ajouter un logement ultérieurement.")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        housing($idUser,$error);
-                    }
-                    else{
+                        housing($idUser, $error);
+                    } else {
                         header('Location: index.php?action=goToHousing');
                     }
-                }
-                elseif ($housingInDb['id_Utilisateur']!=$idUser){
+                } elseif ($housingInDb['id_Utilisateur']!=$idUser) {
                     $addingNewHousing = $newHousing->registerHousing($newHousing, $idUser);
-                    if($addingNewHousing === false){
+                    if ($addingNewHousing === false) {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Un probléme est survenu. Veillez ajouter un logement ultérieurement.")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        housing($idUser,$error);
-                    }
-                    else{
+                        housing($idUser, $error);
+                    } else {
                         header('Location: index.php?action=goToHousing');
                     }
-                }
-                else{
+                } else {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Ce logement est deja enregistré sur votre compte")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    housing($idUser,$error);
+                    housing($idUser, $error);
                 }
-
-            }
-            else{
+            } else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Tous les champs ne sont pas remplis")</script>
                 <?php $error = ob_get_clean(); ?>
                 <?php
-                housing($idUser,$error);
+                housing($idUser, $error);
             }
         }
-        elseif($action == 'goToRooms'){
+        elseif ($action == 'goToRooms') {
             $error=null;
             //conditions idHousing
             $idHousing = htmlspecialchars($_GET['id']);
-            room($idUser,$idHousing,$error);
+            room($idUser, $idHousing, $error);
         }
-        elseif($action == 'addRoom'){
+        elseif ($action == 'addRoom') {
             $idHousing = htmlspecialchars($_GET['id']);
             $room = htmlspecialchars($_POST['piece']);
             $roomName = htmlspecialchars($_POST['nomPiece']);
 
-            if(!empty($room) AND !empty($roomName)){
+            if (!empty($room) and !empty($roomName)) {
                 $newRoom = new RoomManager();
                 $newRoom->setRoomName($roomName);
                 $newRoom->setRoomType($room);
 
-                $check = $newRoom->checkRoomExistence($roomName,$room,$idHousing);
+                $check = $newRoom->checkRoomExistence($roomName, $room, $idHousing);
 
-                if(empty($check)){
-                    $addingNewRoom = $newRoom->registerRoom($idHousing,$newRoom->getRoomName(),$newRoom->getRoomType(),$idUser);
-                    if($addingNewRoom === false){
+                if (empty($check)) {
+                    $addingNewRoom = $newRoom->registerRoom($idHousing, $newRoom->getRoomName(), $newRoom->getRoomType(), $idUser);
+                    if ($addingNewRoom === false) {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Un probléme est survenu. Veillez ajouter une piece ultérieurement")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        room($idUser,$idHousing,$error);
-                    }
-                    else{
+                        room($idUser, $idHousing, $error);
+                    } else {
                         header('Location: index.php?action=goToRooms&id='.$idHousing);
-
                     }
-                }
-                else{
+                } else {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Cette piece existe déjà dans votre logement")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    room($idUser,$idHousing,$error);
+                    room($idUser, $idHousing, $error);
                 }
-
-            }
-            else{
+            } else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Tous les champs ne sont pas remplis. Veillez reessayer")</script>
                 <?php $error = ob_get_clean(); ?>
                 <?php
-                room($idUser,$idHousing,$error);
+                room($idUser, $idHousing, $error);
             }
-
         }
-        elseif($action == 'goToSensors'){
+        elseif ($action == 'goToSensors') {
             $error = null;
             //conditions idHousing
             $idRoom = htmlspecialchars($_GET['id']);
-            sensor($idRoom,$error);
+            sensor($idRoom, $error);
         }
-        elseif($action == 'addSensor'){
+        elseif ($action == 'addSensor') {
             $idRoom = htmlspecialchars($_GET['id']);
             $sensor = htmlspecialchars($_POST['capteurActionneur']);
             $sensorType = htmlspecialchars($_POST['type']);
             $cemacName = htmlspecialchars($_POST['nomCemac']);
 
-            if(!empty($sensor) AND !empty($sensorType) AND !empty($cemacName) ){
+            if (!empty($sensor) and !empty($sensorType) and !empty($cemacName)) {
                 $newSensor = new SensorManager();
                 $newSensor->setFunction($sensor);
                 $newSensor->setType($sensorType);
@@ -352,110 +326,146 @@ try{
                 $checkCemac = $newCemac->checkCemacExistence($cemacName);
 
                 // if the CemacManager does not exist
-                if(empty($checkCemac)){
-                    $saveCemac=$newCemac->registerCemac($cemacName,$idRoom);
-                    if(!empty($saveCemac)){
+                if (empty($checkCemac)) {
+                    $saveCemac=$newCemac->registerCemac($cemacName, $idRoom);
+                    if (!empty($saveCemac)) {
                         $idCemac=$newCemac->getCemacIdFromRoomId($idRoom);
-                        $addingNewSensor = $newSensor->registerSensor($newSensor->getFunction(),$newSensor->getType(),$idCemac['id_Cemac']);
-                        if(!empty($addingNewSensor)){
+                        $addingNewSensor = $newSensor->registerSensor($newSensor->getFunction(), $newSensor->getType(), $idCemac['id_Cemac']);
+                        if (!empty($addingNewSensor)) {
                             header('Location: index.php?action=goToSensors&id='.$idRoom);
-                        }
-                        else{
+                        } else {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Un probléme est survenu. Veillez ajouter un capteur/actionneur ultérieurement")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
-                            sensor($idRoom,$error);
+                            sensor($idRoom, $error);
                         }
-                    }
-                    else{
+                    } else {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Le Cemac n'a pas pu être ajouté. Veillez réessayer ultérieurement")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        sensor($idRoom,$error);
+                        sensor($idRoom, $error);
                     }
                 }
                 // if the CemacManager is not in another room
-                elseif($checkCemac['Piece_idPiece']==$idRoom){
+                elseif ($checkCemac['Piece_idPiece']==$idRoom) {
                     $idCemac=$newCemac->getCemacIdFromRoomId($idRoom);
-                    if(!empty($idCemac)){
-                        $addingNewSensor = $newSensor->registerSensor($newSensor->getFunction(),$newSensor->getType(),$idCemac['id_Cemac']);
-                        if(!empty($addingNewSensor)){
+                    if (!empty($idCemac)) {
+                        $addingNewSensor = $newSensor->registerSensor($newSensor->getFunction(), $newSensor->getType(), $idCemac['id_Cemac']);
+                        if (!empty($addingNewSensor)) {
                             header('Location: index.php?action=goToSensors&id='.$idRoom);
-                        }
-                        else{
+                        } else {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Un probléme est survenu. Veillez ajouter un capteur/actionneur ultérieurement")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
-                            sensor($idRoom,$error);
+                            sensor($idRoom, $error);
                         }
-                    }
-                    else{
+                    } else {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Le Cemac n'a pas pu être ajouté. Veillez réessayer ultérieurement")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        sensor($idRoom,$error);
+                        sensor($idRoom, $error);
                     }
-
-                }
-                else{
+                } else {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Ce Cemac est déjà utilisé dans une autre piece")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    sensor($idRoom,$error);
-
+                    sensor($idRoom, $error);
                 }
-
-            }
-            else{
+            } else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Tous les champs ne sont pas remplis. Veillez réessayer")</script>
                 <?php $error = ob_get_clean(); ?>
                 <?php
-                sensor($idRoom,$error);
+                sensor($idRoom, $error);
             }
-
         }
-        elseif($action == 'goToListSensors'){
+        elseif ($action == 'goToListSensors') {
             showAllSensorsAndActuators($idUser);
         }
-        elseif($action == 'goToAlarm'){
+        elseif ($action == 'goToAlarm') {
             alarm($idUser);
         }
-        elseif($action == 'goToProfile'){
-
-            if(!isset($idUser) AND empty($idUser))
-            {
+        elseif ($action == 'goToProfile') {
+            // the user cannot edit his profile if he is not connected
+            if (!isset($idUser) and empty($idUser)) {
                 header('Location: index.php?action=goToLogIn');
+            } else {
+                profile();
             }
-            profile();
         }
-        elseif($action == 'profile'){
-            //logOut();
+        elseif ($action == 'goToEditProfile') {
+          $error = null;
+            goToEditProfile($error);
         }
-        elseif($action == 'goToForgottenPassword'){
+        elseif ($action == 'editProfile') {
+          $newLogin = htmlspecialchars($_POST['newpseudo']);
+          $newMail = htmlspecialchars($_POST['newmail']);
+          $newFirstName = htmlspecialchars($_POST['newprenom']);
+          $newLastName = htmlspecialchars($_POST['newnom']);
+          $newAddress = htmlspecialchars($_POST['newadresse']);
+          $newCity = htmlspecialchars($_POST['newville']);
+          $newZipCode = htmlspecialchars($_POST['newcodePostal']);
+          $newCountry = htmlspecialchars($_POST['newpays']);
+          $currentPassword = sha1( htmlspecialchars($_POST['mdpactuel']));
+          $newPassword = sha1( htmlspecialchars($_POST['newmdp1']));
+          $newPassword2 = sha1( htmlspecialchars($_POST['newmdp2']));
+
+
+          if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
+          !empty($newAddress) AND !empty($newCity) AND !empty($newZipCode) AND !empty($newCountry) AND
+          !empty($currentPassword) AND !empty($newPassword) AND !empty($newPassword)){
+            if($newPassword == $newPassword2){
+
+            }
+            $updatedUser = new UserManager();
+            $updatedUser->setFirstName($newFirstName);
+            $updatedUser->setLastName($newLastName);
+            $updatedUser->setLogin($newLogin);
+            $updatedUser->setMail($newMail);
+
+            $updatedHousing = new HousingManager();
+            $updatedHousing->setAddress($newAddress);
+            $updatedHousing->setCity($newCity);
+            $updatedHousing->setZipCode($newZipCode);
+            $updatedHousing->setCountry($newCountry);
+
+            $updatedUser->setPassword();
+        }
+
+        else{
+            ?>
+            <?php ob_start(); ?>
+            <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
+            <?php $error = ob_get_clean(); ?>
+            <?php
+            editProfile($error);
+        }
+
+        }
+        elseif ($action == 'goToForgottenPassword') {
             $error = null;
             forgottenPassword($error);
         }
-        elseif($action == 'forgottenPassword'){
+        elseif ($action == 'forgottenPassword') {
             $mail = htmlspecialchars($_POST['mail_recup']);
-            if(isset($_POST['mail_recup']) && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail_recup'])){
+            if (isset($mail) && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $mail)) {
                 $newUser = new UserManager();
                 $newUser->setMail($mail);
 
                 $userExistence = $newUser->checkMailExistence($newUser);
 
-                if($userExistence === false){
+                if ($userExistence === false) {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Cet adresse mail n'existe pas")</script>
@@ -463,12 +473,12 @@ try{
                     <?php
                     forgottenPassword($error);
                 }
-                else{
-                    $tok = mt_rand(0,10000);
+                else {
+                    $tok = mt_rand(0, 10000);
                     $newUser->setTok($tok);
                     $addingTok = $newUser->addTokToDb($newUser);
 
-                    if($addingTok === false){
+                    if ($addingTok === false) {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Un probléme est survenu. Veuillez réessayer ultérieurement")</script>
@@ -476,19 +486,19 @@ try{
                         <?php
                         forgottenPassword($error);
                     }
-                    else{
-                        ini_set( 'display_errors', 1 );
+                    else {
+                        ini_set('display_errors', 1);
 
                         $header="MIME-Version: 1.0\r\n";
                         $header.='From:"Domonline.com"<domonline.isep@gmail.com>'."\n";
                         $header.='Content-Type:text/html; charset="uft-8"'."\n";
                         $header.='Content-Transfer-Encoding: 8bit';
 
-                        error_reporting( E_ALL );
+                        error_reporting(E_ALL);
 
                         $from = "domonline.isep@gmail.com";
 
-                        $to = $_POST['mail_recup'];
+                        $to = $mail;
 
                         $subject = "Vérification du mail";
 
@@ -496,15 +506,13 @@ try{
 
                         $headers = "From:" . $from;
 
-                        mail($to,$subject,$message, $headers);
+                        mail($to, $subject, $message, $headers);
 
                         header("Location: index.php?action=goToNewPassword&tok=".$newUser->getTok());
-
                     }
-
                 }
             }
-            else{
+            else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Cette adresse mail n'est pas valide")</script>
@@ -513,55 +521,52 @@ try{
                 forgottenPassword($error);
             }
         }
-        elseif($action == 'goToNewPassword'){
+        elseif ($action == 'goToNewPassword') {
             $tok = htmlspecialchars($_GET['tok']);
             $error = null;
-            newPassword($tok,$error);
+            newPassword($tok, $error);
         }
-        elseif($action == 'changePassword'){
+        elseif ($action == 'changePassword') {
             $tok = htmlspecialchars($_GET['tok']);
             $tokInput = htmlspecialchars($_POST['tok2']);
             $password = htmlspecialchars($_POST['pass_recup']);
             $passwordVerification = htmlspecialchars($_POST['pass_recup2']);
-            if(!empty($tokInput) AND !empty($password) AND !empty($passwordVerification)){
-                if($tok == $tokInput){
-                    if($password==$passwordVerification){
+            if (!empty($tokInput) and !empty($password) and !empty($passwordVerification)) {
+                if ($tok == $tokInput) {
+                    if ($password==$passwordVerification) {
                         $newUser = new UserManager();
                         $newUser->setTok($tokInput);
                         $newUser->setPassword($password);
                         $gettingMail = $newUser->gettingMailFromTok($newUser);
 
-                        if($gettingMail === false){
+                        if ($gettingMail === false) {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Le code rentré n'est pas valide. Veuillez réessayer")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
-                            newPassword($tok,$error);
-                        }
-                        else{
+                            newPassword($tok, $error);
+                        } else {
                             $newUser->setTok(null);
                             $updateTok = $newUser->updateTok($newUser);
 
-                            if($updateTok === false){
+                            if ($updateTok === false) {
                                 ?>
                                 <?php ob_start(); ?>
                                 <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
                                 <?php $error = ob_get_clean(); ?>
                                 <?php
-                                newPassword($tok,$error);
-                            }
-                            else{
+                                newPassword($tok, $error);
+                            } else {
                                 $updatePassword = $newUser->updatePassword($newUser);
-                                if($updatePassword===false){
+                                if ($updatePassword===false) {
                                     ?>
                                     <?php ob_start(); ?>
                                     <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
                                     <?php $error = ob_get_clean(); ?>
                                     <?php
-                                    newPassword($tok,$error);
-                                }
-                                else{
+                                    newPassword($tok, $error);
+                                } else {
                                     ?>
                                     <?php ob_start(); ?>
                                     <script>alert("Votre mot de passe a bien été modifié !")</script>
@@ -571,54 +576,43 @@ try{
                                 }
                             }
                         }
-                    }
-                    else{
+                    } else {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Les 2 mots de passe rentrés ne sont pas les mêmes")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        newPassword($tok,$error);
+                        newPassword($tok, $error);
                     }
-                }
-                else{
+                } else {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Le code rentré n'est pas valide")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    newPassword($tok,$error);
+                    newPassword($tok, $error);
                 }
-
-
-            }
-            else{
+            } else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Veuillez remplir tous les champs")</script>
                 <?php $error = ob_get_clean(); ?>
                 <?php
-                newPassword($tok,$error);
+                newPassword($tok, $error);
             }
         }
-        elseif($action == 'goToTeam'){
+        elseif ($action == 'goToTeam') {
             showTeam();
         }
-        elseif($action == 'goToOffers'){
+        elseif ($action == 'goToOffers') {
             showOffers();
         }
-        elseif($action == 'contact'){
+        elseif ($action == 'contact') {
             contact();
         }
-
-    }
-    else{
+    } else {
         homepage();
     }
-
-
-
-}
-catch(Exception $e) {
+} catch (Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
 }

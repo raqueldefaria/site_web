@@ -252,10 +252,6 @@ class UserManager
     }
 
 
-    function changeProfile(){
-
-    }
-
     function checkMailExistence($user){
         $db = $this->dbConnect();
 

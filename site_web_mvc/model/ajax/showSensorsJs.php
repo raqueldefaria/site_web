@@ -5,7 +5,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $obj = json_decode($_POST["x"], false);
 
 /* ------------------- DB ------------------- */
-require("connectionDb.php");
+require("../connectionDb.php");
 
 $dataCemac = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece =" .$obj->idPiece) or die(print_r($db->errorInfo()));
 $response  = $dataCemac->fetch();
@@ -21,7 +21,3 @@ if (!empty($response)){
 else{
     echo json_encode(null);
 }
-
-
-
-

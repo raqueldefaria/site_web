@@ -14,6 +14,8 @@
     <script type="application/javascript" src="public/js/showChart.js"></script>
     <script type="application/javascript" src="public/js/showData.js"></script>
     <script type="application/javascript" src="public/js/showOrHidePopUp.js"></script>
+    <script type="application/javascript" src="public/js/writePopUps.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Import de jQuery -->
 
     <title>DomOnline - <?= $title ?></title>
 

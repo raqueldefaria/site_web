@@ -8,7 +8,7 @@
 
 class HousingManager
 {
-    private $adress;
+    private $address;
     private $zipCode;
     private $city;
     private $country;
@@ -23,17 +23,17 @@ class HousingManager
     /**
      * @return mixed
      */
-    public function getAdress()
+    public function getAddress()
     {
-        return $this->adress;
+        return $this->address;
     }
 
     /**
-     * @param mixed $adress
+     * @param mixed $address
      */
-    public function setAdress($adress)
+    public function setAddress($address)
     {
-        $this->adress = $adress;
+        $this->address = $address;
     }
 
     /**
@@ -123,7 +123,7 @@ class HousingManager
 
         $response = $db->prepare('SELECT * FROM logement WHERE logement.id_Utilisateur = ?');
         $response->execute(array($_SESSION['userID']));
-        $userInfo = $response->fetch();
+        $userInfo = $response->fetchAll();
 
         $response->closecursor();
 
@@ -149,9 +149,20 @@ class HousingManager
         return $data;
     }
 
-    function room(){}
 
+    function updateHousing($dataToUpdate){
+      $db = $this->dbConnect();
+      switch ($dataToUpdate) {
+        case 'address':
+          $insertAddress = $db->prepare('UPDATE logement SET logement_adresse = ? WHERE id_Logement = ?');
+          $insertAdress->execute(array($newadresse, $iduser));
+          break;
 
+        default:
+          # code...
+          break;
+      }
+    }
 
 
 

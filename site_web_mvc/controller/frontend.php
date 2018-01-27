@@ -10,7 +10,7 @@ require_once('model/SensorManager.php');
 require_once('model/CemacManager.php');
 
 function gettingHeader(){
-    if(isset($_SESSION['userID'])){
+    if (isset($_SESSION['userID'])) {
         ?>
         <?php ob_start(); ?>
         <link rel="stylesheet" href="public/css/headerbis.css" />
@@ -48,8 +48,7 @@ function gettingHeader(){
         </header>
         <?php $header = ob_get_clean(); ?>
         <?php
-    }
-    else{
+    } else {
         ?>
         <?php ob_start(); ?>
         <link rel="stylesheet" href="public/css/header.css" />
@@ -94,8 +93,7 @@ function homepage(){
 function register($error){
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Inscription
     <?php $title = ob_get_clean(); ?>
@@ -176,12 +174,11 @@ function register($error){
 
             </p>
             <?php
-            if($error!=null){
+            if ($error!=null) {
                 ?>
                 <?= $error ?>
                 <?php
-            }
-            ?>
+            } ?>
         </form>
     </div>
 
@@ -219,8 +216,7 @@ function register($error){
 function logIn($error){
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Connexion
     <?php $title = ob_get_clean(); ?>
@@ -229,7 +225,9 @@ function logIn($error){
 
         <form method="post" action="index.php?action=logIn">
             <p>
-                <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username'])){echo $_COOKIE['username'];}?>" required /> <br />
+                <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username'])) {
+        echo $_COOKIE['username'];
+    } ?>" required /> <br />
                 <span id="missIdentifiant"></span>
                 <br />
                 <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" size="30" maxlength="20" required/><br />
@@ -240,12 +238,11 @@ function logIn($error){
             <a href="index.php?action=goToForgottenPassword" id="mdpOublie"> Mot de passe oublié </a>
             </p>
             <?php
-            if($error!=null){
+            if ($error!=null) {
                 ?>
                 <?= $error ?>
                 <?php
-            }
-            ?>
+            } ?>
 
         </form>
 
@@ -282,13 +279,11 @@ function logIn($error){
 
     <?php
     require("view/frontend/template.php");
-
 }
 
 
 function logOut(){
-
-    setcookie('username','', time() - 36000, "/site_web", "localhost", false, true);
+    setcookie('username', '', time() - 36000, "/site_web", "localhost", false, true);
     $_SESSION = array();
     session_destroy();
 }
@@ -315,11 +310,11 @@ function contact(){
     require("view/frontend/contact.php");
 }
 
-function profile(){
+function profile()
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Profil
     <?php $title = ob_get_clean(); ?>
@@ -327,128 +322,333 @@ function profile(){
     $user = new UserManager();
     $userInfo = $user->showAllInfo();
     $housing = new HousingManager();
-    $housingInfo = $housing->showAllInfo();
-    ?>
+    $housingInfo = $housing->showAllInfo(); ?>
+
     <?php ob_start(); ?>
     <!-- Le corps -->
     <div id="corps">
 
         <div id="main_block">
 
-            <div align="center">
-                <h2>Votre profil</h2>
+         <div align="center">
+          <h2>Votre profil</h2>
 
-                <table>
-                    <tr>
-                        <td align="right">
-                            <strong> Pseudo </strong> :
-                        </td>
-                        <td>
-                            <?php echo $userInfo['utilisateur_login']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Mail </strong> :
-                        </td>
-                        <td>
-                            <?php echo $userInfo['utilisateur_mail']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Prénom </strong> :
-                        </td>
-                        <td>
-                            <?php echo $userInfo['utilisateur_prenom']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Nom </strong> :
-                        </td>
-                        <td>
-                            <?php echo $userInfo['utilisateur_nom']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Type </strong> :
-                        </td>
-                        <td>
-                            <?php echo $userInfo['utilisateur_type']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Adresse </strong> :
-                        </td>
-                        <td>
-                            <?php echo $housingInfo['logement_adresse']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Ville </strong> :
-                        </td>
-                        <td>
-                            <?php echo $housingInfo['logement_ville']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Code postal </strong> :
-                        </td>
-                        <td>
-                            <?php echo $housingInfo['logement_codePostal']; ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="right">
-                            <strong> Pays </strong> :
-                        </td>
-                        <td>
-                            <?php echo $housingInfo['logement_pays']; ?>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <br/>
-
-            <?php if(isset($msg)) { echo '<p>' . $msg . '</p>'; } ?>
-
-            <br/>
-            <a href="index.php?action=profile"> Editer mon profil </a>
-            <br/>
-            <a href="index.php?action=logOut"> Se déconnecter </a>
-
-
+          <table>
+          <tr>
+             <td align="right">
+                <strong> Pseudo </strong> :
+             </td>
+             <td>
+                <?php echo $userInfo['utilisateur_login']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Mail </strong> :
+             </td>
+             <td>
+                <?php echo $userInfo['utilisateur_mail']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Prénom </strong> :
+             </td>
+             <td>
+                <?php echo $userInfo['utilisateur_prenom']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Nom </strong> :
+             </td>
+             <td>
+                <?php echo $userInfo['utilisateur_nom']; ?>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Type </strong> :
+             </td>
+             <td>
+                <?php echo $userInfo['utilisateur_type']; ?>
+             </td>
+          </tr>
+        </table>
         </div>
+
+    <?php
+    for ($it=0; $it<sizeof($housingInfo); $it++) {
+        ?>
+
+        <div align="center">
+        <h2>Logement <?php echo $it; ?> </h2>
+
+        <table>
+          <tr>
+              <td align="right">
+                <strong> Adresse </strong> :
+              </td>
+              <td>
+                <?php echo $housingInfo[$it]['logement_adresse']; ?>
+              </td>
+          </tr>
+          <tr>
+              <td align="right">
+                <strong> Ville </strong> :
+             </td>
+              <td>
+                <?php echo $housingInfo[$it]['logement_ville']; ?>
+              </td>
+          </tr>
+          <tr>
+              <td align="right">
+                <strong> Code postal </strong> :
+              </td>
+              <td>
+                <?php echo $housingInfo[$it]['logement_codePostal']; ?>
+              </td>
+          </tr>
+          <tr>
+              <td align="right">
+                <strong> Pays </strong> :
+              </td>
+              <td>
+                <?php echo $housingInfo[$it]['logement_pays']; ?>
+              </td>
+          </tr>
+        </table>
+        </div>
+      <?php
+    } ?>
+
+       <br/>
+
+       <br/>
+       <a href="index.php?action=goToEditProfile"> Editer mon profil </a>
+       <br/>
+       <a href="deconnexion.php?action=logOut"> Se déconnecter </a>
+
+      </div>
     </div>
     <?php $content = ob_get_clean(); ?>
     <?php
     require("view/frontend/template.php");
-
 }
 
-function housing($idUser,$error){
+function goToEditProfile($error)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
-    <?php ob_start(); ?>
-    Logements
-    <?php $title = ob_get_clean(); ?>
-    <?php ob_start(); ?>
+    $header = $headerList[1]; ?>
+  <?php ob_start(); ?>
+  Edition du profil
+  <?php $title = ob_get_clean(); ?>
+  <?php
+  $user = new UserManager();
+    $userInfo = $user->showAllInfo(); ?>
+  <?php ob_start(); ?>
+  <div id="corps">
 
+      <div id="main_block">
+
+       <div align="center">
+        <h2>Éditer votre profil</h2>
+
+        <form method="POST" action="index.php?action=editProfile">
+
+          <table>
+          <tr>
+             <td align="right">
+                <strong> Pseudo </strong> :
+             </td>
+             <td>
+               <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userInfo['utilisateur_login']; ?>" required />
+                 <span id="missPseu"></span>
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Mail </strong> :
+             </td>
+             <td>
+               <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userInfo['utilisateur_mail']; ?>" required />
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Prénom </strong> :
+             </td>
+             <td>
+               <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userInfo['utilisateur_prenom']; ?>" required />
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Nom </strong> :
+             </td>
+             <td>
+               <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userInfo['utilisateur_nom']; ?>" required />
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Mot de passe actuel </strong> :
+             </td>
+             <td>
+               <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" required />
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Nouveau mot de passe </strong> :
+             </td>
+             <td>
+               <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" required />
+             </td>
+          </tr>
+          <tr>
+             <td align="right">
+                <strong> Confirmer nouveau mot de passe </strong> :
+             </td>
+             <td>
+               <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" required />
+             </td>
+          </tr>
+        </table>
+
+        <br />
+        <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
+
+      </form>
+
+        <?php
+        $housing = new HousingManager();
+    $housingInfo = $housing->showAllInfo();
+    for ($it=0; $it<sizeof($housingInfo); $it++) {
+        ?>
+        <h2>Logement <?php echo $it; ?> </h2>
+
+        <form method="POST" action="index.php?action=editProfile">
+
+        <table>
+          <tr>
+            <td align="right">
+               <strong> Adresse </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $housingInfo[$it]['logement_adresse']; ?>" required />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Ville </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $housingInfo[$it]['logement_ville']; ?>" required />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Code postal </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $housingInfo[$it]['logement_codePostal']; ?>" required/>
+            </td>
+          </tr>
+          <tr>
+            <td align="right">
+               <strong> Pays </strong> :
+            </td>
+            <td>
+              <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $housingInfo[$it]['logement_pays']; ?>" required />
+            </td>
+          </tr>
+
+              <input type="hidden" placeholder="idlogement" id="idlogement" name="idlogement" value="<?php echo $housingInfo[$it]['id_Logement']; ?>" required />
+
+        </table>
+
+        <br />
+        <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
+
+        </form>
+
+        <?php
+    } ?>
+
+
+     </div>
+
+          <br />
+          <a href="index.php?action=goToProfile"> Retourner à mon profil </a>
+          <br />
+          <a href="index.php?action=logOut"> Se déconnecter </a>
+
+
+      </div>
+
+
+  </div>
+  <!--************** script **************-->
+  <script>
+    var formValid = document.getElementById('bouenvoi');
+    var prenom = document.getElementById('Pseudo');
+    var missPrenom = document.getElementById('missPseu');
+    var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+
+    formValid.addEventListener('click', validation);
+
+    function validation(event){
+        //Si le champ est vide
+
+        if (identifiant.validity.valueMissing){
+            event.preventDefault();
+            missPseu.textContent = 'login manquant';
+            missPseu.style.color = 'red';
+        }else if (identifiantValid.test(identifiant.value) == false){
+            event.preventDefault();
+            missPrenom.textContent = 'Format incorrect';
+            missP.style.color = 'red';
+
+        }else{
+        }
+
+    }
+    </script>
     <?php
-    if($error!=null){
+    if ($error!=null) {
         ?>
         <?= $error ?>
         <?php
-    }
-    ?>
+    } ?>
+  <?php $content = ob_get_clean(); ?>
+  <?php
+  require("view/frontend/template.php");
+}
+
+function editProfile(){
+
+}
+
+
+function housing($idUser, $error)
+{
+    $headerList = gettingHeader();
+    $styleHeader = $headerList[0];
+    $header = $headerList[1]; ?>
+
+    <?php ob_start(); ?>
+    Logements
+    <?php $title = ob_get_clean(); ?>
+
+    <?php ob_start(); ?>
+    <?php
+    if ($error!=null) {
+        ?>
+        <?= $error ?>
+        <?php
+    } ?>
 
     <!--************** Pop js **************-->
     <div id="addLogement" class="parentDisable">
@@ -466,6 +666,8 @@ function housing($idUser,$error){
             </form>
         </div>
     </div>
+
+    <div id="editLogementPopContainer"></div> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer un logement -->
 
 
     <!--************** script **************-->
@@ -518,6 +720,9 @@ function housing($idUser,$error){
     <script>
         showHousingsFromDb(<?= $idUser ?>)
     </script>
+    <script>
+      writePopUpsLogements(<?= $idUser ?>)
+    </script>
 
     <?php $content = ob_get_clean(); ?>
 
@@ -526,23 +731,22 @@ function housing($idUser,$error){
 }
 
 
-function room($idUser,$idHousing,$error){
+function room($idUser, $idHousing, $error)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Pieces
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
 
     <?php
-    if($error!=null){
+    if ($error!=null) {
         ?>
         <?= $error ?>
         <?php
-    }
-    ?>
+    } ?>
     <!--************** Pop js **************-->
     <div id="addPiece" class="parentDisable">
         <div class="addPieceOptions" >
@@ -565,6 +769,8 @@ function room($idUser,$idHousing,$error){
         </div>
     </div>
 
+        <div id="editPiecePopContainer"></div> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer une piece -->
+
 
     <!--************** Script**************-->
     <script>
@@ -582,7 +788,6 @@ function room($idUser,$idHousing,$error){
                 event.preventDefault();
                 missnomPiece.textContent = 'Nom pièce manqunat';
                 missnomPiece.style.color = 'red';
-                erreur = true
             }else if (identifiantValid.test(identifiant.value) == false){
                 event.preventDefault();
                 missPrenom.textContent = 'Format incorrect';
@@ -620,6 +825,9 @@ function room($idUser,$idHousing,$error){
     <script>
         showRoomsFromDb(<?= $idUser?>,<?= $idHousing ?>)
     </script>
+    <script>
+      writePopUpsPieces(<?= $idUser?>, <?= $idHousing ?>)
+    </script>
 
     <?php $content = ob_get_clean(); ?>
 
@@ -627,22 +835,21 @@ function room($idUser,$idHousing,$error){
     require("view/frontend/template2.php");
 }
 
-function sensor($idRoom,$error){
+function sensor($idRoom, $error)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Capteurs/actionneurs
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
     <?php
-    if($error!=null){
+    if ($error!=null) {
         ?>
         <?= $error ?>
         <?php
-    }
-    ?>
+    } ?>
     <!--************** Graphique **************-->
     <div id="chartDiv" class="parentDisable">
         <div class="chart" >
@@ -722,11 +929,11 @@ function sensor($idRoom,$error){
 }
 
 
-function showAllSensorsAndActuators($idUser){
+function showAllSensorsAndActuators($idUser)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Tous les capteurs et actionneurs
     <?php $title = ob_get_clean(); ?>
@@ -767,11 +974,11 @@ function showAllSensorsAndActuators($idUser){
     require("view/frontend/template2.php");
 }
 
-function alarm($idUser){
+function alarm($idUser)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Contrôle de l'alarme
     <?php $title = ob_get_clean(); ?>
@@ -807,11 +1014,11 @@ function alarm($idUser){
     require("view/frontend/template2.php");
 }
 
-function forgottenPassword($error){
+function forgottenPassword($error)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Mot de passe oublié
     <?php $title = ob_get_clean(); ?>
@@ -827,12 +1034,11 @@ function forgottenPassword($error){
                 <input type="submit" value="Envoyer" required/>
             </p>
             <?php
-            if($error!=null){
+            if ($error!=null) {
                 ?>
                 <?= $error ?>
                 <?php
-            }
-            ?>
+            } ?>
 
         </form>
 
@@ -843,11 +1049,11 @@ function forgottenPassword($error){
     require("view/frontend/template.php");
 }
 
-function newPassword($tok,$error){
+function newPassword($tok, $error)
+{
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
-    $header = $headerList[1];
-    ?>
+    $header = $headerList[1]; ?>
     <?php ob_start(); ?>
     Réinitialisation du mot de passe
     <?php $title = ob_get_clean(); ?>
@@ -892,17 +1098,15 @@ function newPassword($tok,$error){
             </p>
 
             <?php
-            if($error!=null){
+            if ($error!=null) {
                 ?>
                 <?= $error ?>
                 <?php
-            }
-            ?>
+            } ?>
 
         </form>
     </div>
     <?php $content = ob_get_clean(); ?>
     <?php
     require("view/frontend/template.php");
-
 }
