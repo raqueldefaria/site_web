@@ -82,10 +82,8 @@
 
             <br />
             <a href="adminView.php"> Retourner à la page d'administration </a>
-            <br />
-            <a href="deconnexion.php"> Se déconnecter </a>
-
-
+            <br/>
+            <p> </p>
         </div>
 
 

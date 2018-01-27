@@ -155,7 +155,7 @@ class HousingManager
       switch ($dataToUpdate) {
         case 'address':
           $insertAddress = $db->prepare('UPDATE logement SET logement_adresse = ? WHERE id_Logement = ?');
-          $insertAdress->execute(array($newadresse, $iduser));
+          $insertAddress->execute(array($newadresse, $iduser));
           break;
 
         default:

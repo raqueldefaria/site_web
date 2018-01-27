@@ -265,12 +265,14 @@ function logIn($error){
                 event.preventDefault();
                 missIdentifiant.textContent = 'login manquant';
                 missIdentifiant.style.color = 'red';
-            }else if (identifiantValid.test(identifiant.value) == false){
+            }
+            else if (identifiantValid.test(identifiant.value) == false){
                 event.preventDefault();
                 missPrenom.textContent = 'Format incorrect';
                 missIdentifiant.style.color = 'red';
 
-            }else{
+            }
+            else{
             }
 
         }
@@ -382,7 +384,7 @@ function profile()
         ?>
 
         <div align="center">
-        <h2>Logement <?php echo $it; ?> </h2>
+        <h2>Logement <?php echo $it+1; ?> </h2>
 
         <table>
           <tr>
@@ -427,7 +429,7 @@ function profile()
        <br/>
        <a href="index.php?action=goToEditProfile"> Editer mon profil </a>
        <br/>
-       <a href="deconnexion.php?action=logOut"> Se déconnecter </a>
+       <a href="index.php?action=logOut"> Se déconnecter </a>
 
       </div>
     </div>
@@ -527,7 +529,7 @@ function goToEditProfile($error)
     $housingInfo = $housing->showAllInfo();
     for ($it=0; $it<sizeof($housingInfo); $it++) {
         ?>
-        <h2>Logement <?php echo $it; ?> </h2>
+        <h2>Logement <?php echo $it+1; ?> </h2>
 
         <form method="POST" action="index.php?action=editProfile">
 

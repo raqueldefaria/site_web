@@ -529,8 +529,8 @@ try {
         elseif ($action == 'changePassword') {
             $tok = htmlspecialchars($_GET['tok']);
             $tokInput = htmlspecialchars($_POST['tok2']);
-            $password = htmlspecialchars($_POST['pass_recup']);
-            $passwordVerification = htmlspecialchars($_POST['pass_recup2']);
+            $password = sha1(htmlspecialchars($_POST['pass_recup']));
+            $passwordVerification = sha1(htmlspecialchars($_POST['pass_recup2']));
             if (!empty($tokInput) and !empty($password) and !empty($passwordVerification)) {
                 if ($tok == $tokInput) {
                     if ($password==$passwordVerification) {
