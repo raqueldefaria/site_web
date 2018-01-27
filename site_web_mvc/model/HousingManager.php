@@ -105,7 +105,7 @@ class HousingManager
 
         $insertHousing = $db->prepare("INSERT INTO logement(logement_adresse, logement_codePostal, logement_ville, logement_pays,id_Utilisateur)
                     VALUES(:adresse, :codePostal, :ville, :pays, :id)") or die(print_r($db->errorInfo()));
-        $insertHousing->bindParam(':adresse', $housing->adress);
+        $insertHousing->bindParam(':adresse', $housing->address);
         $insertHousing->bindParam(':codePostal', $housing->zipCode);
         $insertHousing->bindParam(':ville', $housing->city);
         $insertHousing->bindParam(':pays', $housing->country);
