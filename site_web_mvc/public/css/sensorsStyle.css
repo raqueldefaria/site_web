@@ -21,6 +21,13 @@ body{
     padding-right: 30%;
 }
 
+.suppPiece{
+  width:20px;
+  position:relative;
+  left:13px;
+  bottom:35px;
+}
+
 /*------------ Menu ------------*/
 
 #onglets

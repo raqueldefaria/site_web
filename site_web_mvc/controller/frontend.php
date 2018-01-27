@@ -877,7 +877,7 @@ function sensor($idRoom, $error)
                         <option value="Actionneur">Actionneur</option>
                     </select></p>
                 <p>Adresse MAC du Cemac correspondant : <input type="text" name="nomCemac"></p>
-                <input value="Ajouter" type="submit">
+                <input value="Ajouter" type="submit" onclick="addSensor(<?php echo $idRoom?>); event.preventDefault(); hide('addCapteurs'); ">
                 <input value="Fermer" type="submit" onclick="return hide('addCapteurs')">
             </form>
         </div>

@@ -244,7 +244,7 @@ function addSensor(idPiece){
     console.log($('form').serializeArray());
     console.log(idPiece);
     var array = $('form').serializeArray();
-    var obj = {"fonction":array[0].value, "type":array[1].value, "nomCemac":array[2].value };
+    var obj = {"fonction":array[0].value, "type":array[1].value, "nomCemac":array[2].value, "idPiece":idPiece };
     console.log(obj.fonction);
     //window.alert("AH");
     var dbParam = JSON.stringify(obj); // On encode en JSON dbParam, qui contient l'id logement

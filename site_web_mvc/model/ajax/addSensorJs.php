@@ -2,12 +2,12 @@
 
 session_start();
 header("Content-Type: application/json; charset=UTF-8");
-$idPiece = $_SESSION['idPiece'];
+
 $obj = json_decode($_POST["x"], false);
 $fonction = $obj->fonction;
 $type = $obj->type;
 $nomCemac = $obj->nomCemac;
-
+$idPiece = $obj->idPiece;
 
 
 /* ------------------- BDD ------------------- */
@@ -41,12 +41,12 @@ if(empty($responseCemac['id_Cemac']) OR $responseCemac['Piece_idPiece']==$idPiec
     $cemac->closeCursor();
     $data->closeCursor();
 
-    header("Location:../view/interface/capteursPiece.php?id=$idPiece");// à enlever ?
+    //header("Location:../view/interface/capteursPiece.php?id=$idPiece");// à enlever ?
 }
 
 else{
     ?>
 <script>alert("Ce Cemac est deja dans une autre piece !")</script>
 <?php
-    header ("Location:../view/interface/capteursPiece.php?id=$idPiece");
+    //header ("Location:../view/interface/capteursPiece.php?id=$idPiece");
 }
