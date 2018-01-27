@@ -305,6 +305,8 @@ class UserManager
         $updatePassword = $db->prepare('UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?') or die(print_r($db->errorInfo()));
         $response = $updatePassword->execute(array($user->password,$user->mail)) or die(print_r($updatePassword->errorInfo()));
 
+        die(print_r("hi"));
+
         return $response;
 
     }

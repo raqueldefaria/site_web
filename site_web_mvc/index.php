@@ -539,34 +539,37 @@ try {
                         $newUser->setPassword($password);
                         $gettingMail = $newUser->gettingMailFromTok($newUser);
 
-                        if ($gettingMail === false) {
+                        if ($gettingMail == false) {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Le code rentré n'est pas valide. Veuillez réessayer")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
                             newPassword($tok, $error);
-                        } else {
+                        }
+                        else {
                             $newUser->setTok(null);
                             $updateTok = $newUser->updateTok($newUser);
 
-                            if ($updateTok === false) {
+                            if ($updateTok == false) {
                                 ?>
                                 <?php ob_start(); ?>
                                 <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
                                 <?php $error = ob_get_clean(); ?>
                                 <?php
                                 newPassword($tok, $error);
-                            } else {
+                            }
+                            else {
                                 $updatePassword = $newUser->updatePassword($newUser);
-                                if ($updatePassword===false) {
+                                if ($updatePassword==false) {
                                     ?>
                                     <?php ob_start(); ?>
                                     <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
                                     <?php $error = ob_get_clean(); ?>
                                     <?php
                                     newPassword($tok, $error);
-                                } else {
+                                }
+                                else {
                                     ?>
                                     <?php ob_start(); ?>
                                     <script>alert("Votre mot de passe a bien été modifié !")</script>
@@ -576,7 +579,8 @@ try {
                                 }
                             }
                         }
-                    } else {
+                    }
+                    else {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Les 2 mots de passe rentrés ne sont pas les mêmes")</script>
@@ -584,7 +588,8 @@ try {
                         <?php
                         newPassword($tok, $error);
                     }
-                } else {
+                }
+                else {
                     ?>
                     <?php ob_start(); ?>
                     <script>alert("Le code rentré n'est pas valide")</script>
@@ -592,7 +597,8 @@ try {
                     <?php
                     newPassword($tok, $error);
                 }
-            } else {
+            }
+            else {
                 ?>
                 <?php ob_start(); ?>
                 <script>alert("Veuillez remplir tous les champs")</script>
