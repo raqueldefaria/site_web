@@ -2,15 +2,15 @@
 session_start();
 header("Content-Type: application/json; charset=UTF-8");
 $obj = json_decode($_POST["x"], false); //a tester après avec le htmlspecialchars
-$idLogement = $_SESSION['idLogement'];
+
 
 /* ------------------- BDD ------------------- */
-require("../connection_db.php");
+require("../connectionDb.php");
 
 $type = $obj->piece;
 $idUser = $_SESSION['userID'];
 $piece = $obj->nomPiece;
-
+$idLogement = $obj->idLogement;
 
 
 $insertPiece = $db->prepare("INSERT INTO piece(piece_nom, Logement_idLogement, Logement_Utilisateur_idUtilisateur, piece_type) VALUES (:piece,:idLogement,:idUser,:type)") or die(print_r($db->errorInfo()));

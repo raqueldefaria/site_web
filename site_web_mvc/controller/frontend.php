@@ -752,7 +752,7 @@ function room($idUser, $idHousing, $error)
     <!--************** Pop js **************-->
     <div id="addPiece" class="parentDisable">
         <div class="addPieceOptions" >
-            <form method="post" action="index.php?action=addRoom&id=<?php echo $idHousing?>" >
+            <form method="post" id="addPieceForm" action="index.php?action=addRoom&id=<?php echo $idHousing?>" >
                 <p>Type de pièce : <select name="piece">
                         <option value="Garage">Garage</option>
                         <option value="Chambre">Chambre</option>
@@ -765,7 +765,7 @@ function room($idUser, $idHousing, $error)
                     </select></p>
                 <p> Nom de la pièce : <input type="text" name="nomPiece" id="nomPiece" required></p>
                 <span id="missnomPiece"></span>
-                <input value="Ajouter" type="submit" id="boutonAjout">
+                <input value="Ajouter" type="submit" id="boutonAjout" onclick="hide('addPiece'); event.preventDefault(); addRoom(<?php echo $_SESSION['userID']?>, <?php echo $idHousing?>);">
                 <input value="Fermer" type="submit" onclick="return hide('addPiece')" >
             </form>
         </div>
