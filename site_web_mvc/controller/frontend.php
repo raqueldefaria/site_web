@@ -655,7 +655,7 @@ function housing($idUser, $error)
     <!--************** Pop js **************-->
     <div id="addLogement" class="parentDisable">
         <div class="addLogementOptions" >
-            <form method="post" action="index.php?action=addHousing" >
+            <form method="post" id="addLogementForm" action="index.php?action=addHousing" >
                 <p>Ajouter un logement :</p>
                 <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
                 <span id="missAdresse"></span>
@@ -663,7 +663,7 @@ function housing($idUser, $error)
                 <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required />
                 <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required/>
                 <script type="application/javascript" src="public/js/showOrHidePopUp.js"></script>
-                <input value="Ajouter" type="submit"id="boutenvoi">
+                <input value="Ajouter" type="submit"id="boutenvoi" onclick="hide('addLogement'); event.preventDefault(); addHousing(<?php echo $_SESSION['userID']?>);">
                 <input value="Fermer" type="submit" onclick="return hide('addLogement') ">
             </form>
         </div>
