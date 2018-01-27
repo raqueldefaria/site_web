@@ -135,7 +135,7 @@ class HousingManager
         $response = $db->prepare("SELECT id_Utilisateur FROM logement
                          WHERE logement_adresse=:adress AND logement_codePostal=:zipCode AND logement_ville=:city AND logement_pays=:country")or die(print_r("erreur=".$db->errorInfo()));
 
-        $response->bindParam(':adress', $housing->adress);
+        $response->bindParam(':adress', $housing->address);
         $response->bindParam(':zipCode', $housing->zipCode);
         $response->bindParam(':city', $housing->city);
         $response->bindParam(':country', $housing->country);
