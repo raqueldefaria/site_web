@@ -11,12 +11,12 @@ $userinfo = $requser->fetch();
 function deleteuser($id)
 {
   require("../../model/connection_db.php");
+  $deletepiece = $db->prepare('DELETE FROM piece WHERE Logement_Utilisateur_idUtilisateur = ?');
+  $deletepiece->execute(array($id));
   $deletelogement = $db->prepare('DELETE FROM logement WHERE id_Utilisateur = ?');
   $deletelogement->execute(array($id));
   $deleteutilisateur = $db->prepare('DELETE FROM utilisateur WHERE id_Utilisateur = ?');
   $deleteutilisateur->execute(array($id));
-  $deletepiece = $db->prepare('DELETE FROM piece WHERE Logement_Utilisateur_idUtilisateur = ?');
-  $deletepiece->execute(array($id));
 }
 
 /* ------------------- Récupère les information des clients dans la BDD ------------------- */
