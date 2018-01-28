@@ -12,6 +12,7 @@ try {
         $idUser = htmlspecialchars($_SESSION['userID']);
     }
     if (isset($action)) {
+
         if ($action == 'goToRegister') {
             $error = null;
             if (empty($idUser)) {
@@ -20,6 +21,7 @@ try {
                 housing($idUser, $error);
             }
         }
+
         elseif ($action == 'register') {
             $login = htmlspecialchars($_POST['pseudo']);
             $password = sha1(htmlspecialchars($_POST['mdp']));
@@ -133,6 +135,7 @@ try {
                 register($error);
             }
         }
+
         elseif ($action == 'goToLogIn') {
             $error = null;
             if (empty($idUser)) {
@@ -141,6 +144,7 @@ try {
                 housing($idUser, $error);
             }
         }
+
         elseif ($action == 'logIn') {
             $login = htmlspecialchars($_POST['pseudo']);
             $password = sha1(htmlspecialchars($_POST['mdp']));
@@ -191,15 +195,18 @@ try {
                 logIn($error);
             }
         }
+
         elseif ($action == 'logOut') {
             $error=null;
             logOut();
             logIn($error);
         }
+
         elseif ($action == 'goToHousing') {
             $error = null;
             housing($idUser, $error);
         }
+
         elseif ($action == 'addHousing') {
             $adress = htmlspecialchars($_POST['adresse']);
             $zipCode = htmlspecialchars($_POST['codePostal']);
@@ -256,12 +263,14 @@ try {
                 housing($idUser, $error);
             }
         }
+
         elseif ($action == 'goToRooms') {
             $error=null;
             //conditions idHousing
             $idHousing = htmlspecialchars($_GET['id']);
             room($idUser, $idHousing, $error);
         }
+
         elseif ($action == 'addRoom') {
             $idHousing = htmlspecialchars($_GET['id']);
             $room = htmlspecialchars($_POST['piece']);
@@ -303,12 +312,14 @@ try {
                 room($idUser, $idHousing, $error);
             }
         }
+
         elseif ($action == 'goToSensors') {
             $error = null;
             //conditions idHousing
             $idRoom = htmlspecialchars($_GET['id']);
             sensor($idRoom, $error);
         }
+
         elseif ($action == 'addSensor') {
             $idRoom = htmlspecialchars($_GET['id']);
             $sensor = htmlspecialchars($_POST['capteurActionneur']);
@@ -390,12 +401,15 @@ try {
                 sensor($idRoom, $error);
             }
         }
+
         elseif ($action == 'goToListSensors') {
             showAllSensorsAndActuators($idUser);
         }
+
         elseif ($action == 'goToAlarm') {
             alarm($idUser);
         }
+
         elseif ($action == 'goToProfile') {
             // the user cannot edit his profile if he is not connected
             if (!isset($idUser) and empty($idUser)) {
@@ -404,59 +418,127 @@ try {
                 profile();
             }
         }
+
         elseif ($action == 'goToEditProfile') {
-          $error = null;
+            $error = null;
             goToEditProfile($error);
         }
-        elseif ($action == 'editProfile') {
-          $newLogin = htmlspecialchars($_POST['newpseudo']);
-          $newMail = htmlspecialchars($_POST['newmail']);
-          $newFirstName = htmlspecialchars($_POST['newprenom']);
-          $newLastName = htmlspecialchars($_POST['newnom']);
-          $newAddress = htmlspecialchars($_POST['newadresse']);
-          $newCity = htmlspecialchars($_POST['newville']);
-          $newZipCode = htmlspecialchars($_POST['newcodePostal']);
-          $newCountry = htmlspecialchars($_POST['newpays']);
-          $currentPassword = sha1( htmlspecialchars($_POST['mdpactuel']));
-          $newPassword = sha1( htmlspecialchars($_POST['newmdp1']));
-          $newPassword2 = sha1( htmlspecialchars($_POST['newmdp2']));
+
+        elseif ($action == 'editUser') {
+            $newLogin = htmlspecialchars($_POST['newpseudo']);
+            $newMail = htmlspecialchars($_POST['newmail']);
+            $newFirstName = htmlspecialchars($_POST['newprenom']);
+            $newLastName = htmlspecialchars($_POST['newnom']);
+            $currentPassword = sha1( htmlspecialchars($_POST['mdpactuel']));
+            $newPassword = sha1( htmlspecialchars($_POST['newmdp1']));
+            $newPassword2 = sha1( htmlspecialchars($_POST['newmdp2']));
 
 
-          if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
-          !empty($newAddress) AND !empty($newCity) AND !empty($newZipCode) AND !empty($newCountry) AND
-          !empty($currentPassword) AND !empty($newPassword) AND !empty($newPassword)){
-            if($newPassword == $newPassword2){
+            if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
+                !empty($currentPassword) AND !empty($newPassword) AND !empty($newPassword)){
+                $updatedUser = new UserManager();
+
+                $passwordInDb = $updatedUser->gettingPassword($idUser);
+
+                if($newPassword == $newPassword2 AND $currentPassword==$passwordInDb['utilisateur_motDePasse'] ){
+                    $updatedUser->setFirstName($newFirstName);
+                    $updatedUser->setLastName($newLastName);
+                    $updatedUser->setLogin($newLogin);
+                    $updatedUser->setMail($newMail);
+                    $updatedUser->setPassword($newPassword );
+
+                    $updatingInDb = $updatedUser->updateUser($updatedUser,$idUser);
+
+                    if($updatingInDb===false){
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        goToEditProfile($error);
+                    }
+                    else{
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Vos modifications ont bien été prises en compte")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        goToEditProfile($error);
+                    }
+                }
+                else{
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Veuillez vérifier que les mots de passe rentrés sont bien les bons.")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    goToEditProfile($error);
+                }
+            }
+
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                goToEditProfile($error);
+            }
+
+        }
+
+        elseif ($action == 'editHousing') {
+            $idHousing=htmlspecialchars($_GET['id']);
+            $newAddress = htmlspecialchars($_POST['newadresse']);
+            $newCity = htmlspecialchars($_POST['newville']);
+            $newZipCode = htmlspecialchars($_POST['newcodePostal']);
+            $newCountry = htmlspecialchars($_POST['newpays']);
+
+
+            if(!empty($newAddress) AND !empty($newCity) AND !empty($newZipCode) AND !empty($newCountry)){
+                $updatedHousing = new HousingManager();
+                $updatedHousing->setAddress($newAddress);
+                $updatedHousing->setCity($newCity);
+                $updatedHousing->setZipCode($newZipCode);
+                $updatedHousing->setCountry($newCountry);
+
+                $updatingInDb = $updatedHousing->updateHousing($updatedHousing,$idHousing);
+
+                if($updatingInDb===false){
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    goToEditProfile($error);
+                }
+                else{
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Vos modifications ont bien été prises en compte")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    goToEditProfile($error);
+                }
 
             }
-            $updatedUser = new UserManager();
-            $updatedUser->setFirstName($newFirstName);
-            $updatedUser->setLastName($newLastName);
-            $updatedUser->setLogin($newLogin);
-            $updatedUser->setMail($newMail);
 
-            $updatedHousing = new HousingManager();
-            $updatedHousing->setAddress($newAddress);
-            $updatedHousing->setCity($newCity);
-            $updatedHousing->setZipCode($newZipCode);
-            $updatedHousing->setCountry($newCountry);
-
-            $updatedUser->setPassword();
-        }
-
-        else{
-            ?>
-            <?php ob_start(); ?>
-            <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
-            <?php $error = ob_get_clean(); ?>
-            <?php
-            editProfile($error);
-        }
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                goToEditProfile($error);
+            }
 
         }
+
         elseif ($action == 'goToForgottenPassword') {
             $error = null;
             forgottenPassword($error);
         }
+
         elseif ($action == 'forgottenPassword') {
             $mail = htmlspecialchars($_POST['mail_recup']);
             if (isset($mail) && preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $mail)) {
@@ -521,11 +603,13 @@ try {
                 forgottenPassword($error);
             }
         }
+
         elseif ($action == 'goToNewPassword') {
             $tok = htmlspecialchars($_GET['tok']);
             $error = null;
             newPassword($tok, $error);
         }
+
         elseif ($action == 'changePassword') {
             $tok = htmlspecialchars($_GET['tok']);
             $tokInput = htmlspecialchars($_POST['tok2']);
@@ -539,7 +623,7 @@ try {
                         $newUser->setPassword($password);
                         $gettingMail = $newUser->gettingMailFromTok($newUser);
 
-                        if ($gettingMail == false) {
+                        if ($gettingMail === false) {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Le code rentré n'est pas valide. Veuillez réessayer")</script>
@@ -548,10 +632,11 @@ try {
                             newPassword($tok, $error);
                         }
                         else {
+                            $newUser->setMail($gettingMail['utilisateur_mail']);
                             $newUser->setTok(null);
                             $updateTok = $newUser->updateTok($newUser);
 
-                            if ($updateTok == false) {
+                            if ($updateTok === false) {
                                 ?>
                                 <?php ob_start(); ?>
                                 <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
@@ -561,7 +646,7 @@ try {
                             }
                             else {
                                 $updatePassword = $newUser->updatePassword($newUser);
-                                if ($updatePassword==false) {
+                                if ($updatePassword===false) {
                                     ?>
                                     <?php ob_start(); ?>
                                     <script>alert("Un probléme est survenu. Veuillez réessayer")</script>
@@ -607,16 +692,21 @@ try {
                 newPassword($tok, $error);
             }
         }
+
         elseif ($action == 'goToTeam') {
             showTeam();
         }
+
         elseif ($action == 'goToOffers') {
             showOffers();
         }
+
         elseif ($action == 'contact') {
             contact();
         }
-    } else {
+    }
+
+    else {
         homepage();
     }
 } catch (Exception $e) {

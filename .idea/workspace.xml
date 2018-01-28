@@ -4,7 +4,12 @@
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" afterPath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/index.php" afterPath="$PROJECT_DIR$/site_web_mvc/index.php" />
       <change beforePath="$PROJECT_DIR$/site_web_mvc/model/HousingManager.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/HousingManager.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,40 +43,131 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="site_web@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="site_web: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="utilisateur: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="UserManager.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/UserManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="301" column="35" lean-forward="false" selection-start-line="301" selection-start-column="35" selection-end-line="301" selection-end-column="35" />
+              <folding>
+                <element signature="e#364#407#0#PHP" expanded="false" />
+                <element signature="n#__construct#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#518#550#0#PHP" expanded="false" />
+                <element signature="n#getLogin#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#628#666#0#PHP" expanded="false" />
+                <element signature="n#setLogin#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#752#784#0#PHP" expanded="false" />
+                <element signature="n#getPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#868#909#0#PHP" expanded="false" />
+                <element signature="n#setPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1007#1039#0#PHP" expanded="false" />
+                <element signature="n#getMail#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1115#1152#0#PHP" expanded="false" />
+                <element signature="n#setMail#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1234#1266#0#PHP" expanded="false" />
+                <element signature="n#getFirstName#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1352#1394#0#PHP" expanded="false" />
+                <element signature="n#setFirstName#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1496#1528#0#PHP" expanded="false" />
+                <element signature="n#getLastName#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1612#1653#0#PHP" expanded="false" />
+                <element signature="n#setLastName#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1751#1783#0#PHP" expanded="false" />
+                <element signature="n#getBirthday#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#1867#1908#0#PHP" expanded="false" />
+                <element signature="n#setBirthday#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#2006#2038#0#PHP" expanded="false" />
+                <element signature="n#getType#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#2114#2151#0#PHP" expanded="false" />
+                <element signature="n#setType#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#2233#2265#0#PHP" expanded="false" />
+                <element signature="n#getTok#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="e#2339#2375#0#PHP" expanded="false" />
+                <element signature="n#setTok#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#dbConnect#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#getUserIdFromMail#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#checkUserExistence#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#registerUser#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#checkUserExistenceLogIn#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#showAllInfo#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#checkMailExistence#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#gettingMailFromTok#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#updateTok#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#updatePassword#0;n#UserManager#0;n#!!top" expanded="false" />
+                <element signature="n#gettingPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+                <marker date="1517143174525" expanded="true" signature="5748:5805" ph="UPDATE utilisateur... " />
+                <marker date="1517143174525" expanded="true" signature="6816:6890" ph="UPDATE utilisateur... " />
+                <marker date="1517143174525" expanded="true" signature="7206:7275" ph="SELECT utili... utilisateur" />
+                <marker date="1517143174525" expanded="true" signature="7520:7676" ph="UPDATE utilisateur... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3634">
-              <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+            <state relative-caret-position="311">
+              <caret line="648" column="62" lean-forward="true" selection-start-line="648" selection-start-column="62" selection-end-line="648" selection-end-column="62" />
               <folding>
-                <element signature="e#268#27537#0#PHP" expanded="false" />
-                <element signature="e#6124#6336#0#PHP" expanded="false" />
-                <element signature="e#6345#8837#0#PHP" expanded="false" />
-                <element signature="e#8846#8960#0#PHP" expanded="false" />
-                <element signature="e#8969#9079#0#PHP" expanded="false" />
-                <element signature="e#9088#11718#0#PHP" expanded="false" />
-                <element signature="e#11727#11933#0#PHP" expanded="false" />
-                <element signature="e#11942#13778#0#PHP" expanded="false" />
-                <element signature="e#13787#13984#0#PHP" expanded="false" />
-                <element signature="e#13993#18038#0#PHP" expanded="false" />
-                <element signature="e#18047#18145#0#PHP" expanded="false" />
-                <element signature="e#18154#18225#0#PHP" expanded="false" />
-                <element signature="e#18234#18530#0#PHP" expanded="false" />
-                <element signature="e#18539#18650#0#PHP" expanded="false" />
-                <element signature="e#18659#20604#0#PHP" expanded="false" />
-                <element signature="e#20613#20734#0#PHP" expanded="false" />
-                <element signature="e#20743#23280#0#PHP" expanded="false" />
-                <element signature="e#23289#23455#0#PHP" expanded="false" />
-                <element signature="e#23464#27310#0#PHP" expanded="false" />
-                <element signature="e#27319#27385#0#PHP" expanded="false" />
-                <element signature="e#27394#27464#0#PHP" expanded="false" />
-                <element signature="e#27473#27537#0#PHP" expanded="false" />
+                <element signature="e#269#30308#0#PHP" expanded="false" />
+                <element signature="e#493#6117#0#PHP" expanded="false" />
+                <element signature="e#6127#6339#0#PHP" expanded="false" />
+                <element signature="e#6349#8841#0#PHP" expanded="false" />
+                <element signature="e#8851#8965#0#PHP" expanded="false" />
+                <element signature="e#8975#9085#0#PHP" expanded="false" />
+                <element signature="e#9095#11725#0#PHP" expanded="false" />
+                <element signature="e#11735#11941#0#PHP" expanded="false" />
+                <element signature="e#11951#13787#0#PHP" expanded="false" />
+                <element signature="e#13797#13994#0#PHP" expanded="false" />
+                <element signature="e#14004#18049#0#PHP" expanded="false" />
+                <element signature="e#18059#18157#0#PHP" expanded="false" />
+                <element signature="e#18167#18238#0#PHP" expanded="false" />
+                <element signature="e#18248#18544#0#PHP" expanded="false" />
+                <element signature="e#18554#18667#0#PHP" expanded="false" />
+                <element signature="e#18677#21435#0#PHP" expanded="false" />
+                <element signature="e#21445#23284#0#PHP" expanded="false" />
+                <element signature="e#23294#23415#0#PHP" expanded="false" />
+                <element signature="e#23425#25962#0#PHP" expanded="false" />
+                <element signature="e#30088#30154#0#PHP" expanded="false" />
+                <element signature="e#30164#30234#0#PHP" expanded="false" />
+                <element signature="e#30244#30308#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HousingManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="153" column="33" lean-forward="false" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+              <folding>
+                <marker date="1517141597672" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
+                <marker date="1517141597672" expanded="true" signature="2496:2552" ph="SELECT * FRO... logement" />
+                <marker date="1517141597672" expanded="true" signature="2838:3014" ph="SELECT id_Ut... logement" />
+                <marker date="1517141597672" expanded="true" signature="3600:3719" ph="UPDATE logement... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logement" pinned="false" current-in-tab="false">
+        <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.logement">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -79,8 +175,8 @@
       <file leaf-file-name="frontend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1514">
-              <caret line="386" column="37" lean-forward="false" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
+            <state relative-caret-position="-658">
+              <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
               <folding>
                 <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
                 <element signature="n#homepage#0;n#!!top" expanded="false" />
@@ -90,15 +186,17 @@
                 <element signature="n#showTeam#0;n#!!top" expanded="false" />
                 <element signature="n#showOffers#0;n#!!top" expanded="false" />
                 <element signature="n#contact#0;n#!!top" expanded="false" />
+                <element signature="n#profile#0;n#!!top" expanded="false" />
                 <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-                <element signature="n#editProfile#0;n#!!top" expanded="false" />
+                <element signature="e#17525#19074#0#HTML" expanded="false" />
                 <element signature="n#housing#0;n#!!top" expanded="false" />
                 <element signature="n#room#0;n#!!top" expanded="false" />
                 <element signature="n#sensor#0;n#!!top" expanded="false" />
                 <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
                 <element signature="n#alarm#0;n#!!top" expanded="false" />
+                <element signature="e#33570#33594#0#HTML" expanded="true" />
+                <element signature="e#33662#33686#0#HTML" expanded="true" />
                 <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-                <element signature="n#newPassword#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,42 +205,24 @@
       <file leaf-file-name="writePopUps.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-              <folding />
+            <state relative-caret-position="33">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding>
+                <element signature="n#!!block;n#writePopUpsPieces#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HousingManager.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
+      <file leaf-file-name="showData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="110">
+              <caret line="318" column="48" lean-forward="true" selection-start-line="318" selection-start-column="20" selection-end-line="318" selection-end-column="48" />
               <folding>
-                <element signature="e#219#265#0#PHP" expanded="false" />
-                <element signature="n#__construct#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#317#349#0#PHP" expanded="false" />
-                <element signature="n#getAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#431#471#0#PHP" expanded="false" />
-                <element signature="n#setAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#565#597#0#PHP" expanded="false" />
-                <element signature="n#getZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#679#719#0#PHP" expanded="false" />
-                <element signature="n#setZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#813#845#0#PHP" expanded="false" />
-                <element signature="n#getCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#921#958#0#PHP" expanded="false" />
-                <element signature="n#setCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#1040#1072#0#PHP" expanded="false" />
-                <element signature="n#getCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="e#1154#1194#0#PHP" expanded="false" />
-                <element signature="n#setCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="n#dbConnect#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="n#showAllInfo#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <element signature="n#checkHousingExistence#0;n#HousingManager#0;n#!!top" expanded="false" />
-                <marker date="1517076812546" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
-                <marker date="1517076812546" expanded="true" signature="3654:3716" ph="UPDATE logement... " />
+                <marker date="1517139542495" expanded="true" signature="619:635" ph="..." />
+                <marker date="1517139542495" expanded="true" signature="714:730" ph="..." />
+                <marker date="1517139542495" expanded="true" signature="845:861" ph="..." />
               </folding>
             </state>
           </provider>
@@ -154,6 +234,9 @@
     <findStrings>
       <find>newPassword</find>
       <find>profile</find>
+      <find>up</find>
+      <find>==false</find>
+      <find>== false</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,12 +247,15 @@
       <list>
         <option value="$PROJECT_DIR$/site_web_normal/controller/MDP_POST.php" />
         <option value="$PROJECT_DIR$/site_web_normal/view/interface/ReinitialisationMDP.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/view/frontend/template.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/view/frontend/scenario.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/index.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
+        <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/HousingManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/index.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" />
       </list>
     </option>
   </component>
@@ -203,6 +289,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,44 +309,10 @@
               <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,8 +336,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/model/adminModel.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/view/interface/adminmodifyView.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/controller/frontend.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/model/ajax/addSensorJs.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/public/css/sensorsStyle.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/public/js/showData.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -410,22 +466,32 @@
       <workItem from="1516566668588" duration="1025000" />
       <workItem from="1516815998148" duration="2968000" />
       <workItem from="1516826266038" duration="25000" />
-      <workItem from="1517076660816" duration="2083000" />
+      <workItem from="1517076660816" duration="13106000" />
+      <workItem from="1517093352256" duration="3000" />
+      <workItem from="1517138994381" duration="4533000" />
     </task>
+    <task id="LOCAL-00001" summary="MAJ">
+      <created>1517078970667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1517078970667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17782000" />
+    <option name="totallyTimeSpent" value="33341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1918919" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19837838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25135136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -447,276 +513,17 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MAJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAJ" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13860">
-          <caret line="420" column="17" lean-forward="false" selection-start-line="420" selection-start-column="17" selection-end-line="420" selection-end-column="17" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4917">
-          <caret line="149" column="5" lean-forward="false" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="e#219#265#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#317#349#0#PHP" expanded="false" />
-            <element signature="n#getAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#431#471#0#PHP" expanded="false" />
-            <element signature="n#setAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#565#597#0#PHP" expanded="false" />
-            <element signature="n#getZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#679#719#0#PHP" expanded="false" />
-            <element signature="n#setZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#813#845#0#PHP" expanded="false" />
-            <element signature="n#getCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#921#958#0#PHP" expanded="false" />
-            <element signature="n#setCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1040#1072#0#PHP" expanded="false" />
-            <element signature="n#getCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1154#1194#0#PHP" expanded="false" />
-            <element signature="n#setCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#dbConnect#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#showAllInfo#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#checkHousingExistence#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <marker date="1517076812546" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
-            <marker date="1517076812546" expanded="true" signature="3654:3716" ph="UPDATE logement... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10758">
-          <caret line="326" column="10" lean-forward="false" selection-start-line="326" selection-start-column="10" selection-end-line="326" selection-end-column="10" />
-          <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#sensor#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
-          <caret line="446" column="17" lean-forward="false" selection-start-line="446" selection-start-column="17" selection-end-line="446" selection-end-column="17" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4917">
-          <caret line="149" column="5" lean-forward="false" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding>
-            <element signature="e#219#265#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#317#349#0#PHP" expanded="false" />
-            <element signature="n#getAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#431#471#0#PHP" expanded="false" />
-            <element signature="n#setAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#565#597#0#PHP" expanded="false" />
-            <element signature="n#getZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#679#719#0#PHP" expanded="false" />
-            <element signature="n#setZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#813#845#0#PHP" expanded="false" />
-            <element signature="n#getCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#921#958#0#PHP" expanded="false" />
-            <element signature="n#setCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1040#1072#0#PHP" expanded="false" />
-            <element signature="n#getCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1154#1194#0#PHP" expanded="false" />
-            <element signature="n#setCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#dbConnect#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#showAllInfo#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#checkHousingExistence#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <marker date="1517076812546" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
-            <marker date="1517076812546" expanded="true" signature="3654:3716" ph="UPDATE logement... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10659">
-          <caret line="323" column="10" lean-forward="true" selection-start-line="323" selection-start-column="10" selection-end-line="323" selection-end-column="10" />
-          <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#sensor#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="604" column="16" lean-forward="false" selection-start-line="604" selection-start-column="16" selection-end-line="604" selection-end-column="16" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22671">
-          <caret line="687" column="16" lean-forward="false" selection-start-line="687" selection-start-column="16" selection-end-line="687" selection-end-column="16" />
-          <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#sensor#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.donnees">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/equipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_normal/controller/ReinitialisationMDP_POST.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
@@ -770,9 +577,14 @@
             <element signature="n#checkUserExistenceLogIn#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#showAllInfo#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#checkMailExistence#0;n#UserManager#0;n#!!top" expanded="false" />
-            <element signature="n#addTokToDb#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#gettingMailFromTok#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#updateTok#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#updatePassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#gettingPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <marker date="1517143174525" expanded="true" signature="5748:5805" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="6816:6890" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="7206:7275" ph="SELECT utili... utilisateur" />
+            <marker date="1517143174525" expanded="true" signature="7520:7676" ph="UPDATE utilisateur... " />
           </folding>
         </state>
       </provider>
@@ -788,30 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="604" column="16" lean-forward="false" selection-start-line="604" selection-start-column="16" selection-end-line="604" selection-end-column="16" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,15 +616,17 @@
             <element signature="n#showTeam#0;n#!!top" expanded="false" />
             <element signature="n#showOffers#0;n#!!top" expanded="false" />
             <element signature="n#contact#0;n#!!top" expanded="false" />
+            <element signature="n#profile#0;n#!!top" expanded="false" />
             <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
+            <element signature="e#17525#19074#0#HTML" expanded="false" />
             <element signature="n#housing#0;n#!!top" expanded="false" />
             <element signature="n#room#0;n#!!top" expanded="false" />
             <element signature="n#sensor#0;n#!!top" expanded="false" />
             <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
             <element signature="n#alarm#0;n#!!top" expanded="false" />
+            <element signature="e#33570#33594#0#HTML" expanded="true" />
+            <element signature="e#33662#33686#0#HTML" expanded="true" />
             <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -922,9 +712,14 @@
             <element signature="n#checkUserExistenceLogIn#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#showAllInfo#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#checkMailExistence#0;n#UserManager#0;n#!!top" expanded="false" />
-            <element signature="n#addTokToDb#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#gettingMailFromTok#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#updateTok#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#updatePassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#gettingPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <marker date="1517143174525" expanded="true" signature="5748:5805" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="6816:6890" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="7206:7275" ph="SELECT utili... utilisateur" />
+            <marker date="1517143174525" expanded="true" signature="7520:7676" ph="UPDATE utilisateur... " />
           </folding>
         </state>
       </provider>
@@ -940,30 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="604" column="16" lean-forward="false" selection-start-line="604" selection-start-column="16" selection-end-line="604" selection-end-column="16" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,15 +751,17 @@
             <element signature="n#showTeam#0;n#!!top" expanded="false" />
             <element signature="n#showOffers#0;n#!!top" expanded="false" />
             <element signature="n#contact#0;n#!!top" expanded="false" />
+            <element signature="n#profile#0;n#!!top" expanded="false" />
             <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
+            <element signature="e#17525#19074#0#HTML" expanded="false" />
             <element signature="n#housing#0;n#!!top" expanded="false" />
             <element signature="n#room#0;n#!!top" expanded="false" />
             <element signature="n#sensor#0;n#!!top" expanded="false" />
             <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
             <element signature="n#alarm#0;n#!!top" expanded="false" />
+            <element signature="e#33570#33594#0#HTML" expanded="true" />
+            <element signature="e#33662#33686#0#HTML" expanded="true" />
             <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1074,9 +847,14 @@
             <element signature="n#checkUserExistenceLogIn#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#showAllInfo#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#checkMailExistence#0;n#UserManager#0;n#!!top" expanded="false" />
-            <element signature="n#addTokToDb#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#gettingMailFromTok#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#updateTok#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#updatePassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#gettingPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <marker date="1517143174525" expanded="true" signature="5748:5805" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="6816:6890" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="7206:7275" ph="SELECT utili... utilisateur" />
+            <marker date="1517143174525" expanded="true" signature="7520:7676" ph="UPDATE utilisateur... " />
           </folding>
         </state>
       </provider>
@@ -1092,30 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,24 +922,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/equipe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1203,10 +943,197 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.cemac">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/getIdCemacFromIdRoom.php" />
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.piece">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.capteur&amp;eslash;actionneur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1517139542463" expanded="true" signature="271:319" ph="SELECT id_Ce... cemac" />
+            <marker date="1517139542463" expanded="true" signature="486:635" ph="SELECT `capt... capteur/actionneur" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="318" column="48" lean-forward="true" selection-start-line="318" selection-start-column="20" selection-end-line="318" selection-end-column="48" />
+          <folding>
+            <marker date="1517139542495" expanded="true" signature="619:635" ph="..." />
+            <marker date="1517139542495" expanded="true" signature="714:730" ph="..." />
+            <marker date="1517139542495" expanded="true" signature="845:861" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#writePopUpsPieces#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_normal/view/interface/adminmodifyView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_normal/view/interface/adminView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.logement">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="153" column="33" lean-forward="false" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+          <folding>
+            <marker date="1517141597672" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
+            <marker date="1517141597672" expanded="true" signature="2496:2552" ph="SELECT * FRO... logement" />
+            <marker date="1517141597672" expanded="true" signature="2838:3014" ph="SELECT id_Ut... logement" />
+            <marker date="1517141597672" expanded="true" signature="3600:3719" ph="UPDATE logement... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-658">
+          <caret line="300" column="0" lean-forward="false" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding>
+            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
+            <element signature="n#homepage#0;n#!!top" expanded="false" />
+            <element signature="n#register#0;n#!!top" expanded="false" />
+            <element signature="n#logIn#0;n#!!top" expanded="false" />
+            <element signature="n#logOut#0;n#!!top" expanded="false" />
+            <element signature="n#showTeam#0;n#!!top" expanded="false" />
+            <element signature="n#showOffers#0;n#!!top" expanded="false" />
+            <element signature="n#contact#0;n#!!top" expanded="false" />
+            <element signature="n#profile#0;n#!!top" expanded="false" />
+            <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
+            <element signature="e#17525#19074#0#HTML" expanded="false" />
+            <element signature="n#housing#0;n#!!top" expanded="false" />
+            <element signature="n#room#0;n#!!top" expanded="false" />
+            <element signature="n#sensor#0;n#!!top" expanded="false" />
+            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
+            <element signature="n#alarm#0;n#!!top" expanded="false" />
+            <element signature="e#33570#33594#0#HTML" expanded="true" />
+            <element signature="e#33662#33686#0#HTML" expanded="true" />
+            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="648" column="62" lean-forward="true" selection-start-line="648" selection-start-column="62" selection-end-line="648" selection-end-column="62" />
+          <folding>
+            <element signature="e#269#30308#0#PHP" expanded="false" />
+            <element signature="e#493#6117#0#PHP" expanded="false" />
+            <element signature="e#6127#6339#0#PHP" expanded="false" />
+            <element signature="e#6349#8841#0#PHP" expanded="false" />
+            <element signature="e#8851#8965#0#PHP" expanded="false" />
+            <element signature="e#8975#9085#0#PHP" expanded="false" />
+            <element signature="e#9095#11725#0#PHP" expanded="false" />
+            <element signature="e#11735#11941#0#PHP" expanded="false" />
+            <element signature="e#11951#13787#0#PHP" expanded="false" />
+            <element signature="e#13797#13994#0#PHP" expanded="false" />
+            <element signature="e#14004#18049#0#PHP" expanded="false" />
+            <element signature="e#18059#18157#0#PHP" expanded="false" />
+            <element signature="e#18167#18238#0#PHP" expanded="false" />
+            <element signature="e#18248#18544#0#PHP" expanded="false" />
+            <element signature="e#18554#18667#0#PHP" expanded="false" />
+            <element signature="e#18677#21435#0#PHP" expanded="false" />
+            <element signature="e#21445#23284#0#PHP" expanded="false" />
+            <element signature="e#23294#23415#0#PHP" expanded="false" />
+            <element signature="e#23425#25962#0#PHP" expanded="false" />
+            <element signature="e#30088#30154#0#PHP" expanded="false" />
+            <element signature="e#30164#30234#0#PHP" expanded="false" />
+            <element signature="e#30244#30308#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/UserManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="309" column="66" lean-forward="false" selection-start-line="309" selection-start-column="66" selection-end-line="309" selection-end-column="66" />
+        <state relative-caret-position="255">
+          <caret line="301" column="35" lean-forward="false" selection-start-line="301" selection-start-column="35" selection-end-line="301" selection-end-column="35" />
           <folding>
             <element signature="e#364#407#0#PHP" expanded="false" />
             <element signature="n#__construct#0;n#UserManager#0;n#!!top" expanded="false" />
@@ -1249,106 +1176,14 @@
             <element signature="n#checkUserExistenceLogIn#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#showAllInfo#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#checkMailExistence#0;n#UserManager#0;n#!!top" expanded="false" />
-            <element signature="n#addTokToDb#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#gettingMailFromTok#0;n#UserManager#0;n#!!top" expanded="false" />
             <element signature="n#updateTok#0;n#UserManager#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3634">
-          <caret line="392" column="0" lean-forward="false" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
-          <folding>
-            <element signature="e#268#27537#0#PHP" expanded="false" />
-            <element signature="e#6124#6336#0#PHP" expanded="false" />
-            <element signature="e#6345#8837#0#PHP" expanded="false" />
-            <element signature="e#8846#8960#0#PHP" expanded="false" />
-            <element signature="e#8969#9079#0#PHP" expanded="false" />
-            <element signature="e#9088#11718#0#PHP" expanded="false" />
-            <element signature="e#11727#11933#0#PHP" expanded="false" />
-            <element signature="e#11942#13778#0#PHP" expanded="false" />
-            <element signature="e#13787#13984#0#PHP" expanded="false" />
-            <element signature="e#13993#18038#0#PHP" expanded="false" />
-            <element signature="e#18047#18145#0#PHP" expanded="false" />
-            <element signature="e#18154#18225#0#PHP" expanded="false" />
-            <element signature="e#18234#18530#0#PHP" expanded="false" />
-            <element signature="e#18539#18650#0#PHP" expanded="false" />
-            <element signature="e#18659#20604#0#PHP" expanded="false" />
-            <element signature="e#20613#20734#0#PHP" expanded="false" />
-            <element signature="e#20743#23280#0#PHP" expanded="false" />
-            <element signature="e#23289#23455#0#PHP" expanded="false" />
-            <element signature="e#23464#27310#0#PHP" expanded="false" />
-            <element signature="e#27319#27385#0#PHP" expanded="false" />
-            <element signature="e#27394#27464#0#PHP" expanded="false" />
-            <element signature="e#27473#27537#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1514">
-          <caret line="386" column="37" lean-forward="false" selection-start-line="386" selection-start-column="37" selection-end-line="386" selection-end-column="37" />
-          <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#goToEditProfile#0;n#!!top" expanded="false" />
-            <element signature="n#editProfile#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#sensor#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding>
-            <element signature="e#219#265#0#PHP" expanded="false" />
-            <element signature="n#__construct#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#317#349#0#PHP" expanded="false" />
-            <element signature="n#getAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#431#471#0#PHP" expanded="false" />
-            <element signature="n#setAddress#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#565#597#0#PHP" expanded="false" />
-            <element signature="n#getZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#679#719#0#PHP" expanded="false" />
-            <element signature="n#setZipCode#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#813#845#0#PHP" expanded="false" />
-            <element signature="n#getCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#921#958#0#PHP" expanded="false" />
-            <element signature="n#setCity#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1040#1072#0#PHP" expanded="false" />
-            <element signature="n#getCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="e#1154#1194#0#PHP" expanded="false" />
-            <element signature="n#setCountry#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#dbConnect#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#showAllInfo#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <element signature="n#checkHousingExistence#0;n#HousingManager#0;n#!!top" expanded="false" />
-            <marker date="1517076812546" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
-            <marker date="1517076812546" expanded="true" signature="3654:3716" ph="UPDATE logement... " />
+            <element signature="n#updatePassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <element signature="n#gettingPassword#0;n#UserManager#0;n#!!top" expanded="false" />
+            <marker date="1517143174525" expanded="true" signature="5748:5805" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="6816:6890" ph="UPDATE utilisateur... " />
+            <marker date="1517143174525" expanded="true" signature="7206:7275" ph="SELECT utili... utilisateur" />
+            <marker date="1517143174525" expanded="true" signature="7520:7676" ph="UPDATE utilisateur... " />
           </folding>
         </state>
       </provider>

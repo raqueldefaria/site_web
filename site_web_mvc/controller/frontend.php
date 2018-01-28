@@ -457,7 +457,7 @@ function goToEditProfile($error)
        <div align="center">
         <h2>Éditer votre profil</h2>
 
-        <form method="POST" action="index.php?action=editProfile">
+        <form method="POST" action="index.php?action=editUser">
 
           <table>
           <tr>
@@ -531,7 +531,7 @@ function goToEditProfile($error)
         ?>
         <h2>Logement <?php echo $it+1; ?> </h2>
 
-        <form method="POST" action="index.php?action=editProfile">
+        <form method="POST" action="index.php?action=editHousing&id=<?php echo $housingInfo[$it]['id_Logement']; ?>">
 
         <table>
           <tr>
@@ -566,11 +566,7 @@ function goToEditProfile($error)
               <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $housingInfo[$it]['logement_pays']; ?>" required />
             </td>
           </tr>
-
-              <input type="hidden" placeholder="idlogement" id="idlogement" name="idlogement" value="<?php echo $housingInfo[$it]['id_Logement']; ?>" required />
-
         </table>
-
         <br />
         <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
 
@@ -627,10 +623,6 @@ function goToEditProfile($error)
   <?php $content = ob_get_clean(); ?>
   <?php
   require("view/frontend/template.php");
-}
-
-function editProfile(){
-
 }
 
 

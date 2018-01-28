@@ -302,11 +302,33 @@ class UserManager
     function updatePassword($user){
         $db = $this->dbConnect();
 
-        $updatePassword = $db->prepare("UPDATE utilisateur SET utilisateur_motDePasse = ? WHERE utilisateur_mail = ?") or die(print_r($db->errorInfo()));
+        $updatePassword = $db->prepare("UPDATE utilisateur SET utilisateur_motDePasse =? WHERE utilisateur_mail =?") or die(print_r($db->errorInfo()));
         $response = $updatePassword->execute(array($user->password,$user->mail)) or die(print_r($updatePassword->errorInfo()));
 
         return $response;
 
+    }
+
+    function gettingPassword($idUser){
+        $db = $this->dbConnect();
+
+        $currentPassword = $db->prepare("SELECT utilisateur_motDePasse FROM utilisateur WHERE id_Utilisateur=?");
+        $currentPassword->execute(array($idUser));
+
+        $response = $currentPassword->fetch();
+
+        return $response;
+    }
+
+    function updateUser($user,$idUser){
+        $db = $this->dbConnect();
+
+        $request = $db->prepare("UPDATE utilisateur SET utilisateur_motDePasse=?, utilisateur_mail=?, utilisateur_login=?,  utilisateur_nom=?,  utilisateur_prenom=? WHERE id_Utilisateur = ? ") or die(print_r($db->errorInfo()));
+        $response = $request->execute(array($user->password,$user->mail,$user->login,$user->lastName,$user->firstName,$idUser)) or die(print_r($request->errorInfo()));
+
+        $request->closeCursor();
+
+        return $response;
     }
 
 

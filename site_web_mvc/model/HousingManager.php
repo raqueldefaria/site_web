@@ -150,18 +150,14 @@ class HousingManager
     }
 
 
-    function updateHousing($dataToUpdate){
-      $db = $this->dbConnect();
-      switch ($dataToUpdate) {
-        case 'address':
-          $insertAddress = $db->prepare('UPDATE logement SET logement_adresse = ? WHERE id_Logement = ?');
-          $insertAddress->execute(array($newadresse, $iduser));
-          break;
+    function updateHousing($housing,$idHousing){
+        $db = $this->dbConnect();
 
-        default:
-          # code...
-          break;
-      }
+        $request = $db->prepare("UPDATE logement SET logement_adresse=?, logement_codePostal=?, logement_ville=?,  logement_pays=? WHERE id_Logement = ? ") or die(print_r($db->errorInfo()));
+        $response = $request->execute(array($housing->address,$housing->zipCode,$housing->city,$housing->country,$idHousing)) or die(print_r($request->errorInfo()));
+        $request->closeCursor();
+
+        return $response;
     }
 
 
