@@ -33,7 +33,6 @@ function showHousingsFromDb(idUser) {
 
 
 function showRoomsFromDb(idUser, idLogement) {
-    alert("showRooms");
     var obj, dbParam, xmlhttp, myObj, it, txt = "";
     obj = {"idUser": idUser, "idLogement":idLogement };
     dbParam = JSON.stringify(obj);
@@ -95,8 +94,7 @@ function showSensorsFromDb(idPiece) {
         if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
             myObj = JSON.parse(this.responseText);
-            console.log(myObj);
-            if (myObj[0].fonction != null){
+            if (myObj != null){
                 for (it = 0; it < myObj.length; it++) {
                     txt += "<a href='#'>";
                     switch (myObj[it].fonction){

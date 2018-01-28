@@ -1,5 +1,4 @@
 function writePopUpsLogements(idUser) {
-    alert("hi");
     var obj, dbParam, xmlhttp, myObj, it, txt = "";
     obj = {"idUser": idUser};
     dbParam = JSON.stringify(obj);
