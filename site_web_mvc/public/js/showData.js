@@ -33,6 +33,7 @@ function showHousingsFromDb(idUser) {
 
 
 function showRoomsFromDb(idUser, idLogement) {
+    alert("showRooms");
     var obj, dbParam, xmlhttp, myObj, it, txt = "";
     obj = {"idUser": idUser, "idLogement":idLogement };
     dbParam = JSON.stringify(obj);
@@ -209,10 +210,10 @@ function delRoom(idPiece, idLogement, idUser){
     xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             console.log(this.responseText);
-              showRoomsFromDb(idUser, idLogement);
-              //window.alert("AH");
+            showRoomsFromDb(idUser, idLogement);
+            //window.alert("AH");
           }
-      }
+      };
     xmlhttp.open("POST", "model/ajax/deleteRoomJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);

@@ -9,15 +9,17 @@ $idPieceSQL = $obj->idPiece; // j'ai créé une nouvelle variable au lieu d'util
 /* ------------------- BDD ------------------- */
 require("../connectionDb.php");
 
-$cemac_infoID_raw = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece = " .$idPieceSQL);// or die(print_r($db->errorInfo()));
+$cemac_infoID_raw = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece = " .$idPieceSQL) or die(print_r($db->errorInfo()));
 
 
 while($cemac_infoID = $cemac_infoID_raw->fetch()){
-//on supprime les capteurs ayant l'id cemac de la pièce en question
+    // in order to delete the sensors, we need to delete the failures and statistics before
+    $db->exec("DELETE FROM panne WHERE `Capteur/actionneur_Cemac_idCemac` = " .$cemac_infoID['id_Cemac']);
+    $db->exec("DELETE FROM donnees WHERE `Capteur/actionneur_Cemac_idCemac` = " .$cemac_infoID['id_Cemac']);
     $db->exec("DELETE FROM `capteur/actionneur` WHERE Cemac_idCemac = " .$cemac_infoID['id_Cemac']);// or die(print_r($db->errorInfo()));
 }
-$db->exec("DELETE FROM cemac WHERE Piece_idPiece = " .$idPieceSQL); //or die(print_r($db->errorInfo())); // faudrait mettre la clé utilisateur dans la table Cemac
-$db->exec("DELETE FROM piece WHERE id_Piece = ".$idPieceSQL); //or die(print_r($db->errorInfo()));
+$db->exec("DELETE FROM cemac WHERE Piece_idPiece = " .$idPieceSQL) or die(print_r($db->errorInfo())); // faudrait mettre la clé utilisateur dans la table Cemac
+$db->exec("DELETE FROM piece WHERE id_Piece = ".$idPieceSQL) or die(print_r($db->errorInfo()));
 //On supprime également toutes les cemacs se trouvant dans la pièce et enfin la pièce en elle même
 
 
