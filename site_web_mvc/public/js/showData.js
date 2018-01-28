@@ -96,12 +96,10 @@ function showSensorsFromDb(idPiece) {
             myObj = JSON.parse(this.responseText);
             console.log(myObj);
             if (myObj[0].fonction != null){
-
                 for (it = 0; it < myObj.length; it++) {
                     txt += "<a href='#'>";
                     switch (myObj[it].fonction){
                         case "Lumière":
-                            alert("hi");
                             txt += "<div class=\"section\">\n" +
                                 "                <p onclick=\"return popChart('chartDiv', 10," + idPiece +", 'Flux lumineux', 'Flux lumineux en fonction du temps','Flux lumineux en lumens', 'Temps en heures')\">Lumière </p>\n" +
                                 "                <div class=imgBoutton>\n" +
@@ -166,7 +164,6 @@ function showSensorsFromDb(idPiece) {
                     }
                     txt += "</a>";
                 }
-                alert(txt);
             }
             txt +="<a href=\"#\" onclick=\"return pop('addCapteurs') \" >\n" +
                 "            <div class=\"section\">\n" +
@@ -174,7 +171,6 @@ function showSensorsFromDb(idPiece) {
                 "                <p>Ajouter</p>\n" +
                 "            </div>\n" +
                 "        </a>";
-            alert(txt);
             document.getElementById("capteursActionneurs").innerHTML = txt;
         }
 

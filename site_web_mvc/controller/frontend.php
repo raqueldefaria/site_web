@@ -221,6 +221,7 @@ function logIn($error){
     Connexion
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
+    <link rel="stylesheet" href="public/css/connexion.css" />
     <div class="corps">
 
         <form method="post" action="index.php?action=logIn">
@@ -1017,6 +1018,7 @@ function forgottenPassword($error)
     Mot de passe oublié
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
+    <link rel="stylesheet" href="public/css/connexion.css" />
     <div class="corps">
 
         <form method="post" action="index.php?action=forgottenPassword">
@@ -1052,6 +1054,7 @@ function newPassword($tok, $error)
     Réinitialisation du mot de passe
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
+    <link rel="stylesheet" href="public/css/connexion.css" />
     <div id="corps">
         <form method="post" action="index.php?action=changePassword&tok=<?php echo $tok?>">
             <p>

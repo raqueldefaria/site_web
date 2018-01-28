@@ -7,7 +7,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="public/css/inscription.css" />
-    <link rel="stylesheet" href="public/css/connexion.css" />
     <?= $styleHeader ?>
     <link rel="stylesheet" href="public/css/footer.css" />
     <link rel="stylesheet" href="public/css/profil.css" />
