@@ -24,6 +24,7 @@ function xDataFromDb (limit, idPiece, idSensor){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
+            console.log(this.responseText);
             responseFromDb = JSON.parse(this.responseText); // db data
             for (it = 0; it < responseFromDb.length; it++){ //separating data
                 dataArray.push(String(responseFromDb[it].donnees_temps));
@@ -31,7 +32,7 @@ function xDataFromDb (limit, idPiece, idSensor){
         }
     };
 
-    xmlhttp.open("POST", "model/chart.php", true);
+    xmlhttp.open("POST", "model/ajax/chart.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 
@@ -55,7 +56,7 @@ function yDataFromDb (limit, idPiece, idSensor){
         }
     };
 
-    xmlhttp.open("POST", "model/chart.php", true);
+    xmlhttp.open("POST", "model/ajax/chart.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
 
