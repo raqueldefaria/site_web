@@ -148,7 +148,7 @@ try {
 
         elseif ($action == 'logIn') {
             $login = htmlspecialchars($_POST['pseudo']);
-            $password = sha1(htmlspecialchars($_POST['mdp']));
+            $password = htmlspecialchars($_POST['mdp']);
             //$hash = password_hash($password, PASSWORD_DEFAULT);
             if (!empty($login) and !empty($password)) {
                 $userLogIn = new UserManager;
@@ -158,7 +158,7 @@ try {
                 $userExistence = $userLogIn->checkUserExistenceLogIn($userLogIn);
 
                 if (!empty($userExistence)) {
-                    if ($userExistence['utilisateur_motDePasse']==$userLogIn->getPassword()) {
+                    if (password_verify($userLogIn->getPassword(), $userExistence['utilisateur_motDePasse'])) {
                         session_start();
                         $_SESSION['login'] = $login;
                         $_SESSION['userID'] = $userExistence['id_Utilisateur'];
