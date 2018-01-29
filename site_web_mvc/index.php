@@ -24,8 +24,8 @@ try {
 
         elseif ($action == 'register') {
             $login = htmlspecialchars($_POST['pseudo']);
-            $password = sha1(htmlspecialchars($_POST['mdp']));
-            $password2 = sha1(htmlspecialchars($_POST['mdp2']));
+            $password = htmlspecialchars($_POST['mdp']);
+            $password2 = htmlspecialchars($_POST['mdp2']);
             //$hash = password_hash($password, PASSWORD_DEFAULT);
             //$hash2 = password_hash($password2, PASSWORD_DEFAULT);
             $mail = htmlspecialchars($_POST['mail']);
@@ -41,6 +41,7 @@ try {
                 and !empty($lastName) and !empty($birthday) and !empty($mail) and !empty($adress)
                 and !empty($zipCode) and !empty($city) and !empty($country)) {
                 if ($password == $password2) {
+                    $password = password_hash($password, PASSWORD_DEFAULT);
                     $user = new UserManager();
                     $user->setLogin($login);
                     $user->setPassword($password);
