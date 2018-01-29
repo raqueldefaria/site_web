@@ -98,6 +98,7 @@ function register($error){
     Inscription
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
+    <link rel="stylesheet" href="public/css/connexion.css" />
     <div class="corps">
         <form action="index.php?action=register" method="post">
             <p>
