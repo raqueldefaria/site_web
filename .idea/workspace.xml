@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" afterPath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,28 +67,28 @@
             <state relative-caret-position="137">
               <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
-                <element signature="e#269#30306#0#PHP" expanded="false" />
-                <element signature="e#493#6115#0#PHP" expanded="false" />
-                <element signature="e#6125#6337#0#PHP" expanded="false" />
-                <element signature="e#8849#8963#0#PHP" expanded="false" />
-                <element signature="e#8973#9083#0#PHP" expanded="false" />
-                <element signature="e#9093#11723#0#PHP" expanded="false" />
-                <element signature="e#11733#11939#0#PHP" expanded="false" />
-                <element signature="e#11949#13785#0#PHP" expanded="false" />
-                <element signature="e#13795#13992#0#PHP" expanded="false" />
-                <element signature="e#14002#18047#0#PHP" expanded="false" />
-                <element signature="e#18057#18155#0#PHP" expanded="false" />
-                <element signature="e#18165#18236#0#PHP" expanded="false" />
-                <element signature="e#18552#18665#0#PHP" expanded="false" />
-                <element signature="e#18675#21433#0#PHP" expanded="false" />
-                <element signature="e#21443#23282#0#PHP" expanded="false" />
-                <element signature="e#23292#23413#0#PHP" expanded="false" />
-                <element signature="e#23423#25960#0#PHP" expanded="false" />
-                <element signature="e#25970#26136#0#PHP" expanded="false" />
-                <element signature="e#26146#30076#0#PHP" expanded="false" />
-                <element signature="e#30086#30152#0#PHP" expanded="false" />
-                <element signature="e#30162#30232#0#PHP" expanded="false" />
-                <element signature="e#30242#30306#0#PHP" expanded="false" />
+                <element signature="e#269#30370#0#PHP" expanded="false" />
+                <element signature="e#493#6179#0#PHP" expanded="false" />
+                <element signature="e#6189#6401#0#PHP" expanded="false" />
+                <element signature="e#8913#9027#0#PHP" expanded="false" />
+                <element signature="e#9037#9147#0#PHP" expanded="false" />
+                <element signature="e#9157#11787#0#PHP" expanded="false" />
+                <element signature="e#11797#12003#0#PHP" expanded="false" />
+                <element signature="e#12013#13849#0#PHP" expanded="false" />
+                <element signature="e#13859#14056#0#PHP" expanded="false" />
+                <element signature="e#14066#18111#0#PHP" expanded="false" />
+                <element signature="e#18121#18219#0#PHP" expanded="false" />
+                <element signature="e#18229#18300#0#PHP" expanded="false" />
+                <element signature="e#18616#18729#0#PHP" expanded="false" />
+                <element signature="e#18739#21497#0#PHP" expanded="false" />
+                <element signature="e#21507#23346#0#PHP" expanded="false" />
+                <element signature="e#23356#23477#0#PHP" expanded="false" />
+                <element signature="e#23487#26024#0#PHP" expanded="false" />
+                <element signature="e#26034#26200#0#PHP" expanded="false" />
+                <element signature="e#26210#30140#0#PHP" expanded="false" />
+                <element signature="e#30150#30216#0#PHP" expanded="false" />
+                <element signature="e#30226#30296#0#PHP" expanded="false" />
+                <element signature="e#30306#30370#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -363,6 +362,116 @@
       <recent name="C:\wamp64\www\tests\site_web\site_web_mvc\model\ajax" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/index.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -398,7 +507,7 @@
       <workItem from="1517093352256" duration="3000" />
       <workItem from="1517138994381" duration="7766000" />
       <workItem from="1517160868328" duration="8661000" />
-      <workItem from="1517257391873" duration="917000" />
+      <workItem from="1517257391873" duration="1021000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -449,11 +558,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517257498416</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="MAJ inscription css inscription">
+      <created>1517258585360</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1517258585360</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46152000" />
+    <option name="totallyTimeSpent" value="46256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -489,7 +605,8 @@
     <MESSAGE value="On peut desormais supprimmer des pieces" />
     <MESSAGE value="Supprimmer des pieces + afficher capteurs" />
     <MESSAGE value="MAJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAJ" />
+    <MESSAGE value="MAJ inscription css inscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAJ inscription css inscription" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -998,28 +1115,28 @@
         <state relative-caret-position="137">
           <caret line="24" column="40" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
-            <element signature="e#269#30306#0#PHP" expanded="false" />
-            <element signature="e#493#6115#0#PHP" expanded="false" />
-            <element signature="e#6125#6337#0#PHP" expanded="false" />
-            <element signature="e#8849#8963#0#PHP" expanded="false" />
-            <element signature="e#8973#9083#0#PHP" expanded="false" />
-            <element signature="e#9093#11723#0#PHP" expanded="false" />
-            <element signature="e#11733#11939#0#PHP" expanded="false" />
-            <element signature="e#11949#13785#0#PHP" expanded="false" />
-            <element signature="e#13795#13992#0#PHP" expanded="false" />
-            <element signature="e#14002#18047#0#PHP" expanded="false" />
-            <element signature="e#18057#18155#0#PHP" expanded="false" />
-            <element signature="e#18165#18236#0#PHP" expanded="false" />
-            <element signature="e#18552#18665#0#PHP" expanded="false" />
-            <element signature="e#18675#21433#0#PHP" expanded="false" />
-            <element signature="e#21443#23282#0#PHP" expanded="false" />
-            <element signature="e#23292#23413#0#PHP" expanded="false" />
-            <element signature="e#23423#25960#0#PHP" expanded="false" />
-            <element signature="e#25970#26136#0#PHP" expanded="false" />
-            <element signature="e#26146#30076#0#PHP" expanded="false" />
-            <element signature="e#30086#30152#0#PHP" expanded="false" />
-            <element signature="e#30162#30232#0#PHP" expanded="false" />
-            <element signature="e#30242#30306#0#PHP" expanded="false" />
+            <element signature="e#269#30370#0#PHP" expanded="false" />
+            <element signature="e#493#6179#0#PHP" expanded="false" />
+            <element signature="e#6189#6401#0#PHP" expanded="false" />
+            <element signature="e#8913#9027#0#PHP" expanded="false" />
+            <element signature="e#9037#9147#0#PHP" expanded="false" />
+            <element signature="e#9157#11787#0#PHP" expanded="false" />
+            <element signature="e#11797#12003#0#PHP" expanded="false" />
+            <element signature="e#12013#13849#0#PHP" expanded="false" />
+            <element signature="e#13859#14056#0#PHP" expanded="false" />
+            <element signature="e#14066#18111#0#PHP" expanded="false" />
+            <element signature="e#18121#18219#0#PHP" expanded="false" />
+            <element signature="e#18229#18300#0#PHP" expanded="false" />
+            <element signature="e#18616#18729#0#PHP" expanded="false" />
+            <element signature="e#18739#21497#0#PHP" expanded="false" />
+            <element signature="e#21507#23346#0#PHP" expanded="false" />
+            <element signature="e#23356#23477#0#PHP" expanded="false" />
+            <element signature="e#23487#26024#0#PHP" expanded="false" />
+            <element signature="e#26034#26200#0#PHP" expanded="false" />
+            <element signature="e#26210#30140#0#PHP" expanded="false" />
+            <element signature="e#30150#30216#0#PHP" expanded="false" />
+            <element signature="e#30226#30296#0#PHP" expanded="false" />
+            <element signature="e#30306#30370#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
