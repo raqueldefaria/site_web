@@ -7,7 +7,7 @@ $requser = $db->prepare('SELECT * FROM utilisateur,logement  WHERE utilisateur.i
 $requser->execute(array($_SESSION['userID'], $_SESSION['userID']));
 $userinfo = $requser->fetch();
 
-/* ------------------- Requête de la table logement ------------------- */
+/* ------------------- Requête sur la table logement ------------------- */
 function table_logements()
 {
   require("../../model/connection_db.php");

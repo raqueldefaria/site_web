@@ -72,9 +72,10 @@
 
         </form>
 
-          <?php
-          show_logements();
-          ?>
+        //Fonction permettant d'afficher tous les logements de l'utilisateur
+        <?php
+        show_logements();
+        ?>
 
        <?php if(isset($msg)) { echo $msg; } ?>
 

@@ -94,6 +94,7 @@
 
         </form>
 
+        //Fonction permettant d'afficher tous les logements de l'utilisateur
         <?php
         show_logements();
         ?>

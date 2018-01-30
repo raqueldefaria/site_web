@@ -15,7 +15,6 @@
         <title> DomOnline - Administration </title>
     </head>
 
-
     <body>
 
     <?php include("headerbis.php"); ?>
@@ -49,6 +48,5 @@
     <?php include("footer.php"); ?>
 
     </body>
-
 
 </html>

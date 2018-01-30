@@ -19,6 +19,7 @@ function show_logements()
 {
   $data = table_logements();
   $count = 0;
+  //Boucle permettant d'afficher plusieurs logements
   while($logements = $data->fetch())
   {
   $count++;
