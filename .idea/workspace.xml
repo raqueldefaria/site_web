@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="213" column="43" lean-forward="true" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+              <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
               <folding>
                 <element signature="n#!!block;n#showHousingsFromDb#0" expanded="false" />
                 <element signature="n#!!block;n#showRoomsFromDb#0" expanded="false" />
@@ -68,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
-              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <marker date="1517395322142" expanded="true" signature="319:364" ph="SELECT * FRO... logement" />
               </folding>
@@ -98,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="362">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <marker date="1517395643548" expanded="true" signature="268:373" ph="SELECT * FRO... piece" />
               </folding>
@@ -110,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
-              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding>
                 <marker date="1517395481110" expanded="true" signature="271:319" ph="SELECT id_Ce... cemac" />
                 <marker date="1517395481110" expanded="true" signature="465:612" ph="SELECT `capt... capteur/actionneur" />
@@ -134,8 +129,8 @@
       <file leaf-file-name="deleteSensorJs.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state relative-caret-position="132">
+              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding>
                 <marker date="1517396225513" expanded="true" signature="278:345" ph="SELECT id_Pa... panne" />
                 <marker date="1517396225513" expanded="true" signature="278:346" ph="SELECT id_Pa... panne" />
@@ -160,7 +155,7 @@
             <state relative-caret-position="726">
               <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding>
-                <element signature="e#269#30449#0#PHP" expanded="false" />
+                <element signature="e#269#30527#0#PHP" expanded="false" />
                 <element signature="e#493#6179#0#PHP" expanded="false" />
                 <element signature="e#6189#6401#0#PHP" expanded="false" />
                 <element signature="e#6411#8914#0#PHP" expanded="false" />
@@ -175,12 +170,12 @@
                 <element signature="e#18240#18311#0#PHP" expanded="false" />
                 <element signature="e#18321#18617#0#PHP" expanded="false" />
                 <element signature="e#18627#18740#0#PHP" expanded="false" />
-                <element signature="e#18750#21508#0#PHP" expanded="false" />
-                <element signature="e#21518#23357#0#PHP" expanded="false" />
-                <element signature="e#23367#23488#0#PHP" expanded="false" />
-                <element signature="e#23498#26035#0#PHP" expanded="false" />
-                <element signature="e#26045#26211#0#PHP" expanded="false" />
-                <element signature="e#26221#30219#0#PHP" expanded="false" />
+                <element signature="e#18750#21586#0#PHP" expanded="false" />
+                <element signature="e#21596#23435#0#PHP" expanded="false" />
+                <element signature="e#23445#23566#0#PHP" expanded="false" />
+                <element signature="e#23576#26113#0#PHP" expanded="false" />
+                <element signature="e#26123#26289#0#PHP" expanded="false" />
+                <element signature="e#26299#30297#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -369,6 +364,126 @@
       <recent name="C:\wamp64\www\tests\site_web\site_web_mvc\model\ajax" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/controller/frontend.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/view/frontend/offres.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/controller/profilController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/model/adminModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/model/editionProfilModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/model/profilModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/view/interface/adminView.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/view/interface/adminmodifyView.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/view/interface/editionProfilView.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_normal/view/interface/profil.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -406,7 +521,7 @@
       <workItem from="1517160868328" duration="8661000" />
       <workItem from="1517257391873" duration="4442000" />
       <workItem from="1517394024104" duration="16000" />
-      <workItem from="1517394090669" duration="2149000" />
+      <workItem from="1517394090669" duration="2208000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -471,11 +586,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517258626011</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="MAJ">
+      <created>1517396273561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1517396273561</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51842000" />
+    <option name="totallyTimeSpent" value="51901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -510,9 +632,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="On peut desormais supprimmer des pieces" />
     <MESSAGE value="Supprimmer des pieces + afficher capteurs" />
-    <MESSAGE value="MAJ" />
     <MESSAGE value="MAJ inscription css inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="MAJ inscription css inscription" />
+    <MESSAGE value="MAJ" />
+    <option name="LAST_COMMIT_MESSAGE" value="MAJ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -807,7 +929,7 @@
         <state relative-caret-position="726">
           <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding>
-            <element signature="e#269#30449#0#PHP" expanded="false" />
+            <element signature="e#269#30527#0#PHP" expanded="false" />
             <element signature="e#493#6179#0#PHP" expanded="false" />
             <element signature="e#6189#6401#0#PHP" expanded="false" />
             <element signature="e#6411#8914#0#PHP" expanded="false" />
@@ -822,12 +944,12 @@
             <element signature="e#18240#18311#0#PHP" expanded="false" />
             <element signature="e#18321#18617#0#PHP" expanded="false" />
             <element signature="e#18627#18740#0#PHP" expanded="false" />
-            <element signature="e#18750#21508#0#PHP" expanded="false" />
-            <element signature="e#21518#23357#0#PHP" expanded="false" />
-            <element signature="e#23367#23488#0#PHP" expanded="false" />
-            <element signature="e#23498#26035#0#PHP" expanded="false" />
-            <element signature="e#26045#26211#0#PHP" expanded="false" />
-            <element signature="e#26221#30219#0#PHP" expanded="false" />
+            <element signature="e#18750#21586#0#PHP" expanded="false" />
+            <element signature="e#21596#23435#0#PHP" expanded="false" />
+            <element signature="e#23445#23566#0#PHP" expanded="false" />
+            <element signature="e#23576#26113#0#PHP" expanded="false" />
+            <element signature="e#26123#26289#0#PHP" expanded="false" />
+            <element signature="e#26299#30297#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -864,7 +986,7 @@
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
             <marker date="1517395481110" expanded="true" signature="271:319" ph="SELECT id_Ce... cemac" />
             <marker date="1517395481110" expanded="true" signature="465:612" ph="SELECT `capt... capteur/actionneur" />
@@ -885,7 +1007,7 @@
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <marker date="1517395643548" expanded="true" signature="268:373" ph="SELECT * FRO... piece" />
           </folding>
@@ -895,7 +1017,7 @@
     <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="213" column="43" lean-forward="true" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+          <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
           <folding>
             <element signature="n#!!block;n#showHousingsFromDb#0" expanded="false" />
             <element signature="n#!!block;n#showRoomsFromDb#0" expanded="false" />
@@ -911,7 +1033,7 @@
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <marker date="1517395322142" expanded="true" signature="319:364" ph="SELECT * FRO... logement" />
           </folding>
@@ -920,8 +1042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="132">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding>
             <marker date="1517396225513" expanded="true" signature="278:345" ph="SELECT id_Pa... panne" />
             <marker date="1517396225513" expanded="true" signature="278:346" ph="SELECT id_Pa... panne" />
