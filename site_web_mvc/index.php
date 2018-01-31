@@ -724,32 +724,11 @@ try {
             $response = $user->checkId($idUser,$tok);
 
             if($response==0){
-                user($idUser,$error); // go to room
+                user($idUser,$error); // go to user
             }
             else{
                 newPassword($tok, $error);
             }
-
-
-
-            /*
-            $error = null;
-            //conditions idRoom
-            $idRoom = htmlspecialchars($_GET['id']);
-
-            // creating a room in order to access its functions
-            $room = new RoomManager();
-
-            // calling the function checkId
-            $response = $room->checkId($idUser,$idRoom);
-
-            if($response==0){
-                room($idUser,$error); // go to room
-            }
-            else{
-                sensor($idRoom, $error);
-            }
-            */
         }
 
         elseif ($action == 'changePassword') {
@@ -854,6 +833,7 @@ try {
         elseif ($action=='goToProfileAdmin'){
             $error = null;
             profileAdmin($error,$idUser);
+
         }
 
         //show all users

@@ -401,6 +401,14 @@ class UserManager
         return $response;
     }
 
+    function checkId($idUser, $tok){
+      $db = $this->dbConnect();
+
+      $response = $db->prepare('SELECT * FROM utilisateur WHERE id_Utilisateur = ? AND tok = ?');
+      $response->execute(array($idUser,$tok));
+
+      return $response->rowCount();
+    }
 
 
 
