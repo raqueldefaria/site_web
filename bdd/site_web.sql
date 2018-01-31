@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  sam. 27 jan. 2018 à 17:39
+-- Généré le :  mer. 31 jan. 2018 à 22:13
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -37,21 +37,16 @@ CREATE TABLE IF NOT EXISTS `capteur/actionneur` (
   `Cemac_idCemac` int(11) NOT NULL,
   PRIMARY KEY (`id_Capteur/actionneur`,`Cemac_idCemac`),
   KEY `fk_Capteur/actionneur_Cemac1_idx` (`Cemac_idCemac`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `capteur/actionneur`
 --
 
 INSERT INTO `capteur/actionneur` (`id_Capteur/actionneur`, `capteur/actionneur_numero`, `capteur/actionneur_type`, `capteur/actionneur_fonction`, `Cemac_idCemac`) VALUES
-(1, NULL, 'Capteur', 'Lumière', 6),
-(2, NULL, 'Capteur', 'Température', 6),
-(3, NULL, 'Actionneur', 'Volets', 7),
-(4, NULL, 'Capteur', 'Lumière', 6),
-(5, NULL, 'Capteur', 'Lumière', 6),
-(6, NULL, 'Actionneur', 'Volets', 6),
-(11, NULL, 'Capteur', 'Lumière', 9),
-(12, NULL, 'Actionneur', 'Volets', 9);
+(26, NULL, 'Capteur', 'Lumière', 24),
+(27, NULL, 'Actionneur', 'Volets', 25),
+(28, NULL, 'Capteur', 'Lumière', 25);
 
 -- --------------------------------------------------------
 
@@ -66,16 +61,16 @@ CREATE TABLE IF NOT EXISTS `cemac` (
   `Piece_idPiece` int(11) NOT NULL,
   PRIMARY KEY (`id_Cemac`,`Piece_idPiece`),
   KEY `fk_Cemac_Piece1_idx` (`Piece_idPiece`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `cemac`
 --
 
 INSERT INTO `cemac` (`id_Cemac`, `cemac_nom`, `Piece_idPiece`) VALUES
-(6, '00:0C:F1:56:98:AD', 14),
-(7, '00:0C:F1:56:98:AE', 15),
-(9, '00:0C:F1:56:98:AA', 17);
+(24, '0x2b7', 30),
+(25, 'aztcoc', 32),
+(26, 'atzcoc', 32);
 
 -- --------------------------------------------------------
 
@@ -141,20 +136,6 @@ CREATE TABLE IF NOT EXISTS `donnees` (
   KEY `fk_Donnees_Capteur/actionneur1_idx` (`Capteur/actionneur_idCapteur/actionneur`,`Capteur/actionneur_Cemac_idCemac`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `donnees`
---
-
-INSERT INTO `donnees` (`id_Donnees`, `donnees_temps`, `donnees_valeur`, `Capteur/actionneur_idCapteur/actionneur`, `Capteur/actionneur_Cemac_idCemac`) VALUES
-(1, 1, '2.00', 1, 6),
-(2, 2, '4.00', 2, 6),
-(3, 50, '54.00', 4, 6),
-(4, 5, '7.00', 1, 6),
-(5, 10, '3.00', 2, 6),
-(6, 25, '7.00', 4, 6),
-(7, 10, '5.00', 1, 6),
-(8, 15, '10.00', 1, 6);
-
 -- --------------------------------------------------------
 
 --
@@ -185,25 +166,16 @@ CREATE TABLE IF NOT EXISTS `logement` (
   `id_Utilisateur` int(11) NOT NULL,
   PRIMARY KEY (`id_Logement`,`id_Utilisateur`),
   KEY `fk_Logement_Utilisateur1_idx` (`id_Utilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `logement`
 --
 
 INSERT INTO `logement` (`id_Logement`, `logement_adresse`, `logement_codePostal`, `logement_ville`, `logement_pays`, `id_Utilisateur`) VALUES
-(67, '18 avenue de la porte des poissonniers', '75018', 'Paris', 'France', 91),
-(68, '18 avenue de la porte des poissonniers', '75018', 'Paris', 'France', 92),
-(69, 'hi', 'hi', 'hi', 'hi', 93),
-(70, 'ho', 'ho', 'ho', 'ho', 93),
-(71, 'a', 'a', 'a', 'a', 94),
-(74, 'hi', 'hi', 'hi', 'hi', 93),
-(75, 'hi', 'hi', 'hi', 'hi', 93),
-(78, 'a', 'a', 'a', 'a', 94),
-(79, 'h', 'h', 'h', 'h', 92),
-(82, NULL, 'hi', 'hi', 'hi', 96),
-(83, NULL, 'hi', 'hi', 'hi', 91),
-(84, NULL, 'hi', 'hi', 'hi', 91);
+(96, '5 avenue Lombart', '92 260', 'Fontenay', 'France', 102),
+(101, '10 rue de Vanves', '92', 'Issy', 'France', 105),
+(102, '28 rue Notre Dame des Champs', '75 006', 'Paris', 'France', 105);
 
 -- --------------------------------------------------------
 
@@ -222,15 +194,6 @@ CREATE TABLE IF NOT EXISTS `panne` (
   KEY `fk_Panne_Capteur/actionneur1_idx` (`Capteur/actionneur_idCapteur/actionneur`,`Capteur/actionneur_Cemac_idCemac`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `panne`
---
-
-INSERT INTO `panne` (`id_Panne`, `panne_date`, `panne_type`, `Capteur/actionneur_idCapteur/actionneur`, `Capteur/actionneur_Cemac_idCemac`) VALUES
-(1, '2018-01-17', 'Arret', 12, 9),
-(2, '2018-01-18', 'Arret', 12, 9),
-(3, '2018-01-17', 'Arret', 12, 9);
-
 -- --------------------------------------------------------
 
 --
@@ -246,21 +209,16 @@ CREATE TABLE IF NOT EXISTS `piece` (
   `piece_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_Piece`,`Logement_idLogement`,`Logement_Utilisateur_idUtilisateur`),
   KEY `fk_Piece_Logement1_idx` (`Logement_idLogement`,`Logement_Utilisateur_idUtilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `piece`
 --
 
 INSERT INTO `piece` (`id_Piece`, `piece_nom`, `Logement_idLogement`, `Logement_Utilisateur_idUtilisateur`, `piece_type`) VALUES
-(1, 'Garage', 68, 92, 'Garage'),
-(2, 'Bureau', 68, 92, 'Bureau'),
-(6, 'Garage', 69, 93, 'Garage'),
-(9, 'Garage', 71, 94, 'Garage'),
-(13, 'Salle de bain', 69, 93, 'Salle De Bain'),
-(14, 'Garage', 67, 91, 'Garage'),
-(15, 'Chambre', 68, 92, 'Chambre'),
-(17, 'Cuisine', 67, 91, 'Cuisine');
+(30, 'Toilettes 1er étage', 101, 105, 'Toilettes'),
+(31, 'Amphi L012', 101, 105, 'autre'),
+(32, 'Administration', 101, 105, 'Bureau');
 
 -- --------------------------------------------------------
 
@@ -326,18 +284,15 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `utilisateur_dateDeNaissance` date DEFAULT NULL,
   `tok` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_Utilisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id_Utilisateur`, `utilisateur_type`, `utilisateur_nom`, `utilisateur_prenom`, `utilisateur_mail`, `utilisateur_login`, `utilisateur_motDePasse`, `utilisateur_dateDeNaissance`, `tok`) VALUES
-(91, 'particulier', 'mvc', 'mvc', 'racheldf19@gmail.com', 'mvc', '484c7e7e748dd6c6f6fbf66b8ffa8e7c6c3a403a', '1997-08-19', 1113),
-(92, 'particulier', 'test', 'test', 'test@gmail.com', 'test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', '1997-01-19', NULL),
-(93, 'particulier', 'hi', 'hi', 'hi@gmail.com', 'hi', 'c22b5f9178342609428d6f51b2c5af4c0bde6a42', '1111-11-11', NULL),
-(94, 'particulier', 'ho', 'ho', 'ho@gmail.com', 'ho', '9a76a857ad399b492ba01879d0fa2d717e4430b2', '1997-08-19', NULL),
-(96, 'particulier', 'test', 'test', 'racheldf19@outlook.com', 'test1', 'b444ac06613fc8d63795be9ad0beaf55011936ac', '1997-08-19', NULL);
+(102, 'admin', 'Torchut', 'Benjamin', 'abrulus@gmail.com', 'admin', '$2y$10$yG0C5LYzH4uaKGmo1utrP.wlp/u07AsTaWEmxHSmo5aoQmNPAg1s.', '1997-01-21', NULL),
+(105, 'particulier', 'test', 'test', 'test@gmail.com', 'test', '$2y$10$wrV/6zhmVNhr4XCHnX0VQeSpGgK42rgapUhmZL1g9Q8NBQhcjusba', '2000-01-01', NULL);
 
 --
 -- Contraintes pour les tables déchargées
