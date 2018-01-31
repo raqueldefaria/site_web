@@ -142,7 +142,7 @@ function register($error){
                     </tr>
                     <tr>
                         <td>
-                            <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
+                            <p>Date de naissance :</p> <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
                         </td>
                     </tr>
                     <tr>

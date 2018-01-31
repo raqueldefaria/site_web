@@ -26,8 +26,6 @@ try {
             $login = htmlspecialchars($_POST['pseudo']);
             $password = htmlspecialchars($_POST['mdp']);
             $password2 = htmlspecialchars($_POST['mdp2']);
-            //$hash = password_hash($password, PASSWORD_DEFAULT);
-            //$hash2 = password_hash($password2, PASSWORD_DEFAULT);
             $mail = htmlspecialchars($_POST['mail']);
             $firstName = htmlspecialchars($_POST['prenom']);
             $lastName = htmlspecialchars($_POST['nom']);
