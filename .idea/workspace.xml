@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/controller/backend.php" afterPath="$PROJECT_DIR$/site_web_mvc/controller/backend.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/index.php" afterPath="$PROJECT_DIR$/site_web_mvc/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="823" column="38" lean-forward="false" selection-start-line="823" selection-start-column="32" selection-end-line="823" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -81,8 +83,8 @@
       <file leaf-file-name="backend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/backend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3795">
-              <caret line="165" column="34" lean-forward="false" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
+            <state relative-caret-position="227">
+              <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="9" />
               <folding>
                 <element signature="n#admin#0;n#!!top" expanded="false" />
                 <element signature="n#profileAdmin#0;n#!!top" expanded="false" />
@@ -187,11 +189,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6237">
-              <caret line="610" column="50" lean-forward="false" selection-start-line="610" selection-start-column="50" selection-end-line="610" selection-end-column="50" />
+            <state relative-caret-position="227">
+              <caret line="883" column="40" lean-forward="false" selection-start-line="883" selection-start-column="40" selection-end-line="883" selection-end-column="40" />
               <folding>
                 <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
                 <element signature="n#homepage#0;n#!!top" expanded="false" />
@@ -204,7 +206,6 @@
                 <element signature="n#profile#0;n#!!top" expanded="false" />
                 <element signature="n#housing#0;n#!!top" expanded="false" />
                 <element signature="n#room#0;n#!!top" expanded="false" />
-                <element signature="n#sensor#0;n#!!top" expanded="false" />
                 <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
                 <element signature="n#alarm#0;n#!!top" expanded="false" />
                 <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
@@ -250,6 +251,8 @@
       <find>goToAla</find>
       <find>profile</find>
       <find>$_GET</find>
+      <find>gotosensor</find>
+      <find>modify</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -273,12 +276,12 @@
         <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/usersInfo.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/controller/backend.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/HousingManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/RoomManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/index.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/controller/backend.php" />
       </list>
     </option>
   </component>
@@ -334,6 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,12 +359,6 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -374,7 +372,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,7 +425,8 @@
       <workItem from="1517257391873" duration="4442000" />
       <workItem from="1517394024104" duration="16000" />
       <workItem from="1517394090669" duration="17096000" />
-      <workItem from="1517411505367" duration="14000" />
+      <workItem from="1517411505367" duration="107000" />
+      <workItem from="1517416039515" duration="116000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -542,17 +540,24 @@
       <option name="project" value="LOCAL" />
       <updated>1517411336665</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="MAJ">
+      <created>1517411526659</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1517411526659</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66803000" />
+    <option name="totallyTimeSpent" value="67012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21675676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22054054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -879,18 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3795">
-          <caret line="165" column="34" lean-forward="false" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
-          <folding>
-            <element signature="n#admin#0;n#!!top" expanded="false" />
-            <element signature="n#profileAdmin#0;n#!!top" expanded="false" />
-            <element signature="n#editProfileAdmin#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_normal/controller/adminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1551">
@@ -944,31 +937,6 @@
             <marker date="1517396301826" expanded="true" signature="1678:1719" ph="DELETE FROM logement... " />
             <marker date="1517396301826" expanded="true" signature="1795:1842" ph="DELETE FROM utilisateur... " />
             <marker date="1517396301826" expanded="true" signature="2040:2065" ph="SELECT * FRO... utilisateur" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6237">
-          <caret line="610" column="50" lean-forward="false" selection-start-line="610" selection-start-column="50" selection-end-line="610" selection-end-column="50" />
-          <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#profile#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#sensor#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1030,9 +998,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="823" column="38" lean-forward="false" selection-start-line="823" selection-start-column="32" selection-end-line="823" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/backend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="9" />
+          <folding>
+            <element signature="n#admin#0;n#!!top" expanded="false" />
+            <element signature="n#profileAdmin#0;n#!!top" expanded="false" />
+            <element signature="n#editProfileAdmin#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="883" column="40" lean-forward="false" selection-start-line="883" selection-start-column="40" selection-end-line="883" selection-end-column="40" />
+          <folding>
+            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
+            <element signature="n#homepage#0;n#!!top" expanded="false" />
+            <element signature="n#register#0;n#!!top" expanded="false" />
+            <element signature="n#logIn#0;n#!!top" expanded="false" />
+            <element signature="n#logOut#0;n#!!top" expanded="false" />
+            <element signature="n#showTeam#0;n#!!top" expanded="false" />
+            <element signature="n#showOffers#0;n#!!top" expanded="false" />
+            <element signature="n#contact#0;n#!!top" expanded="false" />
+            <element signature="n#profile#0;n#!!top" expanded="false" />
+            <element signature="n#housing#0;n#!!top" expanded="false" />
+            <element signature="n#room#0;n#!!top" expanded="false" />
+            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
+            <element signature="n#alarm#0;n#!!top" expanded="false" />
+            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
+            <element signature="n#newPassword#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
