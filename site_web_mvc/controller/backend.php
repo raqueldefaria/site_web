@@ -262,7 +262,7 @@ $userInfo = $user->showAllInfo(); ?>
     <div id="main_block">
 
         <div align="center">
-            <h2>Éditer votre profil</h2>
+            <h2>Profil</h2>
 
             <form method="POST" action="index.php?action=editUser">
 
