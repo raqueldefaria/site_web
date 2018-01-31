@@ -340,12 +340,22 @@ try {
 
         elseif ($action == 'goToSensors') {
             $error = null;
-            //conditions idHousing
+            //conditions idRoom
             $idRoom = htmlspecialchars($_GET['id']);
 
+            // creating a room in order to access its functions
             $room = new RoomManager();
-            //$response = $room->checkId();
-            sensor($idRoom, $error);
+
+            // calling the function checkId
+            $response = $room->checkId($idUser,$idRoom);
+
+            if($response==0){
+                room($idUser,$error); // go to room
+            }
+            else{
+                sensor($idRoom, $error);
+            }
+
         }
 
         elseif ($action == 'addSensor') {

@@ -110,8 +110,13 @@ class RoomManager
         return $data;
     }
 
-    function checkId(){
+    function checkId($idUser, $idRoom){
+      $db = $this->dbConnect();
 
+      $response = $db->prepare('SELECT * FROM piece WHERE Logement_Utilisateur_idUtilisateur = ? AND id_Piece = ?');
+      $response->execute(array($idUser,$idRoom));
+
+      return $response->rowCount();
     }
 
 
