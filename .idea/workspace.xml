@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/index.php" afterPath="$PROJECT_DIR$/site_web_mvc/index.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,12 +57,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="637" column="25" lean-forward="true" selection-start-line="637" selection-start-column="25" selection-end-line="637" selection-end-column="25" />
+            <state relative-caret-position="384">
+              <caret line="609" column="25" lean-forward="true" selection-start-line="609" selection-start-column="25" selection-end-line="609" selection-end-column="25" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteSensorJs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+              <folding>
+                <marker date="1517397974912" expanded="true" signature="257:322" ph="DELETE FROM `capteur/actionneur`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showData.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
+              <caret line="215" column="16" lean-forward="false" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+              <folding>
+                <marker date="1517430394138" expanded="true" signature="663:679" ph="..." />
+                <marker date="1517430394138" expanded="true" signature="758:774" ph="..." />
+                <marker date="1517430394138" expanded="true" signature="889:905" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteRoomJs.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <marker date="1517430551459" expanded="true" signature="505:554" ph="SELECT id_Ce... cemac" />
+                <marker date="1517430551459" expanded="true" signature="817:878" ph="DELETE FROM panne... " />
+                <marker date="1517430551459" expanded="true" signature="929:992" ph="DELETE FROM donnees... " />
+                <marker date="1517430551459" expanded="true" signature="1043:1098" ph="DELETE FROM `capteur/actionneur`... " />
+                <marker date="1517430551459" expanded="true" signature="1188:1228" ph="DELETE FROM cemac... " />
+                <marker date="1517430551459" expanded="true" signature="1351:1386" ph="DELETE FROM piece... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,56 +188,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminmodifyModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_web_normal/model/adminmodifyModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1516994907814" expanded="true" signature="125:229" ph="SELECT * FRO... utilisateur" />
-                <marker date="1516994907814" expanded="true" signature="359:463" ph="SELECT * FRO... utilisateur" />
-                <marker date="1516994907814" expanded="true" signature="732:788" ph="SELECT * fro... logement" />
-                <marker date="1516994907814" expanded="true" signature="956:1025" ph="UPDATE utilisateur... " />
-                <marker date="1516994907814" expanded="true" signature="1187:1255" ph="UPDATE utilisateur... " />
-                <marker date="1516994907814" expanded="true" signature="1419:1489" ph="UPDATE utilisateur... " />
-                <marker date="1516994907814" expanded="true" signature="1648:1715" ph="UPDATE utilisateur... " />
-                <marker date="1516994907814" expanded="true" signature="1888:1950" ph="UPDATE logement... " />
-                <marker date="1516994907814" expanded="true" signature="2133:2193" ph="UPDATE logement... " />
-                <marker date="1516994907814" expanded="true" signature="2387:2452" ph="UPDATE logement... " />
-                <marker date="1516994907814" expanded="true" signature="2638:2697" ph="UPDATE logement... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_web_normal/model/adminModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-              <folding>
-                <marker date="1517396301826" expanded="true" signature="125:229" ph="SELECT * FRO... utilisateur" />
-                <marker date="1517396301826" expanded="true" signature="524:580" ph="SELECT id_Lo... logement" />
-                <marker date="1517396301826" expanded="true" signature="659:714" ph="SELECT id_Pi... piece" />
-                <marker date="1517396301826" expanded="true" signature="814:863" ph="SELECT id_Ce... cemac" />
-                <marker date="1517396301826" expanded="true" signature="1016:1079" ph="DELETE FROM donnees... " />
-                <marker date="1517396301826" expanded="true" signature="1126:1187" ph="DELETE FROM panne... " />
-                <marker date="1517396301826" expanded="true" signature="1298:1353" ph="DELETE FROM `capteur/actionneur`... " />
-                <marker date="1517396301826" expanded="true" signature="1486:1526" ph="DELETE FROM cemac... " />
-                <marker date="1517396301826" expanded="true" signature="1569:1604" ph="DELETE FROM piece... " />
-                <marker date="1517396301826" expanded="true" signature="1678:1719" ph="DELETE FROM logement... " />
-                <marker date="1517396301826" expanded="true" signature="1795:1842" ph="DELETE FROM utilisateur... " />
-                <marker date="1517396301826" expanded="true" signature="2040:2065" ph="SELECT * FRO... utilisateur" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="frontend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="759" column="41" lean-forward="true" selection-start-line="759" selection-start-column="14" selection-end-line="759" selection-end-column="41" />
+            <state relative-caret-position="3395">
+              <caret line="759" column="41" lean-forward="true" selection-start-line="759" selection-start-column="41" selection-end-line="759" selection-end-column="41" />
               <folding>
                 <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
                 <element signature="n#homepage#0;n#!!top" expanded="false" />
@@ -203,30 +202,6 @@
                 <element signature="n#showTeam#0;n#!!top" expanded="false" />
                 <element signature="n#showOffers#0;n#!!top" expanded="false" />
                 <element signature="n#contact#0;n#!!top" expanded="false" />
-                <element signature="n#housing#0;n#!!top" expanded="false" />
-                <element signature="n#room#0;n#!!top" expanded="false" />
-                <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-                <element signature="n#alarm#0;n#!!top" expanded="false" />
-                <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-                <element signature="n#newPassword#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HousingManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/HousingManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5280">
-              <caret line="165" column="100" lean-forward="false" selection-start-line="165" selection-start-column="86" selection-end-line="165" selection-end-column="100" />
-              <folding>
-                <marker date="1517411260679" expanded="true" signature="1713:1888" ph="INSERT INTO logement... " />
-                <marker date="1517411260679" expanded="true" signature="2499:2555" ph="SELECT * FRO... logement" />
-                <marker date="1517411260679" expanded="true" signature="2825:3001" ph="SELECT id_Ut... logement" />
-                <marker date="1517411260679" expanded="true" signature="3587:3706" ph="UPDATE logement... " />
-                <marker date="1517411260679" expanded="true" signature="4089:4136" ph="SELECT id_Lo... logement" />
-                <marker date="1517411260679" expanded="true" signature="4089:4152" ph="SELECT * FRO... logement" />
-                <marker date="1517411260679" expanded="true" signature="4089:4156" ph="SELECT * FRO... logement" />
               </folding>
             </state>
           </provider>
@@ -271,7 +246,6 @@
         <option value="$PROJECT_DIR$/site_web_normal/view/interface/ReinitialisationMDP.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/view/frontend/scenario.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/view/frontend/template.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/public/js/writePopUps.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/public/js/showChart.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/chart.php" />
@@ -279,7 +253,6 @@
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/usersInfo.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/UserManager.php" />
@@ -288,6 +261,8 @@
         <option value="$PROJECT_DIR$/site_web_mvc/controller/backend.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/index.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
+        <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php" />
       </list>
     </option>
   </component>
@@ -370,13 +345,27 @@
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -413,9 +402,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/index.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/model/RoomManager.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/model/UserManager.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/controller/frontend.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -552,7 +539,7 @@
       <workItem from="1517411505367" duration="107000" />
       <workItem from="1517416039515" duration="185000" />
       <workItem from="1517416707903" duration="358000" />
-      <workItem from="1517427127460" duration="2133000" />
+      <workItem from="1517427127460" duration="3444000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -687,11 +674,25 @@
       <option name="project" value="LOCAL" />
       <updated>1517417080735</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="changing ID">
+      <created>1517429280429</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1517429280429</updated>
+    </task>
+    <task id="LOCAL-00021" summary="changing ID">
+      <created>1517429409373</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1517429409373</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69572000" />
+    <option name="totallyTimeSpent" value="70883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -947,13 +948,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -965,20 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="211" column="39" lean-forward="true" selection-start-line="211" selection-start-column="39" selection-end-line="211" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1093,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="759" column="41" lean-forward="true" selection-start-line="759" selection-start-column="14" selection-end-line="759" selection-end-column="41" />
+        <state relative-caret-position="3395">
+          <caret line="759" column="41" lean-forward="true" selection-start-line="759" selection-start-column="41" selection-end-line="759" selection-end-column="41" />
           <folding>
             <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
             <element signature="n#homepage#0;n#!!top" expanded="false" />
@@ -1104,20 +1084,7 @@
             <element signature="n#showTeam#0;n#!!top" expanded="false" />
             <element signature="n#showOffers#0;n#!!top" expanded="false" />
             <element signature="n#contact#0;n#!!top" expanded="false" />
-            <element signature="n#housing#0;n#!!top" expanded="false" />
-            <element signature="n#room#0;n#!!top" expanded="false" />
-            <element signature="n#showAllSensorsAndActuators#0;n#!!top" expanded="false" />
-            <element signature="n#alarm#0;n#!!top" expanded="false" />
-            <element signature="n#forgottenPassword#0;n#!!top" expanded="false" />
-            <element signature="n#newPassword#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1162,6 +1129,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="609" column="25" lean-forward="true" selection-start-line="609" selection-start-column="25" selection-end-line="609" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding>
+            <marker date="1517397974912" expanded="true" signature="257:322" ph="DELETE FROM `capteur/actionneur`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/RoomManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
@@ -1174,11 +1166,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="637" column="25" lean-forward="true" selection-start-line="637" selection-start-column="25" selection-end-line="637" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="-231">
+          <caret line="215" column="16" lean-forward="false" selection-start-line="215" selection-start-column="16" selection-end-line="215" selection-end-column="16" />
+          <folding>
+            <marker date="1517430394138" expanded="true" signature="663:679" ph="..." />
+            <marker date="1517430394138" expanded="true" signature="758:774" ph="..." />
+            <marker date="1517430394138" expanded="true" signature="889:905" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1517430551459" expanded="true" signature="505:554" ph="SELECT id_Ce... cemac" />
+            <marker date="1517430551459" expanded="true" signature="817:878" ph="DELETE FROM panne... " />
+            <marker date="1517430551459" expanded="true" signature="929:992" ph="DELETE FROM donnees... " />
+            <marker date="1517430551459" expanded="true" signature="1043:1098" ph="DELETE FROM `capteur/actionneur`... " />
+            <marker date="1517430551459" expanded="true" signature="1188:1228" ph="DELETE FROM cemac... " />
+            <marker date="1517430551459" expanded="true" signature="1351:1386" ph="DELETE FROM piece... " />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ require("../connectionDb.php");
 
 $cemac_infoID_raw = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece = " .$idPieceSQL) or die(print_r($db->errorInfo()));
 
-if(!empty($cemac_infoID_raw->fetch())) {
+if($cemac_infoID_raw->rowCount()!=0) {
     while ($cemac_infoID = $cemac_infoID_raw->fetch()) {
         // in order to delete the sensors, we need to delete the failures and statistics before
         $db->exec("DELETE FROM panne WHERE `Capteur/actionneur_Cemac_idCemac` = " . $cemac_infoID['id_Cemac']);

@@ -211,7 +211,7 @@ function delSensor(idCapteur, idPiece){
         var dbParam = JSON.stringify({"idCapteur": idCapteur}); // On encode en JSON dbParam, qui contient l'id capteur
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            console.log(this.responseText);
+            console.log(this.readyState);
             if (this.readyState == 4 && this.status == 200) {
                 showSensorsFromDb(idPiece);
             }
