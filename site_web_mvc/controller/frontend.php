@@ -608,12 +608,12 @@ function goToEditProfile($error,$id)
                 }
                 else{
                     ?>
-                    <a href="index.php?action=goToAdmin"> Retourner la page administrateur </a>
+                    <a href="index.php?action=goToAdmin"> Retourner à la page administrateur </a>
             <?php
                 }
                 ?>
             <br />
-            <a href="index.php?action=logOut"> Se déconnecter </a>
+            <br/>
 
 
         </div>
@@ -1113,5 +1113,3 @@ function newPassword($tok, $error)
     <?php
     require("view/frontend/template.php");
 }
-
-
