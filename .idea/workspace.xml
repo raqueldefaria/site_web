@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/site_web_mvc/model/deleteSensor.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
     </list>
@@ -104,12 +103,12 @@
       <file leaf-file-name="showData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state relative-caret-position="429">
+              <caret line="113" column="344" lean-forward="false" selection-start-line="113" selection-start-column="344" selection-end-line="113" selection-end-column="344" />
               <folding>
-                <marker date="1517435420106" expanded="true" signature="631:647" ph="..." />
-                <marker date="1517435420106" expanded="true" signature="726:742" ph="..." />
-                <marker date="1517435420106" expanded="true" signature="857:873" ph="..." />
+                <marker date="1517435537886" expanded="true" signature="631:647" ph="..." />
+                <marker date="1517435537886" expanded="true" signature="726:742" ph="..." />
+                <marker date="1517435537886" expanded="true" signature="857:873" ph="..." />
               </folding>
             </state>
           </provider>
@@ -355,6 +354,116 @@
       <recent name="C:\wamp64\www\tests\site_web\site_web_mvc\model\ajax" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/controller/backend.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -397,7 +506,7 @@
       <workItem from="1517416039515" duration="185000" />
       <workItem from="1517416707903" duration="358000" />
       <workItem from="1517427127460" duration="6246000" />
-      <workItem from="1517433913016" duration="1534000" />
+      <workItem from="1517433913016" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -567,14 +676,21 @@
       <option name="project" value="LOCAL" />
       <updated>1517433180030</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="changing ID">
+      <created>1517435460937</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1517435460937</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75219000" />
+    <option name="totallyTimeSpent" value="75301000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="-10" width="1940" height="1043" extended-state="7" />
+    <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23189189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1055,12 +1171,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state relative-caret-position="429">
+          <caret line="113" column="344" lean-forward="false" selection-start-line="113" selection-start-column="344" selection-end-line="113" selection-end-column="344" />
           <folding>
-            <marker date="1517435420106" expanded="true" signature="631:647" ph="..." />
-            <marker date="1517435420106" expanded="true" signature="726:742" ph="..." />
-            <marker date="1517435420106" expanded="true" signature="857:873" ph="..." />
+            <marker date="1517435537886" expanded="true" signature="631:647" ph="..." />
+            <marker date="1517435537886" expanded="true" signature="726:742" ph="..." />
+            <marker date="1517435537886" expanded="true" signature="857:873" ph="..." />
           </folding>
         </state>
       </provider>

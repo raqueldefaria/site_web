@@ -112,7 +112,6 @@ function showSensorsFromDb(idPiece) {
                                     "                        </label>\n" +
                                     "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
-
                                 "                </div>\n" +
 
                                 "            </div>" ;
