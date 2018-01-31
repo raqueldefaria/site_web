@@ -13,6 +13,7 @@ body {
     background-image: url("../images/background/image_accueil_opaque.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-bottom: 75px;
 }
 
 #section
