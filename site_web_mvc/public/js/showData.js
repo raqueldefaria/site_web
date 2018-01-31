@@ -6,7 +6,6 @@ function showHousingsFromDb(idUser) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            console.log(myObj);
             if (myObj != null) {
                 for (it = 0; it < myObj.length; it++) {
                     txt += "<div><a href=\"index.php?action=goToRooms&id=" + myObj[it].id_Logement + "\" >" +
@@ -41,7 +40,6 @@ function showRoomsFromDb(idUser, idLogement) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            console.log(myObj);
             if (myObj != null) {
                 for (it = 0; it < myObj.length; it++) {
                     txt += "<div><a href='index.php?action=goToSensors&id=" + myObj[it].id_Piece + "'>";
@@ -95,7 +93,6 @@ function showSensorsFromDb(idPiece) {
     dbParam = JSON.stringify(obj);
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-        console.log(this.responseText);
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
             if (myObj != null){
@@ -114,7 +111,7 @@ function showSensorsFromDb(idPiece) {
                                     "                            <span class=\"slider round\"></span>\n" +
                                     "                        </label>\n" +
                                     "                </div>\n" +
-                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +","+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
 
                                 "                </div>\n" +
 
@@ -131,7 +128,7 @@ function showSensorsFromDb(idPiece) {
                                 "                            <span class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
-                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +","+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
 
                                 "                </div>\n" +
                                 "            </div>";
@@ -147,7 +144,7 @@ function showSensorsFromDb(idPiece) {
                                     "                            <span class=\"slider round\"></span>\n" +
                                     "                        </label>\n" +
                                     "                </div>\n" +
-                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +","+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
 
                                 "                </div>\n" +
                                 "            </div>";
@@ -163,7 +160,7 @@ function showSensorsFromDb(idPiece) {
                                 "                            <span class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
-                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +","+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
 
                                 "                </div>\n" +
                                 "            </div>";
@@ -178,7 +175,7 @@ function showSensorsFromDb(idPiece) {
                                 "                            <span class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
-                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +" , "+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+                                "                    <img src=\"public/images/client/cancel.png\" class=\"suppPiece\" onclick=\"return delSensor("+myObj[it].ID_capteur_actionneur +","+idPiece+")\">\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
                                 "                </div>\n" +
                                 "            </div>";
                     }
@@ -211,7 +208,7 @@ function delSensor(idCapteur, idPiece){
         var dbParam = JSON.stringify({"idCapteur": idCapteur}); // On encode en JSON dbParam, qui contient l'id capteur
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            console.log(this.readyState);
+            console.log(this.responseText);
             if (this.readyState == 4 && this.status == 200) {
                 showSensorsFromDb(idPiece);
             }

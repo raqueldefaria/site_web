@@ -472,7 +472,7 @@ function goToEditProfile($error,$id)
             <div align="center">
                 <h2>Éditer votre profil</h2>
 
-                <form method="POST" action="index.php?action=editUser">
+                <form method="POST" action="index.php?action=editUser&id=<?php echo $id?>">
 
                     <table>
                         <tr>

@@ -474,6 +474,7 @@ try {
         }
 
         elseif ($action == 'editUser') {
+            $id=htmlspecialchars($_GET['id']);
             if($id == $_SESSION['userID']){
                 $newLogin = htmlspecialchars($_POST['newpseudo']);
                 $newMail = htmlspecialchars($_POST['newmail']);
