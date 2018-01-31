@@ -288,6 +288,11 @@ try {
             // calling the function checkId
             $response = $housing->checkId($idUser,$idHousing);
             if($response==0){
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Vous n'êtes pas autorisé à accéder à cette page")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
                 housing($idUser,$error); // go to housing
             }
             else{
@@ -350,7 +355,12 @@ try {
             $response = $room->checkId($idUser,$idRoom);
 
             if($response==0){
-                room($idUser,$error); // go to room
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Vous n'êtes pas autorisé à accéder à cette page")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                housing($idUser,$error); // go to housing
             }
             else{
                 sensor($idRoom, $error);
@@ -488,10 +498,39 @@ try {
                         $updatedUser->setMail($newMail);
                         $updatedUser->setPassword($newPassword );
 
-                        $existingLogin = $updatedUser->checkLogIn($newLogin);
+                        if($newLogin != $_SESSION['login']) {
+                            $existingLogin = $updatedUser->checkLogIn($newLogin);
 
-                        if($existingLogin==0) {
+                            if($existingLogin==0) {
 
+                                $updatingInDb = $updatedUser->updateUser($updatedUser, $idUser);
+
+                                if ($updatingInDb === false) {
+                                    ?>
+                                    <?php ob_start(); ?>
+                                    <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                                    <?php $error = ob_get_clean(); ?>
+                                    <?php
+                                    goToEditProfile($error, $idUser);
+                                } else {
+                                    ?>
+                                    <?php ob_start(); ?>
+                                    <script>alert("Vos modifications ont bien été prises en compte")</script>
+                                    <?php $error = ob_get_clean(); ?>
+                                    <?php
+                                    goToEditProfile($error, $idUser);
+                                }
+                            }
+                            else{
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Le login que vous avez choisi est utilisé")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                goToEditProfile($error, $idUser);
+                            }
+                        }
+                        else{
                             $updatingInDb = $updatedUser->updateUser($updatedUser, $idUser);
 
                             if ($updatingInDb === false) {
@@ -510,14 +549,7 @@ try {
                                 goToEditProfile($error, $idUser);
                             }
                         }
-                        else{
-                            ?>
-                            <?php ob_start(); ?>
-                            <script>alert("Le login que vous avez choisi est utilisé")</script>
-                            <?php $error = ob_get_clean(); ?>
-                            <?php
-                            goToEditProfile($error, $idUser);
-                        }
+
                     }
                     else{
                         ?>
@@ -548,14 +580,44 @@ try {
                 if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName)){
                     $updatedUser = new UserManager();
 
-                        $updatedUser->setFirstName($newFirstName);
-                        $updatedUser->setLastName($newLastName);
-                        $updatedUser->setLogin($newLogin);
-                        $updatedUser->setMail($newMail);
+                    $updatedUser->setFirstName($newFirstName);
+                    $updatedUser->setLastName($newLastName);
+                    $updatedUser->setLogin($newLogin);
+                    $updatedUser->setMail($newMail);
 
-                    $existingLogin = $updatedUser->checkLogIn($newLogin);
+                    if($newLogin != $_SESSION['login']) {
+                        $existingLogin = $updatedUser->checkLogIn($newLogin);
 
-                    if($existingLogin==0){
+                        if($existingLogin==0){
+                            $updatingInDb = $updatedUser->updateUserAdmin($updatedUser,$idUser);
+
+                            if($updatingInDb===false){
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                admin($error);
+                            }
+                            else{
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Vos modifications ont bien été prises en compte")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                admin($error);
+                            }
+                        }
+                        else{
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Le login que vous avez choisi est déja utilisé")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            admin($error);
+                        }
+                    }
+                    else{
                         $updatingInDb = $updatedUser->updateUserAdmin($updatedUser,$idUser);
 
                         if($updatingInDb===false){
@@ -575,14 +637,7 @@ try {
                             admin($error);
                         }
                     }
-                    else{
-                        ?>
-                        <?php ob_start(); ?>
-                        <script>alert("Le login que vous avez choisi est déja utilisé")</script>
-                        <?php $error = ob_get_clean(); ?>
-                        <?php
-                        admin($error);
-                    }
+
                 }
                 else{
                     ?>
@@ -865,43 +920,60 @@ try {
 
             if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName)){
                 $updatedUser = new UserManager();
-                    $updatedUser->setFirstName($newFirstName);
-                    $updatedUser->setLastName($newLastName);
-                    $updatedUser->setLogin($newLogin);
-                    $updatedUser->setMail($newMail);
+                $updatedUser->setFirstName($newFirstName);
+                $updatedUser->setLastName($newLastName);
+                $updatedUser->setLogin($newLogin);
+                $updatedUser->setMail($newMail);
 
-
+                if($newLogin != $_SESSION['login']) {
                     $existingLogin = $updatedUser->checkLogIn($newLogin);
-
-                    if($existingLogin == 0){
-                        $updatingInDb = $updatedUser->updateUserAdmin($updatedUser,$idUser);
-                        if($updatingInDb===false){
+                    if ($existingLogin == 0) {
+                        $updatingInDb = $updatedUser->updateUserAdmin($updatedUser, $idUser);
+                        if ($updatingInDb === false) {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
-                            profileAdmin($error,$idUser);;
+                            profileAdmin($error, $idUser);
                         }
-                        else{
+                        else {
                             ?>
                             <?php ob_start(); ?>
                             <script>alert("Vos modifications ont bien été prises en compte")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
-                            profileAdmin($error,$idUser);
+                            profileAdmin($error, $idUser);
                         }
                     }
-                    else{
+                    else {
                         ?>
                         <?php ob_start(); ?>
                         <script>alert("Ce login est déja utilisé. Veuillez prendre un autre.")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        profileAdmin($error,$idUser);
+                        profileAdmin($error, $idUser);
                     }
-
-
+                }
+                else{
+                    $updatingInDb = $updatedUser->updateUserAdmin($updatedUser, $idUser);
+                    if ($updatingInDb === false) {
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        profileAdmin($error, $idUser);
+                    }
+                    else {
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Vos modifications ont bien été prises en compte")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        profileAdmin($error, $idUser);
+                    }
+                }
             }
             else{
                 ?>
