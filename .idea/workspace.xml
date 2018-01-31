@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/site_web_mvc/model/deleteSensor.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" afterPath="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" afterPath="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/css/clientPieces.css" afterPath="$PROJECT_DIR$/site_web_mvc/public/css/clientPieces.css" />
-      <change beforePath="$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php" afterPath="$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,33 +60,9 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1287">
-              <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-              <folding>
-                <element signature="e#304#518#0#PHP" expanded="false" />
-                <element signature="e#527#43185#0#PHP" expanded="false" />
-                <element signature="e#751#6303#0#PHP" expanded="false" />
-                <element signature="e#6313#6525#0#PHP" expanded="false" />
-                <element signature="e#6535#9257#0#PHP" expanded="false" />
-                <element signature="e#9267#9381#0#PHP" expanded="false" />
-                <element signature="e#9391#9501#0#PHP" expanded="false" />
-                <element signature="e#9511#12141#0#PHP" expanded="false" />
-                <element signature="e#12151#12933#0#PHP" expanded="false" />
-                <element signature="e#12943#14779#0#PHP" expanded="false" />
-                <element signature="e#14789#15547#0#PHP" expanded="false" />
-                <element signature="e#15557#19602#0#PHP" expanded="false" />
-                <element signature="e#19612#19710#0#PHP" expanded="false" />
-                <element signature="e#19720#19791#0#PHP" expanded="false" />
-                <element signature="e#19801#20097#0#PHP" expanded="false" />
-                <element signature="e#28774#30637#0#PHP" expanded="false" />
-                <element signature="e#30647#30768#0#PHP" expanded="false" />
-                <element signature="e#30778#33315#0#PHP" expanded="false" />
-                <element signature="e#33325#33763#0#PHP" expanded="false" />
-                <element signature="e#33773#37771#0#PHP" expanded="false" />
-                <element signature="e#37781#37847#0#PHP" expanded="false" />
-                <element signature="e#37857#37927#0#PHP" expanded="false" />
-                <element signature="e#37937#38001#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="227">
+              <caret line="345" column="35" lean-forward="false" selection-start-line="345" selection-start-column="28" selection-end-line="345" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,8 +70,8 @@
       <file leaf-file-name="deleteSensorJs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="136" />
               <folding>
                 <marker date="1517432526327" expanded="true" signature="259:324" ph="DELETE FROM `capteur/actionneur`... " />
                 <marker date="1517432526327" expanded="true" signature="415:483" ph="SELECT * FRO... panne" />
@@ -127,16 +101,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showData.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="136" column="49" lean-forward="true" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+            <state relative-caret-position="462">
+              <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
-                <marker date="1517431739677" expanded="true" signature="631:647" ph="..." />
-                <marker date="1517431739677" expanded="true" signature="726:742" ph="..." />
-                <marker date="1517431739677" expanded="true" signature="857:873" ph="..." />
+                <marker date="1517435420106" expanded="true" signature="631:647" ph="..." />
+                <marker date="1517435420106" expanded="true" signature="726:742" ph="..." />
+                <marker date="1517435420106" expanded="true" signature="857:873" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deleteSensor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/deleteSensor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+              <folding>
+                <marker date="1517435312966" expanded="true" signature="109:179" ph="DELETE FROM donnees... " />
+                <marker date="1517435312966" expanded="true" signature="242:310" ph="DELETE FROM panne... " />
+                <marker date="1517435312966" expanded="true" signature="373:438" ph="DELETE FROM `capteur/actionneur`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="failures.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/failures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +153,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/css/clientPieces.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
-              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -165,7 +163,7 @@
         <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
-              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
               <folding>
                 <marker date="1517430551459" expanded="true" signature="505:554" ph="SELECT id_Ce... cemac" />
                 <marker date="1517430551459" expanded="true" signature="817:878" ph="DELETE FROM panne... " />
@@ -178,25 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomManager.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site_web_mvc/model/RoomManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding>
-                <marker date="1517427143387" expanded="true" signature="1470:1557" ph="SELECT id_Pi... piece" />
-                <marker date="1517427143387" expanded="true" signature="1861:1998" ph="INSERT INTO piece... " />
-                <marker date="1517427143387" expanded="true" signature="2504:2585" ph="SELECT * FRO... piece" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="frontend.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="912" column="64" lean-forward="false" selection-start-line="912" selection-start-column="64" selection-end-line="912" selection-end-column="64" />
+            <state relative-caret-position="20097">
+              <caret line="906" column="14" lean-forward="false" selection-start-line="906" selection-start-column="14" selection-end-line="906" selection-end-column="14" />
               <folding>
                 <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
                 <element signature="n#homepage#0;n#!!top" expanded="false" />
@@ -206,19 +190,7 @@
                 <element signature="n#showTeam#0;n#!!top" expanded="false" />
                 <element signature="n#showOffers#0;n#!!top" expanded="false" />
                 <element signature="n#contact#0;n#!!top" expanded="false" />
-                <marker date="1517433161378" expanded="true" signature="16596:16664" ph="..." />
-                <marker date="1517433161378" expanded="true" signature="16625:16664" ph="..." />
-                <marker date="1517433161378" expanded="true" signature="16799:16844" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateur" pinned="false" current-in-tab="false">
-        <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -252,6 +224,8 @@
       <find>gotoeditp</find>
       <find>checklogin</find>
       <find>gotoeditprofile</find>
+      <find>sensor</find>
+      <find>gotosen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -277,11 +251,13 @@
         <option value="$PROJECT_DIR$/site_web_mvc/model/RoomManager.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/controller/backend.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/index.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/controller/frontend.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/model/deleteSensors.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/model/deleteSensor.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
       </list>
     </option>
   </component>
@@ -337,6 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,58 +331,12 @@
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="site_web_normal" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,116 +354,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\tests\site_web\site_web_mvc\model\ajax" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/site_web_mvc/controller/frontend.php</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -574,7 +396,8 @@
       <workItem from="1517411505367" duration="107000" />
       <workItem from="1517416039515" duration="185000" />
       <workItem from="1517416707903" duration="358000" />
-      <workItem from="1517427127460" duration="6031000" />
+      <workItem from="1517427127460" duration="6246000" />
+      <workItem from="1517433913016" duration="1534000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -737,17 +560,24 @@
       <option name="project" value="LOCAL" />
       <updated>1517432219701</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="changing ID">
+      <created>1517433180030</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1517433180030</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73470000" />
+    <option name="totallyTimeSpent" value="75219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
+    <frame x="-10" y="-10" width="1940" height="1043" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22810811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23189189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -808,20 +638,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site_web_normal/controller/ReinitialisationMDP_POST.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="39" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/equipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/scenario.php" />
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/getIdCemacFromIdRoom.php" />
     <entry file="file://$PROJECT_DIR$/site_web_normal/model/showLogementsJs.php">
@@ -991,13 +807,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/usersInfo.php" />
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/failures.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_normal/view/interface/adminmodifyView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1782">
@@ -1030,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,19 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1516994907814" expanded="true" signature="125:229" ph="SELECT * FRO... utilisateur" />
-            <marker date="1516994907814" expanded="true" signature="359:463" ph="SELECT * FRO... utilisateur" />
-            <marker date="1516994907814" expanded="true" signature="732:788" ph="SELECT * fro... logement" />
-            <marker date="1516994907814" expanded="true" signature="956:1025" ph="UPDATE utilisateur... " />
-            <marker date="1516994907814" expanded="true" signature="1187:1255" ph="UPDATE utilisateur... " />
-            <marker date="1516994907814" expanded="true" signature="1419:1489" ph="UPDATE utilisateur... " />
-            <marker date="1516994907814" expanded="true" signature="1648:1715" ph="UPDATE utilisateur... " />
-            <marker date="1516994907814" expanded="true" signature="1888:1950" ph="UPDATE logement... " />
-            <marker date="1516994907814" expanded="true" signature="2133:2193" ph="UPDATE logement... " />
-            <marker date="1516994907814" expanded="true" signature="2387:2452" ph="UPDATE logement... " />
-            <marker date="1516994907814" expanded="true" signature="2638:2697" ph="UPDATE logement... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1058,20 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <marker date="1517396301826" expanded="true" signature="125:229" ph="SELECT * FRO... utilisateur" />
-            <marker date="1517396301826" expanded="true" signature="524:580" ph="SELECT id_Lo... logement" />
-            <marker date="1517396301826" expanded="true" signature="659:714" ph="SELECT id_Pi... piece" />
-            <marker date="1517396301826" expanded="true" signature="814:863" ph="SELECT id_Ce... cemac" />
-            <marker date="1517396301826" expanded="true" signature="1016:1079" ph="DELETE FROM donnees... " />
-            <marker date="1517396301826" expanded="true" signature="1126:1187" ph="DELETE FROM panne... " />
-            <marker date="1517396301826" expanded="true" signature="1298:1353" ph="DELETE FROM `capteur/actionneur`... " />
-            <marker date="1517396301826" expanded="true" signature="1486:1526" ph="DELETE FROM cemac... " />
-            <marker date="1517396301826" expanded="true" signature="1569:1604" ph="DELETE FROM piece... " />
-            <marker date="1517396301826" expanded="true" signature="1678:1719" ph="DELETE FROM logement... " />
-            <marker date="1517396301826" expanded="true" signature="1795:1842" ph="DELETE FROM utilisateur... " />
-            <marker date="1517396301826" expanded="true" signature="2040:2065" ph="SELECT * FRO... utilisateur" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1551">
           <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1149,7 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/RoomManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
+        <state relative-caret-position="3696">
           <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <marker date="1517427143387" expanded="true" signature="1470:1557" ph="SELECT id_Pi... piece" />
@@ -1162,7 +942,7 @@
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteRoomJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
             <marker date="1517430551459" expanded="true" signature="505:554" ph="SELECT id_Ce... cemac" />
             <marker date="1517430551459" expanded="true" signature="817:878" ph="DELETE FROM panne... " />
@@ -1185,30 +965,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/css/clientPieces.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="136" column="49" lean-forward="true" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+        <state relative-caret-position="363">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20097">
+          <caret line="906" column="14" lean-forward="false" selection-start-line="906" selection-start-column="14" selection-end-line="906" selection-end-column="14" />
           <folding>
-            <marker date="1517431739677" expanded="true" signature="631:647" ph="..." />
-            <marker date="1517431739677" expanded="true" signature="726:742" ph="..." />
-            <marker date="1517431739677" expanded="true" signature="857:873" ph="..." />
+            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
+            <element signature="n#homepage#0;n#!!top" expanded="false" />
+            <element signature="n#register#0;n#!!top" expanded="false" />
+            <element signature="n#logIn#0;n#!!top" expanded="false" />
+            <element signature="n#logOut#0;n#!!top" expanded="false" />
+            <element signature="n#showTeam#0;n#!!top" expanded="false" />
+            <element signature="n#showOffers#0;n#!!top" expanded="false" />
+            <element signature="n#contact#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/css/clientPieces.css">
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/deleteSensors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="396">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/failures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="136" />
           <folding>
             <marker date="1517432526327" expanded="true" signature="259:324" ph="DELETE FROM `capteur/actionneur`... " />
             <marker date="1517432526327" expanded="true" signature="415:483" ph="SELECT * FRO... panne" />
@@ -1226,60 +1035,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1287">
-          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
-          <folding>
-            <element signature="e#304#518#0#PHP" expanded="false" />
-            <element signature="e#527#43185#0#PHP" expanded="false" />
-            <element signature="e#751#6303#0#PHP" expanded="false" />
-            <element signature="e#6313#6525#0#PHP" expanded="false" />
-            <element signature="e#6535#9257#0#PHP" expanded="false" />
-            <element signature="e#9267#9381#0#PHP" expanded="false" />
-            <element signature="e#9391#9501#0#PHP" expanded="false" />
-            <element signature="e#9511#12141#0#PHP" expanded="false" />
-            <element signature="e#12151#12933#0#PHP" expanded="false" />
-            <element signature="e#12943#14779#0#PHP" expanded="false" />
-            <element signature="e#14789#15547#0#PHP" expanded="false" />
-            <element signature="e#15557#19602#0#PHP" expanded="false" />
-            <element signature="e#19612#19710#0#PHP" expanded="false" />
-            <element signature="e#19720#19791#0#PHP" expanded="false" />
-            <element signature="e#19801#20097#0#PHP" expanded="false" />
-            <element signature="e#28774#30637#0#PHP" expanded="false" />
-            <element signature="e#30647#30768#0#PHP" expanded="false" />
-            <element signature="e#30778#33315#0#PHP" expanded="false" />
-            <element signature="e#33325#33763#0#PHP" expanded="false" />
-            <element signature="e#33773#37771#0#PHP" expanded="false" />
-            <element signature="e#37781#37847#0#PHP" expanded="false" />
-            <element signature="e#37857#37927#0#PHP" expanded="false" />
-            <element signature="e#37937#38001#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        <state relative-caret-position="227">
+          <caret line="345" column="35" lean-forward="false" selection-start-line="345" selection-start-column="28" selection-end-line="345" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/controller/frontend.php">
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/model/deleteSensor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="912" column="64" lean-forward="false" selection-start-line="912" selection-start-column="64" selection-end-line="912" selection-end-column="64" />
+        <state relative-caret-position="363">
+          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
           <folding>
-            <element signature="n#gettingHeader#0;n#!!top" expanded="false" />
-            <element signature="n#homepage#0;n#!!top" expanded="false" />
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <element signature="n#logIn#0;n#!!top" expanded="false" />
-            <element signature="n#logOut#0;n#!!top" expanded="false" />
-            <element signature="n#showTeam#0;n#!!top" expanded="false" />
-            <element signature="n#showOffers#0;n#!!top" expanded="false" />
-            <element signature="n#contact#0;n#!!top" expanded="false" />
-            <marker date="1517433161378" expanded="true" signature="16596:16664" ph="..." />
-            <marker date="1517433161378" expanded="true" signature="16625:16664" ph="..." />
-            <marker date="1517433161378" expanded="true" signature="16799:16844" ph="..." />
+            <marker date="1517435312966" expanded="true" signature="109:179" ph="DELETE FROM donnees... " />
+            <marker date="1517435312966" expanded="true" signature="242:310" ph="DELETE FROM panne... " />
+            <marker date="1517435312966" expanded="true" signature="373:438" ph="DELETE FROM `capteur/actionneur`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <marker date="1517435420106" expanded="true" signature="631:647" ph="..." />
+            <marker date="1517435420106" expanded="true" signature="726:742" ph="..." />
+            <marker date="1517435420106" expanded="true" signature="857:873" ph="..." />
           </folding>
         </state>
       </provider>
