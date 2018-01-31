@@ -21,6 +21,14 @@ try {
                 housing($idUser, $error);
             }
         }
+        if ($action == 'goToRegister') {
+            $error = null;
+            if (empty($idUser)) {
+                register($error);
+            } else {
+                housing($idUser, $error);
+            }
+        }
 
         elseif ($action == 'register') {
             $login = htmlspecialchars($_POST['pseudo']);

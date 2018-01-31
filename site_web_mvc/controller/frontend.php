@@ -38,7 +38,13 @@ function gettingHeader(){
                         <div class="dropdown_content">
                             <a href="index.php?action=goToProfile">Profil</a>
                             <a href="index.php?action=goToHousing">Logements</a>
-                            <?php if (isset($_SESSION['type']) && $_SESSION['type']=='admin'){echo '<a href="index.php?action=goToAdmin">Admin</a>';} ?>
+                            <?php
+                            if (isset($_SESSION['type']) && $_SESSION['type']=="admin"){
+                                ?>
+                                <a href="index.php?action=goToAdmin">Admin</a>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="seConnecter">
@@ -49,7 +55,8 @@ function gettingHeader(){
         </header>
         <?php $header = ob_get_clean(); ?>
         <?php
-    } else {
+    }
+    else {
         ?>
         <?php ob_start(); ?>
         <link rel="stylesheet" href="public/css/header.css" />
@@ -143,7 +150,7 @@ function register($error){
                     <tr>
                         <td>
                             <p>Date de naissance :</p> <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
-                        </td>
+                        </form>
                     </tr>
                     <tr>
                         <td>
@@ -889,31 +896,6 @@ function sensor($idRoom, $error)
         <div id="overflow">
             <div class="optionPieces" id="capteursActionneurs"></div>
 
-            <!--<p class="motPiece">Scénario :</p>
-            <div id="menu">
-                <ul id="onglets">
-                    <li class="active"><a href=""> Chauffage </a></li>
-                    <li><a href=""> Volets </a></li>
-                </ul>
-            </div>
-            <br />
-            <div class=options>
-                <label> Si la température est </label>
-                <select>
-                    <option>supérieure</option>
-                    <option>inférieure</option>
-                </select>
-                <label> à </label>
-                <input type="number" min="-10" max="40" placeholder="Température en degrés" />
-                <label> alors </label>
-                <select name="type" id="type">
-                    <option value="particulier">éteindre le chauffage</option>
-                    <option value="gestionnaire">allumer le chauffage</option>
-                </select>
-                <a href="" ><img src="public/images/add.png" /></a>
-                <a href="" ><img src="public/images/error.png" /></a>
-            </div>-->
-            <?php include("view/frontend/scenario.php")?>
         </div>
 
     </div>
