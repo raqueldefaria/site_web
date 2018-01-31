@@ -14,6 +14,8 @@
     <?= $header ?>
 
     <div id="main_block">
+
+        <p> Pour passer commande, veuillez nous envoyer un mail avec pour objet "Commande - Votre nom" et comprenant votre liste d'achats à l'adresse suivante: <a href="mailto:domonline@gmail.com">domonline@gmail.com</a> .</p>
         <h1> Notre Catalogue </h1>
 
         <div id="demoCatalogueStarterBoite">

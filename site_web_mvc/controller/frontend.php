@@ -38,6 +38,7 @@ function gettingHeader(){
                         <div class="dropdown_content">
                             <a href="index.php?action=goToProfile">Profil</a>
                             <a href="index.php?action=goToHousing">Logements</a>
+                            <?php if (isset($_SESSION['type']) && $_SESSION['type']=='admin'){echo '<a href="index.php?action=goToAdmin">Admin</a>';} ?>
                         </div>
                     </div>
                     <div class="seConnecter">

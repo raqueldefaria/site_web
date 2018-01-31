@@ -430,9 +430,9 @@ try {
             $newMail = htmlspecialchars($_POST['newmail']);
             $newFirstName = htmlspecialchars($_POST['newprenom']);
             $newLastName = htmlspecialchars($_POST['newnom']);
-            $currentPassword = sha1( htmlspecialchars($_POST['mdpactuel']));
-            $newPassword = sha1( htmlspecialchars($_POST['newmdp1']));
-            $newPassword2 = sha1( htmlspecialchars($_POST['newmdp2']));
+            $currentPassword = htmlspecialchars($_POST['mdpactuel']);
+            $newPassword = htmlspecialchars($_POST['newmdp1']);
+            $newPassword2 = htmlspecialchars($_POST['newmdp2']);
 
 
             if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
@@ -441,7 +441,8 @@ try {
 
                 $passwordInDb = $updatedUser->gettingPassword($idUser);
 
-                if($newPassword == $newPassword2 AND $currentPassword==$passwordInDb['utilisateur_motDePasse'] ){
+                if($newPassword == $newPassword2 AND password_verify($currentPassword, $passwordInDb['utilisateur_motDePasse']) ){
+                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
                     $updatedUser->setFirstName($newFirstName);
                     $updatedUser->setLastName($newLastName);
                     $updatedUser->setLogin($newLogin);

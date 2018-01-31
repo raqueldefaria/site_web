@@ -17,7 +17,6 @@ require("../../controller/profilController.php");
         <title> DomOnline - Profil </title>
     </head>
 
-
     <body>
 
     <?php include("headerbis.php"); ?>
@@ -74,11 +73,10 @@ require("../../controller/profilController.php");
         </table>
         </div>
 
+        //Fonction permettant d'afficher tous les logements de l'utilisateur
         <?php
         show_logements();
         ?>
-
-
 
        <br/>
 
@@ -89,15 +87,12 @@ require("../../controller/profilController.php");
        <br/>
        <a href="deconnexion.php"> Se déconnecter </a>
 
-
       </div>
-
 
     </div>
 
     <?php include("footer.php"); ?>
 
     </body>
-
 
 </html>

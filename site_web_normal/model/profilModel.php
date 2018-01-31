@@ -7,10 +7,11 @@ require("../../model/connection_db.php");
    $requser->execute(array($_SESSION['userID'], $_SESSION['userID']));
    $userinfo = $requser->fetch();
 
-/* ------------------- Requête de la table logement ------------------- */
+/* ------------------- Requête sur la table logement ------------------- */
 function table_logements()
 {
   require("../../model/connection_db.php");
+  //On récupère les informations du logement
   $data = $db->prepare('SELECT * from logement WHERE logement.id_Utilisateur = ? ');
   $data->execute(array($_SESSION['userID']));
   return $data;
