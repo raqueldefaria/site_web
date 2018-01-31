@@ -110,6 +110,10 @@ class RoomManager
         return $data;
     }
 
+    function checkId(){
+
+    }
+
 
 
 }

@@ -118,11 +118,11 @@ class HousingManager
 
     }
 
-    function showAllInfo(){
+    function showAllInfo($id){
         $db = $this->dbConnect();
 
         $response = $db->prepare('SELECT * FROM logement WHERE logement.id_Utilisateur = ?');
-        $response->execute(array($_SESSION['userID']));
+        $response->execute(array($id));
         $userInfo = $response->fetchAll();
 
         $response->closecursor();
@@ -159,6 +159,17 @@ class HousingManager
 
         return $response;
     }
+
+    function checkId($idUser,$idHousing){
+        $db = $this->dbConnect();
+
+        $response = $db->prepare('SELECT * FROM logement WHERE id_Utilisateur = ? AND id_Logement = ?');
+        $response->execute(array($idUser,$idHousing));
+
+        return $response->rowCount();
+
+    }
+
 
 
 

@@ -36,13 +36,18 @@ function gettingHeader(){
                             <img id="avatar" src="public/images/585e4beacb11b227491c3399.png" />
                         </div>
                         <div class="dropdown_content">
-                            <a href="index.php?action=goToProfile">Profil</a>
-                            <a href="index.php?action=goToHousing">Logements</a>
+
                             <?php
                             if (isset($_SESSION['type']) && $_SESSION['type']=="admin"){
                                 ?>
                                 <a href="index.php?action=goToAdmin">Admin</a>
-                            <?php
+                                <a href="index.php?action=goToProfileAdmin">Profil</a>
+                                <?php
+                            }
+                            else{?>
+                                <a href="index.php?action=goToProfile">Profil</a>
+                                <a href="index.php?action=goToHousing">Logements</a>
+                                <?php
                             }
                             ?>
                         </div>
@@ -110,85 +115,85 @@ function register($error){
     <div class="corps">
         <form action="index.php?action=register" method="post">
             <p>
-            <div class="table" >
+                <div class="table" >
 
-                <table>
-                    <tr>
-                        <td>
-                            <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant"required />
-                            <span id="missPseudo"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="password" name="mdp" id="mdp" size=35 placeholder="Mot de passe" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="password" name="mdp2" id="mdp2" size=35 placeholder="Confirmez le mot de passe" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="type" id="type" placeholder="Type d'utilisateur">
-                                <option value="particulier">Particulier</option>
-                                <option value="gestionnaire">Gestionnaire</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="nom" id="nom" size=35 placeholder="Nom" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Date de naissance :</p> <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
-                        </form>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="email" name="mail" id="mail" size=35 placeholder="Mail"  required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" required />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required />
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <input type="submit" value="Envoyer" class="boutton" id="boutonenvoi"  />
-
-            </p>
-            <?php
-            if ($error!=null) {
-                ?>
-                <?= $error ?>
-                <?php
-            } ?>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant"required />
+                                <span id="missPseudo"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" name="mdp" id="mdp" size=35 placeholder="Mot de passe" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" name="mdp2" id="mdp2" size=35 placeholder="Confirmez le mot de passe" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="type" id="type" placeholder="Type d'utilisateur">
+                                    <option value="particulier">Particulier</option>
+                                    <option value="gestionnaire">Gestionnaire</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="nom" id="nom" size=35 placeholder="Nom" required/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+            <p>Date de naissance :</p> <input type="date" name="dateNaissance" id="dateNaissance" size=35 placeholder="Date de naissance" required />
         </form>
+        </tr>
+        <tr>
+            <td>
+                <input type="email" name="mail" id="mail" size=35 placeholder="Mail"  required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" required />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required />
+            </td>
+        </tr>
+        </table>
+    </div>
+    <input type="submit" value="Envoyer" class="boutton" id="boutonenvoi"  />
+
+    </p>
+    <?php
+    if ($error!=null) {
+        ?>
+        <?= $error ?>
+        <?php
+    } ?>
+    </form>
     </div>
 
     <script>
@@ -236,8 +241,8 @@ function logIn($error){
         <form method="post" action="index.php?action=logIn">
             <p>
                 <input type="text" name="pseudo" id="identifiant" placeholder="Identifiant" size="30" maxlength="20" value="<?php if (isset($_COOKIE['username'])) {
-        echo $_COOKIE['username'];
-    } ?>" required /> <br />
+                    echo $_COOKIE['username'];
+                } ?>" required /> <br />
                 <span id="missIdentifiant"></span>
                 <br />
                 <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" size="30" maxlength="20" required/><br />
@@ -342,287 +347,304 @@ function profile()
 
         <div id="main_block">
 
-         <div align="center">
-          <h2>Votre profil</h2>
+            <div align="center">
+                <h2>Votre profil</h2>
 
-          <table>
-          <tr>
-             <td align="right">
-                <strong> Pseudo </strong> :
-             </td>
-             <td>
-                <?php echo $userInfo['utilisateur_login']; ?>
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Mail </strong> :
-             </td>
-             <td>
-                <?php echo $userInfo['utilisateur_mail']; ?>
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Prénom </strong> :
-             </td>
-             <td>
-                <?php echo $userInfo['utilisateur_prenom']; ?>
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Nom </strong> :
-             </td>
-             <td>
-                <?php echo $userInfo['utilisateur_nom']; ?>
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Type </strong> :
-             </td>
-             <td>
-                <?php echo $userInfo['utilisateur_type']; ?>
-             </td>
-          </tr>
-        </table>
+                <table>
+                    <tr>
+                        <td align="right">
+                            <strong> Pseudo </strong> :
+                        </td>
+                        <td>
+                            <?php echo $userInfo['utilisateur_login']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <strong> Mail </strong> :
+                        </td>
+                        <td>
+                            <?php echo $userInfo['utilisateur_mail']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <strong> Prénom </strong> :
+                        </td>
+                        <td>
+                            <?php echo $userInfo['utilisateur_prenom']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <strong> Nom </strong> :
+                        </td>
+                        <td>
+                            <?php echo $userInfo['utilisateur_nom']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <strong> Type </strong> :
+                        </td>
+                        <td>
+                            <?php echo $userInfo['utilisateur_type']; ?>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <?php
+            for ($it=0; $it<sizeof($housingInfo); $it++) {
+                ?>
+
+                <div align="center">
+                    <h2>Logement <?php echo $it+1; ?> </h2>
+
+                    <table>
+                        <tr>
+                            <td align="right">
+                                <strong> Adresse </strong> :
+                            </td>
+                            <td>
+                                <?php echo $housingInfo[$it]['logement_adresse']; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Ville </strong> :
+                            </td>
+                            <td>
+                                <?php echo $housingInfo[$it]['logement_ville']; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Code postal </strong> :
+                            </td>
+                            <td>
+                                <?php echo $housingInfo[$it]['logement_codePostal']; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Pays </strong> :
+                            </td>
+                            <td>
+                                <?php echo $housingInfo[$it]['logement_pays']; ?>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <?php
+            } ?>
+
+            <br/>
+
+            <br/>
+            <a href="index.php?action=goToEditProfile"> Editer mon profil </a>
+            <br/>
+            <a href="index.php?action=logOut"> Se déconnecter </a>
+
         </div>
-
-    <?php
-    for ($it=0; $it<sizeof($housingInfo); $it++) {
-        ?>
-
-        <div align="center">
-        <h2>Logement <?php echo $it+1; ?> </h2>
-
-        <table>
-          <tr>
-              <td align="right">
-                <strong> Adresse </strong> :
-              </td>
-              <td>
-                <?php echo $housingInfo[$it]['logement_adresse']; ?>
-              </td>
-          </tr>
-          <tr>
-              <td align="right">
-                <strong> Ville </strong> :
-             </td>
-              <td>
-                <?php echo $housingInfo[$it]['logement_ville']; ?>
-              </td>
-          </tr>
-          <tr>
-              <td align="right">
-                <strong> Code postal </strong> :
-              </td>
-              <td>
-                <?php echo $housingInfo[$it]['logement_codePostal']; ?>
-              </td>
-          </tr>
-          <tr>
-              <td align="right">
-                <strong> Pays </strong> :
-              </td>
-              <td>
-                <?php echo $housingInfo[$it]['logement_pays']; ?>
-              </td>
-          </tr>
-        </table>
-        </div>
-      <?php
-    } ?>
-
-       <br/>
-
-       <br/>
-       <a href="index.php?action=goToEditProfile"> Editer mon profil </a>
-       <br/>
-       <a href="index.php?action=logOut"> Se déconnecter </a>
-
-      </div>
     </div>
     <?php $content = ob_get_clean(); ?>
     <?php
     require("view/frontend/template.php");
 }
 
-function goToEditProfile($error)
+function goToEditProfile($error,$id)
 {
     $headerList = gettingHeader();
     $styleHeader = $headerList[0];
     $header = $headerList[1]; ?>
-  <?php ob_start(); ?>
-  Edition du profil
-  <?php $title = ob_get_clean(); ?>
-  <?php
-  $user = new UserManager();
-    $userInfo = $user->showAllInfo(); ?>
-  <?php ob_start(); ?>
-  <div id="corps">
+    <?php ob_start(); ?>
+    Edition du profil
+    <?php $title = ob_get_clean(); ?>
+    <?php
+    $user = new UserManager();
+    $userInfo = $user->showAllInfo($id); ?>
+    <?php ob_start(); ?>
+    <div id="corps">
 
-      <div id="main_block">
+        <div id="main_block">
 
-       <div align="center">
-        <h2>Éditer votre profil</h2>
+            <div align="center">
+                <h2>Éditer votre profil</h2>
 
-        <form method="POST" action="index.php?action=editUser">
+                <form method="POST" action="index.php?action=editUser">
 
-          <table>
-          <tr>
-             <td align="right">
-                <strong> Pseudo </strong> :
-             </td>
-             <td>
-               <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userInfo['utilisateur_login']; ?>" required />
-                 <span id="missPseu"></span>
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Mail </strong> :
-             </td>
-             <td>
-               <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userInfo['utilisateur_mail']; ?>" required />
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Prénom </strong> :
-             </td>
-             <td>
-               <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userInfo['utilisateur_prenom']; ?>" required />
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Nom </strong> :
-             </td>
-             <td>
-               <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userInfo['utilisateur_nom']; ?>" required />
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Mot de passe actuel </strong> :
-             </td>
-             <td>
-               <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" required />
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Nouveau mot de passe </strong> :
-             </td>
-             <td>
-               <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" required />
-             </td>
-          </tr>
-          <tr>
-             <td align="right">
-                <strong> Confirmer nouveau mot de passe </strong> :
-             </td>
-             <td>
-               <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" required />
-             </td>
-          </tr>
-        </table>
+                    <table>
+                        <tr>
+                            <td align="right">
+                                <strong> Pseudo </strong> :
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Pseudo" id="newpseudo" name="newpseudo" value="<?php echo $userInfo['utilisateur_login']; ?>" required />
+                                <span id="missPseu"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Mail </strong> :
+                            </td>
+                            <td>
+                                <input type="mail" placeholder="Mail" id="newmail" name="newmail" value="<?php echo $userInfo['utilisateur_mail']; ?>" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Prénom </strong> :
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Prénom" id="newprenom" name="newprenom" value="<?php echo $userInfo['utilisateur_prenom']; ?>" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <strong> Nom </strong> :
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Nom" id="newnom" name="newnom" value="<?php echo $userInfo['utilisateur_nom']; ?>" required />
+                            </td>
+                        </tr>
+                        <?php
+                        if($id == $_SESSION['userID']){
+                            ?>
+                            <tr>
+                                <td align="right">
+                                    <strong> Mot de passe actuel </strong> :
+                                </td>
+                                <td>
+                                    <input type="password" placeholder="Mot de passe actuel" id="mdpactuel" name="mdpactuel" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <strong> Nouveau mot de passe </strong> :
+                                </td>
+                                <td>
+                                    <input type="password" placeholder="Nouveau mot de passe" id="newmdp1" name="newmdp1" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <strong> Confirmer nouveau mot de passe </strong> :
+                                </td>
+                                <td>
+                                    <input type="password" placeholder="Nouveau mot de passe" id="newmdp2" name="newmdp2" required />
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                    </table>
 
-        <br />
-        <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
+                    <br />
+                    <input type="submit" value="Mettre à jour mon profil !" class="boutton" id="bouenvoie"/>
 
-      </form>
+                </form>
 
-        <?php
-        $housing = new HousingManager();
-    $housingInfo = $housing->showAllInfo();
-    for ($it=0; $it<sizeof($housingInfo); $it++) {
-        ?>
-        <h2>Logement <?php echo $it+1; ?> </h2>
+                <?php
+                $housing = new HousingManager();
+                $housingInfo = $housing->showAllInfo($id);
+                for ($it=0; $it<sizeof($housingInfo); $it++) {
+                    ?>
+                    <h2>Logement <?php echo $it+1; ?> </h2>
 
-        <form method="POST" action="index.php?action=editHousing&id=<?php echo $housingInfo[$it]['id_Logement']; ?>">
+                    <form method="POST" action="index.php?action=editHousing&id=<?php echo $housingInfo[$it]['id_Logement']; ?>">
 
-        <table>
-          <tr>
-            <td align="right">
-               <strong> Adresse </strong> :
-            </td>
-            <td>
-              <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $housingInfo[$it]['logement_adresse']; ?>" required />
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-               <strong> Ville </strong> :
-            </td>
-            <td>
-              <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $housingInfo[$it]['logement_ville']; ?>" required />
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-               <strong> Code postal </strong> :
-            </td>
-            <td>
-              <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $housingInfo[$it]['logement_codePostal']; ?>" required/>
-            </td>
-          </tr>
-          <tr>
-            <td align="right">
-               <strong> Pays </strong> :
-            </td>
-            <td>
-              <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $housingInfo[$it]['logement_pays']; ?>" required />
-            </td>
-          </tr>
-        </table>
-        <br />
-        <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
+                        <table>
+                            <tr>
+                                <td align="right">
+                                    <strong> Adresse </strong> :
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Adresse" id="newadresse" name="newadresse" value="<?php echo $housingInfo[$it]['logement_adresse']; ?>" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <strong> Ville </strong> :
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Ville" id="newville" name="newville" value="<?php echo $housingInfo[$it]['logement_ville']; ?>" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <strong> Code postal </strong> :
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Code postal" id="newcodePostal" name="newcodePostal" value="<?php echo $housingInfo[$it]['logement_codePostal']; ?>" required/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                    <strong> Pays </strong> :
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Pays" id="newpays" name="newpays" value="<?php echo $housingInfo[$it]['logement_pays']; ?>" required />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <input type="submit" value="Mettre à jour mon logement !" class="boutton" id="bouenvoie"/>
 
-        </form>
+                    </form>
 
-        <?php
-    } ?>
-
-
-     </div>
-
-          <br />
-          <a href="index.php?action=goToProfile"> Retourner à mon profil </a>
-          <br />
-          <a href="index.php?action=logOut"> Se déconnecter </a>
+                    <?php
+                } ?>
 
 
-      </div>
+            </div>
+
+            <br />
+            <?php
+                if($id == $_SESSION['userID']){
+                    ?>
+                    <a href="index.php?action=goToProfile"> Retourner à mon profil </a>
+            <?php
+                }
+                else{
+                    ?>
+                    <a href="index.php?action=goToAdmin"> Retourner la page administrateur </a>
+            <?php
+                }
+                ?>
+            <br />
+            <a href="index.php?action=logOut"> Se déconnecter </a>
 
 
-  </div>
-  <!--************** script **************-->
-  <script>
-    var formValid = document.getElementById('bouenvoi');
-    var prenom = document.getElementById('Pseudo');
-    var missPrenom = document.getElementById('missPseu');
-    var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+        </div>
 
-    formValid.addEventListener('click', validation);
 
-    function validation(event){
-        //Si le champ est vide
+    </div>
+    <!--************** script **************-->
+    <script>
+        var formValid = document.getElementById('bouenvoi');
+        var prenom = document.getElementById('Pseudo');
+        var missPrenom = document.getElementById('missPseu');
+        var prenomValid = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
-        if (identifiant.validity.valueMissing){
-            event.preventDefault();
-            missPseu.textContent = 'login manquant';
-            missPseu.style.color = 'red';
-        }else if (identifiantValid.test(identifiant.value) == false){
-            event.preventDefault();
-            missPrenom.textContent = 'Format incorrect';
-            missP.style.color = 'red';
+        formValid.addEventListener('click', validation);
 
-        }else{
+        function validation(event){
+            //Si le champ est vide
+
+            if (identifiant.validity.valueMissing){
+                event.preventDefault();
+                missPseu.textContent = 'login manquant';
+                missPseu.style.color = 'red';
+            }else if (identifiantValid.test(identifiant.value) == false){
+                event.preventDefault();
+                missPrenom.textContent = 'Format incorrect';
+                missP.style.color = 'red';
+
+            }else{
+            }
+
         }
-
-    }
     </script>
     <?php
     if ($error!=null) {
@@ -630,9 +652,9 @@ function goToEditProfile($error)
         <?= $error ?>
         <?php
     } ?>
-  <?php $content = ob_get_clean(); ?>
-  <?php
-  require("view/frontend/template.php");
+    <?php $content = ob_get_clean(); ?>
+    <?php
+    require("view/frontend/template.php");
 }
 
 
@@ -725,7 +747,7 @@ function housing($idUser, $error)
         showHousingsFromDb(<?= $idUser ?>)
     </script>
     <script>
-      writePopUpsLogements(<?= $idUser ?>)
+        writePopUpsLogements(<?= $idUser ?>)
     </script>
 
     <?php $content = ob_get_clean(); ?>
@@ -773,7 +795,7 @@ function room($idUser, $idHousing, $error)
         </div>
     </div>
 
-        <div id="editPiecePopContainer"></div> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer une piece -->
+    <div id="editPiecePopContainer"></div> <!-- Dans ce div on écrit grace à Js tous les codes html de popups (comme celui ci-dessus) servant à éditer une piece -->
 
 
     <!--************** Script**************-->
@@ -830,7 +852,7 @@ function room($idUser, $idHousing, $error)
         showRoomsFromDb(<?= $idUser?>,<?= $idHousing ?>)
     </script>
     <script>
-      writePopUpsPieces(<?= $idUser?>, <?= $idHousing ?>)
+        writePopUpsPieces(<?= $idUser?>, <?= $idHousing ?>)
     </script>
 
     <?php $content = ob_get_clean(); ?>
@@ -1007,11 +1029,11 @@ function forgottenPassword($error)
 
         <form method="post" action="index.php?action=forgottenPassword">
             <p>
-                <h3>Mot de passe oublié ?</h3>
-                <p> Pas de panique ! Nous vous enverrons un nouveau mot de passe sur l'adresse mail associé à votre compte. </p>
-                <label for="mail_recup"> Votre mail :</label>
-                <input type="email" name="mail_recup" id="mail_recup" required/>
-                <input type="submit" value="Envoyer" required/>
+            <h3>Mot de passe oublié ?</h3>
+            <p> Pas de panique ! Nous vous enverrons un nouveau mot de passe sur l'adresse mail associé à votre compte. </p>
+            <label for="mail_recup"> Votre mail :</label>
+            <input type="email" name="mail_recup" id="mail_recup" required/>
+            <input type="submit" value="Envoyer" required/>
             </p>
             <?php
             if ($error!=null) {
@@ -1091,3 +1113,5 @@ function newPassword($tok, $error)
     <?php
     require("view/frontend/template.php");
 }
+
+

@@ -1,6 +1,7 @@
 <?php
 
 require('controller/frontend.php');
+require('controller/backend.php');
 
 if (isset($_GET['action'])) {
     $action = htmlspecialchars($_GET['action']);
@@ -171,7 +172,13 @@ try {
                         $_SESSION['firstName'] = $userExistence['utilisateur_prenom'];
                         $_SESSION['lastName'] = $userExistence['utilisateur_nom'];
                         $_SESSION['type'] = $userExistence['utilisateur_type'];
-                        header('Location: index.php?action=goToHousing');
+                        if($_SESSION['type']!="admin"){
+                            header('Location: index.php?action=goToHousing');
+                        }
+                        else{
+                            header('Location: index.php?action=goToAdmin');
+                        }
+
                     } else {
                         ?>
                         <?php ob_start(); ?>
@@ -275,7 +282,18 @@ try {
             $error=null;
             //conditions idHousing
             $idHousing = htmlspecialchars($_GET['id']);
-            room($idUser, $idHousing, $error);
+
+            // creating a housing in order to access its functions
+            $housing= new HousingManager();
+            // calling the function checkId
+            $response = $housing->checkId($idUser,$idHousing);
+            if($response==0){
+                housing($idUser,$error); // go to housing
+            }
+            else{
+                room($idUser, $idHousing, $error);
+            }
+
         }
 
         elseif ($action == 'addRoom') {
@@ -324,6 +342,9 @@ try {
             $error = null;
             //conditions idHousing
             $idRoom = htmlspecialchars($_GET['id']);
+
+            $room = new RoomManager();
+            //$response = $room->checkId();
             sensor($idRoom, $error);
         }
 
@@ -427,71 +448,142 @@ try {
         }
 
         elseif ($action == 'goToEditProfile') {
+            $id=$idUser;
             $error = null;
-            goToEditProfile($error);
+            goToEditProfile($error,$id);
         }
 
         elseif ($action == 'editUser') {
-            $newLogin = htmlspecialchars($_POST['newpseudo']);
-            $newMail = htmlspecialchars($_POST['newmail']);
-            $newFirstName = htmlspecialchars($_POST['newprenom']);
-            $newLastName = htmlspecialchars($_POST['newnom']);
-            $currentPassword = htmlspecialchars($_POST['mdpactuel']);
-            $newPassword = htmlspecialchars($_POST['newmdp1']);
-            $newPassword2 = htmlspecialchars($_POST['newmdp2']);
+            if($id == $_SESSION['userID']){
+                $newLogin = htmlspecialchars($_POST['newpseudo']);
+                $newMail = htmlspecialchars($_POST['newmail']);
+                $newFirstName = htmlspecialchars($_POST['newprenom']);
+                $newLastName = htmlspecialchars($_POST['newnom']);
+                $currentPassword = htmlspecialchars($_POST['mdpactuel']);
+                $newPassword = htmlspecialchars($_POST['newmdp1']);
+                $newPassword2 = htmlspecialchars($_POST['newmdp2']);
 
 
-            if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
-                !empty($currentPassword) AND !empty($newPassword) AND !empty($newPassword)){
-                $updatedUser = new UserManager();
+                if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName) AND
+                    !empty($currentPassword) AND !empty($newPassword) AND !empty($newPassword)){
+                    $updatedUser = new UserManager();
 
-                $passwordInDb = $updatedUser->gettingPassword($idUser);
+                    $passwordInDb = $updatedUser->gettingPassword($idUser);
 
-                if($newPassword == $newPassword2 AND password_verify($currentPassword, $passwordInDb['utilisateur_motDePasse']) ){
-                    $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
-                    $updatedUser->setFirstName($newFirstName);
-                    $updatedUser->setLastName($newLastName);
-                    $updatedUser->setLogin($newLogin);
-                    $updatedUser->setMail($newMail);
-                    $updatedUser->setPassword($newPassword );
+                    if($newPassword == $newPassword2 AND password_verify($currentPassword, $passwordInDb['utilisateur_motDePasse']) ){
+                        $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+                        $updatedUser->setFirstName($newFirstName);
+                        $updatedUser->setLastName($newLastName);
+                        $updatedUser->setLogin($newLogin);
+                        $updatedUser->setMail($newMail);
+                        $updatedUser->setPassword($newPassword );
 
-                    $updatingInDb = $updatedUser->updateUser($updatedUser,$idUser);
+                        $existingLogin = $updatedUser->checkLogIn($newLogin);
 
-                    if($updatingInDb===false){
-                        ?>
-                        <?php ob_start(); ?>
-                        <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
-                        <?php $error = ob_get_clean(); ?>
-                        <?php
-                        goToEditProfile($error);
+                        if($existingLogin==0) {
+
+                            $updatingInDb = $updatedUser->updateUser($updatedUser, $idUser);
+
+                            if ($updatingInDb === false) {
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                goToEditProfile($error, $idUser);
+                            } else {
+                                ?>
+                                <?php ob_start(); ?>
+                                <script>alert("Vos modifications ont bien été prises en compte")</script>
+                                <?php $error = ob_get_clean(); ?>
+                                <?php
+                                goToEditProfile($error, $idUser);
+                            }
+                        }
+                        else{
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Le login que vous avez choisi est utilisé")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            goToEditProfile($error, $idUser);
+                        }
                     }
                     else{
                         ?>
                         <?php ob_start(); ?>
-                        <script>alert("Vos modifications ont bien été prises en compte")</script>
+                        <script>alert("Veuillez vérifier que les mots de passe rentrés sont bien les bons.")</script>
                         <?php $error = ob_get_clean(); ?>
                         <?php
-                        goToEditProfile($error);
+                        goToEditProfile($error,$idUser);
+                    }
+                }
+
+                else{
+                    ?>
+                    <?php ob_start(); ?>
+                    <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
+                    <?php $error = ob_get_clean(); ?>
+                    <?php
+                    goToEditProfile($error,$idUser);
+                }
+            }
+            else{
+                $newLogin = htmlspecialchars($_POST['newpseudo']);
+                $newMail = htmlspecialchars($_POST['newmail']);
+                $newFirstName = htmlspecialchars($_POST['newprenom']);
+                $newLastName = htmlspecialchars($_POST['newnom']);
+
+
+                if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName)){
+                    $updatedUser = new UserManager();
+
+                        $updatedUser->setFirstName($newFirstName);
+                        $updatedUser->setLastName($newLastName);
+                        $updatedUser->setLogin($newLogin);
+                        $updatedUser->setMail($newMail);
+
+                    $existingLogin = $updatedUser->checkLogIn($newLogin);
+
+                    if($existingLogin==0){
+                        $updatingInDb = $updatedUser->updateUserAdmin($updatedUser,$idUser);
+
+                        if($updatingInDb===false){
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            admin($error);
+                        }
+                        else{
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Vos modifications ont bien été prises en compte")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            admin($error);
+                        }
+                    }
+                    else{
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Le login que vous avez choisi est déja utilisé")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        admin($error);
                     }
                 }
                 else{
                     ?>
                     <?php ob_start(); ?>
-                    <script>alert("Veuillez vérifier que les mots de passe rentrés sont bien les bons.")</script>
+                    <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    goToEditProfile($error);
+                    admin($error);
                 }
             }
 
-            else{
-                ?>
-                <?php ob_start(); ?>
-                <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
-                <?php $error = ob_get_clean(); ?>
-                <?php
-                goToEditProfile($error);
-            }
 
         }
 
@@ -518,7 +610,7 @@ try {
                     <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    goToEditProfile($error);
+                    goToEditProfile($error,$idUser);
                 }
                 else{
                     ?>
@@ -526,7 +618,7 @@ try {
                     <script>alert("Vos modifications ont bien été prises en compte")</script>
                     <?php $error = ob_get_clean(); ?>
                     <?php
-                    goToEditProfile($error);
+                    goToEditProfile($error,$idUser);
                 }
 
             }
@@ -537,7 +629,7 @@ try {
                 <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
                 <?php $error = ob_get_clean(); ?>
                 <?php
-                goToEditProfile($error);
+                goToEditProfile($error,$idUser);
             }
 
         }
@@ -712,6 +804,126 @@ try {
 
         elseif ($action == 'contact') {
             contact();
+        }
+
+        ///////////////////////////// ADMIN /////////////////////////////
+
+        // show the admins profile
+        elseif ($action=='goToProfileAdmin'){
+            $error = null;
+            profileAdmin($error,$idUser);
+        }
+
+        //show all users
+        elseif ($action == 'goToAdmin'){
+            $error = null;
+            admin($error);
+        }
+
+        // going to the modify page (admin)
+        elseif ($action == 'goToModifyProfileAdmin'){
+            $id = htmlspecialchars($_GET['modify']);
+            $error = null;
+            if($id == $_SESSION['userID']){
+                modifyAdmin($error,$id);
+            }
+            else{
+                goToEditProfile($error,$id);
+            }
+
+        }
+
+        // modify admin profile
+        elseif ($action == 'modifyProfileAdmin'){
+            $newLogin = htmlspecialchars($_POST['newpseudo']);
+            $newMail = htmlspecialchars($_POST['newmail']);
+            $newFirstName = htmlspecialchars($_POST['newprenom']);
+            $newLastName = htmlspecialchars($_POST['newnom']);
+
+
+            if(!empty($newLogin) AND !empty($newMail) AND !empty($newFirstName) AND !empty($newLastName)){
+                $updatedUser = new UserManager();
+                    $updatedUser->setFirstName($newFirstName);
+                    $updatedUser->setLastName($newLastName);
+                    $updatedUser->setLogin($newLogin);
+                    $updatedUser->setMail($newMail);
+
+
+                    $existingLogin = $updatedUser->checkLogIn($newLogin);
+
+                    if($existingLogin == 0){
+                        $updatingInDb = $updatedUser->updateUserAdmin($updatedUser,$idUser);
+                        if($updatingInDb===false){
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            profileAdmin($error,$idUser);;
+                        }
+                        else{
+                            ?>
+                            <?php ob_start(); ?>
+                            <script>alert("Vos modifications ont bien été prises en compte")</script>
+                            <?php $error = ob_get_clean(); ?>
+                            <?php
+                            profileAdmin($error,$idUser);
+                        }
+                    }
+                    else{
+                        ?>
+                        <?php ob_start(); ?>
+                        <script>alert("Ce login est déja utilisé. Veuillez prendre un autre.")</script>
+                        <?php $error = ob_get_clean(); ?>
+                        <?php
+                        profileAdmin($error,$idUser);
+                    }
+
+
+            }
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Tous les champs n'ont pas été remplis. Veuillez réessayer.")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                profileAdmin($error,$idUser);
+            }
+        }
+
+        // admin deletes user
+        elseif ($action == 'deleteUser'){
+            $id = htmlspecialchars($_GET['delete']);
+            $user = new UserManager();
+
+            $response = $user->delete($id);
+
+            if($response === false){
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("Une erreur est survenue. Veuillez réessayer ultérieurement")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                admin($error);
+            }
+            else{
+                ?>
+                <?php ob_start(); ?>
+                <script>alert("L'utilisateur a bien été supprimé")</script>
+                <?php $error = ob_get_clean(); ?>
+                <?php
+                // if the user delete itself
+                if($id == $_SESSION['userID']){
+                    logOut();
+                    logIn($error);
+                }
+                else{
+                    admin($error);
+                }
+
+
+            }
+
         }
     }
 
