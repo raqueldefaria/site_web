@@ -58,7 +58,7 @@ function showRoomsFromDb(idUser, idLogement) {
                         case "Bureau":
                             txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/desktop.png'>";
                             break;
-                        case "Salle de Bain":
+                        case "Salle De Bain":
                             txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/bathtub.png'>";
                             break;
                         case "Toilettes":

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a8170b82-9316-44bc-a213-4f3a9d671bd7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" afterPath="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,14 +42,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="showData.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="showData.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
+            <state relative-caret-position="297">
+              <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
               <folding>
                 <element signature="n#!!block;n#showHousingsFromDb#0" expanded="false" />
-                <element signature="n#!!block;n#showRoomsFromDb#0" expanded="false" />
+                <element signature="n#!!block;n#showSensorsFromDb#0" expanded="false" />
                 <element signature="n#!!block;n#delRoom#0" expanded="false" />
                 <element signature="n#!!block;n#delHousing#0" expanded="false" />
               </folding>
@@ -68,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site_web_mvc/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -112,15 +113,6 @@
       </file>
       <file leaf-file-name="logement" pinned="false" current-in-tab="false">
         <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.logement">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateur" pinned="false" current-in-tab="false">
-        <entry file="das://table:/3d1d4d68/afcd1073-6356-4dee-9408-04d240c45cc8/site_web.utilisateur">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -226,8 +218,8 @@
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showSensorsJs.php" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/showRoomsJs.php" />
-        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
         <option value="$PROJECT_DIR$/site_web_mvc/model/ajax/deleteSensorJs.php" />
+        <option value="$PROJECT_DIR$/site_web_mvc/public/js/showData.js" />
       </list>
     </option>
   </component>
@@ -295,6 +287,27 @@
               <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
               <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="site_web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="site_web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site_web_mvc" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="client" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -464,7 +477,7 @@
       <workItem from="1517160868328" duration="8661000" />
       <workItem from="1517257391873" duration="4442000" />
       <workItem from="1517394024104" duration="16000" />
-      <workItem from="1517394090669" duration="2650000" />
+      <workItem from="1517394090669" duration="3110000" />
     </task>
     <task id="LOCAL-00001" summary="MAJ">
       <created>1517078970667</created>
@@ -543,11 +556,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517396325029</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MAJ">
+      <created>1517396769938</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1517396769938</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52343000" />
+    <option name="totallyTimeSpent" value="52803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="-10" width="1940" height="1043" extended-state="6" />
@@ -593,13 +613,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/view/frontend/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_normal/controller/ReinitialisationMDP_POST.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
@@ -958,19 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="213" column="43" lean-forward="false" selection-start-line="213" selection-start-column="43" selection-end-line="213" selection-end-column="43" />
-          <folding>
-            <element signature="n#!!block;n#showHousingsFromDb#0" expanded="false" />
-            <element signature="n#!!block;n#showRoomsFromDb#0" expanded="false" />
-            <element signature="n#!!block;n#delRoom#0" expanded="false" />
-            <element signature="n#!!block;n#delHousing#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site_web_mvc/model/ajax/showHousingJs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1005,6 +1005,24 @@
             <element signature="e#23442#25979#0#PHP" expanded="false" />
             <element signature="e#25989#26155#0#PHP" expanded="false" />
             <element signature="e#26165#30163#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/images/client/bathtub.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site_web_mvc/public/js/showData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!block;n#showHousingsFromDb#0" expanded="false" />
+            <element signature="n#!!block;n#showSensorsFromDb#0" expanded="false" />
+            <element signature="n#!!block;n#delRoom#0" expanded="false" />
+            <element signature="n#!!block;n#delHousing#0" expanded="false" />
           </folding>
         </state>
       </provider>
