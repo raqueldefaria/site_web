@@ -337,9 +337,9 @@ function profile()
     <?php $title = ob_get_clean(); ?>
     <?php
     $user = new UserManager();
-    $userInfo = $user->showAllInfo();
+    $userInfo = $user->showAllInfo($_SESSION['userID']);
     $housing = new HousingManager();
-    $housingInfo = $housing->showAllInfo(); ?>
+    $housingInfo = $housing->showAllInfo($_SESSION['userID']); ?>
 
     <?php ob_start(); ?>
     <!-- Le corps -->

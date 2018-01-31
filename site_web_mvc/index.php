@@ -832,7 +832,7 @@ try {
 
         // going to the modify page (admin)
         elseif ($action == 'goToModifyProfileAdmin'){
-            $id = htmlspecialchars($_GET['modify']);
+            $id = htmlspecialchars($_GET['id']);
             $error = null;
             if($id == $_SESSION['userID']){
                 modifyAdmin($error,$id);
