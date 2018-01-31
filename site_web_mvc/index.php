@@ -611,7 +611,7 @@ try {
                         else{
                             ?>
                             <?php ob_start(); ?>
-                            <script>alert("Le login que vous avez choisi est déja utilisé")</script>
+                            <script>alert("Le login choisi est déja utilisé")</script>
                             <?php $error = ob_get_clean(); ?>
                             <?php
                             admin($error);
