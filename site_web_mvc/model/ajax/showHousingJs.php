@@ -9,9 +9,14 @@ require("../connectionDb.php");
 /* ------------------- Request ------------------- */
 $data = $db->query("SELECT * FROM logement WHERE id_Utilisateur =".$obj->idUser) or die(print_r($db->errorInfo()));
 
-$outp = array();
-$outp = $data->fetchAll() or die(print_r($data->errorInfo()));
+if($data->rowCount() == 0){
+    echo json_encode(null);
+    $data->closeCursor();
+}
+else{
+    $outp = array();
+    $outp = $data->fetchAll() or die(print_r($data->errorInfo()));
+    echo json_encode($outp);
+    $data->closeCursor();
+}
 
-$data->closeCursor();
-
-echo json_encode($outp);

@@ -6,16 +6,19 @@ function showHousingsFromDb(idUser) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            for (it = 0; it < myObj.length; it++) {
-                    txt += "<div><a href=\"index.php?action=goToRooms&id="+ myObj[it].id_Logement + "\" >" +
+            console.log(myObj);
+            if (myObj != null) {
+                for (it = 0; it < myObj.length; it++) {
+                    txt += "<div><a href=\"index.php?action=goToRooms&id=" + myObj[it].id_Logement + "\" >" +
                         "<div class='section'>" +
                         "<p style='font-size: small'>" + myObj[it].logement_adresse + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_codePostal + " " + myObj[it].logement_ville + "</p>" +
                         "<p style='font-size: small'>" + myObj[it].logement_pays + "</p>" +
                         "</div>" +
-                        "</a><img src=\"public/images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Logement+"\" onclick=\" delHousing("+myObj[it].id_Logement+" , "+idUser+");\">" +
-                        "<img src=\"public/images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Logement+"\"  onclick=\"return pop('editHousing"+myObj[it].id_Logement+"')\" ></div>";
+                        "</a><img src=\"public/images/client/cancel.png\" class=\"suppPiece\" id=\"supp" + myObj[it].id_Logement + "\" onclick=\" delHousing(" + myObj[it].id_Logement + " , " + idUser + ");\">" +
+                        "<img src=\"public/images/client/edit.png\" class=\"editPiece\" id=\"edit" + myObj[it].id_Logement + "\"  onclick=\"return pop('editHousing" + myObj[it].id_Logement + "')\" ></div>";
                 }
+            }
                 txt +="<a href=\"\" onclick=\"return pop('addLogement') \" >\n" +
                     "            <div class=\"section\">\n" +
                     "                <img src=\"public/images/client/add.png\" class=\"addButton\">\n" +
@@ -38,36 +41,39 @@ function showRoomsFromDb(idUser, idLogement) {
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
-            for (it = 0; it < myObj.length; it++) {
-                txt += "<div><a href='index.php?action=goToSensors&id="+ myObj[it].id_Piece + "'>";
-                switch (myObj[it].piece_type){
-                    case "Garage":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/car.png'>";
-                        break;
-                    case "Chambre":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/bed.png'>";
-                        break;
-                    case "Cuisine":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/cutlery.png'>";
-                        break;
-                    case "Bureau":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/desktop.png'>";
-                        break;
-                    case "Salle de Bain":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/bathtub.png'>";
-                        break;
-                    case "Toilettes":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/toilet.png'>";
-                        break;
-                    case "Salon":
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/room.png'>";
-                        break;
-                    default:
-                        txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p>";
-                }
-                txt += "</div></a><img src=\"public/images/client/cancel.png\" class=\"suppPiece\" id=\"supp"+myObj[it].id_Piece+"\" onclick=\"return delRoom("+myObj[it].id_Piece+" , "+idLogement+" , "+idUser+")\">\n"+
-                      "<img src=\"public/images/client/edit.png\" class=\"editPiece\" id=\"edit"+myObj[it].id_Piece+"\"  onclick=\"return pop('editRoom"+myObj[it].id_Piece+"')\" ></div>";
+            console.log(myObj);
+            if (myObj != null) {
+                for (it = 0; it < myObj.length; it++) {
+                    txt += "<div><a href='index.php?action=goToSensors&id=" + myObj[it].id_Piece + "'>";
+                    switch (myObj[it].piece_type) {
+                        case "Garage":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/car.png'>";
+                            break;
+                        case "Chambre":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/bed.png'>";
+                            break;
+                        case "Cuisine":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/cutlery.png'>";
+                            break;
+                        case "Bureau":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/desktop.png'>";
+                            break;
+                        case "Salle de Bain":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/bathtub.png'>";
+                            break;
+                        case "Toilettes":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/toilet.png'>";
+                            break;
+                        case "Salon":
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p><img src='public/images/client/room.png'>";
+                            break;
+                        default:
+                            txt += "<div class='section'><p class=\"namePieceCSS\">" + myObj[it].piece_nom + "</p>";
+                    }
+                    txt += "</div></a><img src=\"public/images/client/cancel.png\" class=\"suppPiece\" id=\"supp" + myObj[it].id_Piece + "\" onclick=\"return delRoom(" + myObj[it].id_Piece + " , " + idLogement + " , " + idUser + ")\">\n" +
+                        "<img src=\"public/images/client/edit.png\" class=\"editPiece\" id=\"edit" + myObj[it].id_Piece + "\"  onclick=\"return pop('editRoom" + myObj[it].id_Piece + "')\" ></div>";
 
+                }
             }
             txt +="<a href=\"\" onclick=\"return pop('addPiece') \" >\n" +
                 "            <div class=\"section\">\n" +
@@ -89,6 +95,7 @@ function showSensorsFromDb(idPiece) {
     dbParam = JSON.stringify(obj);
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
+        console.log(this.responseText);
         if (this.readyState == 4 && this.status == 200) {
             myObj = JSON.parse(this.responseText);
             if (myObj != null){
