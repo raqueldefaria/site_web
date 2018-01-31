@@ -10,16 +10,24 @@ require("../connectionDb.php");
 $dataCemac = $db->query("SELECT id_Cemac FROM cemac WHERE Piece_idPiece =" .$obj->idPiece) or die(print_r($db->errorInfo()));
 $response  = $dataCemac->fetch();
 
-if (!empty($response)){
+if ($dataCemac->rowCount() != 0){
     $data = $db->query("SELECT `capteur/actionneur_fonction` AS fonction , `id_Capteur/actionneur` AS ID_capteur_actionneur FROM `capteur/actionneur` WHERE Cemac_idCemac =" .$response['id_Cemac']) or die(print_r($db->errorInfo()));
 
-    $outp = array();
-    $outp = $data->fetchAll();
+    if($data->rowCount() == 0){
+        $data->closeCursor();
+        $dataCemac->closeCursor();
+        echo json_encode(null);
+    }
+    else{
+        $outp = array();
+        $outp = $data->fetchAll();
 
-    $dataCemac->closeCursor();
-    $data->closeCursor();
+        $dataCemac->closeCursor();
+        $data->closeCursor();
 
-    echo json_encode($outp);
+        echo json_encode($outp);
+    }
+
 }
 else{
     echo json_encode(null);
