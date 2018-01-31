@@ -47,6 +47,16 @@
 
             </div>
 
+            <div id="news3">
+                <h2> Tutoriels d'utilisation : </h2>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yULO6sF7or4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CVHyNKHBHBc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            </div>
+
+
         </div>
 
         <div id="about_domonline">
