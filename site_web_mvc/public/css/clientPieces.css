@@ -9,10 +9,14 @@ body{
 
 /*------------ Pieces in general ------------*/
 
+.namePieceCSS{
+    padding-top: 20px;
+}
+
 .pieces{
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 50%;
     width: 60%;
     margin-left: 39%;
     margin-top: -16%;
@@ -30,11 +34,16 @@ body{
 .suppPiece{
   width:20px;
   position:relative;
-  left:50px;
+  left:126px;
+  bottom:98px;
 }
 
-#overflow{
-    overflow: auto;
+.editPiece{
+  width:20px;
+  position:relative;
+  left:9px;
+  bottom:100px;
+
 }
 /*------------ Title of the section ------------*/
 

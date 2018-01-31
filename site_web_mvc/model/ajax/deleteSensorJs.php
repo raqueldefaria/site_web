@@ -11,7 +11,6 @@ require("../connectionDb.php");
 
 
 $existingFailures = $db->query("SELECT * FROM panne WHERE `Capteur/actionneur_idCapteur/actionneur`=".$obj->idCapteur) or die(print_r($db->errorInfo()));
-echo json_encode($existingFailures);
 $existingData = $db->query("SELECT * FROM donnees WHERE `Capteur/actionneur_idCapteur/actionneur`=".$obj->idCapteur) or die(print_r($db->errorInfo()));
 
 // no data or failures

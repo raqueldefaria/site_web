@@ -909,6 +909,8 @@ function sensor($idRoom, $error)
 
 
     <!--------------- Navigation --------------->
+    <link rel="stylesheet" href="public/css/sensorsList.css" />
+    <link rel="stylesheet" href="public/css/sensorsStyle.css" />
     <div class="pieces">
         <div class="sectionPieces">
             <p class="motPiece">Capteurs/actionneurs</p>
