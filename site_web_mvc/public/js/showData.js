@@ -268,7 +268,7 @@ function addSensor(idPiece){
               showSensorsFromDb(idPiece);
 
           }
-      }
+      };
     xmlhttp.open("POST", "model/ajax/addSensorJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
@@ -290,7 +290,7 @@ function addRoom(idUser,idLogement){
               writePopUpsPieces(idUser, idLogement);
 
           }
-      }
+      };
     xmlhttp.open("POST", "model/ajax/addRoomJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
@@ -311,7 +311,7 @@ function addHousing(idUser){
               showHousingsFromDb(idUser);
               writePopUpsLogements(idUser);
           }
-      }
+      };
     xmlhttp.open("POST", "controller/ajax/addHousingJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);
@@ -334,7 +334,7 @@ function editHousing(idUser, idLogement){
               writePopUpsLogements(idUser);
 
           }
-      }
+      };
     xmlhttp.open("POST", "controller/ajax/editHousingJs.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("x=" + dbParam);

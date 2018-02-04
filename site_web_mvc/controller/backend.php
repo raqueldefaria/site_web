@@ -123,6 +123,12 @@ function admin($error){
     <?php $title = ob_get_clean(); ?>
 
     <?php ob_start(); ?>
+    <?php
+    if ($error!=null) {
+        ?>
+        <?= $error ?>
+        <?php
+    } ?>
     <link rel="stylesheet" href="public/css/admin.css" />
     <div id="corps">
         <div id="main_block">

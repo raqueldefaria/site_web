@@ -141,7 +141,7 @@ class HousingManager
         $response->bindParam(':country', $housing->country);
         $response->execute()or die(print_r("erreur2=".$response->errorInfo()));
 
-        $data = $response->fetch();
+        $data = $response->rowCount();
 
         $response->closecursor();
 

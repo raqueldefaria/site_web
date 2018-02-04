@@ -951,7 +951,8 @@ function showAllSensorsAndActuators($idUser)
     </div>
 
     <!--************** Navigation **************-->
-
+    <link rel="stylesheet" href="public/css/sensorsList.css" />
+    <link rel="stylesheet" href="public/css/sensorsStyle.css" />
     <div class="pieces">
         <div class="sectionPieces">
             <p class="motPiece">Tous les capteurs et actionneurs</p>
@@ -987,6 +988,8 @@ function alarm($idUser)
     <?php $title = ob_get_clean(); ?>
     <?php ob_start(); ?>
     <!--------------- Navigation --------------->
+    <link rel="stylesheet" href="public/css/sensorsList.css" />
+    <link rel="stylesheet" href="public/css/sensorsStyle.css" />
     <div class="pieces">
         <div class="sectionPieces">
             <p class="motPiece">Contrôle de l'alarme</p>
@@ -1074,6 +1077,14 @@ function newPassword($tok, $error)
                     </td>
                     <td>
                         <input type="text" name="tok2" id="tok2" required/> <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tok2"> Votre adresse mail :</label>
+                    </td>
+                    <td>
+                        <input type="email" name="mail" id="tok2" required/> <br />
                     </td>
                 </tr>
                 <tr>

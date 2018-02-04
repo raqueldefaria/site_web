@@ -401,19 +401,23 @@ class UserManager
         return $response;
     }
 
-    function checkId($idUser, $tok){
-      $db = $this->dbConnect();
+    function checkTok($mail,$tok){
+        $db = $this->dbConnect();
 
-      $response = $db->prepare('SELECT * FROM utilisateur WHERE id_Utilisateur = ? AND tok = ?');
-      $response->execute(array($idUser,$tok));
+        $response = $db->prepare('SELECT * FROM utilisateur WHERE utilisateur_mail = ? AND tok = ?');
+        $response->execute(array($mail,$tok));
 
-      return $response->rowCount();
+        return $response->rowCount();
     }
 
+    function checkId($id){
+        $db = $this->dbConnect();
 
+        $response = $db->prepare('SELECT * FROM utilisateur WHERE id_Utilisateur = ?');
+        $response->execute(array($id));
 
-
-
+        return $response->rowCount();
+    }
 
 
 }
