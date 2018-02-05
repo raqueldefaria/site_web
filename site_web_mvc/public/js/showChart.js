@@ -24,7 +24,6 @@ function xDataFromDb (limit, idPiece, idSensor){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this.responseText);
             responseFromDb = JSON.parse(this.responseText); // db data
             for (it = 0; it < responseFromDb.length; it++){ //separating data
                 dataArray.push(String(responseFromDb[it].donnees_temps));

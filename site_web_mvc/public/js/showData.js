@@ -100,7 +100,7 @@ function showSensorsFromDb(idPiece) {
                     txt += "<a href=''>";
                     switch (myObj[it].fonction){
                         case "Lumière":
-                            txt += "<div class=\"section\">\n" +
+                            txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p onclick=\"return popChart('chartDiv', 10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Flux lumineux', 'Flux lumineux en fonction du temps','Flux lumineux en lumens', 'Temps en heures')\">Lumière </p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                     "                <div class=optionSensor>\n" +
@@ -117,7 +117,7 @@ function showSensorsFromDb(idPiece) {
                                 "            </div>" ;
                             break;
                         case "Volets":
-                            txt += "<div class=\"section\">\n" +
+                            txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p>Volets</p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                 "                <div class=optionSensor>\n" +
@@ -133,7 +133,7 @@ function showSensorsFromDb(idPiece) {
                                 "            </div>";
                             break;
                         case "Température":
-                            txt += "<div class=\"section\">\n" +
+                            txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p onclick=\"return popChart('chartDiv',  10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Température', 'Température en fonction du temps', 'Température en °C', 'Temps en heures')\">Température</p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                     "                <div class=optionSensor>\n" +
@@ -149,7 +149,7 @@ function showSensorsFromDb(idPiece) {
                                 "            </div>";
                             break;
                         case "Humidité":
-                            txt += "<div class=\"section\">\n" +
+                            txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p onclick=\"return popChart('chartDiv',  10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Humidité', 'Humidité en fonction du temps', 'Humidité en g par unité de volume', 'Temps en heures')\">Humidité</p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                 "                <div class=optionSensor>\n" +
@@ -165,7 +165,7 @@ function showSensorsFromDb(idPiece) {
                                 "            </div>";
                             break;
                         default:
-                            txt += "<div class=\"section\">\n" +
+                            txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p onclick=\"return popChart('chartDiv',  10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Données du capteur/actionneur', 'Données du capteur/actionneur en fonction du temps', 'Axe des ordonnées', 'Axe des abscisse')\">Capteur/actionneur</p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                 "                <div class=optionSensor>\n" +
@@ -207,7 +207,6 @@ function delSensor(idCapteur, idPiece){
         var dbParam = JSON.stringify({"idCapteur": idCapteur}); // On encode en JSON dbParam, qui contient l'id capteur
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
-            console.log(this.responseText);
             if (this.readyState == 4 && this.status == 200) {
                 showSensorsFromDb(idPiece);
             }
