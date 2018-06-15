@@ -34,7 +34,7 @@ function showLogementsFromDb(idUser) {
 
 
 function showPiecesFromDb(idUser, idLogement) {
-    console.log(idLogement);
+    //console.log(idLogement);
     var obj, dbParam, xmlhttp, myObj, it, txt = "";
     obj = {"idUser": idUser, "idLogement":idLogement };
     dbParam = JSON.stringify(obj);

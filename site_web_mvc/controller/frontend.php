@@ -120,7 +120,7 @@ function register($error){
                     <table>
                         <tr>
                             <td>
-                                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant"required />
+                                <input type="text" name="pseudo" id="pseudo" size=35 placeholder="Identifiant"required value="<?php if(isset($_COOKIE['username_temp'])){echo $_COOKIE['username_temp'];} ?>"/>
                                 <span id="missPseudo"></span>
                             </td>
                         </tr>
@@ -144,12 +144,12 @@ function register($error){
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" required />
+                                <input type="text" name="prenom" id="prenom" size=35 placeholder="Prénom" value="<?php if(isset($_COOKIE['firstname_temp'])){echo $_COOKIE['firstname_temp'];} ?>" required />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="nom" id="nom" size=35 placeholder="Nom" required/>
+                                <input type="text" name="nom" id="nom" size=35 placeholder="Nom" value="<?php if(isset($_COOKIE['lastname_temp'])){echo $_COOKIE['lastname_temp'];} ?>" required/>
                             </td>
                         </tr>
                         <tr>
@@ -159,27 +159,27 @@ function register($error){
         </tr>
         <tr>
             <td>
-                <input type="email" name="mail" id="mail" size=35 placeholder="Mail"  required/>
+                <input type="email" name="mail" id="mail" size=35 placeholder="Mail" value="<?php if(isset($_COOKIE['mail_temp'])){echo $_COOKIE['mail_temp'];} ?>"  required/>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" required/>
+                <input type="text" name="adresse" id="adresse" size=35 placeholder="Adresse" value="<?php if(isset($_COOKIE['adress_temp'])){echo $_COOKIE['adress_temp'];} ?>" required/>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" required />
+                <input type="text" name="codePostal" id="codePostal" size=35 placeholder="Code Postal" value="<?php if(isset($_COOKIE['codepostal_temp'])){echo $_COOKIE['codepostal_temp'];} ?>" required />
             </td>
         </tr>
         <tr>
             <td>
-                <input type="text" name="ville" id="ville" size=35 placeholder="Ville" required/>
+                <input type="text" name="ville" id="ville" size=35 placeholder="Ville" value="<?php if(isset($_COOKIE['city_temp'])){echo $_COOKIE['city_temp'];} ?>" required/>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="text" name="pays" id="pays" size=35 placeholder="Pays" required />
+                <input type="text" name="pays" id="pays" size=35 placeholder="Pays" value="<?php if(isset($_COOKIE['country_temp'])){echo $_COOKIE['country_temp'];} ?>" required />
             </td>
         </tr>
         </table>

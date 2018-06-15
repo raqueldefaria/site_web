@@ -2,6 +2,7 @@
 
 require('controller/frontend.php');
 require('controller/backend.php');
+require('controller/userInscriptionError.php');
 
 if (isset($_GET['action'])) {
     $action = htmlspecialchars($_GET['action']);
@@ -75,6 +76,7 @@ try {
                                 <p><span class="msg_erreur">Un probleme est survenu. Veuillez reessayer ulterieurement.</span></p>
                                 <?php $error = ob_get_clean(); ?>
                                 <?php
+                                pre_fill();
                                 register($error);
                             } else {
                                 $housing = new HousingManager();
@@ -129,6 +131,7 @@ try {
                             <p><span class="msg_erreur">L'utilisateur existe déja</span></p>
                             <?php $error = ob_get_clean(); ?>
                             <?php
+                            pre_fill();
                             register($error);
                         }
                     }
@@ -138,6 +141,7 @@ try {
                         <p><span class="msg_erreur">Les 2 mots de passe ne correspondent pas</span></p>
                         <?php $error = ob_get_clean(); ?>
                         <?php
+                        pre_fill();
                         register($error);
                     }
                 } else {
@@ -146,6 +150,7 @@ try {
                     <p><span class="msg_erreur">Tous les champs ne sont pas remplis</span></p>
                     <?php $error = ob_get_clean(); ?>
                     <?php
+                    pre_fill();
                     register($error);
                 }
 
