@@ -164,6 +164,25 @@ function showSensorsFromDb(idPiece) {
                                 "                </div>\n" +
                                 "            </div>";
                             break;
+                        case "Moteur":
+                            txt += "<div class=\"section\" id='sensor'>\n" +
+                                "                <p onclick=\"return popChart('chartDiv',  10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Humidité', 'Humidité en fonction du temps', 'Humidité en g par unité de volume', 'Temps en heures')\">Moteur</p>\n" +
+                                "                <div class=imgBoutton>\n" +
+                                "                <div class=optionSensor>\n" +
+                                "                    <img src=\"public/images/moteur.png\"/>\n" +
+                                "                        <label class=\"switch\">\n" +
+                                "                            <input type=\"checkbox\">\n" +
+                                "                            <span class=\"slider round\"></span>\n" +
+                                "                        </label>\n" +
+                                "                </div>\n" +
+                                "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
+
+                                "                </div>\n" +
+                                "                <img src=\"public/images/fleche_gauche.png\"/>"+
+                                "                <img src=\"public/images/bouton_stop.png\"/>"+
+                                "                <img src=\"public/images/fleche_droite.png\"/>"+
+                                "            </div>";
+                            break;
                         default:
                             txt += "<div class=\"section\" id='sensor'>\n" +
                                 "                <p onclick=\"return popChart('chartDiv',  10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Données du capteur/actionneur', 'Données du capteur/actionneur en fonction du temps', 'Axe des ordonnées', 'Axe des abscisse')\">Capteur/actionneur</p>\n" +

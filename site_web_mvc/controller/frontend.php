@@ -895,6 +895,7 @@ function sensor($idRoom, $error)
                         <option value="Volets">Volets</option>
                         <option value="Température">Température</option>
                         <option value="Humidité">Humidité</option>
+                        <option value="Moteur">Moteur</option>
                     </select></p>
                 <p>Choisissez le type : <select name="type">
                         <option value="Capteur">Capteur</option>
