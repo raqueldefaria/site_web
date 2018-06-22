@@ -11,7 +11,6 @@
 
     <script type="application/javascript" src="public/js/showChart.js"></script>
     <script type="application/javascript" src="public/js/controlMotor.js"></script>
-    <script type="application/javascript" src="public/js/moveCemac.js"></script>
     <script type="application/javascript" src="public/js/showData.js"></script>
     <script type="application/javascript" src="public/js/showOrHidePopUp.js"></script>
     <script type="application/javascript" src="public/js/writePopUps.js"></script>

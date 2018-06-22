@@ -997,9 +997,9 @@ function alarm($idUser)
             <a href="#"><img src="public/images/client/question.png" class="questions"></a>
         </div>
 
-        <p style="font-size: large">Etat Actuel : <img src="public/images/checked.png"></p>
-        <button id="boutonSeDeconnecter" style="width: 150px" onclick="return controlMotor(3)">Faire avancer le CeMac</button>
-        <p style="font-size: large">Historique des pannes : </p>
+        <p style="font-size: large; margin-left: 10px">Etat Actuel : <img src="public/images/checked.png"></p>
+        <button id="boutonSeDeconnecter" style="width: 150px; margin-left: 10px" onclick="return controlMotor(3)">Faire avancer le CeMac</button>
+        <p style="font-size: large; margin-left: 10px">Historique des pannes : </p>
         <div id="sensorsList">
             <table>
                 <tr>

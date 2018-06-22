@@ -101,7 +101,7 @@ function showSensorsFromDb(idPiece) {
                     switch (myObj[it].fonction){
                         case "Lumière":
                             txt += "<div class=\"section\" id='sensor'>\n" +
-                                "                <p onclick=\"return popChart('chartDiv', 10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Flux lumineux', 'Flux lumineux en fonction du temps','Flux lumineux en lumens', 'Temps en heures')\">Lumière </p>\n" +
+                                "                <p onclick=\"return popChart('chartDiv', 10," + idPiece +", "+ myObj[it].ID_capteur_actionneur +", 'Valeur de la photorésistance', 'Valeurs de la photorésistance en fonction du temps','Valeurs de la photorésistance', 'Temps')\">Lumière </p>\n" +
                                 "                <div class=imgBoutton>\n" +
                                     "                <div class=optionSensor>\n" +
                                 "                    <img src=\"public/images/lumière.png\"/>\n" +
