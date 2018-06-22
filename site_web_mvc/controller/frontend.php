@@ -998,6 +998,7 @@ function alarm($idUser)
         </div>
 
         <p style="font-size: large">Etat Actuel : <img src="public/images/checked.png"></p>
+        <button id="boutonSeDeconnecter" style="width: 150px" onclick="return controlMotor(3)">Faire avancer le CeMac</button>
         <p style="font-size: large">Historique des pannes : </p>
         <div id="sensorsList">
             <table>

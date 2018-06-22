@@ -4,8 +4,6 @@ function controlMotor(action){ //on prend en argument l'idUser, qui pourrait ser
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            console.log("ok");
-            console.log(this.responseText);
 
         }
     };

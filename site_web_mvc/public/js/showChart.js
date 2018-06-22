@@ -25,7 +25,7 @@ function xDataFromDb (limit, idPiece, idSensor){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             responseFromDb = JSON.parse(this.responseText); // db data
-            for (it = 0; it < responseFromDb.length; it++){ //separating data
+            for (it = responseFromDb.length-1; it>-1; it--){ //separating data
                 dataArray.push(String(responseFromDb[it].donnees_temps));
             }
         }
@@ -49,7 +49,7 @@ function yDataFromDb (limit, idPiece, idSensor){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             responseFromDb = JSON.parse(this.responseText); // db data
-            for (it = 0; it < responseFromDb.length; it++){ //separating data
+            for (it = responseFromDb.length-1; it>-1; it--){ //separating data
                 dataArray.push(Number(responseFromDb[it].donnees_valeur));
             }
         }

@@ -25,6 +25,10 @@ $obj = json_decode($_POST["x"], false); //a tester après avec le htmlspecialcha
         curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006b&
 	TRAME=1006b2a010002df");
     }
+if ($obj->action == 3){
+    curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006b&
+	TRAME=1006b2a010002df");
+}
 
 //curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006b&
 //	TRAME=1006b2a010001de");
@@ -43,6 +47,9 @@ elseif($obj->action == 2){
 }
 elseif($obj->action == 0){
     header("Location: http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006b&TRAME=1006b2a010000dd");
+}
+elseif($obj->action == 3){
+    header("Location: http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=006b&TRAME=1006b2a010003dd");
 }
 
 
