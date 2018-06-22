@@ -97,8 +97,13 @@ function createChart (xData, yData, label, title, yLabel, xLabel){
                     scaleLabel: {
                         display: true,
                         labelString: xLabel
+                    },
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 30
                     }
-                }],
+                }]
             }
         }
     });

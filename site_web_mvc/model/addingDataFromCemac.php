@@ -9,14 +9,59 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
 curl_close($ch);
 
-echo "Raw Data:<br />";
-echo("$data");
-
-// 2. Les mettres sous forme de tableau (1 ligne = 1 trame d'un capteur)
+//echo "Raw Data:<br />";
+//echo("$data");
+//
+//// 2. Les mettres sous forme de tableau (1 ligne = 1 trame d'un capteur)
 $data_tab = str_split($data,33);
-echo "<br /><br />Tabular Data:<br />";
-for($i=0, $size=count($data_tab);$i<$size;$i++){
-    echo "trame $i: $data_tab[$i]<br />";
+//echo "<br /><br />Tabular Data:<br />";
+
+$size=count($data_tab);
+
+//--------------------Ajouter les donnees a la BDD---------------------//
+
+/* ------------------- DB ------------------- */
+require("connectionDb.php");
+
+/* ------------------- Request know which data to add ------------------- */
+$entriesInDb = $db->query("SELECT * FROM donnees");
+$numberEntries = 0;
+while($entriesInDb->fetch()){
+    $numberEntries++;
+}
+$entries = $entriesInDb->fetch();
+
+$numberEntriesToAdd = $size-$numberEntries;
+
+// only add
+for($i=$numberEntries, $size=count($data_tab)-2;$i<$size;$i++){
+    $trame = $data_tab[$i];
+// décodage avec des substring
+    $trame_type = substr($trame,0,1);
+    $object_num =  hexdec(substr($trame,1,4));
+
+// décodage avec sscanf
+// tout en chaine de caracteres
+    list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+
+    $value = hexdec($v);
+
+    $date = $year . "-" . $month . "-" . $day . " " . $hour . ":" . $min . ":" . $sec ;
+
+
+
+
+
+    /* ------------------- Request to insert data ------------------- */
+    $data = $db->prepare("INSERT INTO donnees(donnees_temps, donnees_valeur, `Capteur/actionneur_idCapteur/actionneur`, `Capteur/actionneur_Cemac_idCemac`) VALUES (:temps,:valeur,59, 33)") or die(print_r($db->errorInfo()));
+    $data->bindParam(':temps', $date);
+    $data->bindParam(':valeur', $value );
+    //$data->bindParam(':idCapteur', $n);
+    $data->execute() or die(print_r($data->errorInfo()));
+
+    $data->closeCursor();
+
+    $date = "";
 }
 
 // 3. Décoder 1 trame
@@ -32,39 +77,43 @@ for($i=0, $size=count($data_tab);$i<$size;$i++){
 // XX : un checksum (ne sert pas)
 // YYYY MM DD HH mm ss : timestamp
 
-$trame = $data_tab[1];
-echo("<br /><br />$trame<br/>");
-// décodage avec des substring
-$trame_type = substr($trame,0,1);
-$object_num =  hexdec(substr($trame,1,4));
-echo("$object_num $object_num ...<br />");
-
-// décodage avec sscanf
-// tout en chaine de caracteres
-list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-echo("$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec</br/>");
+//$trame = $data_tab[1];
+//echo("<br /><br />$trame<br/>");
+//// décodage avec des substring
+//$trame_type = substr($trame,0,1);
+//$object_num =  hexdec(substr($trame,1,4));
+//echo("$object_num $object_num ...<br />");
+//
+//// décodage avec sscanf
+//// tout en chaine de caracteres
+//list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+//echo("$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec</br/>");
 
 //// en typant les données (à vérifier avec Gilles...)
 //list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) = sscanf($trame,"%1d%4x%1s%1s%2x%4x%4s%2s%4d%2d%2d%2d%2d%2d");
 //echo("$t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec");
 
-$value = hexdec($v);
-echo "hello";
-echo($o);
+//$value = hexdec($v);
+//echo "hello";
+//echo($year + $month + $day + $hour + $min + $sec);
+//
+//$date = $year . "-" . $month . "-" . $day . " " . $hour . ":" . $min . ":" . $sec ;
+//
+//echo ($date);
 
 
 //--------------------Ajouter les donnees a la BDD---------------------//
 
-/* ------------------- DB ------------------- */
-require("connectionDb.php");
-
-
-/* ------------------- Request ------------------- */
-$data = $db->prepare("INSERT INTO donnees(donnees_temps, donnees_valeur, Capteur/actionneur_idCapteur/actionneur) VALUES (:temps,:valeur,:idCapteur)") or die(print_r($db->errorInfo()));
-$data->bindParam(':temps', $min);
-$data->bindParam(':valeur', $value );
-$data->bindParam(':idCapteur', $n);
-$data->execute() or die(print_r($data->errorInfo()));
-
-$data->closeCursor();
+///* ------------------- DB ------------------- */
+//require("connectionDb.php");
+//
+//
+///* ------------------- Request ------------------- */
+//$data = $db->prepare("INSERT INTO donnees(donnees_temps, donnees_valeur, `Capteur/actionneur_idCapteur/actionneur`, `Capteur/actionneur_Cemac_idCemac`) VALUES (:temps,:valeur,33, 33)") or die(print_r($db->errorInfo()));
+//$data->bindParam(':temps', $date);
+//$data->bindParam(':valeur', $value );
+////$data->bindParam(':idCapteur', $n);
+//$data->execute() or die(print_r($data->errorInfo()));
+//
+//$data->closeCursor();
 
