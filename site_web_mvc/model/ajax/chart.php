@@ -9,7 +9,7 @@ $obj = json_decode($_POST["x"], false);
 include("../addingDataFromCemac.php");
 
 
-$data = $db->query("SELECT donnees_valeur, donnees_temps FROM donnees WHERE `Capteur/actionneur_idCapteur/actionneur`=".$obj->idSensor." ORDER BY id_Donnees DESC LIMIT ".$obj->limit) or die(print_r($db->errorInfo()));
+$data = $db->query("SELECT donnees_valeur, donnees_temps FROM donnees WHERE `Capteur/actionneur_idCapteur/actionneur`=".$obj->idSensor." ORDER BY donnees_temps DESC LIMIT 20") or die(print_r($db->errorInfo()));
 
 $outp = array();
 $outp = $data->fetchAll();

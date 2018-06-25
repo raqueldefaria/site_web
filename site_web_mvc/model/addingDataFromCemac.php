@@ -31,10 +31,16 @@ while($entriesInDb->fetch()){
 }
 $entries = $entriesInDb->fetch();
 
+if($numberEntries>2000){
+    $delete = $db->query("DELETE FROM donnees");
+    $delete->fetch();
+    $delete->closeCursor();
+}
+
 $numberEntriesToAdd = $size-$numberEntries;
 
 // only add
-for($i=$numberEntries, $size=count($data_tab)-2;$i<$size;$i++){
+for($i=count($data_tab)-2000, $size=count($data_tab)-2;$i<$size;$i++){
     $trame = $data_tab[$i];
 // décodage avec des substring
     $trame_type = substr($trame,0,1);

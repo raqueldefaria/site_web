@@ -107,8 +107,8 @@ function showSensorsFromDb(idPiece) {
                                 "                    <img src=\"public/images/lumière.png\"/>\n" +
 
                                 "                        <label class=\"switch\">\n" +
-                                    "                            <input type=\"checkbox\">\n" +
-                                    "                            <span class=\"slider round\"></span>\n" +
+                                    "                            <input hidden type=\"checkbox\">\n" +
+                                    "                            <span hidden class=\"slider round\"></span>\n" +
                                     "                        </label>\n" +
                                     "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
@@ -123,8 +123,8 @@ function showSensorsFromDb(idPiece) {
                                 "                <div class=optionSensor>\n" +
                                 "                    <img src=\"public/images/volets.png\"/>\n" +
                                 "                        <label class=\"switch\">\n" +
-                                "                            <input type=\"checkbox\">\n" +
-                                "                            <span class=\"slider round\"></span>\n" +
+                                "                            <input hidden type=\"checkbox\">\n" +
+                                "                            <span hidden class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
@@ -139,8 +139,8 @@ function showSensorsFromDb(idPiece) {
                                     "                <div class=optionSensor>\n" +
                                 "                    <img src=\"public/images/température.png\"/>\n" +
                                 "                        <label class=\"switch\">\n" +
-                                    "                            <input type=\"checkbox\">\n" +
-                                    "                            <span class=\"slider round\"></span>\n" +
+                                    "                            <input hidden type=\"checkbox\">\n" +
+                                    "                            <span hidden class=\"slider round\"></span>\n" +
                                     "                        </label>\n" +
                                     "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
@@ -155,8 +155,8 @@ function showSensorsFromDb(idPiece) {
                                 "                <div class=optionSensor>\n" +
                                 "                    <img src=\"public/images/humidité.png\"/>\n" +
                                 "                        <label class=\"switch\">\n" +
-                                "                            <input type=\"checkbox\">\n" +
-                                "                            <span class=\"slider round\"></span>\n" +
+                                "                            <input hidden type=\"checkbox\">\n" +
+                                "                            <span hidden class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
@@ -171,8 +171,8 @@ function showSensorsFromDb(idPiece) {
                                 "                <div class=optionSensor>\n" +
                                 "                    <img src=\"public/images/moteur.png\"/>\n" +
                                 "                        <label class=\"switch\">\n" +
-                                "                            <input type=\"checkbox\">\n" +
-                                "                            <span class=\"slider round\"></span>\n" +
+                                "                            <input hidden type=\"checkbox\">\n" +
+                                "                            <span hidden class=\"slider round\"></span>\n" +
                                 "                        </label>\n" +
                                 "                </div>\n" +
                                 "                    <a href=\"model/deleteSensor.php?idCapteur="+ myObj[it].ID_capteur_actionneur+"&idRoom="+idPiece+"\"><img src=\"public/images/client/cancel.png\" class=\"suppPiece\"></a>\n" + //bouton supprimer, delCapteur( id capteur , id pièce) est une fct qui fonctionne en ajax pour supprimer un capteur
