@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "title": "Site web threat"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Threat modeling",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
